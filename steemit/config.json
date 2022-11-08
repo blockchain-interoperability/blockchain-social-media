@@ -1,0 +1,41 @@
+{
+    "nodename": "https://api.steemit.com",
+    "query": {
+        "limit": 100,
+        "tag": ""
+    },
+    "output_file": "steemit-data.csv",
+    "wait_time": 60,
+    "log_level": "INFO",
+    "data_columns": [
+        "post_id",
+        "author",
+        "permlink",
+        "category",
+        "title",
+        "body",
+        "json_metadata",
+        "created",
+        "last_update",
+        "depth",
+        "children",
+        "net_rshares",
+        "last_payout",
+        "cashout_time",
+        "total_payout_value",
+        "curator_payout_value",
+        "pending_payout_value",
+        "promoted",
+        "replies",
+        "body_length",
+        "active_votes",
+        "author_reputation",
+        "parent_author",
+        "parent_permlink",
+        "url",
+        "root_title",
+        "beneficiaries",
+        "max_accepted_payout",
+        "percent_steem_dollars"
+    ]
+}
