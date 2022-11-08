@@ -29,7 +29,12 @@ else: collected = pd.DataFrame(columns=config['data_columns'])
 stm = Steem(nodes=[config['nodename']])
 
 while True:
-    posts = stm.get_discussions_by_created(config['query'])
+    try:
+        posts = stm.get_discussions_by_created(config['query'])
+    except:
+        logging.error('request failed.. we sleep for 30s and try again')
+        sleep(30)
+        pass
     new_posts = pd.DataFrame(posts)
     new_posts = new_posts[
         # shouldn't be repeated
