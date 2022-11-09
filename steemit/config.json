@@ -37,5 +37,8 @@
         "beneficiaries",
         "max_accepted_payout",
         "percent_steem_dollars"
+    ],
+    "keywords": [
+        
     ]
 }

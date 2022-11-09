@@ -43,7 +43,11 @@ while True:
             # collected must b empty or the date must not be before
             (len(collected) == 0)
             | (pd.to_datetime(new_posts.created) > pd.to_datetime(collected.created).max())
-        )    
+        ) & (
+            # len(config['keywords']) == 0 # if keywords empty collect everything
+            # | 
+            new_posts.body.str.lower().str.contains('|'.join(config['keywords']))
+        )
     ]
     
     new_posts.to_csv(
