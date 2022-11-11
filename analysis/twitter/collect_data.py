@@ -66,6 +66,20 @@ def prettify_elastic(results):
     df = pd.json_normalize(results)
     df = df.drop(columns=['_index','_type','_id','_score','sort','_ignored'])
     df.columns = df.columns.str.replace('_source.','')
+
+    # If trucated is False, that means text has the full text. If True, extended_tweet.full_text has the full text.
+    
+    df['truncated'] = df['truncated'].fillna(2)
+    df['whole_text'] = df[
+        [
+            'extended_tweet.full_text',
+            'text',     
+            'truncated',
+        ]
+    ].apply(
+        lambda row: row[0] if row[2] == True else row[1] if row[2] == False else '',
+        axis=1
+    )
     return df    
 
 def get_fields_from_index(
