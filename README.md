@@ -10,20 +10,16 @@ The environment can be activated by running `source blockchain-sns-env/bin/activ
 The requirements file should be updated by running `pip freeze > requirements.txt` **while you are in in the virtual environment**
 
 ## Directory Structure
-```bash
-blockchain-social-media
-├─analysis
-└─twitter-nlp
 
-```
-
-- twitter-nlp
-    - Contains code for collecting 
+- twitter-nlp: Contains code for collecting Twitter data
+- steemit: Contains code for collecting Steemit data. Also contains the final CSV file
 - analysis
-    - twitter
+    - twitter: Contains code for analyzing collected results from twitter
+        - main.py: Entry point for preprocessing functions
+        - collect_data.py: Grabs the data from index for targetted fields, and caches the results in batched json files
+        - tokenizer.py: Uses the cached json files to create tokenized/lemmatized versions of each tweet.
+    - steemit
         - Contains code for analyzing collected results from twitter
-    - utils
-        - Dataset definition, common mechanisms etc should be stored here and used as dependencies in other analysis code
 
 ... And more social media to be added!
 
@@ -61,18 +57,8 @@ jupyter kernelspec remove blockchain-sns-env
 The results are stored in the `steemit-data.csv` file by default.
 The progress can be tracked in the `steemit.log` file
 
+## Analyzing Social media data
 
-### File permissions
-When you create a new file or folder, the default owner and group will be **your** account. In order to allow other users to modify the file, this needs to be changed.
-You can check for the owner and group of the file or folder by running `ls -l`. You can also filter output by adding `| grep {keywordmatch}`.
+This project uses Spacy to parse the text values. Ensure that the language model is downloaded before proceeding this part by running `python3 -m spacy download en_core_web_lg` while in venv.
 
-All folders in this directory should have group == `idea_users`. If this is not the case, others cannot modify your file.
-To update the permisison of the entire directory recursively, run `chgrp -R idea_users /data/blockchain-interoperability`.
-This command may take a very long time, since there are a lot of files in the venv. Running these commands *only* for the folder/files that you created is **strongly** encouraged.
-
-Alternatively, you can change the permission of a single file by running the same command `chgrp idea_users {filename}`
-
-Similarly, now the group members need write access to modify the files. This can be done by running
-`chmod g+rw {filename}`, or `chmod -R g+rw {foldername}`
-
-
+### Twitter data
