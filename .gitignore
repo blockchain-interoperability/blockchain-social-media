@@ -3,3 +3,7 @@ blockchain-sns-env
 */*/.ipynb_checkpoints
 steemit/steemit-data.csv
 steemit/steemit.log
+.env
+analysis/twitter/snapshots
+.vscode
+*.pyc
