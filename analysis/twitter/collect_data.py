@@ -121,8 +121,8 @@ def cache_index(
     
     return df
 
-def load_cache(snapshots_path):
-    """load_cache
+def load_cache(snapshots_path = ''):
+    """Aggregates the cached pickle files and returns a single DataFrame
 
     Args:
         snapshots_path (str): Path of directory that stores snapshots

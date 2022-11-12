@@ -1,28 +1,33 @@
 import pandas as pd
 from pathlib import Path
-import spacy
 # import json
 import pickle
 from tqdm.auto import tqdm
 
 # spacy.require_gpu()
-nlp = spacy.load('en_core_web_lg')
+# enabling GPU is even slower?? Hmm
 
 custom_filter = lambda tok: not (tok.is_stop or tok.is_punct or tok.is_space or tok.like_url  or '@' in str(tok))
 
-def get_tokens(text_list): 
+def get_tokens(nlp,text_list): 
     """Turns a list of text into list of tokens. Separated out from the main function for debugging and scaling purpose
 
     Args:
-        text_list (List[str],pd.Series[str]): Iterable containing text
+        nlp (any): Spacy nlp instance.
+        text_list (List[str],pd.Series[str]): Iterable containing text.
 
     Returns:
         _type_: List[List[str]]: List of tokens for each text
     """
-    return list(map(
+
+    parsed = nlp.pipe(text_list, disable=["tok2vec", "parser","ner"])
+    filtered_lemmas = list(map(
         lambda doc: list(map(lambda tok: tok.lemma_, filter(custom_filter,doc))),
-        nlp.pipe(text_list, disable=["tok2vec", "parser","ner"])
+        parsed
     ))
+
+    del parsed
+    return filtered_lemmas
 
 def tokenize_text(
     snapshot_path = '',
@@ -36,18 +41,24 @@ def tokenize_text(
         token_path (str, optional): Path to save the token lists to. Defaults to ''.
         minibatch (int, optional): Size of mini batches to use with Spacy. Defaults to 1000
     """
+    import spacy
+    nlp = spacy.load('en_core_web_lg')
+
     snapshot_folder = Path(snapshot_path)
     token_folder = Path(token_path)
 
     token_folder.mkdir(parents=True,exist_ok=True)
     for f in tqdm(sorted(snapshot_folder.glob(f'*.pkl')),desc='Generating tokens...',leave=False): 
+        token_file = token_folder/f'{f.stem}.pkl'
+        if token_file.is_file(): pass
+
         df = pd.read_pickle(f)
         
         tokens = []
         for i in tqdm(range(0,len(df),minibatch),desc=f'batch {f.stem}', leave=False):
-            tokens += get_tokens(df.whole_text[i:i+minibatch])
+            tokens += get_tokens(nlp,df.whole_text[i:i+minibatch])
 
-        pickle.dump(tokens,open(token_folder/f'{f.stem}.pkl','wb'))
+        pickle.dump(tokens,open(token_file,'wb'))
         del tokens,df
 
 
