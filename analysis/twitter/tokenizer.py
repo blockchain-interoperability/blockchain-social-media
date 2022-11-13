@@ -1,11 +1,49 @@
 import pandas as pd
 from pathlib import Path
-# import json
 import pickle
 from tqdm.auto import tqdm
+import emoji
 
-# spacy.require_gpu()
-# enabling GPU is even slower?? Hmm
+
+
+def get_emoji_tokens(tokens=[]):
+    """Gets only emoji characters from the tokens
+
+    Args:
+        tokens (list, optional): cleaned tokens. Each emoji is expected to be in a separate string. Defaults to [].
+
+    Returns:
+        list[list[str]]: list of list of strings. each string is an emoji.
+    """
+    # emojis_list = []
+    return map(
+        lambda toks: list(set(
+            filter(
+                lambda t: t in emoji.UNICODE_EMOJI.keys(), 
+                toks
+            )
+        )),
+        tokens
+    )
+
+def get_text_tokens(tokens=[]):
+    """Gets only non-emoji words from the tokens
+
+    Args:
+        tokens (list, optional): cleaned tokens. Each word is expected to be in a separate string. Defaults to [].
+
+    Returns:
+        list[list[str]]: list of list of strings. each string is an word].
+    """
+    return map(
+        lambda toks: list(set(
+            filter(
+                lambda t: not t in emoji.UNICODE_EMOJI.keys(), 
+                toks
+            )
+        )),
+        tokens
+    )
 
 custom_filter = lambda tok: not (tok.is_stop or tok.is_punct or tok.is_space or tok.like_url  or '@' in str(tok))
 
@@ -27,12 +65,20 @@ def get_tokens(nlp,text_list):
     ))
 
     del parsed
-    return filtered_lemmas
+    return {
+        'mixed':filtered_lemmas, 
+        'emoji':get_emoji_tokens(filtered_lemmas), 
+        'text':get_text_tokens(filtered_lemmas)
+    }
+    
+
 
 def tokenize_text(
     snapshot_path = '',
-    token_path='',
+    # cache_path={'all': '','emoji': '', 'text':''},
+    token_path= '',
     minibatch=1000,
+    token_types = ['mixed','emoji','text'],
 ):
     """Creates list of tokens per text and saves it in batched pickle files.
 
@@ -42,28 +88,38 @@ def tokenize_text(
         minibatch (int, optional): Size of mini batches to use with Spacy. Defaults to 1000
     """
     import spacy
+    from spacymoji import Emoji
+
+    spacy.require_gpu()
     nlp = spacy.load('en_core_web_lg')
+    nlp.add_pipe('emoji', first=True)
 
     snapshot_folder = Path(snapshot_path)
-    token_folder = Path(token_path)
 
-    token_folder.mkdir(parents=True,exist_ok=True)
+    tokens_cache = dict(zip(token_types,map(lambda t: Path(token_path)/t,token_types)))
+    for c in tokens_cache.values(): c.mkdir(parents=True,exist_ok=True)
+    
     for f in tqdm(sorted(snapshot_folder.glob(f'*.pkl')),desc='Generating tokens...',leave=False): 
-        token_file = token_folder/f'{f.stem}.pkl'
-        if token_file.is_file(): pass
+        # token_file = token_folder/f'{f.stem}.pkl'
+        # if token_file.is_file(): pass
 
         df = pd.read_pickle(f)
         
-        tokens = []
+        tokens = dict(map(lambda t: (t,[]), token_types))
         for i in tqdm(range(0,len(df),minibatch),desc=f'batch {f.stem}', leave=False):
-            tokens += get_tokens(nlp,df.whole_text[i:i+minibatch])
+            
+            all_tokens = get_tokens(nlp,df.whole_text.values[i:i+minibatch])
+            for k,v in tokens.items():
+                v += all_tokens[k]
 
-        pickle.dump(tokens,open(token_file,'wb'))
+        for k,v in tokens.items():
+            pickle.dump(v,open(tokens_cache[k]/f'{f.stem}.pkl','wb'))
         del tokens,df
 
 
 def load_tokens(
     token_path = '',
+    show_progress = True,
 ):
     """Loads tokens from cache
 
@@ -76,6 +132,11 @@ def load_tokens(
     tokens_folder = Path(token_path)
     # check if lemmas match the cache
     tokens = []
-    for f in sorted(tokens_folder.glob('*.pkl')):
+    for f in tqdm(sorted(tokens_folder.glob('*.pkl')),desc='loading tokens...',leave = False,disable = not show_progress):
         tokens += pickle.load(open(f,'rb'))
     return tokens
+
+
+# def extract_emojis(
+
+# )

@@ -38,6 +38,27 @@
     "tokenize_text": {
         "snapshot_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/snapshots",
         "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
-        "minibatch": 1000
+        "minibatch": 100
+    },
+    "draw_ngrams_mixed": {
+        "n": 3,
+        "plots_path": "plots/ngrams",
+        "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
+        "mode": "mixed",
+        "separater": " "
+    },
+    "draw_ngrams_emoji": {
+        "n": 3,
+        "plots_path": "plots/ngrams",
+        "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
+        "mode": "emoji",
+        "separater": ""
+    },
+    "draw_ngrams_text": {
+        "n": 3,
+        "plots_path": "plots/ngrams",
+        "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
+        "mode": "text",
+        "separater": " "
     }
 }
