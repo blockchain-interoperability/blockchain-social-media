@@ -60,5 +60,15 @@
         "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
         "mode": "text",
         "separater": " "
+    },
+    "get_bert_embeddings": {
+        "tokens_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens/text",
+        "bert_embeddings_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/embeddings/bert.npy"
+    },
+    "get_umap_embeddings": {
+        "tokens_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens/text",
+        "bert_embeddings_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/embeddings/bert.npy",
+        "umap_embeddings_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/embeddings/umap.npy"
     }
+    
 }

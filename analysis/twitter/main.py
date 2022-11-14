@@ -5,6 +5,7 @@ import json
 from collect_data import cache_index
 from tokenizer import tokenize_text
 from ngrams import draw_ngrams
+from topic_detection import get_bert_embeddings,get_umap_embeddings
 
 parser = argparse.ArgumentParser()
 
@@ -14,6 +15,8 @@ function_mappings = {
     'draw_ngrams_mixed': draw_ngrams,
     'draw_ngrams_emoji': draw_ngrams,
     'draw_ngrams_text': draw_ngrams,
+    'get_embeddings': get_bert_embeddings,
+    'get_umap_embeddings': get_umap_embeddings
 }
 
 parser.add_argument("function", default="cache_index", help="Function to call")
