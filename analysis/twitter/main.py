@@ -15,13 +15,12 @@ function_mappings = {
     'draw_ngrams_mixed': draw_ngrams,
     'draw_ngrams_emoji': draw_ngrams,
     'draw_ngrams_text': draw_ngrams,
-    'get_embeddings': get_bert_embeddings,
+    'get_bert_embeddings': get_bert_embeddings,
     'get_umap_embeddings': get_umap_embeddings
 }
 
 parser.add_argument("function", default="cache_index", help="Function to call")
 parser.add_argument("--configfile", "-c", default="twitter_config.json", required=False, help="Path to the config file to use.")
-# parser.add_argument("--logfile", "-l", default="tmlog.txt", required=False, help="Path to the log file to write to.")
 
 args = parser.parse_args()
 

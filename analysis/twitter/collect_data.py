@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 def scroll_index(
-    hostname = '',
+    es,
     index_name = '',
     mainquery = {'query':{'match_all':{}}},
     fields = [],
@@ -14,26 +14,18 @@ def scroll_index(
     """Sets up up scrolling request for the index
 
     Args:
-        hostname (str, optional): Address to access ElasticSearch host at. Defaults to ''.
+        es (ElasticSearch): Instance of ElasticSearch client
         index_name (str, optional): Name of index to send queries to. Defaults to ''.
         mainquery (dict,optional): Main query to use with Elasticsearch. Defaults to {'query':{'match_all':{}}}.
         fields (list, optional): Fields of index to grab. Defaults to [].
 
     Returns:
         cursor (generator): generator object that returns a single Hit on iteration.
-        doc_count (int): number of documents found in the index. Used for keeping track of progress.
     """
-    es = Elasticsearch(
-        hosts=[hostname],
-        verify_certs=False,
-        # timeout=config.elasticsearch_timeout_secs
-    )    
+    
     # mainquery = 
 
-    doc_count = es.count(
-        index=['blockchain-interoperability-attacks'],
-        body=mainquery,
-    )['count']
+    
 
     cursor = scan(
         es,
@@ -42,7 +34,7 @@ def scroll_index(
         size=10000
     )
 
-    return cursor,doc_count
+    return cursor
 
 def prettify_elastic(results):
     """Cleans up list of results into a dataframe while dropping some unncessary columns.
@@ -93,18 +85,29 @@ def cache_index(
     Returns:
         df (pd.DataFrame): A concatenated dataframe containing all the specified columns.
     """
-    snapshots_folder = Path(snapshot_path)
-    snapshots_folder.mkdir(exist_ok=True,parents=True)
+    es = Elasticsearch(
+        hosts=[hostname],
+        verify_certs=False,
+        # timeout=config.elasticsearch_timeout_secs
+    )    
 
-    cursor,doc_count = scroll_index(hostname,index_name,mainquery,fields)
+    doc_count = es.count(
+        index=[index_name],
+        body=mainquery,
+    )['count']
+
+    snapshot_folder = Path(snapshot_path)
+    snapshot_folder.mkdir(exist_ok=True,parents=True)
+
 
     df_list = []
-    if (not any(snapshots_folder.iterdir())) or (sorted(snapshots_folder.glob('*.pkl'))[-1].stem != f'{doc_count-1:08d}'):
+    if (not any(snapshot_folder.glob('*.pkl'))) or (sorted(snapshot_folder.glob('*.pkl'))[-1].stem != f'{doc_count-1:08d}'):
         results = []
+        cursor = scroll_index(es,index_name,mainquery,fields)
         for i,c in enumerate(tqdm(cursor,total=doc_count)):
             if i > 0 and i % batch_size == 0:
                 df = prettify_elastic(results)
-                df.to_pickle(snapshots_folder/f'{i:08d}.pkl')
+                df.to_pickle(snapshot_folder/f'{i:08d}.pkl')
                 df_list.append(df)
                 del results
                 results = [] 
@@ -112,24 +115,24 @@ def cache_index(
             results.append(c)
 
         df = prettify_elastic(results)
-        df.to_pickle(snapshots_folder/f'{i:08d}.pkl')
+        df.to_pickle(snapshot_folder/f'{i:08d}.pkl')
         df_list.append(df)
         del results
         df = pd.concat(df_list).reset_index(drop=True)
     else:
-        df = load_cache(snapshots_folder)
+        df = load_cache(snapshot_folder)
     
     return df
 
-def load_cache(snapshots_path = ''):
+def load_cache(snapshot_path = ''):
     """Aggregates the cached pickle files and returns a single DataFrame
 
     Args:
-        snapshots_path (str): Path of directory that stores snapshots
+        snapshot_path (str): Path of directory that stores snapshots
 
     Returns:
         df (pd.DataFrame): A concatenated dataframe containing all the specified columns.
     """
-    snapshots_folder = Path(snapshots_path)
-    df_list = [pd.read_pickle(f) for f in tqdm(sorted(snapshots_folder.glob(f'*.pkl')))]
+    snapshot_folder = Path(snapshot_path)
+    df_list = [pd.read_pickle(f) for f in tqdm(sorted(snapshot_folder.glob(f'*.pkl')))]
     return pd.concat(df_list).reset_index(drop=True)

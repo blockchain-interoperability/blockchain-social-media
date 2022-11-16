@@ -71,8 +71,6 @@ def get_tokens(nlp,text_list):
         'text':get_text_tokens(filtered_lemmas)
     }
     
-
-
 def tokenize_text(
     snapshot_path = '',
     # cache_path={'all': '','emoji': '', 'text':''},
@@ -98,23 +96,32 @@ def tokenize_text(
 
     tokens_cache = dict(zip(token_types,map(lambda t: Path(token_path)/t,token_types)))
     for c in tokens_cache.values(): c.mkdir(parents=True,exist_ok=True)
-    
-    for f in tqdm(sorted(snapshot_folder.glob(f'*.pkl')),desc='Generating tokens...',leave=False): 
-        # token_file = token_folder/f'{f.stem}.pkl'
-        # if token_file.is_file(): pass
 
-        df = pd.read_pickle(f)
-        
-        tokens = dict(map(lambda t: (t,[]), token_types))
-        for i in tqdm(range(0,len(df),minibatch),desc=f'batch {f.stem}', leave=False):
+    # check if files already exist. then we don't need to re-run
+    # (not any([any(t.iterdir()) for t in tokens_cache.values()])) or (sorted(snapshot_folder.glob('*.pkl'))[-1].stem != f'{doc_count-1:08d}')    
+
+    docs_count =sorted(snapshot_folder.glob('*.pkl'))[-1].stem
+    is_up_to_date = all([
+        any(t.glob('*.pkl')) and sorted(t.glob('*.pkl'))[-1].stem == docs_count
+        for t in tokens_cache.values()
+    ])
+    if not is_up_to_date:
+        for f in tqdm(sorted(snapshot_folder.glob(f'*.pkl')),desc='Generating tokens...',leave=False): 
+            # token_file = token_folder/f'{f.stem}.pkl'
+            # if token_file.is_file(): pass
+
+            df = pd.read_pickle(f)
             
-            all_tokens = get_tokens(nlp,df.whole_text.values[i:i+minibatch])
-            for k,v in tokens.items():
-                v += all_tokens[k]
+            tokens = dict(map(lambda t: (t,[]), token_types))
+            for i in tqdm(range(0,len(df),minibatch),desc=f'batch {f.stem}', leave=False):
+                
+                all_tokens = get_tokens(nlp,df.whole_text.values[i:i+minibatch])
+                for k,v in tokens.items():
+                    v += all_tokens[k]
 
-        for k,v in tokens.items():
-            pickle.dump(v,open(tokens_cache[k]/f'{f.stem}.pkl','wb'))
-        del tokens,df
+            for k,v in tokens.items():
+                pickle.dump(v,open(tokens_cache[k]/f'{f.stem}.pkl','wb'))
+            del tokens,df
 
 
 def load_tokens(
