@@ -1,11 +1,10 @@
 import argparse
 import json
 
-
 from collect_data import cache_index
 from tokenizer import tokenize_text
 from ngrams import draw_ngrams
-from topic_detection import get_bert_embeddings,get_umap_embeddings
+from embeddings import get_bert_embeddings,get_umap_embeddings
 
 parser = argparse.ArgumentParser()
 

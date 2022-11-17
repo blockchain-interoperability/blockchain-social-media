@@ -106,6 +106,9 @@ def tokenize_text(
         for t in tokens_cache.values()
     ])
     if not is_up_to_date:
+        for f in tokens_cache.values(): 
+            # f.rmdir()
+            for file in f.glob('*.pkl'): file.unlink()
         for f in tqdm(sorted(snapshot_folder.glob(f'*.pkl')),desc='Generating tokens...',leave=False): 
             # token_file = token_folder/f'{f.stem}.pkl'
             # if token_file.is_file(): pass

@@ -7,11 +7,25 @@
         "mainquery": {
             "query": {
                 "bool": {
-                    "must_not": {
-                        "exists": {
-                            "field": "retweeted_status.id"
+                    "filter": [
+                        {
+                            "range": {
+                                "created_at": {
+                                    "gte": "2022-11-07T00:00:00",
+                                    "lt": "now/s",
+                                    "format": "YYYY-MM-DD'T'HH:mm:ss"
+                                }
+                            }
+                        },{
+                            "bool": {
+                                "must_not": {
+                                    "exists": {
+                                        "field": "retweeted_status.id"
+                                    }
+                                }
+                            }
                         }
-                    }
+                    ]
                 }
             }
         },
@@ -62,6 +76,7 @@
         "separater": " "
     },
     "get_bert_embeddings": {
+        "embedder": "all-MiniLM-L6-v2",
         "tokens_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens/text",
         "bert_embeddings_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/embeddings/bert.pt"
     },

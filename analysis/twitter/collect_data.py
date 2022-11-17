@@ -22,11 +22,6 @@ def scroll_index(
     Returns:
         cursor (generator): generator object that returns a single Hit on iteration.
     """
-    
-    # mainquery = 
-
-    
-
     cursor = scan(
         es,
         index=index_name,
@@ -99,9 +94,14 @@ def cache_index(
     snapshot_folder = Path(snapshot_path)
     snapshot_folder.mkdir(exist_ok=True,parents=True)
 
-
     df_list = []
     if (not any(snapshot_folder.glob('*.pkl'))) or (sorted(snapshot_folder.glob('*.pkl'))[-1].stem != f'{doc_count-1:08d}'):
+        # clear old snapshots
+        # snapshot_folder.rmdir()
+        # snapshot_folder.mkdir(exist_ok=True,parents=True)
+        for file in snapshot_folder.glob('*.pkl'):
+            file.unlink()
+
         results = []
         cursor = scroll_index(es,index_name,mainquery,fields)
         for i,c in enumerate(tqdm(cursor,total=doc_count)):
@@ -136,3 +136,5 @@ def load_cache(snapshot_path = ''):
     snapshot_folder = Path(snapshot_path)
     df_list = [pd.read_pickle(f) for f in tqdm(sorted(snapshot_folder.glob(f'*.pkl')))]
     return pd.concat(df_list).reset_index(drop=True)
+
+
