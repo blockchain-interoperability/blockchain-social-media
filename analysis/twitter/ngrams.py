@@ -27,17 +27,20 @@ def make_circle(radius=1000):
 cloud_shape = make_circle(1000)
 
 
-def count_grams(tokens=[], n=1,separater=''):
+def count_grams(tokens=[], n=1,separater='',ngram_path = ''):
     """Counts frequency of ngrams. Returns a list of tuples in descending order
 
     Args:
         tokens (list, optional): List of List of strings. Each list of strings represents a text. Defaults to [].
         n (int, optional): n in ngrams to search for. Defaults to 1.
         separater (int, optional): separater for the words in a gram. Useful for drawing
+        ngram_path (string, optional): to save the grams
 
     Returns:
         _type_: _description_
     """
+
+    
 
     gram_counts = Counter(
         chain(*map(
@@ -50,6 +53,8 @@ def count_grams(tokens=[], n=1,separater=''):
     )
 
     by_count = sorted(gram_counts.items(), key=lambda x: x[1], reverse=True)
+
+    dict(by_count)
 
     return by_count
 

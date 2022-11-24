@@ -4,8 +4,6 @@ import pickle
 from tqdm.auto import tqdm
 import emoji
 
-
-
 def get_emoji_tokens(tokens=[]):
     """Gets only emoji characters from the tokens
 
@@ -17,12 +15,12 @@ def get_emoji_tokens(tokens=[]):
     """
     # emojis_list = []
     return map(
-        lambda toks: list(set(
+        lambda toks: list(
             filter(
                 lambda t: t in emoji.UNICODE_EMOJI.keys(), 
                 toks
             )
-        )),
+        ),
         tokens
     )
 
@@ -34,14 +32,15 @@ def get_text_tokens(tokens=[]):
 
     Returns:
         list[list[str]]: list of list of strings. each string is an word].
-    """
+    """   
+    
     return map(
-        lambda toks: list(set(
+        lambda toks: list(
             filter(
                 lambda t: not t in emoji.UNICODE_EMOJI.keys(), 
                 toks
             )
-        )),
+        ),
         tokens
     )
 
@@ -59,10 +58,11 @@ def get_tokens(nlp,text_list):
     """
 
     parsed = nlp.pipe(text_list, disable=["tok2vec", "parser","ner"])
-    filtered_lemmas = list(map(
-        lambda doc: list(map(lambda tok: tok.lemma_, filter(custom_filter,doc))),
-        parsed
-    ))
+    filtered_lemmas = [
+        # list(map(lambda tok: tok.lemma_, ))
+        [tok.lemma_ for tok in filter(custom_filter,doc)]
+        for doc in parsed
+    ]
 
     del parsed
     return {
@@ -105,17 +105,12 @@ def tokenize_text(
         any(t.glob('*.pkl')) and sorted(t.glob('*.pkl'))[-1].stem == docs_count
         for t in tokens_cache.values()
     ])
-    if not is_up_to_date:
-        for f in tokens_cache.values(): 
-            # f.rmdir()
-            for file in f.glob('*.pkl'): file.unlink()
-        for f in tqdm(sorted(snapshot_folder.glob(f'*.pkl')),desc='Generating tokens...',leave=False): 
-            # token_file = token_folder/f'{f.stem}.pkl'
-            # if token_file.is_file(): pass
 
+    if not is_up_to_date:
+        for f in tqdm(sorted(snapshot_folder.glob(f'*.pkl')),desc='Generating tokens...',leave=False): 
             df = pd.read_pickle(f)
             
-            tokens = dict(map(lambda t: (t,[]), token_types))
+            tokens = dict((t,[]) for t in token_types)
             for i in tqdm(range(0,len(df),minibatch),desc=f'batch {f.stem}', leave=False):
                 
                 all_tokens = get_tokens(nlp,df.whole_text.values[i:i+minibatch])

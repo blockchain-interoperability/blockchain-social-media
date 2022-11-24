@@ -65,6 +65,7 @@ def cache_index(
     snapshot_path = '',
     batch_size=100000,
     mainquery = {'query':{'match_all':{}}},
+    sort = {'':''},
     fields = [],
 ):
     """Grabs the specified fields from the specified index on Elasticsearch. Since results are expected to be larged, batched pickle files are generated
@@ -74,7 +75,8 @@ def cache_index(
         index_name (str, optional): Name of index to send queries to. Defaults to ''.
         snapshot_path (str, optional): Path of directory that stores snapshots. Defaults to ''.
         batch_size (int, optional): Maximum length of each pickle file. Defaults to 100000.
-        mainquery (dict,optional): Main query to use with Elasticsearch. Defaults to {'query':{'match_all':{}}}.
+        mainquery (dict, optional): Main query to use with Elasticsearch. Defaults to {'query':{'match_all':{}}}.
+        sort (dict, optional): Operation to sort the query results by. Excluded from main query because count doesn't support it.
         fields (list, optional): Fields of index to grab. Defaults to [].
 
     Returns:
@@ -93,19 +95,24 @@ def cache_index(
 
     snapshot_folder = Path(snapshot_path)
     snapshot_folder.mkdir(exist_ok=True,parents=True)
-
+    snapshots = sorted(snapshot_folder.glob('*.pkl'))
     df_list = []
-    if (not any(snapshot_folder.glob('*.pkl'))) or (sorted(snapshot_folder.glob('*.pkl'))[-1].stem != f'{doc_count-1:08d}'):
-        # clear old snapshots
-        # snapshot_folder.rmdir()
-        # snapshot_folder.mkdir(exist_ok=True,parents=True)
-        for file in snapshot_folder.glob('*.pkl'):
-            file.unlink()
+    if (not any(snapshots)) or (snapshots[-1].stem != f'{doc_count-1:08d}'):
+        
+        # offset = 0
+        # if len(snapshots) >= 2:
+        #     last_result = pd.read_pickle(snapshots[-2])
+        #     offset = int(snapshots[-2].stem)
+        #     last_timestamp = pd.to_datetime(last_result['timestamp_ms'],unit='ms')[-1].strftime('%Y-%m-%dT%H:%M:%S.%f')
+        #     mainquery['query']['bool']['filter']['range']['created_at']['gte'] = last_timestamp
+        #     snapshots[-1].unlink()
+        # mainquery['sort'] = sort
+        cursor = scroll_index(es,index_name,mainquery,fields)
+
 
         results = []
-        cursor = scroll_index(es,index_name,mainquery,fields)
         for i,c in enumerate(tqdm(cursor,total=doc_count)):
-            if i > 0 and i % batch_size == 0:
+            if i > 0 and i % batch_size == 0 or i == doc_count-1:
                 df = prettify_elastic(results)
                 df.to_pickle(snapshot_folder/f'{i:08d}.pkl')
                 df_list.append(df)
@@ -113,16 +120,12 @@ def cache_index(
                 results = [] 
 
             results.append(c)
-
-        df = prettify_elastic(results)
-        df.to_pickle(snapshot_folder/f'{i:08d}.pkl')
-        df_list.append(df)
-        del results
         df = pd.concat(df_list).reset_index(drop=True)
     else:
         df = load_cache(snapshot_folder)
     
     return df
+    
 
 def load_cache(snapshot_path = ''):
     """Aggregates the cached pickle files and returns a single DataFrame
@@ -134,7 +137,7 @@ def load_cache(snapshot_path = ''):
         df (pd.DataFrame): A concatenated dataframe containing all the specified columns.
     """
     snapshot_folder = Path(snapshot_path)
-    df_list = [pd.read_pickle(f) for f in tqdm(sorted(snapshot_folder.glob(f'*.pkl')))]
+    df_list = [pd.read_pickle(f) for f in tqdm(sorted(snapshot_folder.glob(f'*.pkl')),leave=False,desc='reading in snapshots..')]
     return pd.concat(df_list).reset_index(drop=True)
 
 

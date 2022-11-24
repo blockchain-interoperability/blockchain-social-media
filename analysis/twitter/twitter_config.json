@@ -11,9 +11,7 @@
                         {
                             "range": {
                                 "created_at": {
-                                    "gte": "2022-11-07T00:00:00",
-                                    "lt": "now/s",
-                                    "format": "YYYY-MM-DD'T'HH:mm:ss"
+                                    "gte": "Tue Nov 01 00:00:00 +0000 2022"
                                 }
                             }
                         },{
@@ -21,6 +19,11 @@
                                 "must_not": {
                                     "exists": {
                                         "field": "retweeted_status.id"
+                                    }
+                                },
+                                "must": {
+                                    "exists": {
+                                        "field": "truncated"
                                     }
                                 }
                             }
@@ -75,10 +78,10 @@
         "mode": "text",
         "separater": " "
     },
-    "get_bert_embeddings": {
+    "create_sbert_embeddings": {
         "embedder": "all-MiniLM-L6-v2",
         "tokens_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens/text",
-        "bert_embeddings_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/embeddings/bert.pt"
+        "bert_embeddings_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/embeddings"
     },
     "get_umap_embeddings": {
         "n_neighbors": 15,
@@ -86,6 +89,12 @@
         "tokens_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens/text",
         "bert_embeddings_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/embeddings/bert.pt",
         "umap_embeddings_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/embeddings/umap.npy"
+    },
+    "get_vader_sentiment": {
+        "sentiment_type": "vader",
+        "snapshot_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/snapshots",
+        "sentiment_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/sentiment"
     }
+    
     
 }
