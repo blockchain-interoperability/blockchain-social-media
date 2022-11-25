@@ -62,3 +62,11 @@ The progress can be tracked in the `steemit.log` file
 This project uses Spacy to parse the text values. Ensure that the language model is downloaded before proceeding this part by running `python3 -m spacy download en_core_web_lg` while in venv.
 
 ### Twitter data
+
+
+Start date: `Timestamp('2022-11-09 05:53:33.788000')`
+
+End date: `Timestamp('2022-11-23 20:58:16.667000')`
+
+
+use `pd.to_datetime()` to convert strings to datetime objects for consistency

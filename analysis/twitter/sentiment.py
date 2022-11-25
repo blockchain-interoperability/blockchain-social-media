@@ -4,6 +4,7 @@ from tqdm.auto import tqdm
 from pathlib import Path
 import pickle
 import pandas as pd
+import numpy as np
 from collect_data import load_cache
 
 VADER_SENTIMENT_LABEL_MAPPINGS = {
@@ -95,5 +96,5 @@ def load_sentiment(sentiment_path):
         sentiment_scores += batch_scores
         # all_sentiments += pickle.load(open(f,'rb'))
     
-    return sentiment_labels,sentiment_scores
+    return np.array(sentiment_labels),np.array(sentiment_scores)
         
