@@ -3,7 +3,7 @@ from elasticsearch.helpers import scan
 import pandas as pd
 from tqdm.auto import tqdm
 from pathlib import Path
-
+import pickle
 
 def scroll_index(
     es,
@@ -63,6 +63,8 @@ def cache_index(
     hostname = '',
     index_name = '',
     snapshot_path = '',
+    timestamp_path = '',
+    whole_text_path = '',
     batch_size=100000,
     mainquery = {'query':{'match_all':{}}},
     sort = {'':''},
@@ -95,6 +97,14 @@ def cache_index(
 
     snapshot_folder = Path(snapshot_path)
     snapshot_folder.mkdir(exist_ok=True,parents=True)
+
+    timestamp_folder = Path(timestamp_path)
+    timestamp_folder.mkdir(exist_ok=True,parents=True)
+
+    whole_text_folder = Path(whole_text_path)
+    whole_text_folder.mkdir(exist_ok=True,parents=True)
+
+
     snapshots = sorted(snapshot_folder.glob('*.pkl'))
     df_list = []
     if (not any(snapshots)) or (snapshots[-1].stem != f'{doc_count-1:08d}'):
@@ -113,8 +123,11 @@ def cache_index(
         results = []
         for i,c in enumerate(tqdm(cursor,total=doc_count)):
             if i > 0 and i % batch_size == 0 or i == doc_count-1:
+                filename = f'{i:08d}.pkl'
                 df = prettify_elastic(results)
-                df.to_pickle(snapshot_folder/f'{i:08d}.pkl')
+                df.to_pickle(snapshot_folder/filename)
+                pickle.dump(df.timestamp_ms.values.tolist(),open(timestamp_folder/filename,'wb'))
+                pickle.dump(df.whole_text.values.tolist(),open(whole_text_folder/filename,'wb'))
                 df_list.append(df)
                 del results
                 results = [] 
@@ -141,3 +154,15 @@ def load_cache(snapshot_path = ''):
     return pd.concat(df_list).reset_index(drop=True)
 
 
+def load_pickles(some_path):
+    some_path = Path(some_path)
+    result = []
+    for f in tqdm(
+        sorted(some_path.glob('*.pkl')),
+        desc=f'loading from {some_path.name}',
+        leave=False
+    
+    ):
+        result += pickle.load(open(f,'rb'))
+    # [(f) ]
+    return result

@@ -61,7 +61,8 @@ def count_grams(tokens=[], n=1,separater='',ngram_path = ''):
 
 def draw_ngrams(
     n=3,
-    num=500,
+    cloud_max=500,
+    bar_max = 20,
     token_path='',
     plots_path='plots',
     mode='mixed',
@@ -87,12 +88,32 @@ def draw_ngrams(
     for i in range(1, n+1):
         fig, ax = plt.subplots(figsize=(8, 8))
         by_count = count_grams(tokens, i, separater)
-        wc = WordCloud(background_color="white", max_words=num,
+        wc = WordCloud(background_color="white", max_words=cloud_max,
                        mask=cloud_shape, max_font_size=400, font_path='./Symbola.otf')
-        wc.generate_from_frequencies(dict(by_count[:num]))
+        wc.generate_from_frequencies(dict(by_count[:cloud_max]))
         ax.imshow(wc)
         ax.axis('off')
-        fig.savefig(pfold/f'{mode}_{i}_grams.png', dpi=300)
-        print(f'{mode} -- {i}grams drawn')
+        fig.savefig(pfold/f'{mode}_{i}_grams_cloud.png', dpi=300)
+        print(f'{mode} -- {i} grams drawn')
 
-import emoji
+        fig,ax = plt.subplots(figsize=(8,8))
+
+        df = pd.DataFrame(by_count[:bar_max],columns=[f'{i}-Gram','Frequency'])
+        sns.barplot(
+            data=df,
+            x = 'Frequency',
+            y = f'{i}-Gram',
+            ax=ax
+        )
+        plt.tight_layout()
+
+        fig.savefig(pfold/f'{mode}_{i}_grams_bar.png', dpi=300)
+
+
+
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+import pandas as pd
+

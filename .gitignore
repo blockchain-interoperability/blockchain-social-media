@@ -11,3 +11,7 @@ analysis/twitter/snapshots
 analysis/twitter/tokens
 analysis/twitter/embeddings
 analysis/twitter/sentiment
+analysis/twitter/timestamp
+analysis/twitter/whole_text
+analysis/twitter/models
+analysis/twitter/cluster_results

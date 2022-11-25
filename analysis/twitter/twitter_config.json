@@ -3,6 +3,8 @@
         "hostname": "http://idea-vm-elasticsearch:9200",
         "index_name": "blockchain-interoperability-attacks",
         "snapshot_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/snapshots",
+        "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/timestamps",
+        "whole_text_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/whole_text",
         "batch_size": 100000,
         "mainquery": {
             "query": {
@@ -59,6 +61,8 @@
     },
     "draw_ngrams_mixed": {
         "n": 3,
+        "cloud_max": 500,
+        "bar_max": 20,
         "plots_path": "plots/ngrams",
         "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
         "mode": "mixed",
@@ -66,6 +70,8 @@
     },
     "draw_ngrams_emoji": {
         "n": 3,
+        "cloud_max": 500,
+        "bar_max": 20,
         "plots_path": "plots/ngrams",
         "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
         "mode": "emoji",
@@ -73,6 +79,8 @@
     },
     "draw_ngrams_text": {
         "n": 3,
+        "cloud_max": 500,
+        "bar_max": 20,
         "plots_path": "plots/ngrams",
         "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
         "mode": "text",
@@ -99,7 +107,29 @@
         "sentiment_type": "transformer",
         "snapshot_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/snapshots",
         "sentiment_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/sentiment"
+    },
+    "train_encoder_linear": {
+        "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/timestamp",
+        "sentiment_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/sentiment/vader",
+        "embedding_path" :"/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/embeddings/all-MiniLM-L6-v2",
+        "encoder_type":"linear",
+        "save_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/models",
+        "splits":[8,1,1]
+    },
+    "run_kmeans": {
+        "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/timestamp",
+        "sentiment_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/sentiment/vader",
+        "embedding_path" :"/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/embeddings/all-MiniLM-L6-v2",
+        "encoder_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/models/LinearAutoEncoder.pkl",
+        "encoder_type": "linear",
+        "whole_text_path" :"/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/whole_text",
+        "token_path" :"/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens/text",
+        "k": 5,
+        "n": 100,
+        "slice_size": "30m",
+        "save_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/cluster_results"
     }
+
     
     
 }

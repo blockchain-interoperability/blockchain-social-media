@@ -6,6 +6,8 @@ from tokenizer import tokenize_text
 from ngrams import draw_ngrams
 from embeddings import create_sbert_embeddings
 from sentiment import get_sentiment
+from autoencoders import train_encoder
+from clustering import run_kmeans
 
 parser = argparse.ArgumentParser()
 
@@ -19,6 +21,8 @@ function_mappings = {
     'get_vader_sentiment': get_sentiment,
     'get_trans_sentiment': get_sentiment,
     # 'get_umap_embeddings': get_umap_embeddings
+    'train_encoder_linear': train_encoder,
+    'run_kmeans': run_kmeans
 }
 
 parser.add_argument("function", default="cache_index", help="Function to call")
