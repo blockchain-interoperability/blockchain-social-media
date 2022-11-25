@@ -100,3 +100,10 @@ def create_sbert_embeddings(embedder = 'all-MiniLM-L6-v2',tokens_path = '',bert_
 #     return umap_embeddings
 
 
+def load_embeddings(
+    embedding_path
+):
+    return torch.vstack([
+        torch.load(f) 
+        for f in tqdm(sorted(Path(embedding_path).glob('*.pkl')),desc='loading embeddings..',leave=False)
+    ])

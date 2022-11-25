@@ -10,3 +10,4 @@ steemit/steemit.log
 analysis/twitter/snapshots
 analysis/twitter/tokens
 analysis/twitter/embeddings
+analysis/twitter/sentiment

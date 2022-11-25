@@ -94,6 +94,11 @@
         "sentiment_type": "vader",
         "snapshot_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/snapshots",
         "sentiment_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/sentiment"
+    },
+    "get_trans_sentiment": {
+        "sentiment_type": "transformer",
+        "snapshot_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/snapshots",
+        "sentiment_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/sentiment"
     }
     
     
