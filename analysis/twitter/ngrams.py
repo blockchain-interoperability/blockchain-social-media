@@ -72,6 +72,8 @@ def draw_ngrams(
     plots_path='plots',
     mode='mixed',
     separater = '',
+    spam_idx_path = '',
+    filter_spam = 'False',
 ):
     """Draws ngram wordclouds
 
@@ -84,6 +86,11 @@ def draw_ngrams(
     """
     # tokens = load_tokens(tokens_path)
     pfold = Path(plots_path)
+    filter_spam = bool(filter_spam)
+    if not filter_spam: 
+        pfold = pfold / 'with_spam'
+    else:
+        pfold = pfold / 'without_spam'
     pfold.mkdir(parents=True,exist_ok=True)
 
     # if mode == 'emoji':
@@ -91,7 +98,10 @@ def draw_ngrams(
     # tokens = load_tokens(Path(token_path)/mode)
     dset = TwitterDataset(
         timestamp_path,
-        token_path = Path(token_path)/mode
+        spam_idx_path,
+        # whole_text_path,
+        token_path = Path(token_path)/mode,
+        filter_spam = filter_spam
     )
 
 

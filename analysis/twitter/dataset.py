@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from dataclasses import dataclass
 import torch
+import pickle
 from torch.utils.data import Dataset
 
 from collect_data import load_cache,load_pickles
@@ -10,15 +11,24 @@ from tokenizer import load_tokens
 from embeddings import load_embeddings
 from sentiment import load_sentiment
 
+spam_patterns = [
+    "I Wish I discovered this earlier. Uniswap is being exploited"
+]
+
+def is_spam(text):
+    return any([s in text for s in spam_patterns])
+
 
 class TwitterDataset(Dataset):
     def __init__(
         self,
         timestamp_path,
+        spam_idx_path,
         sentiment_path = '',
-        whole_text_path = '',
         token_path = '',
         embedding_path = '',
+        whole_text_path = '',
+        filter_spam = True,
     ):
         start = time.perf_counter()
         # data =
@@ -28,7 +38,7 @@ class TwitterDataset(Dataset):
         
         # just empty list if we don't use it
         sentiment_label,sentiment_score = [None]* len(timestamp),[None]* len(timestamp)
-        if token_path:
+        if sentiment_path:
             sentiment_label,sentiment_score = load_sentiment(sentiment_path)
             # tokens = load_tokens(token_path)
 
@@ -40,12 +50,12 @@ class TwitterDataset(Dataset):
         if embedding_path:
             embeddings = load_embeddings(embedding_path)
 
-        whole_text = [None]* len(timestamp)
-        if whole_text_path:
-            whole_text = load_pickles(whole_text_path)
+        # whole_text = [None]* len(timestamp)
+        # if whole_text_path:
+        whole_text = load_pickles(whole_text_path)
         
+
         
-        print(f'loaded dataset. took {time.perf_counter()-start} ms')
 
         # now we only save the ones we use. discard the rest to save memory 
         # self.timestamp = timestamp
@@ -59,10 +69,19 @@ class TwitterDataset(Dataset):
 
         missing_time = pd.isna(timestamp).nonzero()[0]
 
+
         # self.sorted_idx = list(filter(lambda i: not i in missing_time,sorted_idx))
         self.sorted_idx = sorted_idx[~np.in1d(sorted_idx,missing_time)]
+        if filter_spam:
+            print('no spam here!')
+            spam_idx = np.array(pickle.load(open(spam_idx_path,'rb')))
+            # spam_tweet = np.array([i for i,t in enumerate(whole_text) if is_spam(t)])
+            self.sorted_idx = sorted_idx[~np.in1d(sorted_idx,spam_idx)]
 
         self.timestamp = timestamp.astype(int)
+
+        print(f'loaded dataset. took {time.perf_counter()-start} ms')
+
 
         del tokens,embeddings,sentiment_label,sentiment_score
 
