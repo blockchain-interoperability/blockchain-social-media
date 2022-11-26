@@ -6,6 +6,9 @@ from torch.utils.data import DataLoader
 from torch.utils.data.sampler import SequentialSampler
 from tqdm.auto import tqdm
 from pathlib import Path
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
 
 from dataset import TwitterDataset
 
@@ -121,6 +124,7 @@ def train_encoder(
     token_path = '',
     encoder_type = 'linear',
     save_path = '',
+    plot_path = '',
     splits = [8,1,1]
 ):
     dset = TwitterDataset(
@@ -149,6 +153,9 @@ def train_encoder(
     criterion = RMSELoss
     optimizer = Adam(model.parameters())
 
+    train_losses = []
+    val_losses = []
+
     old_val_loss = 1000000
     for epoch in tqdm(range(100)):
         train_loss = []
@@ -170,7 +177,9 @@ def train_encoder(
             loss = criterion(out,inp)
             val_loss.append(loss.item())
 
-        print(f'{epoch:04d} train_loss: {sum(train_loss)/len(train_loss)}  -- val_loss: {sum(val_loss)/len(val_loss)}',)
+        # print(f'{epoch:04d} train_loss: {sum(train_loss)/len(train_loss)}  -- val_loss: {sum(val_loss)/len(val_loss)}',)
+        train_losses.append(sum(train_loss)/len(train_loss))
+        val_losses.append(sum(val_loss)/len(val_loss))
         
 
         if sum(val_loss)/len(val_loss) > old_val_loss:
@@ -178,6 +187,18 @@ def train_encoder(
             break
         else: old_val_loss = sum(val_loss)/len(val_loss)
 
+
+    df = pd.DataFrame()
+    # df['Epoch'] = list(range(8))
+    df['Train Loss'] = train_loss
+    df['Validation Loss'] = val_loss
+
+    fig,ax = plt.subplots(figsize=(6,3))
+    sns.lineplot(
+        data = df,
+        ax = ax
+    )
+    fig.savefig(plot_path)
 
     model.eval()
     test_real = []
@@ -189,7 +210,7 @@ def train_encoder(
 
         test_real.append(inp.cpu())
         test_pred.append(out.cpu())
-        
+    
 
     
     test_performance = RMSELoss(torch.vstack(test_pred),torch.vstack(test_real))

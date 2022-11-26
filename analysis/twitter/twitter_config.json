@@ -159,6 +159,7 @@
         "embedding_path" :"/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/embeddings/all-MiniLM-L6-v2",
         "encoder_type":"linear",
         "save_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/models",
+        "plot_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/plots/linear_autoencoder_loss.pdf",
         "splits":[8,1,1]
     },
     "run_kmeans": {
@@ -169,7 +170,7 @@
         "encoder_type": "linear",
         "whole_text_path" :"/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/whole_text",
         "token_path" :"/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens/text",
-        "k": 5,
+        "k": 7,
         "n": 100,
         "slice_size": "30m",
         "save_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/cluster_results"

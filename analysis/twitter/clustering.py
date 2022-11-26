@@ -4,7 +4,7 @@ import json
 # from torch.utils.data import DataLoader, SequentialSampler
 from sklearn.preprocessing import MaxAbsScaler
 import numpy as np
-from sklearn.cluster import KMeans
+from sklearn.cluster import MiniBatchKMeans
 from collections import Counter
 from itertools import chain
 from tqdm.auto import tqdm
@@ -74,25 +74,37 @@ def run_kmeans(
         reduced_embs = model.encoder(original_embs).cpu().numpy()
         scaled_embs = MaxAbsScaler().fit_transform(reduced_embs)
 
-        kmeans = KMeans(n_clusters=5).fit(scaled_embs)
+        kmeans = MiniBatchKMeans(n_clusters=k).fit(scaled_embs)
 
         one_slice_result = []
         for label in set(kmeans.labels_):
             centroid = kmeans.cluster_centers_[label]
             cluster = scaled_embs[kmeans.labels_ == label]
+            distances = np.sqrt(((cluster - centroid)**2).sum(1))
+            distances /= distances.max()
+            
+            word_count = {}
+            for i,d in zip(original_idxs[kmeans.labels_ == label],distances):
+                for t in dset.tokens[i]:
+                    if not t in word_count:
+                        word_count[t] = d
+                    else:
+                        word_count[t] += d
+
+
             top_N_closest = np.argsort(np.sqrt(((cluster - centroid)**2).sum(1)))[:n]
-            word_count = dict(sorted(
-                Counter(
-                    chain(
-                        *[
-                            dset.tokens[i] 
-                            for i in original_idxs[kmeans.labels_ == label]
-                        ]
-                    )
-                ).items(),
-                key= lambda x: x[1],
-                reverse=True
-            ))
+            # word_count = dict(sorted(
+            #     Counter(
+            #         chain(
+            #             *[
+            #                 dset.tokens[i] 
+            #                 for i in original_idxs[kmeans.labels_ == label]
+            #             ]
+            #         )
+            #     ).items(),
+            #     key= lambda x: x[1],
+            #     reverse=True
+            # ))
 
             # one_slice_result[f'top_{n}_idxs_{label}'] = top_N_closest.tolist()
             # one_slice_result[f'wordcount_{label}'] = word_count
