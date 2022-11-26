@@ -107,7 +107,7 @@ def draw_ngrams(
         fig.savefig(pfold/f'{mode}_{i}_grams_cloud.pdf', dpi=300)
         print(f'{mode} -- {i} grams drawn')
 
-        fig,ax = plt.subplots(figsize=(2,4))
+        fig,ax = plt.subplots(figsize=(3,4))
 
         df = pd.DataFrame(by_count[:bar_max],columns=[f'{i}-Gram','Frequency'])
         sns.barplot(
