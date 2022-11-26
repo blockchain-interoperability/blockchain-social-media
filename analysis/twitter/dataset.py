@@ -71,16 +71,16 @@ class TwitterDataset(Dataset):
 
 
         # self.sorted_idx = list(filter(lambda i: not i in missing_time,sorted_idx))
-        self.sorted_idx = sorted_idx[~np.in1d(sorted_idx,missing_time)]
         if filter_spam:
             print('no spam here!')
             spam_idx = np.array(pickle.load(open(spam_idx_path,'rb')))
             # spam_tweet = np.array([i for i,t in enumerate(whole_text) if is_spam(t)])
-            self.sorted_idx = sorted_idx[~np.in1d(sorted_idx,spam_idx)]
+            sorted_idx = sorted_idx[~np.in1d(sorted_idx,spam_idx)]
 
+        self.sorted_idx = sorted_idx[~np.in1d(sorted_idx,missing_time)]
         self.timestamp = timestamp.astype(int)
 
-        print(f'loaded dataset. took {time.perf_counter()-start} ms')
+        print(f'loaded dataset. took {time.perf_counter()-start} ms. Got {len(self.sorted_idx)} items')
 
 
         del tokens,embeddings,sentiment_label,sentiment_score

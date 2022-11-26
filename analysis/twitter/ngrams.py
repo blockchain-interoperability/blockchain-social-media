@@ -52,7 +52,7 @@ def count_grams(dataset=[], n=1,separater='',ngram_path = ''):
                 lambda gram: separater.join(gram), 
                 zip(*[dataset.tokens[t][i:] for i in range(n)])
             ),
-            tqdm(dataset.sorted_idx,desc='making grams..',total=len(dataset),leave=False)
+            tqdm(dataset.sorted_idx,desc=f'making {n} grams..',total=len(dataset),leave=False)
         ))
     )
 
@@ -115,9 +115,8 @@ def draw_ngrams(
         ax.imshow(wc)
         ax.axis('off')
         fig.savefig(pfold/f'{mode}_{i}_grams_cloud.pdf', dpi=300)
-        print(f'{mode} -- {i} grams drawn')
 
-        fig,ax = plt.subplots(figsize=(3,4))
+        fig,ax = plt.subplots(figsize=(2,3))
 
         df = pd.DataFrame(by_count[:bar_max],columns=[f'{i}-Gram','Frequency'])
         sns.barplot(
@@ -130,6 +129,7 @@ def draw_ngrams(
 
         fig.savefig(pfold/f'{mode}_{i}_grams_bar.pdf', dpi=300)
 
+        print(f'{mode} -- {i} grams drawn')
 
 
 
