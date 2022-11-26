@@ -15,7 +15,7 @@ class TwitterDataset(Dataset):
     def __init__(
         self,
         timestamp_path,
-        sentiment_path,
+        sentiment_path = '',
         whole_text_path = '',
         token_path = '',
         embedding_path = '',
@@ -27,6 +27,11 @@ class TwitterDataset(Dataset):
         # 5%are missing timestamp... need to filter out
         
         # just empty list if we don't use it
+        sentiment_label,sentiment_score = [None]* len(timestamp),[None]* len(timestamp)
+        if token_path:
+            sentiment_label,sentiment_score = load_sentiment(sentiment_path)
+            # tokens = load_tokens(token_path)
+
         tokens = [None]* len(timestamp)
         if token_path:
             tokens = load_tokens(token_path)
@@ -39,7 +44,7 @@ class TwitterDataset(Dataset):
         if whole_text_path:
             whole_text = load_pickles(whole_text_path)
         
-        sentiment_label,sentiment_score = load_sentiment(sentiment_path)
+        
         print(f'loaded dataset. took {time.perf_counter()-start} ms')
 
         # now we only save the ones we use. discard the rest to save memory 

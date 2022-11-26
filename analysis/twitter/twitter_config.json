@@ -63,7 +63,8 @@
         "n": 3,
         "cloud_max": 500,
         "bar_max": 20,
-        "plots_path": "plots/ngrams",
+        "plots_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/plots/ngrams",
+        "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/timestamp",
         "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
         "mode": "mixed",
         "separater": " "
@@ -72,7 +73,8 @@
         "n": 3,
         "cloud_max": 500,
         "bar_max": 20,
-        "plots_path": "plots/ngrams",
+        "plots_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/plots/ngrams",
+        "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/timestamp",
         "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
         "mode": "emoji",
         "separater": ""
@@ -81,7 +83,8 @@
         "n": 3,
         "cloud_max": 500,
         "bar_max": 20,
-        "plots_path": "plots/ngrams",
+        "plots_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/plots/ngrams",
+        "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/timestamp",
         "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
         "mode": "text",
         "separater": " "
