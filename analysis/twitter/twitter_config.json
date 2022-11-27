@@ -61,7 +61,7 @@
     },
     "draw_ngrams_mixed_spam": {
         "n": 3,
-        "cloud_max": 500,
+        "cloud_max": 100,
         "bar_max": 20,
         "plots_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/plots/ngrams",
         "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/timestamp",
@@ -73,7 +73,7 @@
     },
     "draw_ngrams_mixed_nospam": {
         "n": 3,
-        "cloud_max": 500,
+        "cloud_max": 100,
         "bar_max": 20,
         "plots_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/plots/ngrams",
         "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/timestamp",
@@ -85,7 +85,7 @@
     },
     "draw_ngrams_emoji_spam": {
         "n": 3,
-        "cloud_max": 500,
+        "cloud_max": 100,
         "bar_max": 20,
         "plots_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/plots/ngrams",
         "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/timestamp",
@@ -97,7 +97,7 @@
     },
     "draw_ngrams_emoji_nospam": {
         "n": 3,
-        "cloud_max": 500,
+        "cloud_max": 100,
         "bar_max": 20,
         "plots_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/plots/ngrams",
         "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/timestamp",
@@ -109,7 +109,7 @@
     },
     "draw_ngrams_text_spam": {
         "n": 3,
-        "cloud_max": 500,
+        "cloud_max": 100,
         "bar_max": 20,
         "plots_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/plots/ngrams",
         "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/timestamp",
@@ -121,7 +121,7 @@
     },
     "draw_ngrams_text_nospam": {
         "n": 3,
-        "cloud_max": 500,
+        "cloud_max": 100,
         "bar_max": 20,
         "plots_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/plots/ngrams",
         "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/timestamp",
@@ -166,13 +166,12 @@
         "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/timestamp",
         "spam_idx_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/spam_idx.pkl",
         "embedding_path" :"/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/embeddings/all-MiniLM-L6-v2",
+        "sentiment_path":"/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/sentiment/vader",
+        "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens/text",
         "encoder_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/models/LinearAutoEncoder.pkl",
         "encoder_type": "linear",
         "k": 7,
         "slice_size": "30m",
         "save_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/cluster_results"
     }
-
-    
-    
 }

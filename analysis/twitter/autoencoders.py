@@ -145,9 +145,9 @@ def train_encoder(
 
     train_idxs,val_idxs,test_idxs = split_idxs
 
-    train_loader = DataLoader(dset,batch_size = 1028,sampler = SequentialSampler(train_idxs))
-    val_loader = DataLoader(dset,batch_size = 1028,sampler = SequentialSampler(val_idxs))
-    test_loader = DataLoader(dset,batch_size = 1028,sampler = SequentialSampler(test_idxs))    
+    train_loader = DataLoader(dset,batch_size = 1024,sampler = SequentialSampler(train_idxs))
+    val_loader = DataLoader(dset,batch_size = 1024,sampler = SequentialSampler(val_idxs))
+    test_loader = DataLoader(dset,batch_size = 1024,sampler = SequentialSampler(test_idxs))    
 
     model = ENCODER_MAPPING[encoder_type]().cuda()
     criterion = RMSELoss

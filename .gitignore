@@ -16,3 +16,5 @@ analysis/twitter/whole_text
 analysis/twitter/models
 analysis/twitter/cluster_results
 analysis/twitter/spam_idx.pkl
+
+analysis/twitter/kmeans_pytorch/__pycache__

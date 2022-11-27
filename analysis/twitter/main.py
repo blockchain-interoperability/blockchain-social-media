@@ -25,7 +25,8 @@ function_mappings = {
     'get_trans_sentiment': get_sentiment,
     # 'get_umap_embeddings': get_umap_embeddings
     'train_encoder_linear': train_encoder,
-    'run_kmeans': run_kmeans
+    'run_kmeans': run_kmeans,
+    # 'parse_clusters': parse_clusters
 }
 
 parser.add_argument("function", default="cache_index", help="Function to call")
