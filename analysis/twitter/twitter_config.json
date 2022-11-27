@@ -171,6 +171,7 @@
         "encoder_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/models/LinearAutoEncoder.pkl",
         "encoder_type": "linear",
         "k": 7,
+        "top_n_topics": 20,
         "slice_size": "30m",
         "save_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/cluster_results"
     }

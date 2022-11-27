@@ -16,6 +16,12 @@ from pathlib import Path
 from dataset import TwitterDataset
 from autoencoders import load_encoder
 
+SENTIMENT_MAPPING = {
+    -1: 'neg',
+    0: 'neu',
+    1: 'pos'
+}
+
 def run_kmeans(
     timestamp_path,
     spam_idx_path,
@@ -25,6 +31,7 @@ def run_kmeans(
     encoder_path,
     encoder_type,
     k = 7,
+    top_n_topics = 20,
     slice_size = '30m',
     save_path = ''
 ):
@@ -36,7 +43,7 @@ def run_kmeans(
         sentiment_path = sentiment_path,
         token_path = token_path,
     )
-    save_path = Path(save_path)/f'kmeans_{k}_{slice_size}_results.pkl'
+    save_path = Path(save_path)
     save_path.mkdir(exist_ok=True,parents=True)
 
     model = load_encoder(encoder_path,encoder_type)
@@ -53,7 +60,7 @@ def run_kmeans(
 
     loader = DataLoader(dset,batch_size=4096)
     reduced = []
-    for batch in tqdm(loader):
+    for batch in tqdm(loader,desc='reducing dimension...',leave=False):
         inp = batch['embedding'].cuda()
         out = model.encoder(inp)
         reduced.append(out)
@@ -62,11 +69,12 @@ def run_kmeans(
 
     scaled = MaxAbsScaler().fit_transform(reduced.cpu().numpy())
     cluster_ids_x, cluster_centers = kmeans(
-        X=scaled, num_clusters=k, distance='euclidean', device=torch.device('cuda:0'), iter_limit =100
+        X=torch.tensor(scaled), num_clusters=k, distance='euclidean', device=torch.device('cuda:0'), iter_limit =100
     )
     print('clusters identified')
 
-
+    cluster_ids_x = cluster_ids_x.numpy()
+    cluster_centers = cluster_centers.numpy()
     # pre calculate the time slices acccording to the parameter
     time_slices = [
         [
@@ -79,55 +87,82 @@ def run_kmeans(
     ]
 
     # start = dset_start
+    embeddings = []
     results = []
-    for slice_beg,slice_end in tqdm(time_slices,desc=f'going over by {slice_size}'):
+    for i,(slice_beg,slice_end) in enumerate(tqdm(time_slices,desc=f'going over by {slice_size}')):
         # grab the dataset's sorted indexs using the time slices
         beg,end = dset.get_range(slice_beg,slice_end)
         
         
         labels = cluster_ids_x[beg:end]
 
-        one_slice = []
+        # one_slice = []
 
         for label in set(labels):
             centroid = cluster_centers[label]
             cluster = scaled[beg:end][labels == label]
             distance = np.sqrt(((cluster - centroid)**2).sum(1))
             distance /= distance.max()
+            # higher is better. distance is normalized in [0,1] and by negating we give low distance a high weight
+            weight = 1-distance 
+
             original_index = dset[beg:end]['original_index'][labels == label]
-            # idx_by_distance = np.arange(beg,end)[]
+           # idx_by_distance = np.arange(beg,end)[]
             # idx_by_distance = np.argsort(distance)
 
 
-            word_count = {}
-            word_weighted = {}
+            topic_count = {}
+            topic_weighted = {}
             sentiment_weighted = {0:0, 1:0, -1:0}
             sentiment_count = {0:0, 1:0, -1:0}
 
-            for idx,dis in zip(original_index,distance):
+            for idx,w in zip(original_index,weight):
                 # word_counts += 
                 for t in dset.tokens[idx]:
-                    if not t in word_count:
-                        word_count[t] = 1
+                    if not t in topic_count:
+                        topic_count[t] = 1
                     else:
-                        word_count[t] += 1
-                    if not t in word_weighted:
-                        word_weighted[t] = dis
+                        topic_count[t] += 1
+                    if not t in topic_weighted:
+                        topic_weighted[t] = w
                     else:
-                        word_weighted[t] += dis
+                        topic_weighted[t] += w
                 
                 sentiment_count[dset.sentiment_label[idx]] += 1
-                sentiment_weighted[dset.sentiment_label[idx]] += dis
+                sentiment_weighted[dset.sentiment_label[idx]] += w
 
-            one_slice.append({
-                'topic_weighted': word_weighted,
-                'topic_count': word_count,
-                'sentiment_count': sentiment_count,
-                'sentiment_weighted': sentiment_weighted,
+            topic_by_weight,topic_weights = zip(*sorted(topic_weighted.items(),key=lambda x:x[1],reverse=True)[:top_n_topics])
+            topic_by_count, topic_counts = zip(*sorted(topic_count.items(),key=lambda x:x[1],reverse=True)[:top_n_topics])
+
+            sentiment_by_count = {f'{SENTIMENT_MAPPING[k]}_count': v for k,v in sentiment_count.items()}
+            sentiment_by_weight = {f'{SENTIMENT_MAPPING[k]}_weight': v for k,v in sentiment_weighted.items()}
+
+            results.append({
+                'slice_idx': i,
+                'label': label,
+                'cluster_size': len(cluster),
+                'topic_by_weight': topic_by_weight,
+                'topic_weights': topic_weights,
+                'topic_by_count': topic_by_count,
+                'topic_counts': topic_counts,
+                'original_idxs': original_index,
+                **sentiment_by_count,
+                **sentiment_by_weight,
             })
-        results.append(one_slice)
+            embeddings.append({
+                'slice_idx': i,
+                'label': label,
+                'original_idxs': original_index,
+                'cluster_embs': cluster
+            })
 
-    torch.save(results,save_path)
+        # results.append(one_slice)
+
+    # torch.save(results,save_path)
+    df = pd.DataFrame(results)
+
+    df.to_pickle(save_path/f'kmeans_{k}_{slice_size}_results.pkl')
+    torch.save(embeddings,save_path/f'kmeans_{k}_{slice_size}_embeddings.pkl')
     # del original_embs,reduced_embs,scaled_embs
 
 
