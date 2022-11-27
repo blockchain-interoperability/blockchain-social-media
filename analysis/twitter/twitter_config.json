@@ -68,7 +68,7 @@
         "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
         "mode": "mixed",
         "separater": " ",
-        "spam_idx_path": "/home/kangi/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/spam_idx.pkl",
+        "spam_idx_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/spam_idx.pkl",
         "filter_spam": 0
     },
     "draw_ngrams_mixed_nospam": {
@@ -80,7 +80,7 @@
         "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
         "mode": "mixed",
         "separater": " ",
-        "spam_idx_path": "/home/kangi/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/spam_idx.pkl",
+        "spam_idx_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/spam_idx.pkl",
         "filter_spam": 1
     },
     "draw_ngrams_emoji_spam": {
@@ -92,7 +92,7 @@
         "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
         "mode": "emoji",
         "separater": "",
-        "spam_idx_path": "/home/kangi/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/spam_idx.pkl",
+        "spam_idx_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/spam_idx.pkl",
         "filter_spam": 0
     },
     "draw_ngrams_emoji_nospam": {
@@ -104,7 +104,7 @@
         "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
         "mode": "emoji",
         "separater": "",
-        "spam_idx_path": "/home/kangi/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/spam_idx.pkl",
+        "spam_idx_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/spam_idx.pkl",
         "filter_spam": 1
     },
     "draw_ngrams_text_spam": {
@@ -116,7 +116,7 @@
         "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
         "mode": "text",
         "separater": " ",
-        "spam_idx_path": "/home/kangi/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/spam_idx.pkl",
+        "spam_idx_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/spam_idx.pkl",
         "filter_spam": 0
     },
     "draw_ngrams_text_nospam": {
@@ -128,7 +128,7 @@
         "token_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens",
         "mode": "text",
         "separater": " ",
-        "spam_idx_path": "/home/kangi/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/spam_idx.pkl",
+        "spam_idx_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/spam_idx.pkl",
         "filter_spam": 1
     },
     "create_sbert_embeddings": {
@@ -164,7 +164,7 @@
     },
     "run_kmeans": {
         "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/timestamp",
-        "spam_idx_path": "/home/kangi/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/spam_idx.pkl",
+        "spam_idx_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/spam_idx.pkl",
         "embedding_path" :"/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/embeddings/all-MiniLM-L6-v2",
         "encoder_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/models/LinearAutoEncoder.pkl",
         "encoder_type": "linear",
