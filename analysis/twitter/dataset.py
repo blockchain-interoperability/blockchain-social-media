@@ -38,21 +38,29 @@ class TwitterDataset(Dataset):
         
         # just empty list if we don't use it
         sentiment_label,sentiment_score = [None]* len(timestamp),[None]* len(timestamp)
+        self.use_sentiment = False
         if sentiment_path:
             sentiment_label,sentiment_score = load_sentiment(sentiment_path)
+            self.use_sentiment=True
             # tokens = load_tokens(token_path)
 
         tokens = [None]* len(timestamp)
+        self.use_tokens = False
         if token_path:
             tokens = load_tokens(token_path)
+            self.use_tokens = True
         
+        self.use_embeddings = False
         embeddings = [None]* len(timestamp)
         if embedding_path:
             embeddings = load_embeddings(embedding_path)
+            self.use_embeddings = True
 
-        # whole_text = [None]* len(timestamp)
-        # if whole_text_path:
-        whole_text = load_pickles(whole_text_path)
+        whole_text = [None]* len(timestamp)
+        self.use_whole_text = False
+        if whole_text_path:
+            whole_text = load_pickles(whole_text_path)
+            self.use_whole_text = True
         
 
         
@@ -87,15 +95,14 @@ class TwitterDataset(Dataset):
 
     def __getitem__(self,idx):
         idx = self.sorted_idx[idx]
-        return {
-            'original_index': idx,
-            # 'timestamp': self.timestamp[idx],
-            # 'whole_text': self.whole_text[idx],
-            # 'tokens': self.tokens[idx],
-            'embedding': self.embedding[idx],
-            'sentiment_label': self.sentiment_label[idx],
-            # 'sentiment_score': self.sentiment_score[idx],
+        ret = {
+            'original_index': idx
         }
+        if self.use_sentiment:
+            ret['sentiment_label'] = self.sentiment_label[idx]
+        if self.use_embeddings:
+            ret['embedding'] = self.embedding[idx]
+        return ret
         
     def __len__(self):
         return len(self.sorted_idx)

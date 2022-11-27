@@ -164,14 +164,11 @@
     },
     "run_kmeans": {
         "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/timestamp",
-        "sentiment_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/sentiment/vader",
+        "spam_idx_path": "/home/kangi/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/spam_idx.pkl",
         "embedding_path" :"/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/embeddings/all-MiniLM-L6-v2",
         "encoder_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/models/LinearAutoEncoder.pkl",
         "encoder_type": "linear",
-        "whole_text_path" :"/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/whole_text",
-        "token_path" :"/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens/text",
         "k": 7,
-        "n": 100,
         "slice_size": "30m",
         "save_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/cluster_results"
     }
