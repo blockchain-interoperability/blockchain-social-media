@@ -70,3 +70,7 @@ End date: `Timestamp('2022-11-23 20:58:16.667000')`
 
 
 use `pd.to_datetime()` to convert strings to datetime objects for consistency
+
+## Acknowledgements
+
+The authors acknowledge the support from NSF IUCRC CRAFT center research grant (CRAFT Grant #22006) for this research. The opinions expressed in this code base do not necessarily represent the views of NSF IUCRC CRAFT.
