@@ -11,8 +11,8 @@ from pathlib import Path
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-from tokenizer import load_tokens
-from dataset import TwitterDataset
+from utils.tokenizer import load_tokens
+from utils.dataset import TwitterDataset
 
 def make_circle(radius=1000):
     """Hepler function to draw circle in ngram wordcloud background. Note that the wordcloud background can be changed to any other shape

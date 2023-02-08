@@ -13,8 +13,8 @@ from itertools import chain
 from tqdm.auto import tqdm
 from pathlib import Path
 
-from dataset import TwitterDataset
-from autoencoders import load_encoder
+from utils.dataset import TwitterDataset
+from utils.autoencoders import load_encoder
 
 SENTIMENT_MAPPING = {
     -1: 'neg',

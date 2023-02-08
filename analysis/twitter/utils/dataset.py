@@ -1,15 +1,14 @@
 import time
 import pandas as pd
 import numpy as np
-from dataclasses import dataclass
-import torch
 import pickle
 from torch.utils.data import Dataset
+from pathlib import Path
+from tqdm.auto import tqdm
 
-from collect_data import load_cache,load_pickles
-from tokenizer import load_tokens
-from embeddings import load_embeddings
-from sentiment import load_sentiment
+from utils.tokenizer import load_tokens
+from utils.embeddings import load_embeddings
+from utils.sentiment import load_sentiment
 
 spam_patterns = [
     "I Wish I discovered this earlier. Uniswap is being exploited"
@@ -18,6 +17,19 @@ spam_patterns = [
 def is_spam(text):
     return any([s in text for s in spam_patterns])
 
+
+def load_pickles(some_path):
+    some_path = Path(some_path)
+    result = []
+    for f in tqdm(
+        sorted(some_path.glob('*.pkl')),
+        desc=f'loading from {some_path.name}',
+        leave=False
+    
+    ):
+        result += pickle.load(open(f,'rb'))
+    # [(f) ]
+    return result
 
 class TwitterDataset(Dataset):
     def __init__(

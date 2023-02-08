@@ -2,9 +2,9 @@
     "cache_index": {
         "hostname": "http://idea-vm-elasticsearch:9200",
         "index_name": "blockchain-interoperability-attacks",
-        "snapshot_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/snapshots",
-        "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/timestamps",
-        "whole_text_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/whole_text",
+        "snapshot_path": "/data/blockchain-interoperability/blockchain-social-media/twitter-data/snapshots",
+        "timestamp_path": "/data/blockchain-interoperability/blockchain-social-media/twitter-data/timestamps",
+        "whole_text_path": "/data/blockchain-interoperability/blockchain-social-media/twitter-data/whole_text",
         "batch_size": 100000,
         "mainquery": {
             "query": {
@@ -53,6 +53,9 @@
             "in_reply_to_status_id",
             "n_reply_to_user_id"
         ]
+    },
+    "filter_data": {
+
     },
     "tokenize_text": {
         "snapshot_path": "/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/snapshots",

@@ -4,6 +4,16 @@ import pandas as pd
 from tqdm.auto import tqdm
 from pathlib import Path
 import pickle
+import json
+
+# print()
+# load the keywords for first round filtering
+keywords = json.load(open(Path(__file__).parent/'keywords.json'))
+def has_keyword(text):
+    return any(
+        text.lower().count(k) > 0
+        for k in keywords
+    )
 
 def scroll_index(
     es,
@@ -22,6 +32,18 @@ def scroll_index(
     Returns:
         cursor (generator): generator object that returns a single Hit on iteration.
     """
+    # we will add a query to only grab the ones that contain at least one keyword (or partially, if keyword was space separated)
+    mainquery['bool']['must'] = {
+        "simple_query_string": {
+            "query": ' '.join(keywords),
+            "fields": [
+                "text",
+                "extended_tweet.full_text"
+            ],
+            # 'minimum_should_match': 1
+        }
+    }
+
     cursor = scan(
         es,
         index=index_name,
@@ -57,6 +79,7 @@ def prettify_elastic(results):
         lambda row: row[0] if row[2] == True else row[1] if row[2] == False else '',
         axis=1
     )
+
     return df    
 
 def cache_index(
@@ -93,6 +116,7 @@ def cache_index(
     doc_count = es.count(
         index=[index_name],
         body=mainquery,
+        request_timeout = 30,
     )['count']
 
     snapshot_folder = Path(snapshot_path)
@@ -107,22 +131,18 @@ def cache_index(
 
     snapshots = sorted(snapshot_folder.glob('*.pkl'))
     df_list = []
+
+    # if there are no snapshots or the last (sorted) snapshot does not match the doc count, start over
     if (not any(snapshots)) or (snapshots[-1].stem != f'{doc_count-1:08d}'):
-        
-        # offset = 0
-        # if len(snapshots) >= 2:
-        #     last_result = pd.read_pickle(snapshots[-2])
-        #     offset = int(snapshots[-2].stem)
-        #     last_timestamp = pd.to_datetime(last_result['timestamp_ms'],unit='ms')[-1].strftime('%Y-%m-%dT%H:%M:%S.%f')
-        #     mainquery['query']['bool']['filter']['range']['created_at']['gte'] = last_timestamp
-        #     snapshots[-1].unlink()
-        # mainquery['sort'] = sort
         cursor = scroll_index(es,index_name,mainquery,fields)
-
-
         results = []
+        # good_count = 0
         for i,c in enumerate(tqdm(cursor,total=doc_count)):
-            if i > 0 and i % batch_size == 0 or i == doc_count-1:
+            if (
+                i > 0 
+                and i % batch_size == 0 
+                or i == doc_count-1
+            ):
                 filename = f'{i:08d}.pkl'
                 df = prettify_elastic(results)
                 df.to_pickle(snapshot_folder/filename)
@@ -133,36 +153,18 @@ def cache_index(
                 results = [] 
 
             results.append(c)
+
         df = pd.concat(df_list).reset_index(drop=True)
+    # we have everything, just need to concat the dataframes
     else:
-        df = load_cache(snapshot_folder)
-    
+        df = pd.concat([
+            pd.read_pickle(f) 
+            for f in tqdm(
+                sorted(snapshot_folder.glob(f'*.pkl')),
+                leave=False,
+                desc='reading in snapshots..'
+            )
+        ]).reset_index(drop=True)
     return df
     
 
-def load_cache(snapshot_path = ''):
-    """Aggregates the cached pickle files and returns a single DataFrame
-
-    Args:
-        snapshot_path (str): Path of directory that stores snapshots
-
-    Returns:
-        df (pd.DataFrame): A concatenated dataframe containing all the specified columns.
-    """
-    snapshot_folder = Path(snapshot_path)
-    df_list = [pd.read_pickle(f) for f in tqdm(sorted(snapshot_folder.glob(f'*.pkl')),leave=False,desc='reading in snapshots..')]
-    return pd.concat(df_list).reset_index(drop=True)
-
-
-def load_pickles(some_path):
-    some_path = Path(some_path)
-    result = []
-    for f in tqdm(
-        sorted(some_path.glob('*.pkl')),
-        desc=f'loading from {some_path.name}',
-        leave=False
-    
-    ):
-        result += pickle.load(open(f,'rb'))
-    # [(f) ]
-    return result

@@ -5,7 +5,6 @@ from pathlib import Path
 import pickle
 import pandas as pd
 import numpy as np
-from collect_data import load_cache
 
 VADER_SENTIMENT_LABEL_MAPPINGS = {
     'POS': 1,
@@ -68,12 +67,6 @@ def get_sentiment(
     snap_files = sorted(snapshot_path.glob('*.pkl'))
     sent_files = sorted(sentiment_path.glob('*.pkl'))
     sentiment = []
-    # if len(snap_files) == len(sent_files):
-    #     for p in sent_files:
-    #         sentiment += pickle.load(open(p,'rb'))
-    # else:
-    #     # snapshots = load_cache(snapshot)
-    #     sentiment = []
     for partial in tqdm(snap_files, desc= f'{sentiment_type} sentiment scores..',leave =False):
         analyzer = ANALYZERS[sentiment_type]()
         df = pd.read_pickle(partial)
