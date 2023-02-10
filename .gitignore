@@ -1,4 +1,4 @@
-*/*/.ipynb_checkpoints
+*/.ipynb_checkpoints
 steemit/steemit-data.csv
 steemit/steemit.log
 .env
@@ -6,12 +6,12 @@ steemit/steemit.log
 *.pyc
 
 
-analysis/twitter/kmeans_pytorch/__pycache__
+twitter/kmeans_pytorch/__pycache__
 
-analysis/twitter/__pycache__
-analysis/twitter/utils/__pycache__
+twitter/__pycache__
+twitter/utils/__pycache__
 
 
-analysis/twitter/tools/*/*.json
+twitter/tools/*/*.json
 
-analysis/twitter/tools/embedder/embedderlog.txt
+twitter/tools/embedder/embedderlog.txt
