@@ -1,13 +1,15 @@
 from sentence_transformers import SentenceTransformer
 from pathlib import Path
-from tokenizer import load_tokens
 import numpy as np
 # import umap
 import torch
 import pickle
 from tqdm.auto import tqdm
 
-def get_sbert_embedding(tokens, embedder):
+from utils.collect_data import get_snapshot_column
+# from utils.tokenizer import load_tokens
+
+def batch_transformer_embeddings(tokens, embedder):
     model = SentenceTransformer(embedder,device='cuda')
     
     def encode(minibatch):
@@ -30,52 +32,43 @@ def get_sbert_embedding(tokens, embedder):
     return batch_embeddings_cpu
 
 
-def create_sbert_embeddings(embedder = 'all-MiniLM-L6-v2',tokens_path = '',bert_embeddings_path = ''):
+def get_transformer_embeddings(
+    embedder = 'all-MiniLM-L6-v2',
+    snapshot_path = '',
+    embeddings_path = '',
+    **kwargs
+    # embedder_batch_size = 100000
+):
     """Creates bert embeddings. Each list of tokens is joined to a string and fed into the bert transformer to create an embedding
 
     Args:
-        tokens_path (str, optional): Path of cached tokens. Defaults to ''.
-        bert_embeddings_path (str, optional): Path to save the results in. Defaults to ''.
+        embedder (str, optional): embedder name. Defaults to 'all-MiniLM-L6-v2'
+        snapshot_path (str, optional): Path of cached snapshot path. Defaults to ''.
+        embeddings_path (str, optional): Path to save the results in. Defaults to ''.
 
     Returns:
-        list[list[int]]: embeddings generated from bert
+        embeddings (torch.Tensor): embeddings from the transformer model
     """
-    embeddings_folder = Path(bert_embeddings_path) / embedder
-    embeddings_folder.mkdir(exist_ok=True,parents=True)
-    created_embeddings = sorted(embeddings_folder.glob('*.pkl'))
-    token_batches = sorted(Path(tokens_path).glob('*.pkl'))
+    snapshot_path = Path(snapshot_path)
+    embeddings_path = Path(embeddings_path) / f'{embedder}.pkl'
+    embeddings_path.parent.mkdir(exist_ok=True,parents=True)
+    whole_text = get_snapshot_column(snapshot_path,'whole_text')
+        
     
-    if len(created_embeddings) == len(token_batches):
-        embeddings = torch.vstack([torch.load(s) for s in created_embeddings])
-        print('loaded cached bert embeddings!')
+    if embeddings_path.is_file():
+        pickle.load(open(embeddings_path,'rb'))
+    
     else:
-        start_index = 0
         embeddings = []
-        if created_embeddings:
-            start_index = len(created_embeddings)-1
-            embeddings = [torch.load(s) for s in created_embeddings]
-            print(f'picking up from {start_index}')
-        for batch in tqdm(
-            token_batches[start_index:],
+        for batch_start in tqdm(
+            range(0,len(whole_text,batch_size)),
             desc='creating embeddings',
-            leave=False
+            # leave=False
         ):  
-            tokens = pickle.load(open(batch,'rb'))
-            batch_embeddings = get_sbert_embedding(tokens,embedder)
-
-            torch.save(batch_embeddings,embeddings_folder / batch.name)
-            embeddings.append(batch_embeddings)
-            
-            del tokens
+            batch_embeddings = batch_transformer_embeddings(whole_text[batch_start:batch_start+batch_size],embedder)
+            embeddings.append(batch_embeddings)        
             torch.cuda.empty_cache()
             
         embeddings = torch.vstack(embeddings)
+        torch.save(embeddings,embeddings_path)
     return embeddings
-
-def load_embeddings(
-    embedding_path
-):
-    return torch.vstack([
-        torch.load(f) 
-        for f in tqdm(sorted(Path(embedding_path).glob('*.pkl')),desc='loading embeddings..',leave=False)
-    ])

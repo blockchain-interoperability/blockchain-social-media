@@ -1,5 +1,3 @@
-twitter-nlp
-blockchain-sns-env
 */*/.ipynb_checkpoints
 steemit/steemit-data.csv
 steemit/steemit.log
@@ -7,14 +5,13 @@ steemit/steemit.log
 .vscode
 *.pyc
 
-analysis/twitter/snapshots
-analysis/twitter/tokens
-analysis/twitter/embeddings
-analysis/twitter/sentiment
-analysis/twitter/timestamp
-analysis/twitter/whole_text
-analysis/twitter/models
-analysis/twitter/cluster_results
-analysis/twitter/spam_idx.pkl
 
 analysis/twitter/kmeans_pytorch/__pycache__
+
+analysis/twitter/__pycache__
+analysis/twitter/utils/__pycache__
+
+
+analysis/twitter/tools/*/*.json
+
+analysis/twitter/tools/embedder/embedderlog.txt

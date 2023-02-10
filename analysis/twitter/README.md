@@ -17,6 +17,12 @@ python3 main.py [funcname]
 ```
 The arguments for the function can be saved in (twitter_config.json)[twitter_config.json]
 
+If you want the use the default values from the config.json file, you can also use pass the entire argument to every function
+```python
+import json
+config = json.load(open('config.json'))
+df = cache_index(**config)
+```
 
 ### Loading the newst data
 
@@ -28,9 +34,20 @@ python3 main.py cache_index
 
 To load in jupyter:
 ```python
-from collect_data import cache_index
+from utils.collect_data import cache_index
 df = cache_index('/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/snapshots')
 ```
+
+You can also access the individual columns of the dataframe (quicker) by loading from the cache folder, saved under `{column_name}.pkl`
+
+```python
+from utils.collect_data import cache_index
+whole_text = cache_index('/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/snapshots/whole_text.pkl')
+```
+
+### Loading embeddings
+
+
 
 ### Tokenizing the text
 
@@ -44,9 +61,9 @@ python3 main.py tokenize_text
 To load filtered tokens, you can
 
 ```python
-from tokenizer import load_tokens
+from utils.tokenizer import get_tokens
 mode = 'text'
-tokens = load_tokens(f'/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens/{mode}')
+tokens = get_tokens(f'/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens/{mode}')
 ```
 
 
@@ -63,11 +80,11 @@ Note that in the settings, `n = 3`. This means that 1 and 2 grams will also be c
 
 If you want the ngrams by count, you can run
 ```python
-from tokenizer import load_tokens
-from ngrams import count_grams
+from utils.tokenizer import get_tokens
+from utils.ngrams import count_grams
 
 mode = 'text'
-tokens = load_tokens(f'/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens/{mode}')
+tokens = get_tokens(f'/data/blockchain-interoperability/blockchain-social-media/analysis/twitter/tokens/{mode}')
 count_grams(tokens,separater = ' ')
 ```
 
