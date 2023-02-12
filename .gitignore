@@ -5,7 +5,7 @@ steemit/steemit.log
 .vscode
 *.pyc
 
-
+blockchain-sns-env
 twitter/kmeans_pytorch/__pycache__
 
 twitter/__pycache__

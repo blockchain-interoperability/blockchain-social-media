@@ -61,6 +61,7 @@ jupyterlab-pygments==0.2.2
 jupyterlab-widgets==3.0.5
 kiwisolver==1.4.4
 kneed==0.8.2
+llvmlite==0.39.1
 markdown-it-py==2.1.0
 MarkupSafe==2.1.2
 matplotlib==3.6.3
@@ -76,7 +77,8 @@ nest-asyncio==1.5.6
 nltk==3.8.1
 notebook==6.5.2
 notebook_shim==0.2.2
-numpy==1.24.2
+numba==0.56.4
+numpy==1.23.5
 nvidia-cublas-cu11==11.10.3.66
 nvidia-cuda-nvrtc-cu11==11.7.99
 nvidia-cuda-runtime-cu11==11.7.99
@@ -102,6 +104,7 @@ pydeck==0.8.0
 pyFUME==0.2.25
 Pygments==2.14.0
 Pympler==1.0.1
+pynndescent==0.5.8
 pyparsing==3.0.9
 pyrsistent==0.19.3
 python-dateutil==2.8.2
@@ -148,7 +151,7 @@ transformers==4.26.1
 typing_extensions==4.4.0
 tzdata==2022.7
 tzlocal==4.2
-umap==0.1.1
+umap-learn==0.5.3
 uri-template==1.2.0
 urllib3==1.26.14
 validators==0.20.0

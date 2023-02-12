@@ -1,8 +1,8 @@
 import plotly.graph_objects as go
 import streamlit as st
 import numpy as np
-import tensorflow_hub as hub
-import tensorflow as tf
+# import tensorflow_hub as hub
+# import tensorflow as tf
 from itertools import compress
 from sentence_transformers import SentenceTransformer
 from scipy.stats import linregress, pearsonr
@@ -68,10 +68,11 @@ def get_embedding_model(embedding_type):
         embedding_model = SentenceTransformer("all-MiniLM-L12-v2")
     elif embedding_type == "use_large":
         # prevent TensorFlow from allocating the entire GPU just to load the embedding model
-        gpus = tf.config.list_physical_devices("GPU")
-        for gpu in gpus:
-            tf.config.experimental.set_memory_growth(gpu, True)
-        embedding_model = hub.load("https://tfhub.dev/google/universal-sentence-encoder-large/5")
+        # gpus = tf.config.list_physical_devices("GPU")
+        # for gpu in gpus:
+        #     tf.config.experimental.set_memory_growth(gpu, True)
+        # embedding_model = hub.load("https://tfhub.dev/google/universal-sentence-encoder-large/5")
+        print('no tf!')
     else:
         raise ValueError(f"Unsupported embedding type '{embedding_type}'.")
     return embedding_model
