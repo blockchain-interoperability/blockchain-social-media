@@ -185,7 +185,13 @@ def compute_embedding_display_proj(embeddings):
 def compute_cluster_keywords(tweet_text, cluster_assignments, num_keywords, coherence_metrics):
     tfidf = TfidfVectorizer(stop_words="english", ngram_range=(1, 1))
     tfidf_vectors = tfidf.fit_transform(tweet_text)
-    tfidf_vocab = np.array(tfidf.get_feature_names())
+    
+    # temporary fix for scikit-learn version difference
+    # https://stackoverflow.com/questions/70215049/attributeerror-tfidfvectorizer-object-has-no-attribute-get-feature-names-out
+    try:
+        tfidf_vocab = np.array(tfidf.get_feature_names())
+    except:
+        tfidf_vocab = np.array(tfidf.get_feature_names_out())
 
     cluster_keywords = []
     cluster_tfidf_scores = []
