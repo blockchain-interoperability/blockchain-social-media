@@ -24,14 +24,11 @@ class LinearAutoEncoder(nn.Module):
         self.encoder = nn.Sequential(
             nn.Linear(384, 200),
             nn.ReLU(inplace=True),
-            # nn.MaxPool2d(2,2),
             nn.Linear(200,50),
             nn.ReLU(inplace=True),
             nn.Linear(50,10),
             nn.ReLU(inplace=True),
-            # nn.MaxPool2d(2,2),
         )
-        # nn.MaxPool2d(2, 2)
        
         #Decoder
         self.decoder = nn.Sequential(

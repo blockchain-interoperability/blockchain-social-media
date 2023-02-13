@@ -9,21 +9,6 @@ The environment can be activated by running `source blockchain-sns-env/bin/activ
 
 The requirements file should be updated by running `pip freeze > requirements.txt` **while you are in in the virtual environment**
 
-## Directory Structure
-
-- twitter-nlp: Contains code for collecting Twitter data
-- steemit: Contains code for collecting Steemit data. Also contains the final CSV file
-- analysis
-    - twitter: Contains code for analyzing collected results from twitter
-        - main.py: Entry point for preprocessing functions
-        - collect_data.py: Grabs the data from index for targetted fields, and caches the results in batched json files
-        - tokenizer.py: Uses the cached json files to create tokenized/lemmatized versions of each tweet.
-    - steemit
-        - Contains code for analyzing collected results from twitter
-
-... And more social media to be added!
-
-
 ## Starting collection for social media
 
 ### Instructions for running twitter collection

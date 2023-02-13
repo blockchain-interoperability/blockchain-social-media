@@ -8,6 +8,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
 from elasticsearch_dsl import Search
+from tqdm.auto import tqdm
 
 from config import Config
 
@@ -49,6 +50,8 @@ es = Elasticsearch(hosts=[config.elasticsearch_host],
 print("Polling for unscored docs in Elasticsearch...")
 print()
 logging.info("Starting poller...")
+
+pbar = tqdm()
 while True:
     try:
         s = Search(using=es, index=config.elasticsearch_index_name)
@@ -60,9 +63,11 @@ while True:
 
         if len(hits) == 0:
             #Sleep - idle
-            logging.info("No unscored docs found. Going to sleep (idle)...")
-            time.sleep(config.sleep_idle_secs)
-            continue
+            # logging.info("No unscored docs found. Going to sleep (idle)...")
+            # time.sleep(config.sleep_idle_secs)
+            # continue
+            print('I think we are done, exiting...')
+            break
 
         #Run sentiment analysis on the batch
         logging.info("Found {0} unscored docs. Calculating sentiment scores with Vader...".format(len(hits)))
@@ -108,6 +113,8 @@ while True:
         #Sleep - not idle
         logging.info("Updates completed successfully. Going to sleep (not idle)...")
         time.sleep(config.sleep_not_idle_secs)
+
+        pbar.update(1)
 
     except Exception as ex:
         logging.exception("Exception occurred while polling or processing a batch.")
