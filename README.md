@@ -1,6 +1,21 @@
 # Blockchain Interoperability
 
 
+## TODO
+
+### Stage 1:
+1.1 Train autoencoder
+1.2 Find large clusters
+1.3 Identify topics of each cluster
+1.4 Create subsets (elasticsearch index) of dataset for each cluster
+
+### Stage 2:
+2.1 Modify streamlit tool to grab the original tweets and not their responses
+2.2 Use the streamlit tool and the topics identified in 1.4 to further analyze/find real-life examples of tweets
+2.3 Analyze the sentiment change accross the clusters using Roberta sentiment
+
+
+
 This repository contains code related to social media data on blockchain interoperability (specifically hack risks)
 
 Requirements for running all scripts can be found in `requirements.txt`. (Python 3.6)
