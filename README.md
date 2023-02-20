@@ -18,9 +18,9 @@
 
 This repository contains code related to social media data on blockchain interoperability (specifically hack risks)
 
-Requirements for running all scripts can be found in `requirements.txt`. (Python 3.6)
-In the local setup, the virtual environment is located in `blockchain-sns-env/`, one level below the root directory
-The environment can be activated by running `source blockchain-sns-env/bin/activate`. 
+Requirements for running all scripts can be found in `requirements.txt`. (Python 3.9)
+In the local setup, the virtual environment is located in `/data/blockchain-interoperability/blockchain-social-media/blockchain-sns-env/`, one level below the root directory
+The environment can be activated by running `source /data/blockchain-interoperability/blockchain-social-media/blockchain-sns-env/bin/activate`. 
 
 The requirements file should be updated by running `pip freeze > requirements.txt` **while you are in in the virtual environment**
 
