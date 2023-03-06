@@ -65,7 +65,6 @@ def start():
             
             #Get the next batch of hits from Elasticsearch
             hits = s.execute()
-            print('got hits')
 
             if len(hits) == 0:
                 #Sleep - idle

@@ -20,45 +20,75 @@ st.set_page_config(
 )
 
 es_indices = {
-    "coronavirus-data-all-lite": {
-        "embedding_type": "use_large",
-        "example_query": "Shut down the schools!",
-        "example_aspects": ["child safety", "saving the economy"]
-    },
-    "coronavirus-data-masks": {
-        "embedding_type": "use_large",
-        "example_query": "Why should I wear a mask?",
-        "example_aspects": ["protecting others", "personal freedom"]
-    },
-    "coronavirus-data-pubhealth-quotes": {
-        "embedding_type": "sbert",
-        "example_query": "Stay home, stay safe.",
-        "example_aspects": ["CDC can't be trusted", "flatten the curve"]
-    },
-    "opioids-data-all": {
-        "embedding_type": "use_large",
-        "example_query": "Heroine",
-        "example_aspects": ["can't stop", "stay away"]
-    },
-    "ukraine-data-lite": {
-        "embedding_type": "sbert",
-        "example_query": "US should arm Ukraine with fighter jets.",
-        "example_aspects": ["risks of getting involved", "Russian war crimes"]
-    },
-    "ukraine-data-lite-oct22": {
-        "embedding_type": "sbert",
-        "example_query": "US should arm Ukraine with fighter jets.",
-        "example_aspects": ["risks of getting involved", "Russian war crimes"]
-    },
-    "vaccine-data-pubhealth-quotes": {
-        "embedding_type": "sbert",
-        "example_query": "Pregnant women should get vaccinated.",
-        "example_aspects": ["risks to baby", "COVID while pregnant"]
-    },
+    # "coronavirus-data-all-lite": {
+    #     "embedding_type": "use_large",
+    #     "example_query": "Shut down the schools!",
+    #     "example_aspects": ["child safety", "saving the economy"]
+    # },
+    # "coronavirus-data-masks": {
+    #     "embedding_type": "use_large",
+    #     "example_query": "Why should I wear a mask?",
+    #     "example_aspects": ["protecting others", "personal freedom"]
+    # },
+    # "coronavirus-data-pubhealth-quotes": {
+    #     "embedding_type": "sbert",
+    #     "example_query": "Stay home, stay safe.",
+    #     "example_aspects": ["CDC can't be trusted", "flatten the curve"]
+    # },
+    # "opioids-data-all": {
+    #     "embedding_type": "use_large",
+    #     "example_query": "Heroine",
+    #     "example_aspects": ["can't stop", "stay away"]
+    # },
+    # "ukraine-data-lite": {
+    #     "embedding_type": "sbert",
+    #     "example_query": "US should arm Ukraine with fighter jets.",
+    #     "example_aspects": ["risks of getting involved", "Russian war crimes"]
+    # },
+    # "ukraine-data-lite-oct22": {
+    #     "embedding_type": "sbert",
+    #     "example_query": "US should arm Ukraine with fighter jets.",
+    #     "example_aspects": ["risks of getting involved", "Russian war crimes"]
+    # },
+    # "vaccine-data-pubhealth-quotes": {
+    #     "embedding_type": "sbert",
+    #     "example_query": "Pregnant women should get vaccinated.",
+    #     "example_aspects": ["risks to baby", "COVID while pregnant"]
+    # },
     "blockchain-small-0": {
         "embedding_type": "sbert",
         "example_query": "binance should have helped ftx",
-        "example_aspects": ["binance good","binance_bad"]
+        "example_aspects": ["Statement 1","Statement 2"]
+    },
+    "blockchain-cluster-0": {
+        "embedding_type": "sbert",
+        "example_query": "binance should have helped ftx",
+        "example_aspects": ["Statement 1","Statement 2"]
+    },
+    "blockchain-cluster-1": {
+        "embedding_type": "sbert",
+        "example_query": "binance should have helped ftx",
+        "example_aspects": ["Statement 1","Statement 2"]
+    },
+    "blockchain-cluster-2": {
+        "embedding_type": "sbert",
+        "example_query": "binance should have helped ftx",
+        "example_aspects": ["Statement 1","Statement 2"]
+    },
+    "blockchain-cluster-3": {
+        "embedding_type": "sbert",
+        "example_query": "binance should have helped ftx",
+        "example_aspects": ["Statement 1","Statement 2"]
+    },
+    "blockchain-cluster-4": {
+        "embedding_type": "sbert",
+        "example_query": "binance should have helped ftx",
+        "example_aspects": ["Statement 1","Statement 2"]
+    },
+    "blockchain-cluster-5": {
+        "embedding_type": "sbert",
+        "example_query": "binance should have helped ftx",
+        "example_aspects": ["Statement 1","Statement 2"]
     }
 }
 
