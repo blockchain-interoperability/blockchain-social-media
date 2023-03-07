@@ -30,18 +30,26 @@ def get_tweet_text(hit):
 
     return text, quoted_text
 
-def get_base_filters(embedding_type):
-    return [{
-        "exists": {
-            "field": f"embedding.{embedding_type}.quoted"
-        }
-    }, {
-        "exists": {
-            "field": f"embedding.{embedding_type}.primary"
-        }
-    }]
+def get_base_filters(embedding_type, use_responses):
+    
+    if use_responses:
+        return [{
+            "exists": {
+                "field": f"embedding.{embedding_type}.quoted"
+            }
+        }, {
+            "exists": {
+                "field": f"embedding.{embedding_type}.primary"
+            }
+        }]
+    else:
+        return [{
+            "exists": {
+                "field": f"embedding.{embedding_type}.primary"
+            }
+        }]
 
-def get_query(embedding_type, query_embedding, date_range):
+def get_query(embedding_type, query_embedding, date_range, use_responses):
     additional_filters = []
     if len(date_range) > 0:
         additional_filters.append({
@@ -56,18 +64,31 @@ def get_query(embedding_type, query_embedding, date_range):
         if len(date_range) > 1:
             additional_filters[-1]["range"]["created_at"]["lte"] = date_range[1].strftime("%Y-%m-%d")
 
+    if use_responses:
+        source_keys = [
+            "id_str", "text", "extended_tweet.full_text", "quoted_status.text", 
+            "quoted_status.extended_tweet.full_text", f"embedding.{embedding_type}.primary"
+        ]
+        match_function = f"dotProduct(params.query_vector, 'embedding.{embedding_type}.quoted') + 1.0"
+    else:
+        source_keys = [
+            "id_str", "text", "extended_tweet.full_text", f"embedding.{embedding_type}.primary"
+        ]
+        match_function = f"dotProduct(params.query_vector, 'embedding.{embedding_type}.primary') + 1.0"
+
+
     query = {
-        "_source": ["id_str", "text", "extended_tweet.full_text", "quoted_status.text", 
-                    "quoted_status.extended_tweet.full_text", f"embedding.{embedding_type}.primary"],
+        "_source": source_keys,
         "query": {
             "script_score": {
                 "query": {
                     "bool": {
-                        "filter": get_base_filters(embedding_type) + additional_filters
+                        "filter": get_base_filters(embedding_type, use_responses) + additional_filters
                     }
                 },
                 "script": {
-                    "source": f"dotProduct(params.query_vector, 'embedding.{embedding_type}.quoted') + 1.0",
+                    
+                    "source": match_function,
                     "params": {"query_vector": query_embedding.tolist()}
                 }
             }
@@ -75,7 +96,7 @@ def get_query(embedding_type, query_embedding, date_range):
     }
     return query
 
-def run_query(es_uri, es_index, embedding_type, embedding_model, query, date_range, max_results=1000):
+def run_query(es_uri, es_index, embedding_type, embedding_model, query, date_range, max_results=1000,use_responses=False):
     # Embed query
     if embedding_type == "sbert":
         query_embedding = embedding_model.encode(query, normalize_embeddings=True)
@@ -85,10 +106,10 @@ def run_query(es_uri, es_index, embedding_type, embedding_model, query, date_ran
         raise ValueError(f"Unsupported embedding type '{embedding_type}'.")
 
     # Use query embeddings to get responses to similar tweets
-    with Elasticsearch(hosts=[es_uri], timeout=60, verify_certs=False) as es:
+    with Elasticsearch(hosts=[es_uri], timeout=600000, verify_certs=False) as es:
         s = Search(using=es, index=es_index)
         s = s.params(size=max_results)
-        s.update_from_dict(get_query(embedding_type, query_embedding, date_range))
+        s.update_from_dict(get_query(embedding_type, query_embedding, date_range, use_responses))
 
         tweet_text = []
         tweet_text_display = []
@@ -97,9 +118,13 @@ def run_query(es_uri, es_index, embedding_type, embedding_model, query, date_ran
         for hit in s.execute():
             tweet_embeddings.append(np.array(hit["embedding"][embedding_type]["primary"]))
             text, quoted_text = get_tweet_text(hit)
-            tweet_text.append((quoted_text, text))
-            tweet_text_display.append(f"Tweet:<br>----------<br>{text_wrap(quoted_text)}<br><br>"
-                                      f"Response:<br>----------<br>{text_wrap(text)}")
+            if use_responses:
+                tweet_text.append((quoted_text, text))
+                tweet_text_display.append(f"Tweet:<br>----------<br>{text_wrap(quoted_text)}<br><br>"
+                                        f"Response:<br>----------<br>{text_wrap(text)}")
+            else:
+                tweet_text.append((text,))
+                tweet_text_display.append(f'Tweet:<br>----------<br>{text_wrap(text)}<br>')
             tweet_scores.append(hit.meta.score-1.0)
             if len(tweet_embeddings) == max_results:
                 break
@@ -109,13 +134,13 @@ def run_query(es_uri, es_index, embedding_type, embedding_model, query, date_ran
 
     return tweet_text, tweet_text_display, tweet_embeddings, tweet_scores
 
-def get_index_date_boundaries(es_uri, es_index, embedding_type):
+def get_index_date_boundaries(es_uri, es_index, embedding_type, use_responses):
     with Elasticsearch(hosts=[es_uri], timeout=60, verify_certs=False) as es:
         s = Search(using=es, index=es_index)
         s = s.params(size=0)
         s.update_from_dict({
             "query": {
-                "bool": {"filter": get_base_filters(embedding_type)}
+                "bool": {"filter": get_base_filters(embedding_type, use_responses)}
             },
             "aggs": {
                 "min_date": {"min": {"field": "created_at", "format": "strict_date"}},

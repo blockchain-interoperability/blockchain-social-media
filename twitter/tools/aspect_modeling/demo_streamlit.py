@@ -108,7 +108,7 @@ def get_embedding_model(embedding_type):
     return embedding_model
 
 @st.cache(allow_output_mutation=True, max_entries=1)
-def get_query_results(es_index, embedding_type, query, date_range, max_results):
+def get_query_results(es_index, embedding_type, query, date_range, max_results, use_responses):
     embedding_model = get_embedding_model(embedding_type)
     query_results = asp.run_query(
         es_uri, 
@@ -117,12 +117,13 @@ def get_query_results(es_index, embedding_type, query, date_range, max_results):
         embedding_model, 
         query, 
         date_range,
-        max_results=max_results)
+        max_results=max_results,
+        use_responses = use_responses)
     return query_results
 
 @st.cache(allow_output_mutation=True)
-def get_date_boundaries(es_index, embedding_type):
-    date_boundaries = asp.get_index_date_boundaries(es_uri, es_index, embedding_type)
+def get_date_boundaries(es_index, embedding_type, use_responses):
+    date_boundaries = asp.get_index_date_boundaries(es_uri, es_index, embedding_type, use_responses)
     return date_boundaries
 
 @st.cache(allow_output_mutation=True, max_entries=1)
@@ -160,10 +161,13 @@ def run():
                                     key="elasticsearch_index")
             embedding_type = es_indices[es_index]["embedding_type"]
 
-            query = st.text_input("Find responses to tweets similar to: *", 
+            query = st.text_input("Find tweets similar to: *", 
                                   key="query", 
                                   value=es_indices[es_index]["example_query"])
-            date_boundaries = get_date_boundaries(es_index, embedding_type)
+            use_responses = st.select_slider("Search by responses:", ["Off", "On"])
+            use_responses = use_responses == 'On'
+            
+            date_boundaries = get_date_boundaries(es_index, embedding_type, use_responses)
             date_range = st.date_input("Date Range: *", key="date_range", value=date_boundaries,
                                        min_value=date_boundaries[0], max_value=date_boundaries[1])
             max_results = st.slider("Max Results *", 500, 10000, key="max_results", 
@@ -215,7 +219,7 @@ def run():
     elif len(date_range) == 1:
         date_range = (date_range[0], date_boundaries[1])
     tweet_text, tweet_text_display, tweet_embeddings, tweet_scores = get_query_results(
-        es_index, embedding_type, query, date_range, max_results
+        es_index, embedding_type, query, date_range, max_results, use_responses
     )
     aspect_similarities = get_aspect_similarities(tweet_embeddings, embedding_type, aspects)
 
@@ -249,7 +253,10 @@ def run():
     # Step 5: Run topic modeling on clusters with tf-idf
     cluster_keywords = None
     if len(cluster_assignments) > 0:
-        filtered_tweet_responses = [tweet_text[1] for tweet_text in filtered_tweet_text]
+        filtered_tweet_responses = [tweet_text[use_responses] for tweet_text in filtered_tweet_text]
+        
+        print('we are gonna cluster thes: ', filtered_tweet_responses[:10])
+
         cluster_keywords, cluster_tfidf_scores, cluster_coherence = get_cluster_keywords(
             filtered_tweet_responses, cluster_assignments, num_topic_keywords, coherence_metrics
         )
