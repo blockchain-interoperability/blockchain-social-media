@@ -58,37 +58,37 @@ es_indices = {
     "blockchain-small-0": {
         "embedding_type": "sbert",
         "example_query": "binance should have helped ftx",
-        "example_aspects": ["Statement 1","Statement 2"]
+        "example_aspects": ["Aspect 1","Aspect 2"]
     },
     "blockchain-cluster-0": {
         "embedding_type": "sbert",
         "example_query": "binance should have helped ftx",
-        "example_aspects": ["Statement 1","Statement 2"]
+        "example_aspects": ["Aspect 1","Aspect 2"]
     },
     "blockchain-cluster-1": {
         "embedding_type": "sbert",
         "example_query": "binance should have helped ftx",
-        "example_aspects": ["Statement 1","Statement 2"]
+        "example_aspects": ["Aspect 1","Aspect 2"]
     },
     "blockchain-cluster-2": {
         "embedding_type": "sbert",
         "example_query": "binance should have helped ftx",
-        "example_aspects": ["Statement 1","Statement 2"]
+        "example_aspects": ["Aspect 1","Aspect 2"]
     },
     "blockchain-cluster-3": {
         "embedding_type": "sbert",
         "example_query": "binance should have helped ftx",
-        "example_aspects": ["Statement 1","Statement 2"]
+        "example_aspects": ["Aspect 1","Aspect 2"]
     },
     "blockchain-cluster-4": {
         "embedding_type": "sbert",
         "example_query": "binance should have helped ftx",
-        "example_aspects": ["Statement 1","Statement 2"]
+        "example_aspects": ["Aspect 1","Aspect 2"]
     },
     "blockchain-cluster-5": {
         "embedding_type": "sbert",
         "example_query": "binance should have helped ftx",
-        "example_aspects": ["Statement 1","Statement 2"]
+        "example_aspects": ["Aspect 1","Aspect 2"]
     }
 }
 
@@ -156,7 +156,7 @@ def run():
             sorted_es_indices = sorted(es_indices.keys())
             es_index = st.selectbox("Elasticsearch Index *", 
                                     sorted_es_indices,
-                                    index = sorted_es_indices.index("ukraine-data-lite-oct22"),
+                                    index = 0,
                                     key="elasticsearch_index")
             embedding_type = es_indices[es_index]["embedding_type"]
 
