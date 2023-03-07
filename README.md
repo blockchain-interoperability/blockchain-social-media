@@ -24,6 +24,18 @@ The environment can be activated by running `source /data/blockchain-interoperab
 
 The requirements file should be updated by running `pip freeze > requirements.txt` **while you are in in the virtual environment**
 
+## How to use the streamlit dashboard
+
+Credits to Abraham Sanders to the [original code](https://github.com/TheRensselaerIDEA/twitter-nlp)
+
+To run the dashboard on your local machine, first ensure that elasticsearch is exposed through port 8080.
+The dashboard can then be accessed by running 
+
+```streamlit run demo_streamlit.py```
+
+inside the `tools/aspect_modeling` directory.
+
+
 ## Starting collection for social media
 
 ### Instructions for running twitter collection
@@ -70,6 +82,7 @@ End date: `Timestamp('2022-11-23 20:58:16.667000')`
 
 
 use `pd.to_datetime()` to convert strings to datetime objects for consistency
+
 
 ## Acknowledgements
 
