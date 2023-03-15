@@ -55,41 +55,42 @@ es_indices = {
     #     "example_query": "Pregnant women should get vaccinated.",
     #     "example_aspects": ["risks to baby", "COVID while pregnant"]
     # },
-    "blockchain-small-0": {
-        "embedding_type": "sbert",
-        "example_query": "binance should have helped ftx",
-        "example_aspects": ["Aspect 1","Aspect 2"]
-    },
+    
     "blockchain-cluster-0": {
         "embedding_type": "sbert",
-        "example_query": "binance should have helped ftx",
+        "example_query": "binance and ftx",
         "example_aspects": ["Aspect 1","Aspect 2"]
     },
     "blockchain-cluster-1": {
         "embedding_type": "sbert",
-        "example_query": "binance should have helped ftx",
+        "example_query": "binance and ftx",
         "example_aspects": ["Aspect 1","Aspect 2"]
     },
     "blockchain-cluster-2": {
         "embedding_type": "sbert",
-        "example_query": "binance should have helped ftx",
+        "example_query": "binance and ftx",
         "example_aspects": ["Aspect 1","Aspect 2"]
     },
     "blockchain-cluster-3": {
         "embedding_type": "sbert",
-        "example_query": "binance should have helped ftx",
+        "example_query": "binance and ftx",
         "example_aspects": ["Aspect 1","Aspect 2"]
     },
     "blockchain-cluster-4": {
         "embedding_type": "sbert",
-        "example_query": "binance should have helped ftx",
+        "example_query": "binance and ftx",
         "example_aspects": ["Aspect 1","Aspect 2"]
     },
     "blockchain-cluster-5": {
         "embedding_type": "sbert",
-        "example_query": "binance should have helped ftx",
+        "example_query": "binance and ftx",
         "example_aspects": ["Aspect 1","Aspect 2"]
-    }
+    },
+    "blockchain-small-0": {
+        "embedding_type": "sbert",
+        "example_query": "binance and ftx",
+        "example_aspects": ["Aspect 1","Aspect 2"]
+    },
 }
 
 @st.cache(allow_output_mutation=True, max_entries=2)
@@ -157,7 +158,7 @@ def run():
             sorted_es_indices = sorted(es_indices.keys())
             es_index = st.selectbox("Elasticsearch Index *", 
                                     sorted_es_indices,
-                                    index = 0,
+                                    index = 1,
                                     key="elasticsearch_index")
             embedding_type = es_indices[es_index]["embedding_type"]
 
@@ -166,6 +167,9 @@ def run():
                                   value=es_indices[es_index]["example_query"])
             use_responses = st.select_slider("Search by responses:", ["Off", "On"])
             use_responses = use_responses == 'On'
+
+            filter_by_aspect = st.select_slider("Filter responses by aspect:", ["Off", "On"])
+            filter_by_aspect = filter_by_aspect == 'On'
             
             date_boundaries = get_date_boundaries(es_index, embedding_type, use_responses)
             date_range = st.date_input("Date Range: *", key="date_range", value=date_boundaries,
@@ -186,7 +190,7 @@ def run():
 
         with clustering_tab:
             # Clustering space & dimension reduction
-            clustering_space = st.selectbox("Clustering Space", ["aspect", "embedding"], key="clustering_space")
+            clustering_space = st.selectbox("Clustering Space", ["embedding","aspect"], key="clustering_space")
             dreduce_dim = None
             if clustering_space == "embedding":
                 max_dim = 512 if embedding_type == "use_large" else 384
@@ -226,12 +230,17 @@ def run():
     # Step 3: Filter results by min query and aspect similarity
     min_query_similarity_filter = tweet_scores >= min_query_similarity
     min_aspect_similarity_filter = (aspect_similarities >= min_aspect_similarity).any(axis=-1)
-    combined_filter = min_query_similarity_filter & min_aspect_similarity_filter
+    if filter_by_aspect:
+        combined_filter = min_query_similarity_filter & min_aspect_similarity_filter
+    else:
+        combined_filter = min_query_similarity_filter
     
     filtered_aspect_similarities = aspect_similarities[combined_filter]
     filtered_tweet_embeddings = tweet_embeddings[combined_filter]
     filtered_tweet_text = list(compress(tweet_text, combined_filter))
     filtered_tweet_text_display = list(compress(tweet_text_display, combined_filter))
+
+    print(f'after filtering, we get {len(filtered_tweet_text)} tweets..')
     
     # Step 4: Run clustering
     vectors_to_cluster = filtered_aspect_similarities if clustering_space == "aspect" else filtered_tweet_embeddings
@@ -246,8 +255,10 @@ def run():
             vectors_to_cluster, clustering_type, kmeans_n_clusters, hdbscan_min_cluster_size, hdbscan_min_samples, dreduce_dim
         )
         actual_n_clusters = np.max(cluster_assignments) + 1
+        print(f'we got {actual_n_clusters} clusters')
 
     if clustering_space == "embedding":
+        print(f'we are resizing the vector with shape: {vectors_to_cluster.shape}')
         vectors_to_cluster = get_embedding_display_proj(vectors_to_cluster)
 
     # Step 5: Run topic modeling on clusters with tf-idf

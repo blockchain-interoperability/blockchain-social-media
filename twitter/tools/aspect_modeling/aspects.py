@@ -131,6 +131,7 @@ def run_query(es_uri, es_index, embedding_type, embedding_model, query, date_ran
 
         tweet_embeddings = np.vstack(tweet_embeddings)
         tweet_scores = np.array(tweet_scores)
+    print(f'The query got {len(tweet_embeddings)} tweets')
 
     return tweet_text, tweet_text_display, tweet_embeddings, tweet_scores
 
