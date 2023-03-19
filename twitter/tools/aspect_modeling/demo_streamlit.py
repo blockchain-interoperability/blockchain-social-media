@@ -1,100 +1,43 @@
-import plotly.graph_objects as go
+from typing import List,Tuple
 import streamlit as st
 import numpy as np
 # import tensorflow_hub as hub
 # import tensorflow as tf
+from datetime import datetime
 from itertools import compress
 from sentence_transformers import SentenceTransformer
 from scipy.stats import linregress, pearsonr
 from gensim.models.coherencemodel import COHERENCE_MEASURES
+import json
 
-import aspects as asp
-from display_helpers import format_date_range, build_topic_dataframes
+from query import (
+    run_query,
+    get_index_date_boundaries
+)
+from clustering import (
+    cluster_vectors,
+    compute_cluster_keywords,
+    plot_cluster,
+    compute_embedding_display_proj,
+    build_topic_dataframes
+)
+from aspects import compute_aspect_similarities
+from sentiment import plot_cluster_sentiment
+from display_helpers import format_date_range
 
-es_uri = "https://localhost:8080/elasticsearch/"
-title = "Twitter Response Analysis"
+config_file = 'config.json'
+config = json.load(open(config_file))
+
 st.set_page_config(
-    page_title=title,
+    page_title=config['title'],
     page_icon="📊",
     layout="wide"
 )
 
-es_indices = {
-    # "coronavirus-data-all-lite": {
-    #     "embedding_type": "use_large",
-    #     "example_query": "Shut down the schools!",
-    #     "example_aspects": ["child safety", "saving the economy"]
-    # },
-    # "coronavirus-data-masks": {
-    #     "embedding_type": "use_large",
-    #     "example_query": "Why should I wear a mask?",
-    #     "example_aspects": ["protecting others", "personal freedom"]
-    # },
-    # "coronavirus-data-pubhealth-quotes": {
-    #     "embedding_type": "sbert",
-    #     "example_query": "Stay home, stay safe.",
-    #     "example_aspects": ["CDC can't be trusted", "flatten the curve"]
-    # },
-    # "opioids-data-all": {
-    #     "embedding_type": "use_large",
-    #     "example_query": "Heroine",
-    #     "example_aspects": ["can't stop", "stay away"]
-    # },
-    # "ukraine-data-lite": {
-    #     "embedding_type": "sbert",
-    #     "example_query": "US should arm Ukraine with fighter jets.",
-    #     "example_aspects": ["risks of getting involved", "Russian war crimes"]
-    # },
-    # "ukraine-data-lite-oct22": {
-    #     "embedding_type": "sbert",
-    #     "example_query": "US should arm Ukraine with fighter jets.",
-    #     "example_aspects": ["risks of getting involved", "Russian war crimes"]
-    # },
-    # "vaccine-data-pubhealth-quotes": {
-    #     "embedding_type": "sbert",
-    #     "example_query": "Pregnant women should get vaccinated.",
-    #     "example_aspects": ["risks to baby", "COVID while pregnant"]
-    # },
-    
-    "blockchain-cluster-0": {
-        "embedding_type": "sbert",
-        "example_query": "binance and ftx",
-        "example_aspects": ["Aspect 1","Aspect 2"]
-    },
-    "blockchain-cluster-1": {
-        "embedding_type": "sbert",
-        "example_query": "binance and ftx",
-        "example_aspects": ["Aspect 1","Aspect 2"]
-    },
-    "blockchain-cluster-2": {
-        "embedding_type": "sbert",
-        "example_query": "binance and ftx",
-        "example_aspects": ["Aspect 1","Aspect 2"]
-    },
-    "blockchain-cluster-3": {
-        "embedding_type": "sbert",
-        "example_query": "binance and ftx",
-        "example_aspects": ["Aspect 1","Aspect 2"]
-    },
-    "blockchain-cluster-4": {
-        "embedding_type": "sbert",
-        "example_query": "binance and ftx",
-        "example_aspects": ["Aspect 1","Aspect 2"]
-    },
-    "blockchain-cluster-5": {
-        "embedding_type": "sbert",
-        "example_query": "binance and ftx",
-        "example_aspects": ["Aspect 1","Aspect 2"]
-    },
-    "blockchain-small-0": {
-        "embedding_type": "sbert",
-        "example_query": "binance and ftx",
-        "example_aspects": ["Aspect 1","Aspect 2"]
-    },
-}
-
 @st.cache(allow_output_mutation=True, max_entries=2)
-def get_embedding_model(embedding_type):
+def get_embedding_model(
+        embedding_type: str
+    ) -> SentenceTransformer:
     if embedding_type == "sbert":
         embedding_model = SentenceTransformer("all-MiniLM-L12-v2")
     elif embedding_type == "use_large":
@@ -109,62 +52,79 @@ def get_embedding_model(embedding_type):
     return embedding_model
 
 @st.cache(allow_output_mutation=True, max_entries=1)
-def get_query_results(es_index, embedding_type, query, date_range, max_results, use_responses):
+def get_query_results(
+        es_index:str, 
+        embedding_type:str, 
+        query:str, 
+        date_range:Tuple[datetime,datetime],
+        max_results:int, 
+        sentiment_type:str, 
+        use_responses:bool
+    ) -> dict:
     embedding_model = get_embedding_model(embedding_type)
-    query_results = asp.run_query(
-        es_uri, 
+    query_results = run_query(
+        config['es_uri'], 
         es_index, 
         embedding_type,
         embedding_model, 
         query, 
         date_range,
+        sentiment_type,
         max_results=max_results,
         use_responses = use_responses)
     return query_results
 
 @st.cache(allow_output_mutation=True)
-def get_date_boundaries(es_index, embedding_type, use_responses):
-    date_boundaries = asp.get_index_date_boundaries(es_uri, es_index, embedding_type, use_responses)
+def get_date_boundaries(
+        es_index: str, 
+        embedding_type: str, 
+        use_responses: bool
+    ) -> Tuple[datetime,datetime]:
+    date_boundaries = get_index_date_boundaries(config['es_uri'], es_index, embedding_type, use_responses)
     return date_boundaries
 
 @st.cache(allow_output_mutation=True, max_entries=1)
-def get_aspect_similarities(tweet_embeddings, embedding_type, aspects):
+def get_aspect_similarities(
+        tweet_embeddings: np.array, 
+        embedding_type: str, 
+        aspects: List[str]
+    ):
     embedding_model = get_embedding_model(embedding_type)
-    aspect_similarities = asp.compute_aspect_similarities(
+    aspect_similarities = compute_aspect_similarities(
         tweet_embeddings, embedding_type, embedding_model, aspects)
     return aspect_similarities
 
 @st.cache(allow_output_mutation=True, max_entries=1)
 def get_cluster_assignments(*args, **kwargs):
-    cluster_assignments = asp.cluster_vectors(*args, **kwargs)
+    cluster_assignments = cluster_vectors(*args, **kwargs)
     return cluster_assignments
 
 @st.cache(allow_output_mutation=True, max_entries=1)
 def get_embedding_display_proj(*args, **kwargs):
-    proj = asp.compute_embedding_display_proj(*args, **kwargs)
+    proj = compute_embedding_display_proj(*args, **kwargs)
     return proj
 
 @st.cache(allow_output_mutation=True, max_entries=1)
 def get_cluster_keywords(*args, **kwargs):
-    keywords = asp.compute_cluster_keywords(*args, **kwargs)
+    keywords = compute_cluster_keywords(*args, **kwargs)
     return keywords
 
 def run():
     # Step 1: Collect query, aspect, and clustering parameters
     with st.sidebar:
-        st.title(title)
-        query_tab, aspects_tab, clustering_tab = st.tabs(["Query", "Aspects", "Clustering"])
+        st.title(config['title'])
+        query_tab, aspects_tab, clustering_tab, sentiment_tab = st.tabs(["Query", "Aspects", "Clustering","Sentiment"])
         with query_tab:
-            sorted_es_indices = sorted(es_indices.keys())
+            sorted_es_indices = sorted(config['es_indices'].keys())
             es_index = st.selectbox("Elasticsearch Index *", 
                                     sorted_es_indices,
                                     index = 1,
                                     key="elasticsearch_index")
-            embedding_type = es_indices[es_index]["embedding_type"]
+            embedding_type = config['es_indices'][es_index]["embedding_type"]
 
             query = st.text_input("Find tweets similar to: *", 
                                   key="query", 
-                                  value=es_indices[es_index]["example_query"])
+                                  value=config['es_indices'][es_index]["example_query"])
             use_responses = st.select_slider("Search by responses:", ["Off", "On"])
             use_responses = use_responses == 'On'
 
@@ -181,7 +141,7 @@ def run():
             st.markdown('<span style="color: red">*: changing causes query to re-run.</span>', unsafe_allow_html=True)
 
         with aspects_tab:
-            aspect_defaults = es_indices[es_index]["example_aspects"]
+            aspect_defaults = config['es_indices'][es_index]["example_aspects"]
             aspects = [st.text_input(f"Aspect {i+1}:", key=f"aspect_{i+1}", value=aspect_defaults[i]) 
                        for i in range(2)]
             min_aspect_similarity = st.slider("Min Aspect Similarity", -1.0, 1.0, key="min_aspect_similarity", 
@@ -215,6 +175,10 @@ def run():
             coherence_metrics = st.multiselect(
                 "Topic Coherence Metrics", list(COHERENCE_MEASURES), default=["u_mass", "c_w2v"], key="coherence_metrics"
             )
+        
+        with sentiment_tab:
+            sentiment_type = st.selectbox('Sentiment Type',['roberta','vader'])
+
             
     # Step 2: Execute the query and compute aspect similarities
     # (results are cached for unchanged query and aspect parameters)
@@ -222,8 +186,8 @@ def run():
         date_range = date_boundaries
     elif len(date_range) == 1:
         date_range = (date_range[0], date_boundaries[1])
-    tweet_text, tweet_text_display, tweet_embeddings, tweet_scores = get_query_results(
-        es_index, embedding_type, query, date_range, max_results, use_responses
+    tweet_text, tweet_text_display, tweet_embeddings, tweet_scores, tweet_sentiments, timestamp = get_query_results(
+        es_index, embedding_type, query, date_range, max_results,sentiment_type, use_responses
     )
     aspect_similarities = get_aspect_similarities(tweet_embeddings, embedding_type, aspects)
 
@@ -239,6 +203,10 @@ def run():
     filtered_tweet_embeddings = tweet_embeddings[combined_filter]
     filtered_tweet_text = list(compress(tweet_text, combined_filter))
     filtered_tweet_text_display = list(compress(tweet_text_display, combined_filter))
+    filtered_timestamp = list(compress(timestamp,combined_filter))
+    filtered_tweet_sentiments = tweet_sentiments[combined_filter]
+
+    # filtered_tweet_sentiment = 
 
     print(f'after filtering, we get {len(filtered_tweet_text)} tweets..')
     
@@ -288,26 +256,40 @@ def run():
                     f"**Pearson's r:** {rvalue:.3f} (p={pvalue:.3f}); &nbsp;&nbsp; "
                     f"**Clusters:** {actual_n_clusters}; &nbsp;&nbsp; "
                     f"**Silhouette:** {silhouette_score:.3f}", unsafe_allow_html=True)
-        results_plot = go.Figure()
-        results_plot.layout.margin = go.layout.Margin(b=0, l=0, r=0, t=30)
-        if clustering_space == "aspect":
-            results_plot.update_layout(xaxis_title=aspects[0], yaxis_title=aspects[1])
-        for i in np.unique(cluster_assignments).tolist():
-            cluster_vectors = vectors_to_cluster[cluster_assignments == i]
-            cluster_tweet_text_display = list(compress(filtered_tweet_text_display, cluster_assignments == i))
-            results_plot.add_trace(go.Scatter(x=cluster_vectors[:, 0],
-                                              y=cluster_vectors[:, 1],
-                                              mode="markers",
-                                              marker=dict(color=i, colorscale="Viridis"),
-                                              hoverinfo="text",
-                                              hovertext=cluster_tweet_text_display,
-                                              legendgroup=i,
-                                              name=f"Cluster {i+1}"))
-        if show_trendline and linreg is not None:
-            x = np.linspace(vectors_to_cluster[:, 0].min(), vectors_to_cluster[:, 0].max(), 2)
-            y = linreg.slope * x + linreg.intercept
-            results_plot.add_trace(go.Scatter(x=x, y=y, mode="lines", line={"dash": "longdash"}, showlegend=False))
-        st.plotly_chart(results_plot, use_container_width=True)
+        # results_plot = 
+        st.plotly_chart(
+            plot_cluster(
+                filtered_tweet_text_display,
+                clustering_space,
+                aspects,
+                cluster_assignments,
+                vectors_to_cluster,
+                show_trendline,
+                linreg_slope = linreg.slope if linreg else None,
+                linreg_intercept = linreg.intercept if linreg else None,
+            ), 
+            use_container_width=True
+        )
+
+    # Step 8: Draw sentiment
+
+    with st.expander(f"Results ({n_results} responses sentiment)", expanded=True):
+        st.markdown('### Overall sentiment')
+        st.plotly_chart(
+            plot_cluster_sentiment(cluster_assignments,filtered_tweet_sentiments,filtered_timestamp,None)
+        )
+
+        for cluster_id in range(actual_n_clusters):
+            st.markdown(f'### Cluster {cluster_id} sentiment')
+            st.plotly_chart(
+                plot_cluster_sentiment(
+                    cluster_assignments,
+                    filtered_tweet_sentiments,
+                    filtered_timestamp,
+                    cluster_id,
+                ),
+                use_container_width=True
+            )
 
     # display topic results
     if cluster_keywords is not None:
