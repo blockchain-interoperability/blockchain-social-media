@@ -118,7 +118,7 @@ def run():
             sorted_es_indices = sorted(config['es_indices'].keys())
             es_index = st.selectbox("Elasticsearch Index *", 
                                     sorted_es_indices,
-                                    index = 1,
+                                    index = 0,
                                     key="elasticsearch_index")
             embedding_type = config['es_indices'][es_index]["embedding_type"]
 
@@ -274,13 +274,14 @@ def run():
     # Step 8: Draw sentiment
 
     with st.expander(f"Results ({n_results} responses sentiment)", expanded=True):
-        st.markdown('### Overall sentiment')
+        st.markdown('**Overall sentiment**')
         st.plotly_chart(
-            plot_cluster_sentiment(cluster_assignments,filtered_tweet_sentiments,filtered_timestamp,None)
+            plot_cluster_sentiment(cluster_assignments,filtered_tweet_sentiments,filtered_timestamp,None),
+            use_container_width=True
         )
 
         for cluster_id in range(actual_n_clusters):
-            st.markdown(f'### Cluster {cluster_id} sentiment')
+            st.markdown(f'**Cluster {cluster_id+1} sentiment**')
             st.plotly_chart(
                 plot_cluster_sentiment(
                     cluster_assignments,

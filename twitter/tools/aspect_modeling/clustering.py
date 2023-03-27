@@ -1,6 +1,7 @@
 from typing import List
 from itertools import compress
 import numpy as np
+import pandas as pd
 import umap
 from hdbscan import HDBSCAN
 from sklearn.cluster import KMeans

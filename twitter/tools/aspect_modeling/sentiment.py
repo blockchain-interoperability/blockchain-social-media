@@ -8,12 +8,12 @@ def get_time_states(timestamp,subgroup):
         pos_ratio = (subgroup['sentiment'] > .1).sum() / len(subgroup)
         neg_ratio = (subgroup['sentiment'] < -.1).sum() / len(subgroup)
         neu_ratio = 1 - pos_ratio - neg_ratio
-        non_ratio = 0
+        # non_ratio = 0
     else:
         pos_ratio = 0
         neg_ratio = 0
         neu_ratio = 0
-        non_ratio = 1
+        # non_ratio = 1
    
     return {
         'timestamp':timestamp,
@@ -21,7 +21,7 @@ def get_time_states(timestamp,subgroup):
         'pos_ratio': pos_ratio,
         'neg_ratio': neg_ratio,
         'neu_ratio': neu_ratio,
-        'non_ratio': non_ratio,
+        # 'non_ratio': non_ratio,
         'average': (subgroup['sentiment'].mean() + 1)/2,
     }
 

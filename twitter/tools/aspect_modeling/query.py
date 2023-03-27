@@ -165,16 +165,16 @@ def run_query(
         for hit in s.execute():
             tweet_embeddings.append(np.array(hit["embedding"][embedding_type]["primary"]))
             text, quoted_text = get_tweet_text(hit)
+            tweet_scores.append(hit.meta.score-1.0)
+            tweet_sentiments.append(np.array(hit["sentiment"][sentiment_type]["primary"]))
+            timestamp.append(hit['timestamp_ms'])
             if use_responses:
                 tweet_text.append((quoted_text, text))
                 tweet_text_display.append(f"Tweet:<br>----------<br>{text_wrap(quoted_text)}<br><br>"
                                         f"Response:<br>----------<br>{text_wrap(text)}")
             else:
                 tweet_text.append((text,))
-                tweet_text_display.append(f'Tweet:<br>----------<br>{text_wrap(text)}<br>')
-            tweet_scores.append(hit.meta.score-1.0)
-            tweet_sentiments.append(np.array(hit["sentiment"][sentiment_type]["primary"]))
-            timestamp.append(hit['timestamp_ms'])
+                tweet_text_display.append(f'Tweet:<br>----------<br>{text_wrap(text)}<br>----------<br>Sentiment Score: {tweet_sentiments[-1]:.4f}<br>')
             if len(tweet_embeddings) == max_results:
                 break
         
