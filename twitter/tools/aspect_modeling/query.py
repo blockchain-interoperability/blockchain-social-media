@@ -170,11 +170,17 @@ def run_query(
             timestamp.append(hit['timestamp_ms'])
             if use_responses:
                 tweet_text.append((quoted_text, text))
-                tweet_text_display.append(f"Tweet:<br>----------<br>{text_wrap(quoted_text)}<br><br>"
-                                        f"Response:<br>----------<br>{text_wrap(text)}")
+                tweet_text_display.append(
+                    f"Tweet:<br>----------<br>{text_wrap(quoted_text)}<br><br>"
+                    f"Response:<br>----------<br>{text_wrap(text)}"
+                )
             else:
                 tweet_text.append((text,))
-                tweet_text_display.append(f'Tweet:<br>----------<br>{text_wrap(text)}<br>----------<br>Sentiment Score: {tweet_sentiments[-1]:.4f}<br>')
+                tweet_text_display.append(
+                    f'Tweet:<br>----------<br>{text_wrap(text)}'
+                    f'<br>----------<br>Sentiment Score: {tweet_sentiments[-1]:.4f}'
+                    f'<br>----------<br>Timestamp: {str(pd.to_datetime(timestamp[-1],unit="ms"))}'
+                    )
             if len(tweet_embeddings) == max_results:
                 break
         
