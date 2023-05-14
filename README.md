@@ -1,23 +1,10 @@
 # Blockchain Interoperability
 
+This repository contains the data and code used for our paper titled "Decrypting Crypto Social Media: Analyzing Crypto Twitter to Detect Risk Signals".
 
-## TODO
+The `twitter` folder contains the python code for running our analysis. the specific plot generation code can be found in the jupyter notebooks under `twitter/notebooks`.
 
-### Stage 1:
-1.1 Train autoencoder
-1.2 Find large clusters
-1.3 Identify topics of each cluster
-1.4 Create subsets (elasticsearch index) of dataset for each cluster
-
-### Stage 2:
-2.1 Modify streamlit tool to grab the original tweets and not their responses
-2.2 Use the streamlit tool and the topics identified in 1.4 to further analyze/find real-life examples of tweets
-2.3 Analyze the sentiment change accross the clusters using Roberta sentiment
-
-
-
-This repository contains code related to social media data on blockchain interoperability (specifically hack risks)
-
+## Running the code
 Requirements for running all scripts can be found in `requirements.txt`. (Python 3.9)
 In the local setup, the virtual environment is located in `/data/blockchain-interoperability/blockchain-social-media/blockchain-sns-env/`, one level below the root directory
 The environment can be activated by running `source /data/blockchain-interoperability/blockchain-social-media/blockchain-sns-env/bin/activate`. 
