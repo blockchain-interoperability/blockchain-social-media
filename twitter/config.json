@@ -1,7 +1,0 @@
-{
-    "snapshot_path": "/data/blockchain-interoperability/blockchain-social-media/twitter-data/snapshots",
-    "embeddings_path": "/data/blockchain-interoperability/blockchain-social-media/twitter-data/embeddings",
-    "embedder": "all-MiniLM-L12-v2",
-    "sentiment_type": "transformer",
-    "sentiment_path": "/data/blockchain-interoperability/blockchain-social-media/twitter-data/sentiment"
-}
