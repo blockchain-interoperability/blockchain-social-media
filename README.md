@@ -52,19 +52,3 @@ Easiest way: Use the terminal in jupyter kernel for the idea cluster. (You **nee
 3. Run the collection process by `bash run_twitter.sh`
 
 The configuration file can be found under `twitter-nlp/twitter-monitor/blockchain_config.json`.
-
-
-## Collection Period
-
-Start date: `Timestamp('2022-11-09 05:53:33.788000')`
-
-End date: `Timestamp('2022-11-23 20:58:16.667000')`
-
-use `pd.to_datetime()` to convert strings to datetime objects for consistency
-
-All the heavy operations should be ran through main.py. Only once the cache is created locally should you use the data on jupyter.
-
-
-## Acknowledgements
-
-The authors acknowledge the support from NSF IUCRC CRAFT center research grant (CRAFT Grant #22006) for this research. The opinions expressed in this code base do not necessarily represent the views of NSF IUCRC CRAFT.
