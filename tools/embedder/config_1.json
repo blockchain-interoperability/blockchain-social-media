@@ -1,0 +1,18 @@
+{
+    "py/object": "config.Config",
+    "elasticsearch_host": "http://idea-vm-elasticsearch:9200",
+    "elasticsearch_verify_certs": false,
+    "elasticsearch_index_name": "blockchain-cluster-1",
+    "elasticsearch_batch_size": 2000,
+    "elasticsearch_timeout_secs": 120,
+    "use_large_tfhub_url": "https://tfhub.dev/google/universal-sentence-encoder-large/5",
+    "use_large_batch_size": 512,
+    "sbert_model_name": "all-MiniLM-L12-v2",
+    "sbert_batch_size": 512,
+    "sbert_max_seq_length": 512,
+    "embedding_type": "sbert",
+    "sleep_idle_secs": 5,
+    "sleep_not_idle_secs": 0.01,
+    "log_level": "WARNING"
+
+}
