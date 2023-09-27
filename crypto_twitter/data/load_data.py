@@ -87,7 +87,7 @@ def load_data() -> pd.DataFrame:
             for c in cursor:
                 results += [c]
                 progress.update(scroll_task, advance = 1)
-            break
+                break
 
         print('turning into dataframe')
         df = prettify_elastic(results)
