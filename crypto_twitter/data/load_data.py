@@ -3,6 +3,7 @@ from elasticsearch.helpers import scan
 from pathlib import Path
 import pandas as pd
 import h5py
+import click
 
 from crypto_twitter.utils.progress import progress_bar
 from crypto_twitter.config.elastic import (
@@ -111,3 +112,5 @@ def load_data() -> pd.DataFrame:
 
     return df
 
+if __name__ == "__main__":
+    load_data()
