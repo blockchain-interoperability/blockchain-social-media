@@ -5,17 +5,3 @@ steemit/steemit.log
 .vscode
 *.pyc
 *.log
-
-blockchain-sns-env
-twitter/kmeans_pytorch/__pycache__
-
-twitter/__pycache__
-twitter/utils/__pycache__
-
-
-twitter/tools/*/*.json
-
-twitter/tools/embedder/embedderlog.txt
-
-
-twitter/tools/reindex/cluster_*

@@ -1,25 +1,17 @@
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import scan
-import pandas as pd
-from tqdm.auto import tqdm
 from pathlib import Path
-import pickle
-import json
+import pandas as pd
+import h5py
 
-# print()
-# load the keywords for first round filtering
-keywords = json.load(open(Path(__file__).parent.parent/'keywords.json'))
-elastic_config = json.load(open(Path(__file__).parent.parent/'elastic_config.json'))
+from crypto_twitter.utils.progress import progress_bar
+from crypto_twitter.config.elastic import (
+    ELASTIC_CONFIG,
+    KEYWORDS,
+)
+from crypto_twitter.config.paths import SNAPSHOT_DIR
 
-
-def has_keyword(text):
-    return any(
-        k.lower() in text.lower()
-        for k in keywords
-    )
-
-
-def prettify_elastic(results):
+def prettify_elastic(results) -> pd.DataFrame:
     """Cleans up list of results into a dataframe while dropping some unncessary columns.
 
     Args:
@@ -48,27 +40,24 @@ def prettify_elastic(results):
 
     return df
 
-def cache_index(snapshot_path,**kwargs):
+def load_data() -> pd.DataFrame:
     """Grabs the specified fields from the specified index on Elasticsearch. Since results are expected to be larged, batched pickle files are generated
 
     Args:
-        snapshot_path (str, optional): Path of directory that stores snapshots. Defaults to ''.
+        SNAPSHOT_DIR (str, optional): Path of directory that stores snapshots. Defaults to ''.
     Returns:
         df (pd.DataFrame): A concatenated dataframe containing all the specified columns.
     """
 
-    snapshot_path = Path(snapshot_path)
-    snapshot_path.mkdir(exist_ok=True,parents=True)
-
     es = Elasticsearch(
-        hosts=[elastic_config['hostname']],
+        hosts=[ELASTIC_CONFIG['hostname']],
         verify_certs=False,
     )    
     # we will add a query to only grab the ones that contain at least one keyword (or partially, if keyword was space separated)
-    mainquery = elastic_config['mainquery']
+    mainquery = ELASTIC_CONFIG['mainquery']
     mainquery['query']['bool']['must'] = {
         "simple_query_string": {
-            "query": ' '.join(keywords),
+            "query": ' '.join(KEYWORDS),
             "fields": [
                 "text",
                 "extended_tweet.full_text"
@@ -76,29 +65,40 @@ def cache_index(snapshot_path,**kwargs):
         }
     }
     doc_count = es.count(
-        index=[elastic_config['index_name']],
+        index=[ELASTIC_CONFIG['index_name']],
         body=mainquery,
         request_timeout = 120,
     )['count']
 
 
-    # snapshots = sorted()
-    df_list = []
 
     # if there are no snapshots or the last (sorted) snapshot does not match the doc count, start over
-    if not any(snapshot_path.glob('*.pkl')):
+    if not SNAPSHOT_DIR.is_file():
         cursor = scan(
             es,
-            index=elastic_config['index_name'],
-            query = {**mainquery, '_source':elastic_config['fields']},
+            index=ELASTIC_CONFIG['index_name'],
+            query = {**mainquery, '_source':ELASTIC_CONFIG['fields']},
             size=10000,
             request_timeout = 120,
         )
-        results = [c for c in tqdm(cursor,total=doc_count,desc='scrolling index')]
-        print('turning into dataframe...')
+        results = []
+        with progress_bar() as progress:
+            scroll_task = progress.add_task(description='scrolling index.. ', total=doc_count)
+            for c in cursor:
+                results += [c]
+                progress.update(scroll_task, advance = 1)
+            break
+
+        print('turning into dataframe')
         df = prettify_elastic(results)
-        for c in tqdm(df.columns,desc='saving dataframe...'):
-            df[c].to_pickle(snapshot_path/f'{c}.pkl')
+
+        print('loaded dataframe')
+        print('columns:')
+        for c in df.columns:
+            print(c)
+
+        # with h5py.File(str(SNAPSHOT_DIR), 'w') as f:
+        #     dataset = f.create_dataset('')
 
         
     # we have everything, just need to concat the dataframes
@@ -106,17 +106,8 @@ def cache_index(snapshot_path,**kwargs):
         print('loading from cache...')
         df = pd.DataFrame([
             pd.read_pickle(f)
-            for f in snapshot_path.glob('*.pkl')
+            for f in SNAPSHOT_DIR.glob('*.pkl')
         ])
 
     return df
 
-
-def get_snapshot_column(snapshot_path,column_name):
-    column_path = Path(snapshot_path) / f'{column_name}.pkl'
-    if not column_path.is_file():
-        df = cache_index(snapshot_path)
-        return df[column_name]
-    else:
-        print('column already created. loading...')
-        return pd.read_pickle(column_path)
