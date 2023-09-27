@@ -1,0 +1,49 @@
+hostname: http://idea-vm-elasticsearch:9200
+index_name: blockchain-interoperability-attacks
+batch_size: 100000
+mainquery: 
+  query:
+    bool:
+      filter: 
+        - range: 
+          created_at: 
+            gte: Tue Nov 01 00:00:00 +0000 2022
+        
+        - bool:
+          must_not:
+            exists:
+              field: retweeted_status.id
+fields: 
+  - id
+  - text
+  - extended_tweet.full_text
+  - truncated
+  - created_at
+  - user.id
+  - user.created_at
+  - user.followers_count
+  - user.friends_count
+  - geo 
+  - user.geo_enabled 
+  - user.location
+  - quote_count
+  - reply_count
+  - retweet_count
+  - favorite_count
+  - quoted_status.id
+  - quoted_status.text
+  - quoted_status.extended_tweet.full_text
+  - quoted_status.truncated
+  - quoted_status.created_at
+  - quoted_status.user.id
+  - quoted_status.user.created_at
+  - quoted_status.user.following
+  - quoted_status.user.followers_count
+  - quoted_status.user.friends_count
+  - quoted_status.geo
+  - quoted_status.user.geo_enabled
+  - quoted_status.user.location
+  - quoted_status.quote_count
+  - quoted_status.reply_count
+  - quoted_status.retweet_count
+  - quoted_status.favorite_count
