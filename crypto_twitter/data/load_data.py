@@ -2,15 +2,20 @@ from elasticsearch import Elasticsearch
 from elasticsearch.helpers import scan
 from pathlib import Path
 import pandas as pd
+from pandas.api.types import is_string_dtype, is_numeric_dtype
 import h5py
 import click
+import json
 
 from crypto_twitter.utils.progress import progress_bar
-from crypto_twitter.config.elastic import (
-    ELASTIC_CONFIG,
-    KEYWORDS,
+from crypto_twitter.config import (
+    ES_QUERY,
+    ES_COLUMNS,
+    ES_HOSTNAME,
+    ES_INDEXNAME,
+    ES_KEYWORDS,
+    SNAPSHOT_DIR,
 )
-from crypto_twitter.config.paths import SNAPSHOT_DIR
 
 def prettify_elastic(results) -> pd.DataFrame:
     """Cleans up list of results into a dataframe while dropping some unncessary columns.
@@ -23,19 +28,37 @@ def prettify_elastic(results) -> pd.DataFrame:
     """
     df = pd.json_normalize(results)
     df = df.drop(columns=df.columns[~df.columns.str.contains('_source')])
-    df.columns = df.columns.str.replace('_source.','').str.replace('.','_')
+    df.columns = df.columns.str.replace('_source.','')
 
     # If trucated is False, that means text has the full text. If True, extended_tweet.full_text has the full text.
-    
     df['truncated'] = df['truncated'].fillna(2)
-    df['whole_text'] = df[
+    df['full_text'] = df[
         [
-            'extended_tweet_full_text',
+            'extended_tweet.full_text',
             'text',     
             'truncated',
         ]
     ].apply(
-        lambda row: row[0] if row[2] == True else row[1] if row[2] == False else '',
+        lambda row: (
+            row[0] if row[2] == True 
+            else row[1] if row[2] == False 
+            else ''
+        ),
+        axis=1
+    )
+
+    df['quoted_status.full_text'] = df[
+        [
+            'quoted_status.extended_tweet.full_text',
+            'quoted_status.text',     
+            'quoted_status.truncated',
+        ]
+    ].apply(
+        lambda row: (
+            row[0] if row[2] == True 
+            else row[1] if row[2] == False 
+            else ''
+        ),
         axis=1
     )
 
@@ -51,14 +74,13 @@ def load_data() -> pd.DataFrame:
     """
 
     es = Elasticsearch(
-        hosts=[ELASTIC_CONFIG['hostname']],
+        hosts=[ES_HOSTNAME],
         verify_certs=False,
     )    
     # we will add a query to only grab the ones that contain at least one keyword (or partially, if keyword was space separated)
-    mainquery = ELASTIC_CONFIG['mainquery']
-    mainquery['query']['bool']['must'] = {
+    ES_QUERY['query']['bool']['must'] = {
         "simple_query_string": {
-            "query": ' '.join(KEYWORDS),
+            "query": ' '.join(ES_KEYWORDS),
             "fields": [
                 "text",
                 "extended_tweet.full_text"
@@ -66,49 +88,56 @@ def load_data() -> pd.DataFrame:
         }
     }
     doc_count = es.count(
-        index=[ELASTIC_CONFIG['index_name']],
-        body=mainquery,
+        index=[ES_INDEXNAME],
+        body=ES_QUERY,
         request_timeout = 120,
     )['count']
 
-
-
     # if there are no snapshots or the last (sorted) snapshot does not match the doc count, start over
-    if not SNAPSHOT_DIR.is_file():
-        cursor = scan(
-            es,
-            index=ELASTIC_CONFIG['index_name'],
-            query = {**mainquery, '_source':ELASTIC_CONFIG['fields']},
-            size=10000,
-            request_timeout = 120,
-        )
-        results = []
-        with progress_bar() as progress:
-            scroll_task = progress.add_task(description='scrolling index.. ', total=doc_count)
-            for c in cursor:
-                results += [c]
-                progress.update(scroll_task, advance = 1)
-                break
+    # if not SNAPSHOT_DIR.is_file():
+    cursor = scan(
+        es,
+        index=ES_INDEXNAME,
+        query = {**ES_QUERY, '_source': ES_COLUMNS},
+        size=10000,
+        request_timeout = 120,
+    )
+    results = []
+    with progress_bar() as progress:
+        scroll_task = progress.add_task(description='scrolling index.. ', total=doc_count)
+        counter = 0
+        for c in cursor:
+            results += [c]
+            progress.update(scroll_task, advance = 1)
+            if counter == 10: break
+            counter += 1
 
-        print('turning into dataframe')
-        df = prettify_elastic(results)
+    print('turning into dataframe')
+    df = prettify_elastic(results)
 
-        print('loaded dataframe')
-        print('columns:')
-        for c in df.columns:
-            print(c)
+    print('loaded dataframe')
 
-        # with h5py.File(str(SNAPSHOT_DIR), 'w') as f:
-        #     dataset = f.create_dataset('')
-
-        
+    str_type = h5py.special_dtype(vlen=str)
+    
+    # with h5py.File(str(SNAPSHOT_DIR), 'w') as f:
+    #     for col in ['full_text'] + ES_COLUMNS:
+    #         print(col, df[col].dtype)
+    #         if is_string_dtype(df[col].dtype):
+    #             f.create_dataset(col, data=df[col].values, dtype=str_type)
+    #         else:
+    #             f.create_dataset(col, data=df[col].values)
+    
     # we have everything, just need to concat the dataframes
-    else:
-        print('loading from cache...')
-        df = pd.DataFrame([
-            pd.read_pickle(f)
-            for f in SNAPSHOT_DIR.glob('*.pkl')
-        ])
+    # else:
+    #     print('loading from cache...')
+    #     with h5py.File(str(SNAPSHOT_DIR), 'r') as f:
+    #         df = pd.concat(
+    #             [
+    #                 pd.Series(f[c][:], name = c)
+    #                 for col in ['full_text'] + ES_COLUMNS
+    #             ],
+    #             axis = 1
+    #         )
 
     return df
 

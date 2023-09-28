@@ -5,3 +5,4 @@ steemit/steemit.log
 .vscode
 *.pyc
 *.log
+test.ipynb

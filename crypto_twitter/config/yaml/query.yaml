@@ -1,0 +1,10 @@
+query:
+  bool:
+    filter: 
+      - range: 
+          created_at: 
+            gte: Tue Nov 01 00:00:00 +0000 2022
+      - bool:
+          must_not:
+            exists:
+              field: retweeted_status.id
