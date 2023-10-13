@@ -56,7 +56,7 @@ def load_raw_data() -> pd.DataFrame:
     Returns:
         df (pd.DataFrame): A concatenated dataframe containing all the specified columns.
     """
-
+    
     if not (RAW_SNAPSHOT_DIR / 'final.pkl').is_file():
         chunk_size = 100000
         es = Elasticsearch(
@@ -109,18 +109,20 @@ def load_raw_data() -> pd.DataFrame:
         )
         dataframes += [df]
 
-        print(f'we saved {(len(dataframes) -1) * chunk_size + len(results):,} rows in {len(dataframes)} chunks in {int(start-time.time())} seconds')
+        print(f'we saved {(len(dataframes) -1) * chunk_size + len(results):,} rows in {len(dataframes)} chunks in {int(time.time()-start)} seconds')
         df = pd.concat(dataframes)
 
     else:
+        start = time.time()
         dataframes = []
-        cache_files = sorted(RAW_SNAPSHOT_DIR.glob('*.csv'))
+        cache_files = sorted(RAW_SNAPSHOT_DIR.glob('*.pkl'))
         with progress_bar() as progress:
             load_task = progress.add_task(description='loading cache...', total=len(cache_files))
             for file in cache_files:
                 dataframes += [pd.read_pickle(file)]
                 progress.update(load_task, advance=1)
         df = pd.concat(dataframes)
+        print(f'Loaded cache in {int(time.time()-start)} seconds')
 
     return df
 

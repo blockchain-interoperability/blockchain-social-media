@@ -12,3 +12,6 @@ else:
 
 RAW_SNAPSHOT_DIR = DATA_DIR / 'snapshots'
 RAW_SNAPSHOT_DIR.mkdir(exist_ok=True, parents=True)
+
+GRAPH_DIR = DATA_DIR / 'graph'
+GRAPH_DIR.mkdir(exist_ok=True, parents=True)
