@@ -1,3 +1,4 @@
+import time
 import pandas as pd
 
 from crypto_twitter.config import GRAPH_DATA_FILE
@@ -18,6 +19,6 @@ def load_graph_data() -> tuple[pd.DataFrame, list[int], list[list[int]]]:
     else:
         start = time.time()
         graph_df = pd.read_pickle(GRAPH_DATA_FILE)
-        print(f'loaded cached graph in {int(start-time.time())} seconds')
+        print(f'loaded cached graph in {int(time.time() - start)} seconds')
 
     return graph_df, nodes, edges
