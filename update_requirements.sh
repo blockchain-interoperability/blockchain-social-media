@@ -1,2 +1,2 @@
 # Ignore certain packages conda does
-pip list --format=freeze | grep -Po '^((?!mkl\-fft).)*$' >requirements.txt
+pip list --format=freeze | grep -Po '^((?!mkl).)*$' >requirements.txt
