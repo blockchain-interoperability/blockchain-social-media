@@ -1,6 +1,7 @@
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import scan
 import pandas as pd
+import time
 
 from crypto_twitter.utils.progress import progress_bar
 from crypto_twitter.config import (
@@ -21,7 +22,6 @@ def prettify_elastic(results) -> pd.DataFrame:
     Returns:
         df (pd.DataFrame): Concatenated dataframe with indexes reset
     """
-    print(f'I should have {len(ES_COLUMNS)} columns')
 
     df = pd.json_normalize(results)
     df = df.drop(columns=df.columns[~df.columns.str.contains('_source')])
@@ -40,11 +40,11 @@ def prettify_elastic(results) -> pd.DataFrame:
     # If trucated is False, that means text has the full text. If True, extended_tweet.full_text has the full text.
     df['truncated'] = df['truncated'].fillna(False)
     df['full_text'] = df['text']
-    df[df['truncated']]['full_text'] = df[df['truncated']]['extended_tweet.full_text']
+    df.loc[df['truncated'],'full_text'] = df[df['truncated']]['extended_tweet.full_text']
 
     df['quoted_status.truncated'] = df['quoted_status.truncated'].fillna(False)
     df['quoted_status.full_text'] = df['quoted_status.text']
-    df[df['quoted_status.truncated']]['quoted_status.full_text'] = df[df['quoted_status.truncated']]['quoted_status.extended_tweet.full_text']
+    df.loc[df['quoted_status.truncated'],'quoted_status.full_text'] = df[df['quoted_status.truncated']]['quoted_status.extended_tweet.full_text']
 
     return df
 
@@ -57,49 +57,70 @@ def load_raw_data() -> pd.DataFrame:
         df (pd.DataFrame): A concatenated dataframe containing all the specified columns.
     """
 
-    es = Elasticsearch(
-        hosts=[ES_HOSTNAME],
-        verify_certs=False,
-    )    
-    # we will add a query to only grab the ones that contain at least one keyword (or partially, if keyword was space separated)
-    ES_QUERY['query']['bool']['must'] = {
-        "simple_query_string": {
-            "query": ' '.join(ES_KEYWORDS),
-            "fields": [
-                "text",
-                "extended_tweet.full_text"
-            ],
+    if not (RAW_SNAPSHOT_DIR / 'final.pkl').is_file():
+        chunk_size = 100000
+        es = Elasticsearch(
+            hosts=[ES_HOSTNAME],
+            verify_certs=False,
+        )    
+        # we will add a query to only grab the ones that contain at least one keyword (or partially, if keyword was space separated)
+        ES_QUERY['query']['bool']['must'] = {
+            "simple_query_string": {
+                "query": ' '.join(ES_KEYWORDS),
+                "fields": [
+                    "text",
+                    "extended_tweet.full_text"
+                ],
+            }
         }
-    }
-    doc_count = es.count(
-        index=[ES_INDEXNAME],
-        body=ES_QUERY,
-        request_timeout = 120,
-    )['count']
-    print(f'scanning {doc_count:,} documents..')
+        doc_count = es.count(
+            index=[ES_INDEXNAME],
+            body=ES_QUERY,
+            request_timeout = 120,
+        )['count']
+        print(f'scanning {doc_count:,} documents..')
 
-    # if there are no snapshots or the last (sorted) snapshot does not match the doc count, start over
-    if not RAW_SNAPSHOT_DIR.is_file():
         cursor = scan(
             es,
             index=ES_INDEXNAME,
             query = {**ES_QUERY, '_source': ES_COLUMNS},
-            size=10000,
             request_timeout = 120,
         )
+        dataframes = []
         results = []
+        start = time.time()
         with progress_bar() as progress:
             scroll_task = progress.add_task(description='scrolling index.. ', total=doc_count)
             for c in cursor:
                 results += [c]
+                if len(results) == chunk_size:
+                    df = prettify_elastic(results)
+                    df.to_pickle(
+                        RAW_SNAPSHOT_DIR / f'{len(dataframes):010d}.pkl', 
+                    )
+                    del results[:]
+                    dataframes += [df]
                 progress.update(scroll_task, advance = 1)
 
-        print('turning into dataframe')
         df = prettify_elastic(results)
+        del results[:]
+        df.to_pickle(
+            RAW_SNAPSHOT_DIR / f'final.pkl',
+        )
+        dataframes += [df]
 
-        df.to_json(RAW_SNAPSHOT_DIR, orient='records')
+        print(f'we saved {(len(dataframes) -1) * chunk_size + len(results):,} rows in {len(dataframes)} chunks in {int(start-time.time())} seconds')
+        df = pd.concat(dataframes)
+
     else:
-        df = pd.read_json(RAW_SNAPSHOT_DIR)
+        dataframes = []
+        cache_files = sorted(RAW_SNAPSHOT_DIR.glob('*.csv'))
+        with progress_bar() as progress:
+            load_task = progress.add_task(description='loading cache...', total=len(cache_files))
+            for file in cache_files:
+                dataframes += [pd.read_pickle(file)]
+                progress.update(load_task, advance=1)
+        df = pd.concat(dataframes)
 
     return df
 

@@ -10,4 +10,5 @@ if os.environ.get('DATA_DIR'):
 else:
     raise Exception('Unable to determine DATA_DIR')
 
-RAW_SNAPSHOT_DIR = DATA_DIR / 'snapshot.json'
+RAW_SNAPSHOT_DIR = DATA_DIR / 'snapshots'
+RAW_SNAPSHOT_DIR.mkdir(exist_ok=True, parents=True)
