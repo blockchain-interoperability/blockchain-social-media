@@ -6,7 +6,6 @@ import time
 
 from crypto_twitter.data import (
     load_graph_data,
-    load_graph_edges,
 )
 from .get_graph_overview import get_graph_overview
 
@@ -17,8 +16,7 @@ class TweetReplyGraph:
     data: pd.DataFrame
 
     def __init__(self) -> None:
-        nodes, edges = load_graph_edges()
-        graph_data = load_graph_data()
+        graph_data, nodes, edges = load_graph_data()
         G = nx.DiGraph(edges)
 
         start = time.time()
