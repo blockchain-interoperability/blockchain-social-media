@@ -3,15 +3,12 @@ import json
 import time
 
 from crypto_twitter.utils import progress_bar
-from crypto_twitter.config import GRAPH_DIR
+from crypto_twitter.config import GRAPH_NODES_FILE, GRAPH_EDGES_FILE
 from crypto_twitter.data import load_raw_data
 
-def build_graph() -> tuple[list[int],list[tuple[int]]|list[list[int]]]:
+def load_graph_edges() -> tuple[list[int],list[tuple[int]]|list[list[int]]]:
 
-    node_file = GRAPH_DIR / 'nodes.json'
-    edge_file = GRAPH_DIR / 'edges.json'
-
-    if not node_file.is_file() and not edge_file.is_file():
+    if not GRAPH_NODES_FILE.is_file() and not GRAPH_EDGES_FILE.is_file():
         df = load_raw_data()
         edges_to = []
         edges_from = []
@@ -31,17 +28,17 @@ def build_graph() -> tuple[list[int],list[tuple[int]]|list[list[int]]]:
         
         json.dump(
             nodes,
-            open(node_file, 'w')
+            open(GRAPH_NODES_FILE, 'w')
         )
         json.dump(
             edges,
-            open(edge_file, 'w')
+            open(GRAPH_EDGES_FILE, 'w')
         )
         print(f'Saved node and edge information to {GRAPH_DIR}')
     else:
         start = time.time()
-        nodes = json.load(open(node_file))
-        edges = json.load(open(edge_file))
+        nodes = json.load(open(GRAPH_NODES_FILE))
+        edges = json.load(open(GRAPH_EDGES_FILE))
         print(f'loaded graph in {int(time.time() - start)} seconds')
 
     return nodes, edges

@@ -1,8 +1,9 @@
 import click
+import json
 from crypto_twitter.data import (
     load_raw_data,
-    build_graph,
-    graph_stats,
+    load_graph_edges,
+    get_graph_overview,
 )
 
 
@@ -13,10 +14,14 @@ def run(
 ):
     if operation == 'load_raw_data':
         load_raw_data()
-    if operation == 'build_graph':
-        build_graph()
-    if operation == 'graph_stats':
-        graph_stats()
+    elif operation == 'load_graph_edges':
+        load_graph_edges()
+    elif operation == 'view_graph_overview':
+        overview = get_graph_overview()
+        print(json.dumps(overview, indent=2))
+    elif operation == 'recompute_graph_overview':
+        overview = get_graph_overview(recompute=True)
+        print(json.dumps(overview, indent=2))
     else:
         raise Exception('Unknown operation')
 
