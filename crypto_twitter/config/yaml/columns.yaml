@@ -1,64 +1,32 @@
-- name: id
-  type: int
-- name: text
-  type: str
-- name: extended_tweet.full_text
-  type: str
-- name: truncated
-  type: bool
-- name: created_at
-  type: str
-- name: user.id
-  type: int
-- name: user.created_at
-  type: str
-- name: user.followers_count
-  type: int
-- name: user.friends_count
-  type: int
-- name: geo 
-  type: str
-- name: user.geo_enabled 
-  type: bool 
-- name: user.location
-  type: str
-- name: quote_count
-  type: int
-- name: reply_count
-  type: int
-- name: retweet_count
-  type: int
-- name: favorite_count
-  type: int
-- name: quoted_status.id
-  type: int
-- name: quoted_status.text
-  type: str
-- name: quoted_status.extended_tweet.full_text
-  type: str
-- name: quoted_status.truncated
-  type: bool
-- name: quoted_status.created_at
-  type: str
-- name: quoted_status.user.id
-  type: str
-- name: quoted_status.user.created_at
-  type: str
-- name: quoted_status.user.followers_count
-  type: int
-- name: quoted_status.user.friends_count
-  type: int
-- name: quoted_status.geo
-  type: str
-- name: quoted_status.user.geo_enabled
-  type: bool
-- name: quoted_status.user.location
-  type: str
-- name: quoted_status.quote_count
-  type: int
-- name: quoted_status.reply_count
-  type: int
-- name: quoted_status.retweet_count
-  type: int
-- name: quoted_status.favorite_count
-  type: int
+- id
+- text
+- extended_tweet.full_text
+- truncated
+- created_at
+- user.id
+- user.created_at
+- user.followers_count
+- user.friends_count
+- geo 
+- user.geo_enabled 
+- user.location
+- quote_count
+- reply_count
+- retweet_count
+- favorite_count
+- quoted_status.id
+- quoted_status.text
+- quoted_status.extended_tweet.full_text
+- quoted_status.truncated
+- quoted_status.created_at
+- quoted_status.user.id
+- quoted_status.user.created_at
+- quoted_status.user.followers_count
+- quoted_status.user.friends_count
+- quoted_status.geo
+- quoted_status.user.geo_enabled
+- quoted_status.user.location
+- quoted_status.quote_count
+- quoted_status.reply_count
+- quoted_status.retweet_count
+- quoted_status.favorite_count
