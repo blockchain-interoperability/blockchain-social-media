@@ -4,9 +4,9 @@ import numpy as np
 import json
 
 from crypto_twitter.config import GRAPH_STATS_FILE
-from .load_graph_edges import load_graph_edges
+from crypto_twitter.data import load_graph_edges
 
-def get_graph_overview(recompute: bool = False) -> None:
+def get_graph_overview(recompute: bool = False) -> dict[str,any]:
     if not GRAPH_STATS_FILE.is_file() or recompute:
         start = time.time()
         nodes,edges = load_graph_edges()

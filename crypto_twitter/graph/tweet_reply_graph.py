@@ -4,9 +4,11 @@ import numpy as np
 import json
 import time
 
-from .load_graph_edges import load_graph_edges
+from crypto_twitter.data import (
+    load_graph_data,
+    load_graph_edges,
+)
 from .get_graph_overview import get_graph_overview
-from crypto_twitter.data import load_graph_data
 
 class TweetReplyGraph:
     graph: nx.DiGraph
@@ -25,14 +27,14 @@ class TweetReplyGraph:
         self.edges = edges
         self.data = graph_data
 
-        print(f'loaded complete reply graph in {int(time.time()-start} seconds')
+        print(f'loaded complete reply graph in {int(time.time()-start)} seconds')
 
     def get_stats(
         self,
         recompute: bool = False,
         display: bool = False,
     ) -> dict[str,any]:
-        stats = get_graph_stats(recompute)
+        stats = get_graph_overview(recompute)
         if display:
             print(json.dumps(stats, indent=2))
         return stats

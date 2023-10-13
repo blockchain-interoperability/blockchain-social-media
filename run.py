@@ -3,6 +3,8 @@ import json
 from crypto_twitter.data import (
     load_raw_data,
     load_graph_edges,
+)
+from crypto_twitter.graph import (
     get_graph_overview,
 )
 

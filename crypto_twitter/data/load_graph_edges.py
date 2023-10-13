@@ -4,7 +4,7 @@ import time
 
 from crypto_twitter.utils import progress_bar
 from crypto_twitter.config import GRAPH_NODES_FILE, GRAPH_EDGES_FILE
-from crypto_twitter.data import load_raw_data
+from .load_raw_data import load_raw_data
 
 def load_graph_edges() -> tuple[list[int],list[tuple[int]]|list[list[int]]]:
 
