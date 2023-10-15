@@ -3,13 +3,16 @@ import time
 import numpy as np
 import json
 
-from crypto_twitter.config import GRAPH_STATS_FILE
-from crypto_twitter.data import load_graph_edges
+from crypto_chatter.config import CryptoChatterDataConfig
 
-def get_graph_overview(recompute: bool = False) -> dict[str,any]:
-    if not GRAPH_STATS_FILE.is_file() or recompute:
+def get_graph_overview(
+    nodes: list[int], 
+    edges: list[list[int]],
+    data_config: CryptoChatterDataConfig,
+    recompute: bool = False
+) -> dict[str,any]:
+    if not data_config.graph_stats_file.is_file() or recompute:
         start = time.time()
-        nodes,edges = load_graph_edges()
         G = nx.DiGraph(edges)
 
         start = time.time()
@@ -19,7 +22,7 @@ def get_graph_overview(recompute: bool = False) -> dict[str,any]:
         start = time.time()
         _, in_degree = zip(*G.in_degree(nodes))
         in_degree = np.array(in_degree)
-        print(f'computed in_degree  stats in {int(time.time() - start)} seconds')
+        print(f'computed in_degree stats in {int(time.time() - start)} seconds')
 
         start = time.time()
         _, out_degree = zip(*G.out_degree(nodes))
@@ -42,9 +45,9 @@ def get_graph_overview(recompute: bool = False) -> dict[str,any]:
             }
         }
 
-        json.dump(graph_stats, open(GRAPH_STATS_FILE, 'w'))
+        json.dump(graph_stats, open(data_config.graph_stats_file, 'w'), indent=2)
+        return graph_stats
 
     else:
-        graph_stats = json.load(open(GRAPH_STATS_FILE))
-
+        graph_stats = json.load(open(data_config.graph_stats_file))
         return graph_stats

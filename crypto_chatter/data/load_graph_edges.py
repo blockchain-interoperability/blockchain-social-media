@@ -1,15 +1,17 @@
 import pandas as pd
 import json
 import time
+from pathlib import Path
 
-from crypto_twitter.utils import progress_bar
-from crypto_twitter.config import GRAPH_NODES_FILE, GRAPH_EDGES_FILE
+from crypto_chatter.utils import progress_bar
+from crypto_chatter.config import CryptoChatterDataConfig
 from .load_raw_data import load_raw_data
 
-def load_graph_edges() -> tuple[list[int],list[tuple[int]]|list[list[int]]]:
-
-    if not GRAPH_NODES_FILE.is_file() and not GRAPH_EDGES_FILE.is_file():
-        df = load_raw_data()
+def load_graph_edges(
+    data_config: CryptoChatterDataConfig
+) -> tuple[list[int],list[tuple[int]]|list[list[int]]]:
+    if not data_config.graph_nodes_file.is_file() and not data_config.graph_edges_file.is_file():
+        df = load_raw_data(data_config)
         edges_to = []
         edges_from = []
 
@@ -28,17 +30,17 @@ def load_graph_edges() -> tuple[list[int],list[tuple[int]]|list[list[int]]]:
         
         json.dump(
             nodes,
-            open(GRAPH_NODES_FILE, 'w')
+            open(data_config.graph_nodes_file, 'w')
         )
         json.dump(
             edges,
-            open(GRAPH_EDGES_FILE, 'w')
+            open(data_config.graph_edges_file, 'w')
         )
-        print(f'Saved node and edge information to {GRAPH_DIR}')
+        print(f'Saved node and edge information to {data_config.graph_dir}')
     else:
         start = time.time()
-        nodes = json.load(open(GRAPH_NODES_FILE))
-        edges = json.load(open(GRAPH_EDGES_FILE))
+        nodes = json.load(open(data_config.graph_nodes_file))
+        edges = json.load(open(data_config.graph_edges_file))
         print(f'loaded graph in {int(time.time() - start)} seconds')
 
     return nodes, edges

@@ -21,3 +21,8 @@ To update the requirements file, run
 pip list --format=freeze > requirements.txt
 ```
 
+## Example usage:
+
+```python
+from crypto_twitter import 
+```
