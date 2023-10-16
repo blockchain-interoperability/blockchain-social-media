@@ -10,12 +10,12 @@ from .presets import (
     ES_TWITTER_MAPPINGS,
     ES_TWITTER_QUERY,
     ES_REDDIT_COLUMNS,
-    REDDIT_USERNAME,
-    REDDIT_PASSWORD,
-    REDDIT_CLIENT_ID,
-    REDDIT_CLIENT_SECRET,
     ES_REDDIT_QUERY,
     ES_REDDIT_MAPPINGS,
+    # REDDIT_USERNAME,
+    # REDDIT_PASSWORD,
+    # REDDIT_CLIENT_ID,
+    # REDDIT_CLIENT_SECRET,
 )
 
 from .crypto_chatter_data_config import CryptoChatterDataConfig

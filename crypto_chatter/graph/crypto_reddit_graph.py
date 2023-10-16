@@ -7,10 +7,10 @@ from crypto_chatter.config import (
     ES_REDDIT_COLUMNS,
     ES_REDDIT_MAPPINGS,
     DATA_DIR,
-    REDDIT_USERNAME,
-    REDDIT_PASSWORD,
-    REDDIT_CLIENT_ID,
-    REDDIT_CLIENT_SECRET,
+    # REDDIT_USERNAME,
+    # REDDIT_PASSWORD,
+    # REDDIT_CLIENT_ID,
+    # REDDIT_CLIENT_SECRET,
     CryptoChatterDataConfig,
 )
 from .crypto_graph import CryptoGraph
@@ -45,10 +45,10 @@ class CryptoRedditGraph(CryptoGraph):
             graph_nodes_file = DATA_DIR / 'reddit/graph/nodes.json',
             graph_data_file = DATA_DIR / 'reddit/graph/graph_data.pkl',
             graph_gephi_file = DATA_DIR / 'reddit/graph/graph.gexf',
-            reddit_username=REDDIT_USERNAME,
-            reddit_password=REDDIT_PASSWORD,
-            reddit_client_id=REDDIT_CLIENT_ID,
-            reddit_client_secret=REDDIT_CLIENT_SECRET,
+            # reddit_username=REDDIT_USERNAME,
+            # reddit_password=REDDIT_PASSWORD,
+            # reddit_client_id=REDDIT_CLIENT_ID,
+            # reddit_client_secret=REDDIT_CLIENT_SECRET,
         )
         self.data_config.raw_snapshot_dir.mkdir(parents=True, exist_ok=True)
         self.data_config.graph_dir.mkdir(parents=True, exist_ok=True)

@@ -16,23 +16,23 @@ if os.environ.get('ES_HOSTNAME'):
 else:
     raise Exception('Unable to determine ES_HOSTNAME')
     
-if os.environ.get('REDDIT_USERNAME'):
-    REDDIT_USERNAME = os.environ.get('REDDIT_USERNAME')
-else:
-    raise Exception('Unable to determine REDDIT_USERNAME')
-
-if os.environ.get('REDDIT_PASSWORD'):
-    REDDIT_PASSWORD = os.environ.get('REDDIT_PASSWORD')
-else:
-    raise Exception('Unable to determine REDDIT_PASSWORD')
-
-if os.environ.get('REDDIT_CLIENT_ID'):
-    REDDIT_CLIENT_ID = os.environ.get('REDDIT_CLIENT_ID')
-else:
-    raise Exception('Unable to determine REDDIT_CLIENT_ID')
-
-if os.environ.get('REDDIT_CLIENT_SECRET'):
-    REDDIT_CLIENT_SECRET = os.environ.get('REDDIT_CLIENT_SECRET')
-else:
-    raise Exception('Unable to determine REDDIT_CLIENT_SECRET')
-
+# if os.environ.get('REDDIT_USERNAME'):
+#     REDDIT_USERNAME = os.environ.get('REDDIT_USERNAME')
+# else:
+#     raise Exception('Unable to determine REDDIT_USERNAME')
+#
+# if os.environ.get('REDDIT_PASSWORD'):
+#     REDDIT_PASSWORD = os.environ.get('REDDIT_PASSWORD')
+# else:
+#     raise Exception('Unable to determine REDDIT_PASSWORD')
+#
+# if os.environ.get('REDDIT_CLIENT_ID'):
+#     REDDIT_CLIENT_ID = os.environ.get('REDDIT_CLIENT_ID')
+# else:
+#     raise Exception('Unable to determine REDDIT_CLIENT_ID')
+#
+# if os.environ.get('REDDIT_CLIENT_SECRET'):
+#     REDDIT_CLIENT_SECRET = os.environ.get('REDDIT_CLIENT_SECRET')
+# else:
+#     raise Exception('Unable to determine REDDIT_CLIENT_SECRET')
+#

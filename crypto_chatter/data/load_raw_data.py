@@ -24,7 +24,8 @@ def load_raw_data(data_config: CryptoChatterDataConfig) -> pd.DataFrame:
         df (pd.DataFrame): A concatenated dataframe containing all the specified columns.
     """
     
-    if not (data_config.raw_snapshot_dir / 'final.pkl').is_file():
+    marker_file = data_config.raw_snapshot_dir / 'completed.txt'
+    if not marker_file.is_file():
         chunk_size = 100000
         es = Elasticsearch(
             hosts=[data_config.es_hostname],
@@ -65,12 +66,13 @@ def load_raw_data(data_config: CryptoChatterDataConfig) -> pd.DataFrame:
         df = prettify_elastic(results, data_config)
         del results[:]
         df.to_pickle(
-            data_config.raw_snapshot_dir / 'final.pkl',
+            data_config.raw_snapshot_dir / f'{len(dataframes):010d}.pkl', 
         )
         dataframes += [df]
 
         print(f'we saved {(len(dataframes) -1) * chunk_size + len(results):,} rows in {len(dataframes)} chunks in {int(time.time()-start)} seconds')
         df = pd.concat(dataframes)
+        open(marker_file, 'w').close()
 
     else:
         start = time.time()
