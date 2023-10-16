@@ -28,6 +28,13 @@ def get_graph_overview(
 
         connected_components = load_graph_components(G, data_config)
         connected_components_size = np.array([len(cc) for cc in connected_components])
+        top_5_components = [
+            {
+                'id': cid, 
+                'size': connected_components_size[cid]
+            }
+            for cid in connected_components_size.argsort()[:5:-1]
+        ]
 
         graph_stats = {
             "Node Count": len(nodes),
@@ -48,6 +55,7 @@ def get_graph_overview(
                 "Max": int(connected_components_size.max()),
                 "Avg": int(connected_components_size.mean()),
                 "Min": int(connected_components_size.min()),
+                "Top 5 Components": top_5_components
             }
         }
 
