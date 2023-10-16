@@ -41,15 +41,17 @@ class CryptoTwitterGraph(CryptoGraph):
             data_source=self.data_source,
             raw_snapshot_dir = DATA_DIR / f'twitter/{index_name}/snapshots',
             graph_dir = DATA_DIR / f'twitter/{index_name}/graph',
+            graph_gephi_dir = DATA_DIR / f'twitter/{index_name}/graph/gephi',
+            graph_components_dir = DATA_DIR / f'twitter/{index_name}/graph/components',
             graph_stats_file = DATA_DIR / f'twitter/{index_name}/graph/stats.json',
             graph_edges_file = DATA_DIR / f'twitter/{index_name}/graph/edges.json',
             graph_nodes_file = DATA_DIR / f'twitter/{index_name}/graph/nodes.json',
             graph_data_file = DATA_DIR / f'twitter/{index_name}/graph/graph_data.pkl',
-            graph_gephi_file = DATA_DIR / f'twitter/{index_name}/graph/graph.gexf',
             graph_attributes = ['full_text', 'user.id', 'user.followers_count', 'favorite_count', 'quote_count'],
         )
         self.data_config.raw_snapshot_dir.mkdir(parents=True, exist_ok=True)
         self.data_config.graph_dir.mkdir(parents=True, exist_ok=True)
+        self.data_config.graph_components_dir.mkdir(parents=True, exist_ok=True)
     
     def populate_attributes(self):
         for attr in self.data_config.graph_attributes:

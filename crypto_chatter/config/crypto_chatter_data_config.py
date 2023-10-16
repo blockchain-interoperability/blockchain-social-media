@@ -6,11 +6,12 @@ class CryptoChatterDataConfig:
     data_source: str
     raw_snapshot_dir: Path
     graph_dir: Path
+    graph_gephi_dir: Path
+    graph_components_dir: Path
     graph_stats_file: Path
     graph_edges_file: Path
     graph_nodes_file: Path
     graph_data_file: Path
-    graph_gephi_file: Path
     graph_attributes: list[str]
     reddit_username: str | None = None
     reddit_password: str | None = None

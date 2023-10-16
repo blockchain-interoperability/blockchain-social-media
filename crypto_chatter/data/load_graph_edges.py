@@ -41,7 +41,7 @@ def load_graph_edges(
         start = time.time()
         nodes = json.load(open(data_config.graph_nodes_file))
         edges = json.load(open(data_config.graph_edges_file))
-        print(f'loaded graph in {int(time.time() - start)} seconds')
+        print(f'loaded graph edges in {int(time.time() - start)} seconds')
 
     return nodes, edges
 
