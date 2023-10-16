@@ -1,0 +1,43 @@
+properties:
+  coordinates.coordinates:
+    type: geo_point
+  created_at:
+    format: EEE MMM dd HH:mm:ss Z yyyy
+    type: date
+  embedding.sbert.primary:
+    dims: 384
+    type: dense_vector
+  embedding.sbert.quoted:
+    dims: 384
+    type: dense_vector
+  embedding.sbert.quoted_concat:
+    dims: 384
+    type: dense_vector
+  embedding.use_large.primary:
+    dims: 512
+    type: dense_vector
+  embedding.use_large.quoted:
+    dims: 512
+    type: dense_vector
+  embedding.use_large.quoted_concat:
+    dims: 512
+    type: dense_vector
+  place.bounding_box:
+    coerce: true
+    ignore_malformed: true
+    type: geo_shape
+  quoted_status.coordinates.coordinates:
+    type: geo_point
+  quoted_status.created_at:
+    format: EEE MMM dd HH:mm:ss Z yyyy
+    type: date
+  quoted_status.place.bounding_box:
+    coerce: true
+    ignore_malformed: true
+    type: geo_shape
+  quoted_status.user.created_at:
+    format: EEE MMM dd HH:mm:ss Z yyyy
+    type: date
+  user.created_at:
+    format: EEE MMM dd HH:mm:ss Z yyyy
+    type: date

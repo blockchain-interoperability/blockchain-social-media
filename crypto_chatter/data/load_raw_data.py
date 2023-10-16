@@ -13,7 +13,6 @@ def prettify_elastic(results:list[dict], data_config:CryptoChatterDataConfig) ->
         df = prettify_elastic_twitter(results, data_config)
     elif data_config.data_source == 'reddit': 
         raise NotImplementedError('Reddit parsing is not yet implemented!')
-
     return df
 
 def load_raw_data(data_config: CryptoChatterDataConfig) -> pd.DataFrame:
