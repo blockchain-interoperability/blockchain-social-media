@@ -1,1 +1,1 @@
-from .progress import progress_bar
+from .progress_bar import progress_bar
