@@ -3,7 +3,7 @@ from elasticsearch.helpers import scan
 import pandas as pd
 import time
 
-from crypto_chatter.utils.progress import progress_bar
+from crypto_chatter.utils import progress_bar
 from crypto_chatter.config import CryptoChatterDataConfig
 
 from .prettify_elastic_twitter import prettify_elastic_twitter

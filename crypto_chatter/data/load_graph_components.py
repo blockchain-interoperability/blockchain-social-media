@@ -15,11 +15,12 @@ def load_graph_components(
     marker_file = data_config.graph_components_dir/'completed.txt'
     if not marker_file.is_file():
         start = time.time()
-        connected_components = sorted(nx.strongly_connected_components(G), key=len, reverse=True)
+        connected_components = []
         print(f'computed connected components in {int(time.time() - start)} seconds')
         with progress_bar() as progress:
             save_task = progress.add_task(description='saving component info..', total=len(connected_components))
-            for i, cc in enumerate(connected_components):
+            for i, cc in enumerate(sorted(nx.strongly_connected_components(G), key=len, reverse=True)):
+                cc = list(cc)
                 json.dump(
                     cc,
                     open(
@@ -27,7 +28,7 @@ def load_graph_components(
                         'w'
                     )
                 )
-                connected_components += [list(cc)]
+                connected_components += [cc]
                 progress.update(save_task, advance =1)
         print(f'counted and saved connected components info in {int(time.time()-start)} seconds')
         open(marker_file, 'w').close()
