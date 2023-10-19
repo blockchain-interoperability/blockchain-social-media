@@ -31,14 +31,14 @@ def get_graph_overview(
         top_5_components = [
             {
                 'id': cid, 
-                'size': connected_components_size[cid]
+                'size': int(connected_components_size[cid])
             }
             for cid in connected_components_size.argsort()[:5:-1]
         ]
 
         graph_stats = {
-            "Node Count": len(nodes),
-            "Edge Count": len(edges),
+            "Node Count": len(G.nodes),
+            "Edge Count": len(G.edges),
             "Longest Path": len(longest_path),
             "Connected Components Count": len(connected_components),
             "In-Degree": {
