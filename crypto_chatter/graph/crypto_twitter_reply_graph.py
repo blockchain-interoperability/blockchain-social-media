@@ -13,7 +13,7 @@ from crypto_chatter.config import (
 from .crypto_graph import CryptoGraph
 
 
-class CryptoTwitterGraph(CryptoGraph):
+class CryptoTwitterReplyGraph(CryptoGraph):
     graph: nx.DiGraph
     nodes: list[int]
     edges: list[list[int]]

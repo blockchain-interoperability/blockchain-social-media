@@ -19,7 +19,7 @@ def load_graph_components(
             list(cc) 
             for cc in sorted(nx.strongly_connected_components(G), key=len, reverse=True)
         ]
-        print(f'detected {len(connected_components)} components in {int(time.time()-start)} seconds')
+        print(f'detected {len(connected_components):,} components in {int(time.time()-start)} seconds')
         with progress_bar() as progress:
             save_task = progress.add_task(
                 description='saving component info..', 

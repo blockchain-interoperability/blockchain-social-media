@@ -12,7 +12,7 @@ from crypto_chatter.data import (
 
 from .get_graph_overview import get_graph_overview
 
-class CryptoGraph:
+class CryptoReplyGraph:
     G: nx.DiGraph | None = None
     nodes: list[int] | None = None
     edges: list[list[int]] | None = None
