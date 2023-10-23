@@ -10,10 +10,10 @@ from crypto_chatter.config import (
     DATA_DIR,
     CryptoChatterDataConfig,
 )
-from .crypto_graph import CryptoGraph
+from .crypto_reply_graph import CryptoReplyGraph
 
 
-class CryptoTwitterReplyGraph(CryptoGraph):
+class CryptoTwitterReplyGraph(CryptoReplyGraph):
     graph: nx.DiGraph
     nodes: list[int]
     edges: list[list[int]]
@@ -40,13 +40,13 @@ class CryptoTwitterReplyGraph(CryptoGraph):
             es_query=es_query,
             data_source=self.data_source,
             raw_snapshot_dir = DATA_DIR / f'twitter/{index_name}/snapshots',
-            graph_dir = DATA_DIR / f'twitter/{index_name}/graph',
-            graph_gephi_dir = DATA_DIR / f'twitter/{index_name}/graph/gephi',
-            graph_components_dir = DATA_DIR / f'twitter/{index_name}/graph/components',
-            graph_stats_file = DATA_DIR / f'twitter/{index_name}/graph/stats.json',
-            graph_edges_file = DATA_DIR / f'twitter/{index_name}/graph/edges.json',
-            graph_nodes_file = DATA_DIR / f'twitter/{index_name}/graph/nodes.json',
-            graph_data_file = DATA_DIR / f'twitter/{index_name}/graph/graph_data.pkl',
+            graph_dir = DATA_DIR / f'twitter/{index_name}/reply-graph',
+            graph_gephi_dir = DATA_DIR / f'twitter/{index_name}/reply-graph/gephi',
+            graph_components_dir = DATA_DIR / f'twitter/{index_name}/reply-graph/components',
+            graph_stats_file = DATA_DIR / f'twitter/{index_name}/reply-graph/stats.json',
+            graph_edges_file = DATA_DIR / f'twitter/{index_name}/reply-graph/edges.json',
+            graph_nodes_file = DATA_DIR / f'twitter/{index_name}/reply-graph/nodes.json',
+            graph_data_file = DATA_DIR / f'twitter/{index_name}/reply-graph/graph_data.pkl',
             graph_attributes = ['full_text', 'user.id', 'user.followers_count', 'favorite_count', 'quote_count'],
         )
         self.data_config.raw_snapshot_dir.mkdir(parents=True, exist_ok=True)

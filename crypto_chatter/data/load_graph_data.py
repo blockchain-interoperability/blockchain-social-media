@@ -8,7 +8,7 @@ from .load_raw_data import load_raw_data
 def load_graph_data(
     nodes: list[int],
     data_config: CryptoChatterDataConfig,
-) -> tuple[pd.DataFrame, list[int], list[list[int]]]:
+) -> pd.DataFrame:
     if not data_config.graph_data_file.is_file():
         raw_df = load_raw_data(data_config)
 

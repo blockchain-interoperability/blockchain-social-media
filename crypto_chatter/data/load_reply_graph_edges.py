@@ -1,15 +1,14 @@
 import pandas as pd
 import json
 import time
-from pathlib import Path
 
-from crypto_chatter.utils import progress_bar
+from crypto_chatter.utils import progress_bar, NodeList, EdgeList
 from crypto_chatter.config import CryptoChatterDataConfig
 from .load_raw_data import load_raw_data
 
-def load_graph_edges(
+def load_reply_graph_edges(
     data_config: CryptoChatterDataConfig
-) -> tuple[list[int],list[tuple[int]]|list[list[int]]]:
+) -> tuple[NodeList, EdgeList]:
     if not data_config.graph_nodes_file.is_file() and not data_config.graph_edges_file.is_file():
         df = load_raw_data(data_config)
         edges_to = []

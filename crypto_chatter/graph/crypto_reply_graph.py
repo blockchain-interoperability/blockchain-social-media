@@ -6,13 +6,14 @@ import json
 from crypto_chatter.config import CryptoChatterDataConfig
 from crypto_chatter.data import (
     load_graph_data, 
-    load_graph_edges,
+    load_reply_graph_edges,
     load_graph_components,
 )
 
+from .crypto_graph import CryptoGraph
 from .get_graph_overview import get_graph_overview
 
-class CryptoReplyGraph:
+class CryptoReplyGraph(CryptoGraph):
     G: nx.DiGraph | None = None
     nodes: list[int] | None = None
     edges: list[list[int]] | None = None
@@ -33,7 +34,7 @@ class CryptoReplyGraph:
         '''
         start = time.time()
 
-        nodes, edges = load_graph_edges(self.data_config)
+        nodes, edges = load_reply_graph_edges(self.data_config)
         graph_data = load_graph_data(nodes, self.data_config)
         G = nx.DiGraph(edges)
 
@@ -41,9 +42,7 @@ class CryptoReplyGraph:
         self.nodes = nodes
         self.edges = edges
         self.data = graph_data
-        self.components = load_graph_components(G, self.data_config)
-
-        # self.populate_attributes()
+        self.components = load_graph_components(graph=self)
 
         print(f'constructed complete reply graph in {int(time.time()-start)} seconds')
 
@@ -64,11 +63,7 @@ class CryptoReplyGraph:
         Get basic statistics of the network. 
         '''
         self.check_graph_is_built()
-        stats = get_graph_overview(
-            G = self.G,
-            data_config=self.data_config,
-            recompute=recompute
-        )
+        stats = get_graph_overview(graph=self, recompute=recompute)
         if display:
             print(json.dumps(stats, indent=2))
         return stats
