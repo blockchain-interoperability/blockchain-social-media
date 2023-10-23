@@ -7,12 +7,14 @@ from crypto_chatter.graph import CryptoGraph
 
 def load_graph_components(
     graph: CryptoGraph,
+    top_n: int = 100,
 ) -> list[list[int]]:
     '''
     Loads the strongly connected components of the given directed graph.
     '''
     marker_file = graph.data_config.graph_components_dir/'completed.txt'
-    if not marker_file.is_file():
+    last_file = sorted(graph.data_config.graph_components_dir.glob('*.json'))[top_n-1]
+    if not marker_file.is_file() or not last_file.is_file():
         start = time.time()
         connected_components = [
             list(cc) 
@@ -22,10 +24,9 @@ def load_graph_components(
         with progress_bar() as progress:
             save_task = progress.add_task(
                 description='saving component info..', 
-                total=len(connected_components)
+                total=max(len(connected_components), top_n),
             )
-
-            for i, cc in enumerate(connected_components):
+            for i, cc in enumerate(connected_components[:top_n]):
                 json.dump(
                     cc,
                     open(
@@ -38,7 +39,7 @@ def load_graph_components(
         open(marker_file, 'w').close()
 
     else:
-        cc_files = sorted(graph.data_config.graph_components_dir.glob('*.json'))
+        cc_files = sorted(graph.data_config.graph_components_dir.glob('*.json'))[:top_n]
         connected_components = []
         with progress_bar() as progress:
             load_task = progress.add_task(description='loading component info..', total=len(cc_files))

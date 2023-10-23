@@ -28,7 +28,10 @@ class CryptoReplyGraph(CryptoGraph):
     def populate_attributes(self) -> None:
         ...
 
-    def build(self) -> None:
+    def build(
+        self,
+        top_n_components:int = 100
+    ) -> None:
         '''
         Build the graph using the data from snapshot
         '''
@@ -42,7 +45,7 @@ class CryptoReplyGraph(CryptoGraph):
         self.nodes = nodes
         self.edges = edges
         self.data = graph_data
-        self.components = load_graph_components(graph=self)
+        self.components = load_graph_components(graph=self, top_n = top_n_components)
 
         print(f'constructed complete reply graph in {int(time.time()-start)} seconds')
 
