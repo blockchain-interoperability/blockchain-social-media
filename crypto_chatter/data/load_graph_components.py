@@ -39,6 +39,7 @@ def load_graph_components(
         open(marker_file, 'w').close()
 
     else:
+        start = time.time()
         cc_files = sorted(graph.data_config.graph_components_dir.glob('*.json'))[:top_n]
         connected_components = []
         with progress_bar() as progress:
@@ -46,5 +47,6 @@ def load_graph_components(
             for f in cc_files:
                 connected_components += [json.load(open(f))]
                 progress.update(load_task, advance =1)
+        print(f'loaded {top_n} compnents in {int(time.time()-start)} seconds')
     
     return connected_components
