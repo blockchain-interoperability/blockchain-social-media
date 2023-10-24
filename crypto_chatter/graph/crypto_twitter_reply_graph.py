@@ -12,16 +12,10 @@ from crypto_chatter.config import (
 )
 from .crypto_reply_graph import CryptoReplyGraph
 
-
 class CryptoTwitterReplyGraph(CryptoReplyGraph):
-    graph: nx.DiGraph
-    nodes: list[int]
-    edges: list[list[int]]
-    data: pd.DataFrame
-    data_config: CryptoChatterDataConfig
-    data_source: str = 'twitter'
-    
-    def __init__(self, index_name: str) -> None:
+    data_source = 'twitter'
+
+    def configure(self, index_name: str) -> None:
         es_query = ES_TWITTER_QUERY
         es_query['query']['bool']['must'] = {
             "simple_query_string": {
@@ -39,6 +33,7 @@ class CryptoTwitterReplyGraph(CryptoReplyGraph):
             es_mappings=ES_TWITTER_MAPPINGS,
             es_query=es_query,
             data_source=self.data_source,
+            node_id_col='id',
             raw_snapshot_dir = DATA_DIR / f'twitter/{index_name}/snapshots',
             graph_dir = DATA_DIR / f'twitter/{index_name}/reply-graph',
             graph_gephi_dir = DATA_DIR / f'twitter/{index_name}/reply-graph/gephi',
@@ -52,7 +47,8 @@ class CryptoTwitterReplyGraph(CryptoReplyGraph):
         self.data_config.raw_snapshot_dir.mkdir(parents=True, exist_ok=True)
         self.data_config.graph_dir.mkdir(parents=True, exist_ok=True)
         self.data_config.graph_components_dir.mkdir(parents=True, exist_ok=True)
-    
+        self.data_config.graph_gephi_dir.mkdir(parents=True, exist_ok=True)
+
     def populate_attributes(self):
         for attr in self.data_config.graph_attributes:
             nx.set_node_attributes(

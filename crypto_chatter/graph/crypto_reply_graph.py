@@ -9,29 +9,21 @@ from crypto_chatter.data import (
     load_reply_graph_edges,
     load_graph_components,
 )
+from crypto_chatter.utils import progress_bar
 
 from .crypto_graph import CryptoGraph
 from .get_graph_overview import get_graph_overview
 
 class CryptoReplyGraph(CryptoGraph):
-    G: nx.DiGraph | None = None
-    nodes: list[int] | None = None
-    edges: list[list[int]] | None = None
-    components: list[list[int]] | None = None
-    data: pd.DataFrame | None = None
-    data_config: CryptoChatterDataConfig
-    data_source: str
-
-    def __init__(self, *args, **kwargs) -> None:
+    def __init__(self, index_name:str, *args, **kwargs) -> None:
+        self.configure(index_name=index_name)
+        self.build()
         ...
 
-    def populate_attributes(self) -> None:
+    def configure(self, index_name: str) -> None:
         ...
 
-    def build(
-        self,
-        top_n_components:int = 100
-    ) -> None:
+    def build(self) -> None:
         '''
         Build the graph using the data from snapshot
         '''
@@ -45,43 +37,49 @@ class CryptoReplyGraph(CryptoGraph):
         self.nodes = nodes
         self.edges = edges
         self.data = graph_data
-        self.components = load_graph_components(graph=self, top_n = top_n_components)
 
         print(f'constructed complete reply graph in {int(time.time()-start)} seconds')
-
-    def check_graph_is_built(self):
-        '''
-        Called before operations that require the actual graph. 
-        Used to ensure that graph is built.
-        '''
-        if not self.nodes or not self.edges or not self.G:
-            raise Exception('Graph needs to be built first!')
 
     def get_stats(
         self,
         recompute: bool = False,
         display: bool = False,
-    ) -> dict[str,any]:
+    ) -> dict[str, any]:
         '''
         Get basic statistics of the network. 
         '''
-        self.check_graph_is_built()
         stats = get_graph_overview(graph=self, recompute=recompute)
         if display:
             print(json.dumps(stats, indent=2))
         return stats
-    
-    def export_gephi_component(
-        self,
-        component_id: int,
-    ) -> None:
-        '''
-        Export the selected component to a file format that can be consumed by gephi for visual inspection
-        '''
-        self.check_graph_is_built()
-        self.components[component_id]
-        ...
 
+    def load_components(
+        self,
+        top_n_components:int = 100
+    ):
+        if self.components is None or self.top_n_components != top_n_components:
+            self.components = load_graph_components(graph=self, top_n = top_n_components)
+    
+    def export_gephi_components(
+        self,
+        top_n_components:int = 100
+    ) -> None:
+        self.load_components(top_n_components)
+        with progress_bar() as progress:
+            save_task = progress.add_task('exporting components to gephi..', total=top_n_components)
+            for i,c in enumerate(self.components):
+                subgraph = self.G.subgraph(c)
+                for col in self.data.columns:
+                    nx.set_node_attributes(
+                        subgraph,
+                        values = dict(zip(
+                            self.data[self.data_config.node_id_col].values, 
+                            self.data[col].values
+                        )),
+                        name = col,
+                    )
+                nx.write_gexf(subgraph, self.data_config.graph_gephi_dir / f'{i:06d}.gexf')
+                progress.advance(save_task)
 
     def export_gephi_full(
         self,
@@ -89,7 +87,6 @@ class CryptoReplyGraph(CryptoGraph):
         '''
         Export the full graph to a file format that can be consumed by gephi for visual inspection
         '''
-        self.check_graph_is_built()
         full_graph_file = self.data_config.graph_gephi_dir / 'full.gexf'
         nx.write_gexf(self.G, full_graph_file)
         print(f'exported graph to {str(full_graph_file)}')

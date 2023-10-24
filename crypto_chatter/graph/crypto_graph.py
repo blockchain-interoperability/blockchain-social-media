@@ -2,15 +2,18 @@ import networkx as nx
 import pandas as pd
 
 from crypto_chatter.config import CryptoChatterDataConfig
+from crypto_chatter.utils import NodeList, EdgeList
 
 class CryptoGraph():
-    G: nx.DiGraph | None = None
-    nodes: list[int] | None = None
-    edges: list[list[int]] | None = None
-    components: list[list[int]] | None = None
-    data: pd.DataFrame | None = None
+    G: nx.DiGraph
+    nodes: NodeList
+    edges: EdgeList
+    data: pd.DataFrame
     data_config: CryptoChatterDataConfig
+    node_id_col: str
     data_source: str
+    top_n_components: int 
+    components: NodeList | None = None
 
     def __init__(self, *args, **kwargs) -> None:
         ...
@@ -19,7 +22,4 @@ class CryptoGraph():
         ...
 
     def build(self) -> None:
-        ...
-
-    def check_graph_is_built(self) -> bool:
         ...

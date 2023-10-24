@@ -13,8 +13,8 @@ def load_graph_components(
     Loads the strongly connected components of the given directed graph.
     '''
     marker_file = graph.data_config.graph_components_dir/'completed.txt'
-    last_file = sorted(graph.data_config.graph_components_dir.glob('*.json'))[top_n-1]
-    if not marker_file.is_file() or not last_file.is_file():
+    cached_files = sorted(graph.data_config.graph_components_dir.glob('*.json'))
+    if not marker_file.is_file() or len(cached_files) < top_n:
         start = time.time()
         connected_components = [
             list(cc) 
@@ -35,7 +35,7 @@ def load_graph_components(
                     )
                 )
                 progress.update(save_task, advance =1)
-        print(f'counted and saved connected components info in {int(time.time()-start)} seconds')
+        print(f'counted and saved {top_n} connected components info in {int(time.time()-start)} seconds')
         open(marker_file, 'w').close()
 
     else:

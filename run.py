@@ -18,20 +18,16 @@ def run(
         else: 
             raise Exception('Unknown graph type')
     elif data_source == 'reddit':
-        graph = None
+        raise Exception('Reddit is not implemented')
     else:
         raise Exception('Unknown data source')
-    if operation == 'build_graph':
-        graph.build()
-    elif operation == 'graph_overview':
-        graph.build()
+
+    if operation == 'graph_overview':
         graph.get_stats(display=True)
     elif operation == 'recompute_graph_overview':
-        graph.build()
         graph.get_stats(recompute=True, display=True)
-    elif operation == 'export_gephi':
-        graph.build()
-        graph.export_gephi()
+    elif operation == 'export_components':
+        graph.export_gephi_components()
     else:
         raise Exception('Unknown operation')
 

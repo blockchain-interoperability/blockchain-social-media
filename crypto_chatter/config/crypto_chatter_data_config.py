@@ -4,6 +4,7 @@ from pathlib import Path
 @dataclass
 class CryptoChatterDataConfig:
     data_source: str
+    node_id_col: str
     raw_snapshot_dir: Path
     graph_dir: Path
     graph_gephi_dir: Path
