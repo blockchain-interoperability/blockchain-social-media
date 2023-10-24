@@ -23,3 +23,6 @@ class CryptoGraph():
 
     def build(self) -> None:
         ...
+
+    def load_components(self, top_n_components:int) -> None:
+        ...

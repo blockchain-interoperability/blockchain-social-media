@@ -11,6 +11,7 @@ def get_graph_overview(
     recompute: bool = False,
 ) -> dict[str,any]:
     if not graph.data_config.graph_stats_file.is_file() or recompute:
+        graph.load_components()
         start = time.time()
         longest_path = nx.dag_longest_path(graph.G)
         print(f'found longest path in {int(time.time() - start)} seconds')
@@ -25,8 +26,7 @@ def get_graph_overview(
         out_degree = np.array(out_degree)
         print(f'computed out_degree stats in {int(time.time() - start)} seconds')
 
-        connected_components = load_graph_components(graph)
-        connected_components_size = np.array([len(cc) for cc in connected_components])
+        connected_components_size = np.array([len(cc) for cc in graph.components])
         top_5_components = [
             {
                 'id': cid, 
@@ -39,7 +39,7 @@ def get_graph_overview(
             "Node Count": len(graph.nodes),
             "Edge Count": len(graph.edges),
             "Longest Path": len(longest_path),
-            "Connected Components Count": len(connected_components),
+            "Connected Components Count": len(graph.components),
             "In-Degree": {
                 "Max": int(in_degree.max()),
                 "Avg": float(in_degree.mean()),

@@ -9,15 +9,22 @@ from .load_raw_data import load_raw_data
 def load_reply_graph_edges(
     data_config: CryptoChatterDataConfig
 ) -> tuple[NodeList, EdgeList]:
-    if not data_config.graph_nodes_file.is_file() and not data_config.graph_edges_file.is_file():
+    if (
+        not data_config.graph_nodes_file.is_file() 
+        and not data_config.graph_edges_file.is_file()
+    ):
         df = load_raw_data(data_config)
+        has_reply = df[~df['quoted_status.id'].isna()]
         edges_to = []
         edges_from = []
 
         start = time.time()
         with progress_bar() as progress:
             graph_task = progress.add_task('Constructing edges...', total = len(df))
-            for tweet_id, reply_id in df[['id','quoted_status.id']].values:
+            for tweet_id, reply_id in zip(
+                has_reply['quoted_status.id'].values,
+                has_reply['id'].values
+            ):
                 if not pd.isna(reply_id):
                     edges_to += [reply_id]
                     edges_from += [tweet_id]
