@@ -35,6 +35,8 @@ def get_graph_overview(
             for cid in components_size.argsort()[:5:-1]
         ]
 
+        print(f'why do I have {len(top_5_components)} components...')
+
         graph_stats = {
             "Node Count": len(graph.nodes),
             "Edge Count": len(graph.edges),
