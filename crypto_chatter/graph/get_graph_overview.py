@@ -35,7 +35,7 @@ def get_graph_overview(
             for cid in components_size.argsort()[:5:-1]
         ]
 
-        print(f'why do I have {len(top_5_components)} components...')
+        print(f'why do I have {len(top_5_components)} components from {len(components_size)}...')
 
         graph_stats = {
             "Node Count": len(graph.nodes),
@@ -56,7 +56,7 @@ def get_graph_overview(
                 "Max": int(components_size.max()),
                 "Avg": int(components_size.mean()),
                 "Min": int(components_size.min()),
-                "Top 5 Components": top_5_components
+                # "Top 5 Components": top_5_components
             }
         }
 
