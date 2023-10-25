@@ -17,7 +17,7 @@ def load_graph_components(
     if not marker_file.is_file() or len(cached_files) < top_n:
         start = time.time()
         connected_components = [
-            list(map(cc, int)) 
+            list(cc) 
             for cc in sorted(
                 nx.strongly_connected_components(graph.G),
                 key=len,
