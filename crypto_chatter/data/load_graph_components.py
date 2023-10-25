@@ -17,8 +17,12 @@ def load_graph_components(
     if not marker_file.is_file() or len(cached_files) < top_n:
         start = time.time()
         connected_components = [
-            list(cc) 
-            for cc in sorted(nx.strongly_connected_components(graph.G), key=len, reverse=True)
+            list(map(cc, int)) 
+            for cc in sorted(
+                nx.strongly_connected_components(graph.G),
+                key=len,
+                reverse=True
+            )
         ]
         print(f'detected {len(connected_components):,} components in {int(time.time()-start)} seconds')
         with progress_bar() as progress:

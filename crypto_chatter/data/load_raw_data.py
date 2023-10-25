@@ -70,7 +70,9 @@ def load_raw_data(data_config: CryptoChatterDataConfig) -> pd.DataFrame:
         )
         dataframes += [df]
 
-        print(f'we saved {(len(dataframes) -1) * chunk_size + len(results):,} rows in {len(dataframes)} chunks in {int(time.time()-start)} seconds')
+        num_rows = (len(dataframes) -1) * chunk_size + len(results)
+
+        print(f'we saved {num_rows:,} rows in {len(dataframes)} chunks in {int(time.time()-start)} seconds')
         df = pd.concat(dataframes)
         open(marker_file, 'w').close()
 
@@ -79,7 +81,10 @@ def load_raw_data(data_config: CryptoChatterDataConfig) -> pd.DataFrame:
         dataframes = []
         cache_files = sorted(data_config.raw_snapshot_dir.glob('*.pkl'))
         with progress_bar() as progress:
-            load_task = progress.add_task(description='loading cache...', total=len(cache_files))
+            load_task = progress.add_task(
+                description='loading cache...', 
+                total=len(cache_files)
+            )
             for file in cache_files:
                 dataframes += [pd.read_pickle(file)]
                 progress.update(load_task, advance=1)
