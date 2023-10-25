@@ -16,21 +16,21 @@ def load_graph_components(
     cached_files = sorted(graph.data_config.graph_components_dir.glob('*.json'))
     if not marker_file.is_file() or len(cached_files) < top_n:
         start = time.time()
-        connected_components = [
+        components = [
             list(cc) 
             for cc in sorted(
-                nx.strongly_connected_components(graph.G),
+                nx.weakly_connected_components(graph.G),
                 key=len,
                 reverse=True
             )
         ]
-        print(f'detected {len(connected_components):,} components in {int(time.time()-start)} seconds')
+        print(f'detected {len(components):,} components in {int(time.time()-start)} seconds')
         with progress_bar() as progress:
             save_task = progress.add_task(
                 description='saving component info..', 
-                total=max(len(connected_components), top_n),
+                total=max(len(components), top_n),
             )
-            for i, cc in enumerate(connected_components[:top_n]):
+            for i, cc in enumerate(components[:top_n]):
                 json.dump(
                     cc,
                     open(
@@ -45,12 +45,12 @@ def load_graph_components(
     else:
         start = time.time()
         cc_files = sorted(graph.data_config.graph_components_dir.glob('*.json'))[:top_n]
-        connected_components = []
+        components = []
         with progress_bar() as progress:
             load_task = progress.add_task(description='loading component info..', total=len(cc_files))
             for f in cc_files:
-                connected_components += [json.load(open(f))]
+                components += [json.load(open(f))]
                 progress.update(load_task, advance =1)
         print(f'loaded {top_n} compnents in {int(time.time()-start)} seconds')
     
-    return connected_components
+    return components

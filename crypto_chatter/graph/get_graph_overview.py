@@ -26,13 +26,13 @@ def get_graph_overview(
         out_degree = np.array(out_degree)
         print(f'computed out_degree stats in {int(time.time() - start)} seconds')
 
-        connected_components_size = np.array([len(cc) for cc in graph.components])
+        components_size = np.array([len(cc) for cc in graph.components])
         top_5_components = [
             {
                 'id': int(cid), 
-                'size': int(connected_components_size[cid])
+                'size': int(components_size[cid])
             }
-            for cid in connected_components_size.argsort()[:5:-1]
+            for cid in components_size.argsort()[:5:-1]
         ]
 
         graph_stats = {
@@ -51,9 +51,9 @@ def get_graph_overview(
                 "Min": int(out_degree.min()),
             },
             "Conncted Compoenents Size": {
-                "Max": int(connected_components_size.max()),
-                "Avg": int(connected_components_size.mean()),
-                "Min": int(connected_components_size.min()),
+                "Max": int(components_size.max()),
+                "Avg": int(components_size.mean()),
+                "Min": int(components_size.min()),
                 "Top 5 Components": top_5_components
             }
         }
