@@ -27,13 +27,6 @@ def get_graph_overview(
         print(f'computed out_degree stats in {int(time.time() - start)} seconds')
 
         components_size = np.array([len(cc) for cc in graph.components])
-        top_5_components = [
-            {
-                'id': int(cid), 
-                'size': int(components_size[cid])
-            }
-            for cid in components_size.argsort()[:5:-1]
-        ]
 
         print(f'why do I have {len(top_5_components)} components from {len(components_size)}...')
 
@@ -56,7 +49,6 @@ def get_graph_overview(
                 "Max": int(components_size.max()),
                 "Avg": int(components_size.mean()),
                 "Min": int(components_size.min()),
-                # "Top 5 Components": top_5_components
             }
         }
 

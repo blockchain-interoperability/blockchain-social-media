@@ -53,18 +53,16 @@ class CryptoReplyGraph(CryptoGraph):
 
     def load_components(
         self,
-        top_n_components:int = 100
     ):
-        if self.components is None or self.top_n_components != top_n_components:
-            self.components = load_graph_components(graph=self, top_n = top_n_components)
+        if self.components is None:
+            self.components = load_graph_components(graph=self)
     
     def export_gephi_components(
         self,
-        top_n_components:int = 100
     ) -> None:
-        self.load_components(top_n_components)
+        self.load_components()
         with progress_bar() as progress:
-            save_task = progress.add_task('exporting components to gephi..', total=top_n_components)
+            save_task = progress.add_task('exporting components to gephi..', total=len(self.components))
             for i,c in enumerate(self.components):
                 subgraph = self.G.subgraph(c)
                 for col in self.data.columns:
