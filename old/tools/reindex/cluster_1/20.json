@@ -1,1 +1,0 @@
-{"py/object": "config.Config", "elasticsearch_host": "http://idea-vm-elasticsearch:9200", "elasticsearch_verify_certs": false, "elasticsearch_index_name": "blockchain-cluster-1", "elasticsearch_timeout_secs": 120, "max_docs": 1000000, "elasticsearch_query": {"terms": {"_id": []}}}
