@@ -29,7 +29,7 @@ def get_graph_overview(
         connected_components_size = np.array([len(cc) for cc in graph.components])
         top_5_components = [
             {
-                'id': cid, 
+                'id': int(cid), 
                 'size': int(connected_components_size[cid])
             }
             for cid in connected_components_size.argsort()[:5:-1]
