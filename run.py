@@ -26,7 +26,7 @@ def run(
         graph.get_stats(display=True)
     elif operation == 'recompute_graph_overview':
         graph.get_stats(recompute=True, display=True)
-    elif operation == 'export_components':
+    elif operation == 'export_components_gephi':
         graph.export_gephi_components()
     else:
         raise Exception('Unknown operation')
