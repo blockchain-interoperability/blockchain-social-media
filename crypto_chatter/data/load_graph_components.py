@@ -37,8 +37,8 @@ def load_graph_components(
                     )
                 )
                 progress.update(save_task, advance =1)
-        print(f'counted and saved {len(components)} connected components info in {int(time.time()-start)} seconds')
         open(marker_file, 'w').close()
+        print(f'counted and saved {len(components)} connected components info in {int(time.time()-start)} seconds')
 
     else:
         start = time.time()
