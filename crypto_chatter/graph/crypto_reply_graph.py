@@ -69,8 +69,8 @@ class CryptoReplyGraph(CryptoGraph):
                     nx.set_node_attributes(
                         subgraph,
                         values = dict(zip(
-                            self.data[self.data_config.node_id_col].values, 
-                            self.data[col].values
+                            self.data[self.data_config.node_id_col].values.tolist(), 
+                            self.data[col].values.tolist()
                         )),
                         name = col,
                     )
