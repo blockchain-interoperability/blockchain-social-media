@@ -1,7 +1,5 @@
-from dataclasses import dataclass
 from pathlib import Path
 
-@dataclass
 class CryptoChatterDataConfig:
     data_source: str
     node_id_col: str
