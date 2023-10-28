@@ -4,9 +4,9 @@ import json
 
 from crypto_chatter.config import CryptoChatterDataConfig
 from crypto_chatter.utils import NodeList, EdgeList
-from crypto_chatter.data import load_graph_components
 from crypto_chatter.utils import progress_bar
 
+from .load_weakly_connected_components import load_weaky_connected_components
 from .get_graph_overview import get_graph_overview
 
 class CryptoGraph():
@@ -44,7 +44,7 @@ class CryptoGraph():
         self,
     ):
         if self.components is None:
-            self.components = load_graph_components(graph=self)
+            self.components = load_weaky_connected_components(self.G, self.data_config)
 
     def export_gephi_components(
         self,

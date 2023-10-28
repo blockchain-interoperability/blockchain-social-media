@@ -1,10 +1,8 @@
 import networkx as nx
 import time
 
-from crypto_chatter.data import (
-    load_graph_data, 
-    load_reply_graph_edges,
-)
+from .load_graph_data import load_graph_data
+from .load_reply_graph_edges import load_reply_graph_edges
 
 from .crypto_graph import CryptoGraph
 
