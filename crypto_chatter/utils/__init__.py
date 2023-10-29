@@ -3,3 +3,5 @@ from .types import (
     NodeList, 
     EdgeList,
 )
+
+from .extract_hashtags import extract_hashtags
