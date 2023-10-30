@@ -1,23 +1,7 @@
-from typing import Literal
 import click
 
-from crypto_chatter.graph import (
-    CryptoGraph,
-    CryptoTwitterTweetGraph,
-) 
-from crypto_chatter.config import CryptoChatterDataConfig, load_default_data_config
-
-def load_twitter_graph(
-    data_config: CryptoChatterDataConfig,
-    graph_type: Literal['tweet', 'user'],
-) -> CryptoGraph:
-    if graph_type == 'tweet':
-        graph = CryptoTwitterTweetGraph(data_config=data_config)
-    elif graph_type == 'user':
-        raise NotImplementedError('User graph is not implemented')
-    else:
-        raise Exception('Unknown graph type')
-    return graph
+from crypto_chatter.graph import load_graph 
+from crypto_chatter.config import load_default_data_config
 
 @click.command()
 @click.argument('operation')
@@ -28,11 +12,8 @@ def run(
     dataset: str,
     graph_type: str,
 ):
-    data_config = load_default_data_config(dataset)
-    if 'twitter' in dataset:
-        graph = load_twitter_graph(data_config, graph_type)
-    else:
-        raise NotImplementedError('Other data sources are not implemented')
+    data_config = load_default_data_config(dataset, graph_type)
+    graph = load_graph(data_config, graph_type)
 
     if operation == 'graph_overview':
         graph.get_stats(display=True)

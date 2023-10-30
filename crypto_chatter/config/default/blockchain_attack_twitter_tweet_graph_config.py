@@ -21,13 +21,13 @@ index_name = 'blockchain-interoperability-attacks'
 data_source = 'twitter'
 
 class BlockchainAttackTwitterTweetGraphConfig(CryptoChatterDataConfig):
-    es_hostname=ES_HOSTNAME
-    es_index=index_name
-    es_columns=ES_TWITTER_COLUMNS
-    es_mappings=ES_TWITTER_MAPPINGS
-    es_query=es_query
-    data_source=data_source
-    node_id_col='id'
+    es_hostname = ES_HOSTNAME
+    es_index = index_name
+    es_columns = ES_TWITTER_COLUMNS
+    es_mappings = ES_TWITTER_MAPPINGS
+    es_query = es_query
+    data_source = data_source
+    node_id_col ='id'
     raw_snapshot_dir = DATA_DIR / f'twitter/{index_name}/snapshots'
     graph_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph'
     graph_gephi_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph/gephi'
