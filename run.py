@@ -3,7 +3,7 @@ import click
 
 from crypto_chatter.graph import (
     CryptoGraph,
-    CryptoTwitterReplyGraph,
+    CryptoTwitterTweetGraph,
 ) 
 from crypto_chatter.config import CryptoChatterDataConfig
 from crypto_chatter.config.default import BlockchainAttackTwitterConfig
@@ -20,7 +20,7 @@ def load_twitter_graph(
     graph_type: Literal['tweet', 'user'],
 ) -> CryptoGraph:
     if graph_type == 'tweet':
-        graph = CryptoTwitterReplyGraph(data_config=data_config)
+        graph = CryptoTwitterTweetGraph(data_config=data_config)
     elif graph_type == 'user':
         raise NotImplementedError('User graph is not implemented')
     else:
@@ -31,7 +31,7 @@ def load_twitter_graph(
 @click.command()
 @click.argument('operation')
 @click.option('-d', '--dataset', type=str, default='twitter:blockchain-interoperability-attacks')
-@click.option('-t', '--graph_type', type=str, default='reply')
+@click.option('-t', '--graph_type', type=str, default='tweet')
 def run(
     operation: str,
     dataset: str,

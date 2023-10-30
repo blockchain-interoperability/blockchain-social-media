@@ -1,2 +1,2 @@
 from .crypto_graph import CryptoGraph
-from .crypto_twitter_reply_graph import CryptoTwitterReplyGraph
+from .crypto_twitter_tweet_graph import CryptoTwitterTweetGraph

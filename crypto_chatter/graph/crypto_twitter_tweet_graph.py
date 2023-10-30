@@ -7,7 +7,7 @@ from .load_reply_graph_data import load_reply_graph_data
 from .load_weakly_connected_components import load_weaky_connected_components 
 from .get_reply_graph_overview import get_reply_graph_overview
 
-class CryptoTwitterReplyGraph(CryptoGraph):
+class CryptoTwitterTweetGraph(CryptoGraph):
     data_source = 'twitter'
     def build(self) -> None:
         '''
