@@ -1,22 +1,21 @@
 import networkx as nx
+import json
 import time
 
-from .load_graph_data import load_graph_data
-from .load_reply_graph_edges import load_reply_graph_edges
-
 from .crypto_graph import CryptoGraph
+from .load_reply_graph_data import load_reply_graph_data
+from .load_weakly_connected_components import load_weaky_connected_components 
+from .get_reply_graph_overview import get_reply_graph_overview
 
 class CryptoTwitterReplyGraph(CryptoGraph):
     data_source = 'twitter'
-
     def build(self) -> None:
         '''
         Build the graph using the data from snapshot
         '''
         start = time.time()
 
-        nodes, edges = load_reply_graph_edges(self.data_config)
-        graph_data = load_graph_data(nodes, self.data_config)
+        graph_data, nodes, edges = load_reply_graph_data(self.data_config)
         G = nx.DiGraph(edges)
 
         self.G = G
@@ -26,10 +25,22 @@ class CryptoTwitterReplyGraph(CryptoGraph):
 
         print(f'constructed complete reply graph in {int(time.time()-start)} seconds')
 
-    def populate_attributes(self):
-        for attr in self.data_config.graph_attributes:
-            nx.set_node_attributes(
-                self.G,
-                self.data[attr],
-                name = attr,
-            )
+    def load_components(
+        self,
+    ) -> None:
+        if self.components is None:
+            self.components = load_weaky_connected_components(self)
+
+    def get_stats(
+        self,
+        recompute: bool = False,
+        display: bool = False,
+    ) -> dict[str, any]:
+        self.load_components()
+        '''
+        Get basic statistics of the network. 
+        '''
+        stats = get_reply_graph_overview(self, recompute=recompute)
+        if display:
+            print(json.dumps(stats, indent=2))
+        return stats
