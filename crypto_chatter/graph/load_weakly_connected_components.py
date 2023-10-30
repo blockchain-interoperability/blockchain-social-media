@@ -4,8 +4,10 @@ import time
 
 from crypto_chatter.utils import progress_bar
 
+from .crypto_graph import CryptoGraph
+
 def load_weaky_connected_components(
-    graph: _CryptoGraph
+    graph: CryptoGraph
 ) -> list[list[int]]:
     '''
     Loads the strongly connected components of the given directed graph.
