@@ -1,6 +1,7 @@
 import pandas as pd
 
 from crypto_chatter.config import CryptoChatterDataConfig
+from crypto_chatter.utils import extract_hashtags
 
 def prettify_elastic_twitter(results:list[dict], data_config:CryptoChatterDataConfig) -> pd.DataFrame:
     """Cleans up list of results into a dataframe while dropping some unncessary columns.
@@ -34,5 +35,8 @@ def prettify_elastic_twitter(results:list[dict], data_config:CryptoChatterDataCo
     df['quoted_status.truncated'] = df['quoted_status.truncated'].fillna(False)
     df['quoted_status.full_text'] = df['quoted_status.text']
     df.loc[df['quoted_status.truncated'],'quoted_status.full_text'] = df[df['quoted_status.truncated']]['quoted_status.extended_tweet.full_text']
+
+    # parse hashtags
+    df['hashtags'] = df['full_text'].apply(extract_hashtags)
 
     return df
