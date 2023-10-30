@@ -1,5 +1,7 @@
 from crypto_chatter.config import CryptoChatterDataConfig
 
+from .blockchain_attack_twitter_tweet_graph_config import BlockchainAttackTwitterTweetGraphConfig
+
 def load_default_data_config(dataset:str, graph_type:str) -> CryptoChatterDataConfig:
     if (
         dataset == 'twitter:blockchain-interoperability-attacks' 
