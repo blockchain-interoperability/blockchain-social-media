@@ -5,15 +5,7 @@ from crypto_chatter.graph import (
     CryptoGraph,
     CryptoTwitterTweetGraph,
 ) 
-from crypto_chatter.config import CryptoChatterDataConfig
-from crypto_chatter.config.default import BlockchainAttackTwitterConfig
-
-def load_data_config(dataset:str) -> CryptoChatterDataConfig:
-    if dataset == 'twitter:blockchain-interoperability-attacks':
-        data_config = BlockchainAttackTwitterConfig()
-    else:
-        raise Exception('Unknown data source')
-    return data_config
+from crypto_chatter.config import CryptoChatterDataConfig, load_default_data_config
 
 def load_twitter_graph(
     data_config: CryptoChatterDataConfig,
@@ -27,7 +19,6 @@ def load_twitter_graph(
         raise Exception('Unknown graph type')
     return graph
 
-
 @click.command()
 @click.argument('operation')
 @click.option('-d', '--dataset', type=str, default='twitter:blockchain-interoperability-attacks')
@@ -37,7 +28,7 @@ def run(
     dataset: str,
     graph_type: str,
 ):
-    data_config = load_data_config(dataset)
+    data_config = load_default_data_config(dataset)
     if 'twitter' in dataset:
         graph = load_twitter_graph(data_config, graph_type)
     else:

@@ -20,7 +20,7 @@ es_query['query']['bool']['must'] = {
 index_name = 'blockchain-interoperability-attacks'
 data_source = 'twitter'
 
-class BlockchainAttackTwitterConfig(CryptoChatterDataConfig):
+class BlockchainAttackTwitterTweetGraphConfig(CryptoChatterDataConfig):
     es_hostname=ES_HOSTNAME
     es_index=index_name
     es_columns=ES_TWITTER_COLUMNS
@@ -29,13 +29,13 @@ class BlockchainAttackTwitterConfig(CryptoChatterDataConfig):
     data_source=data_source
     node_id_col='id'
     raw_snapshot_dir = DATA_DIR / f'twitter/{index_name}/snapshots'
-    graph_dir = DATA_DIR / f'twitter/{index_name}/reply-graph'
-    graph_gephi_dir = DATA_DIR / f'twitter/{index_name}/reply-graph/gephi'
-    graph_components_dir = DATA_DIR / f'twitter/{index_name}/reply-graph/components'
-    graph_stats_file = DATA_DIR / f'twitter/{index_name}/reply-graph/stats.json'
-    graph_edges_file = DATA_DIR / f'twitter/{index_name}/reply-graph/edges.json'
-    graph_nodes_file = DATA_DIR / f'twitter/{index_name}/reply-graph/nodes.json'
-    graph_data_file = DATA_DIR / f'twitter/{index_name}/reply-graph/graph_data.pkl'
+    graph_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph'
+    graph_gephi_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph/gephi'
+    graph_components_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph/components'
+    graph_stats_file = DATA_DIR / f'twitter/{index_name}/tweet-graph/stats.json'
+    graph_edges_file = DATA_DIR / f'twitter/{index_name}/tweet-graph/edges.json'
+    graph_nodes_file = DATA_DIR / f'twitter/{index_name}/tweet-graph/nodes.json'
+    graph_data_file = DATA_DIR / f'twitter/{index_name}/tweet-graph/graph_data.pkl'
     graph_attributes = ['full_text' 'user.id' 'user.followers_count' 'favorite_count' 'quote_count']
 
     def __init__(self) -> None:
