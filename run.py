@@ -16,8 +16,8 @@ def load_data_config(dataset:str) -> CryptoChatterDataConfig:
     return data_config
 
 def load_twitter_graph(
+    data_config: CryptoChatterDataConfig,
     graph_type: Literal['tweet', 'user'],
-    data_config: CryptoChatterDataConfig
 ) -> CryptoGraph:
     if graph_type == 'tweet':
         graph = CryptoTwitterReplyGraph(data_config=data_config)
@@ -37,6 +37,11 @@ def run(
     dataset: str,
     graph_type: str,
 ):
+    data_config = load_data_config(dataset)
+    if 'twitter' in dataset:
+        graph = load_twitter_graph(data_config, graph_type)
+    else:
+        raise NotImplementedError('Other data sources are not implemented')
 
     if operation == 'graph_overview':
         graph.get_stats(display=True)
