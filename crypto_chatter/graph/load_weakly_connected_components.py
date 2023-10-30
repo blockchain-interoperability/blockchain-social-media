@@ -4,9 +4,6 @@ import time
 
 from crypto_chatter.utils import progress_bar
 
-from ._crypto_graph import _CryptoGraph
-from crypto_chatter.config import CryptoChatterDataConfig
-
 def load_weaky_connected_components(
     graph: _CryptoGraph
 ) -> list[list[int]]:
