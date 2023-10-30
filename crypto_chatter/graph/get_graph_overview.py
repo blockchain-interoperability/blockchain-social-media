@@ -3,7 +3,6 @@ import time
 import numpy as np
 import json
 
-from crypto_chatter.data import load_graph_components
 from .crypto_graph import CryptoGraph
 
 def get_graph_overview(
