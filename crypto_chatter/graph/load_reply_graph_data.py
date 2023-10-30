@@ -6,7 +6,7 @@ from crypto_chatter.utils import progress_bar, NodeList, EdgeList
 from crypto_chatter.config import CryptoChatterDataConfig
 from crypto_chatter.data.load_raw_data import load_raw_data
 
-def load_reply_graph_edges(
+def load_reply_graph_data(
     data_config: CryptoChatterDataConfig
 ) -> tuple[pd.DataFrame, NodeList, EdgeList]:
     if (
