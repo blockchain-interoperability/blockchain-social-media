@@ -4,7 +4,6 @@ import numpy as np
 import json
 from pathlib import Path
 
-from .crypto_graph import CryptoGraph
 from crypto_chatter.utils import EdgeList, NodeList
 
 def get_graph_overview(
