@@ -32,10 +32,18 @@ class CryptoGraph():
         recompute: bool = False,
         display: bool = False,
     ) -> dict[str, any]:
+        self.load_components()
         '''
         Get basic statistics of the network. 
         '''
-        stats = get_graph_overview(graph=self, recompute=recompute)
+        stats = get_graph_overview(
+            G = self.G,
+            nodes = self.nodes,
+            edges = self.edges,
+            components = self.components,
+            graph_stats_file = self.data_config.graph_stats_file,
+            recompute = recompute,
+        )
         if display:
             print(json.dumps(stats, indent=2))
         return stats
