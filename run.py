@@ -13,7 +13,7 @@ def run(
     graph_type: str,
 ):
     data_config = load_default_data_config(dataset, graph_type)
-    graph = load_graph(data_config, graph_type)
+    graph = load_graph(data_config)
 
     if operation == 'graph_overview':
         graph.get_stats(display=True)

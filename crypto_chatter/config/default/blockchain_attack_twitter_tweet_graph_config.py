@@ -29,6 +29,7 @@ class BlockchainAttackTwitterTweetGraphConfig(CryptoChatterDataConfig):
     data_source = data_source
     node_id_col ='id'
     raw_snapshot_dir = DATA_DIR / f'twitter/{index_name}/snapshots'
+    graph_type = 'tweet'
     graph_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph'
     graph_gephi_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph/gephi'
     graph_components_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph/components'

@@ -7,13 +7,12 @@ from .crypto_graph import CryptoGraph
 
 def load_graph(
     data_config: CryptoChatterDataConfig,
-    graph_type: Literal['tweet','user'],
 ) -> CryptoGraph:
-    if data_config.data_source == 'twitter':
-        if graph_type == 'tweet':
-            graph = CryptoTwitterTweetGraph(data_config)
-        else:
-            raise NotImplementedError('Other graph types for twitter are not implemented')
+    if (
+        data_config.data_source == 'twitter' 
+        and data_config.graph_type == 'tweet'
+    ):
+        graph = CryptoTwitterTweetGraph(data_config)
     else:
         raise NotImplementedError('Other data sources are not implemented')
 
