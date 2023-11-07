@@ -14,14 +14,14 @@ def load_user_graph_edges(
         and not data_config.graph_edges_file.is_file()
     ):
         df = load_raw_data(data_config)
-        has_quoter = df[~df['user.id'] & ~df['quoted_status.user.id'].isna()]
+        has_quoter = df[~df['user.id'].isna() & ~df['quoted_status.user.id'].isna()]
         edges_to = []
         edges_from = []
 
         start = time.time()
         with progress_bar() as progress:
             graph_task = progress.add_task('Constructing edges...', total = len(df))
-            for user_id, quoter_id in zip(
+            for quoter_id, user_id in zip(
                 has_quoter['user.id'].values,
                 has_quoter['quoted_status.user.id'].values
             ):
