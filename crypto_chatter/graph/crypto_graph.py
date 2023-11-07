@@ -1,3 +1,4 @@
+from typing_extensions import Self
 import networkx as nx
 import pandas as pd
 
@@ -24,7 +25,7 @@ class CryptoGraph:
 
     def load_components(
         self,
-    ) -> None:
+    ) -> Self:
         ...
 
     def get_stats(
@@ -32,11 +33,6 @@ class CryptoGraph:
         recompute: bool = False,
         display: bool = False,
     ) -> dict[str, any]:
-        ...
-
-    def load_components(
-        self,
-    ) -> None:
         ...
 
     def export_gephi_components(

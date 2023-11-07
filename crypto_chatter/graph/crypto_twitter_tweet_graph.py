@@ -1,3 +1,4 @@
+from typing_extensions import Self
 import networkx as nx
 import json
 import time
@@ -27,10 +28,10 @@ class CryptoTwitterTweetGraph(CryptoGraph):
 
     def load_components(
         self,
-    ) -> None:
+    ) -> Self:
         if self.components is None:
             self.components = load_weaky_connected_components(self)
-
+        return self
     def get_stats(
         self,
         recompute: bool = False,
