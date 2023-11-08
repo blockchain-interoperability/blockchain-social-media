@@ -26,8 +26,8 @@ def load_reply_graph_data(
                 has_reply['id'].values
             ):
                 if not pd.isna(reply_id):
-                    edges_to += [int(reply_id)]
-                    edges_from += [int(tweet_id)]
+                    edges_from += [int(reply_id)]
+                    edges_to += [int(tweet_id)]
                 progress.update(graph_task, advance =1)
 
         nodes = list(set(edges_to) | set(edges_from))

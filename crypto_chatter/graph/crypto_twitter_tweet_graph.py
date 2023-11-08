@@ -1,5 +1,6 @@
 from typing_extensions import Self
 import networkx as nx
+import numpy as np
 import json
 import time
 
@@ -32,6 +33,12 @@ class CryptoTwitterTweetGraph(CryptoGraph):
         if self.components is None:
             self.components = load_weaky_connected_components(self)
         return self
+    
+    def degree_centrality(
+        self,
+    ) -> np.ndarray:
+        ...
+
     def get_stats(
         self,
         recompute: bool = False,

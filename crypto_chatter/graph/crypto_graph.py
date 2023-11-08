@@ -1,5 +1,6 @@
 from typing_extensions import Self
 import networkx as nx
+import numpy as np
 import pandas as pd
 
 from crypto_chatter.config import CryptoChatterDataConfig
@@ -26,6 +27,11 @@ class CryptoGraph:
     def load_components(
         self,
     ) -> Self:
+        ...
+
+    def degree_centrality(
+        self,
+    ) -> np.ndarray:
         ...
 
     def get_stats(

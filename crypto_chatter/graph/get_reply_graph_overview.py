@@ -24,10 +24,19 @@ def get_reply_graph_overview(
         _, out_degree = zip(*graph.G.out_degree(graph.nodes))
         out_degree = np.array(out_degree)
         print(f'computed out_degree stats in {int(time.time() - start)} seconds')
-
+        
+        reply_count = (~graph.data['quoted_status.id'].isna()).sum()
         components_size = np.array([len(cc) for cc in graph.components])
 
         graph_stats = {
+            "Reply Tweets": {
+                "Count": f"{reply_count:,}",
+                "Ratio": f"{reply_count/len(graph.data)*100:.2f}%"
+            },
+            "Standalone Tweets": {
+                "Count": f"{len(graph.data)-reply_count:,}",
+                "Ratio": f"{(len(graph.data)-reply_count)/len(graph.data)*100:.2f}%"
+            },
             "Node Count": len(graph.nodes),
             "Edge Count": len(graph.edges),
             "In-Degree": {
@@ -48,7 +57,6 @@ def get_reply_graph_overview(
                 "Min": int(components_size.min()),
             }
         }
-
         json.dump(graph_stats, open(graph.data_config.graph_stats_file, 'w'), indent=2)
         return graph_stats
 
