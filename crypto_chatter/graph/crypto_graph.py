@@ -70,6 +70,19 @@ class CryptoGraph:
             eig_cent_values = json.load(open(save_file))
         return np.array(eig_cent_values)
 
+    def closeness_centrality(
+        self,
+    ) -> np.ndarray:
+        save_file = self.data_config.graph_stats_dir / 'closeness_centrality.json'
+        if not save_file.is_file():
+            start = time.time()
+            eig_cent = nx.closeness_centrality(self.G)
+            eig_cent_values = [eig_cent[n] for n in self.nodes]
+            print(f'computed closeness centrality in {int(time.time() - start)} seconds')
+        else:
+            eig_cent_values = json.load(open(save_file))
+        return np.array(eig_cent_values)
+
     def get_stats(
         self,
         recompute: bool = False,
@@ -77,7 +90,6 @@ class CryptoGraph:
     ) -> dict[str, any]:
         overview_file = self.data_config.graph_stats_dir / 'overview.json'
         if not overview_file.is_file() or recompute:
-            self.load_components()
             start = time.time()
             longest_path = nx.dag_longest_path(self.G)
             print(f'found longest path in {int(time.time() - start)} seconds')
@@ -96,8 +108,10 @@ class CryptoGraph:
             bet_cent = self.betweenness_centrality()
             eig_cent = self.eigenvector_centrality()
             
+            # self.load_components()
+            # components_size = np.array([len(cc) for cc in self.components])
+            
             reply_count = (~self.data['quoted_status.id'].isna()).sum()
-            components_size = np.array([len(cc) for cc in self.components])
 
             graph_stats = {
                 "Reply Tweets": {
@@ -121,12 +135,12 @@ class CryptoGraph:
                     "Min": int(out_degree.min()),
                 },
                 "Longest Path": len(longest_path),
-                "Connected Components Count": len(self.components),
-                "Conncted Compoenents Size": {
-                    "Max": int(components_size.max()),
-                    "Avg": int(components_size.mean()),
-                    "Min": int(components_size.min()),
-                },
+                # "Connected Components Count": len(self.components),
+                # "Conncted Compoenents Size": {
+                #     "Max": int(components_size.max()),
+                #     "Avg": int(components_size.mean()),
+                #     "Min": int(components_size.min()),
+                # },
                 "Degree Centrality": {
                     "Max": int(deg_cent.max()),
                     "Avg": int(deg_cent.mean()),
