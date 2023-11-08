@@ -9,7 +9,7 @@ class CryptoChatterDataConfig:
     graph_dir: Path
     graph_gephi_dir: Path
     graph_components_dir: Path
-    graph_stats_file: Path
+    graph_stats_dir: Path
     graph_edges_file: Path
     graph_nodes_file: Path
     graph_data_file: Path

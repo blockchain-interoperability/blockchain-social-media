@@ -9,7 +9,8 @@ def get_reply_graph_overview(
     graph: CryptoGraph,
     recompute: bool = False,
 ) -> dict[str,any]:
-    if not graph.data_config.graph_stats_file.is_file() or recompute:
+    overview_file = graph.data_config.graph_stats_dir / 'overview.json'
+    if not overview_file.is_file() or recompute:
         graph.load_components()
         start = time.time()
         longest_path = nx.dag_longest_path(graph.G)
@@ -24,6 +25,10 @@ def get_reply_graph_overview(
         _, out_degree = zip(*graph.G.out_degree(graph.nodes))
         out_degree = np.array(out_degree)
         print(f'computed out_degree stats in {int(time.time() - start)} seconds')
+
+        deg_cent = graph.degree_centrality()
+        bet_cent = graph.betweenness_centrality()
+        eig_cent = graph.eigenvector_centrality()
         
         reply_count = (~graph.data['quoted_status.id'].isna()).sum()
         components_size = np.array([len(cc) for cc in graph.components])
@@ -55,11 +60,26 @@ def get_reply_graph_overview(
                 "Max": int(components_size.max()),
                 "Avg": int(components_size.mean()),
                 "Min": int(components_size.min()),
-            }
+            },
+            "Degree Centrality": {
+                "Max": int(deg_cent.max()),
+                "Avg": int(deg_cent.mean()),
+                "Min": int(deg_cent.min()),
+            },
+            "Betweenness Centrality": {
+                "Max": int(bet_cent.max()),
+                "Avg": int(bet_cent.mean()),
+                "Min": int(bet_cent.min()),
+            },
+            "Eigenvector Centrality": {
+                "Max": int(eig_cent.max()),
+                "Avg": int(eig_cent.mean()),
+                "Min": int(eig_cent.min()),
+            },
         }
-        json.dump(graph_stats, open(graph.data_config.graph_stats_file, 'w'), indent=2)
+        json.dump(graph_stats, open(overview_file, 'w'), indent=2)
         return graph_stats
 
     else:
-        graph_stats = json.load(open(graph.data_config.graph_stats_file))
+        graph_stats = json.load(open(overview_file))
         return graph_stats

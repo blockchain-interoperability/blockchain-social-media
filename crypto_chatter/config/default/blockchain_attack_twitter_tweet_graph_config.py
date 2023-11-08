@@ -33,7 +33,7 @@ class BlockchainAttackTwitterTweetGraphConfig(CryptoChatterDataConfig):
     graph_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph'
     graph_gephi_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph/gephi'
     graph_components_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph/components'
-    graph_stats_file = DATA_DIR / f'twitter/{index_name}/tweet-graph/stats.json'
+    graph_stats_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph/stats'
     graph_edges_file = DATA_DIR / f'twitter/{index_name}/tweet-graph/edges.json'
     graph_nodes_file = DATA_DIR / f'twitter/{index_name}/tweet-graph/nodes.json'
     graph_data_file = DATA_DIR / f'twitter/{index_name}/tweet-graph/graph_data.pkl'

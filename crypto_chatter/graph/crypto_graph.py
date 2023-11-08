@@ -6,6 +6,12 @@ import pandas as pd
 from crypto_chatter.config import CryptoChatterDataConfig
 from crypto_chatter.utils import NodeList, EdgeList
 
+from .centrality import (
+    compute_degree_centrality,
+    compute_betweenness_centrality,
+    compute_eigenvector_centrality,
+)
+
 class CryptoGraph:
     G: nx.DiGraph
     nodes: NodeList
@@ -32,7 +38,17 @@ class CryptoGraph:
     def degree_centrality(
         self,
     ) -> np.ndarray:
-        ...
+        return compute_degree_centrality(self)
+
+    def betweenness_centrality(
+        self,
+    ) -> np.ndarray:
+        return compute_betweenness_centrality(self)
+
+    def eigenvector_centrality(
+        self,
+    ) -> np.ndarray:
+        return compute_eigenvector_centrality(self)
 
     def get_stats(
         self,
