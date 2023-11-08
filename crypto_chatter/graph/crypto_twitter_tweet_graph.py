@@ -36,20 +36,28 @@ class CryptoTwitterTweetGraph(CryptoGraph):
     def in_degree(
         self,
     ) -> np.ndarray:
-        start = time.time()
-        _, in_degree = zip(*self.G.in_degree(self.nodes))
-        in_degree = np.array(in_degree)
-        print(f'computed in_degree stats in {int(time.time() - start)} seconds')
-        return in_degree
+        save_file = self.data_config.graph_stats_dir / 'in_degree.json'
+        if not save_file.is_file():
+            start = time.time()
+            in_degree = list(dict(self.G.in_degree(self.nodes)).values())
+            print(f'computed in_degree stats in {int(time.time() - start)} seconds')
+            json.dump(in_degree, open(save_file, 'w'))
+        else:
+            in_degree = json.load(open(save_file))
+        return np.array(in_degree)
 
     def out_degree(
         self,
     ) -> np.ndarray:
-        start = time.time()
-        _, out_degree = zip(*self.G.out_degree(self.nodes))
-        out_degree = np.array(out_degree)
-        print(f'computed out_degree stats in {int(time.time() - start)} seconds')
-        return out_degree
+        save_file = self.data_config.graph_stats_dir / 'out_degree.json'
+        if not save_file.is_file():
+            start = time.time()
+            out_degree = list(dict(self.G.out_degree(self.nodes)).values())
+            print(f'computed out_degree stats in {int(time.time() - start)} seconds')
+            json.dump(out_degree, open(save_file, 'w'))
+        else:
+            out_degree = json.load(open(save_file))
+        return np.array(out_degree)
 
     def get_stats(
         self,

@@ -34,11 +34,15 @@ class CryptoGraph:
     def degree(
         self,
     ):
-        start = time.time()
-        _, degree = zip(*self.G.degree(self.nodes))
-        degree = np.array(degree)
-        print(f'computed degree stats in {int(time.time() - start)} seconds')
-        return degree
+        save_file = self.data_config.graph_stats_dir / 'out_degree.json'
+        if not save_file.is_file():
+            start = time.time()
+            degree = list(dict(self.G.degree(self.nodes)).values())
+            print(f'computed degree stats in {int(time.time() - start)} seconds')
+            json.dump(degree, open(save_file, 'w'))
+        else:
+            degree = json.load(open(save_file))
+        return np.array(degree)
 
     def degree_centrality(
         self,
