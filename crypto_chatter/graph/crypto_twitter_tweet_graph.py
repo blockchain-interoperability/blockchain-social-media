@@ -33,16 +33,3 @@ class CryptoTwitterTweetGraph(CryptoGraph):
             self.components = load_weaky_connected_components(self)
         return self
     
-    def get_stats(
-        self,
-        recompute: bool = False,
-        display: bool = False,
-    ) -> dict[str, any]:
-        self.load_components()
-        '''
-        Get basic statistics of the network. 
-        '''
-        stats = get_reply_graph_overview(self, recompute=recompute)
-        if display:
-            print(json.dumps(stats, indent=2))
-        return stats
