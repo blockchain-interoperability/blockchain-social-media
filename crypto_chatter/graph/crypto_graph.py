@@ -53,6 +53,7 @@ class CryptoGraph:
             deg_cent = nx.degree_centrality(self.G)
             deg_cent_values = [deg_cent[n] for n in self.nodes]
             print(f'computed degree centrality in {int(time.time() - start)} seconds')
+            json.dump(deg_cent_values, open(save_file,'w'))
         else:
             deg_cent_values = json.load(open(save_file))
         return np.array(deg_cent_values)
@@ -66,6 +67,7 @@ class CryptoGraph:
             bet_cent = nx.betweenness_centrality(self.G)
             bet_cent_values = [bet_cent[n] for n in self.nodes]
             print(f'computed betweenness centrality in {int(time.time() - start)} seconds')
+            json.dump(bet_cent_values, open(save_file,'w'))
         else:
             bet_cent_values = json.load(open(save_file))
         return np.array(bet_cent_values)
@@ -79,6 +81,7 @@ class CryptoGraph:
             eig_cent = nx.eigenvector_centrality(self.G)
             eig_cent_values = [eig_cent[n] for n in self.nodes]
             print(f'computed eigenvector centrality in {int(time.time() - start)} seconds')
+            json.dump(eig_cent_values, open(save_file,'w'))
         else:
             eig_cent_values = json.load(open(save_file))
         return np.array(eig_cent_values)
@@ -89,12 +92,13 @@ class CryptoGraph:
         save_file = self.data_config.graph_stats_dir / 'closeness_centrality.json'
         if not save_file.is_file():
             start = time.time()
-            eig_cent = nx.closeness_centrality(self.G)
-            eig_cent_values = [eig_cent[n] for n in self.nodes]
+            cls_cent = nx.closeness_centrality(self.G)
+            cls_cent_values = [cls_cent[n] for n in self.nodes]
             print(f'computed closeness centrality in {int(time.time() - start)} seconds')
+            json.dump(cls_cent_values, open(save_file,'w'))
         else:
-            eig_cent_values = json.load(open(save_file))
-        return np.array(eig_cent_values)
+            cls_cent_values = json.load(open(save_file))
+        return np.array(cls_cent_values)
 
     def get_stats(
         self,
