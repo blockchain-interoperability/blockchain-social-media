@@ -173,7 +173,7 @@ class CryptoGraph:
     ) -> None:
         ...
 
-class CryptoSubgraph:
+class CryptoSubGraph:
     parent: CryptoGraph
     source: int
     nodes: NodeList
