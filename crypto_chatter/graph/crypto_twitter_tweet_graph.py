@@ -111,24 +111,24 @@ class CryptoTwitterTweetGraph(CryptoGraph):
                 #     "Min": int(components_size.min()),
                 # },
                 "Degree Centrality": {
-                    "Max": int(deg_cent.max()),
-                    "Avg": int(deg_cent.mean()),
-                    "Min": int(deg_cent.min()),
+                    "Max": deg_cent.max(),
+                    "Avg": deg_cent.mean(),
+                    "Min": deg_cent.min(),
                 },
                 # "Betweenness Centrality": {
-                #     "Max": int(bet_cent.max()),
-                #     "Avg": int(bet_cent.mean()),
-                #     "Min": int(bet_cent.min()),
+                #     "Max": bet_cent.max(),
+                #     "Avg": bet_cent.mean(),
+                #     "Min": bet_cent.min(),
                 # },
                 "Eigenvector Centrality": {
-                    "Max": int(eig_cent.max()),
-                    "Avg": int(eig_cent.mean()),
-                    "Min": int(eig_cent.min()),
+                    "Max": eig_cent.max(),
+                    "Avg": eig_cent.mean(),
+                    "Min": eig_cent.min(),
                 },
                 "Closeness Centrality": {
-                    "Max": int(cls_cent.max()),
-                    "Avg": int(cls_cent.mean()),
-                    "Min": int(cls_cent.min()),
+                    "Max": cls_cent.max(),
+                    "Avg": cls_cent.mean(),
+                    "Min": cls_cent.min(),
                 },
             }
             json.dump(graph_stats, open(overview_file, 'w'), indent=2)
