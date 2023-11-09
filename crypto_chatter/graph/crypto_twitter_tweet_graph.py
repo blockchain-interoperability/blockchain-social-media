@@ -26,6 +26,34 @@ class CryptoTwitterTweetGraph(CryptoGraph):
 
         print(f'constructed complete reply graph in {int(time.time()-start)} seconds')
 
+    def in_degree_centrality(
+        self,
+    ) -> np.ndarray:
+        save_file = self.data_config.graph_stats_dir / 'in_degree_centrality.json'
+        if not save_file.is_file():
+            start = time.time()
+            in_deg_cent = nx.in_degree_centrality(self.G)
+            in_deg_cent_values = [in_deg_cent[n] for n in self.nodes]
+            print(f'computed in degree centrality in {int(time.time() - start)} seconds')
+            json.dump(in_deg_cent_values, open(save_file,'w'))
+        else:
+            in_deg_cent_values = json.load(open(save_file))
+        return np.array(in_deg_cent_values)
+    
+    def out_degree_centrality(
+        self,
+    ) -> np.ndarray:
+        save_file = self.data_config.graph_stats_dir / 'out_degree_centrality.json'
+        if not save_file.is_file():
+            start = time.time()
+            out_deg_cent = nx.out_degree_centrality(self.G)
+            out_deg_cent_values = [out_deg_cent[n] for n in self.nodes]
+            print(f'computed out degree centrality in {int(time.time() - start)} seconds')
+            json.dump(out_deg_cent_values, open(save_file,'w'))
+        else:
+            out_deg_cent_values = json.load(open(save_file))
+        return np.array(out_deg_cent_values)
+
     def load_components(
         self,
     ) -> Self:
@@ -75,6 +103,7 @@ class CryptoTwitterTweetGraph(CryptoGraph):
             in_degree = self.in_degree()
             out_degree = self.out_degree()
             deg_cent = self.degree_centrality()
+            in_deg_cent = self.in_degree_centrality()
             # bet_cent = self.betweenness_centrality()
             eig_cent = self.eigenvector_centrality()
             cls_cent = self.closeness_centrality()
@@ -114,6 +143,11 @@ class CryptoTwitterTweetGraph(CryptoGraph):
                     "Max": deg_cent.max(),
                     "Avg": deg_cent.mean(),
                     "Min": deg_cent.min(),
+                },
+                "InDegree Centrality": {
+                    "Max": in_deg_cent.max(),
+                    "Avg": in_deg_cent.mean(),
+                    "Min": in_deg_cent.min(),
                 },
                 # "Betweenness Centrality": {
                 #     "Max": bet_cent.max(),
