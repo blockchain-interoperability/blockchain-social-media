@@ -215,12 +215,19 @@ class CryptoSubGraph:
 
     def count_hashtags(
         self,
+        top_n:int = 100,
     ) -> dict[str, int]:
-        hashtag_count = dict(
-            Counter([
-                tag
-                for hashtags in self.data['hashtags'].values
-                for tag in hashtags
-            ]).most_common()
-        )
+        save_file = self.parent.data_config.graph_dir / f'subgraph/{self.source}/hashtags/{top_n}.json'
+        save_file.parent.mkdir(parents=True, exist_ok=True)
+        if not save_file.is_file():
+            hashtag_count = dict(
+                Counter([
+                    tag
+                    for hashtags in self.data['hashtags'].values
+                    for tag in hashtags
+                ]).most_common()[:top_n]
+            )
+            json.dump(hashtag_count, open(save_file, 'w'))
+        else:
+            hashtag_count = json.load(open(save_file))
         return hashtag_count
