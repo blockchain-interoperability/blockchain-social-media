@@ -75,7 +75,7 @@ class CryptoTwitterTweetGraph(CryptoGraph):
             in_degree = self.in_degree()
             out_degree = self.out_degree()
             deg_cent = self.degree_centrality()
-            bet_cent = self.betweenness_centrality()
+            # bet_cent = self.betweenness_centrality()
             eig_cent = self.eigenvector_centrality()
             cls_cent = self.closeness_centrality()
             
@@ -115,11 +115,11 @@ class CryptoTwitterTweetGraph(CryptoGraph):
                     "Avg": int(deg_cent.mean()),
                     "Min": int(deg_cent.min()),
                 },
-                "Betweenness Centrality": {
-                    "Max": int(bet_cent.max()),
-                    "Avg": int(bet_cent.mean()),
-                    "Min": int(bet_cent.min()),
-                },
+                # "Betweenness Centrality": {
+                #     "Max": int(bet_cent.max()),
+                #     "Avg": int(bet_cent.mean()),
+                #     "Min": int(bet_cent.min()),
+                # },
                 "Eigenvector Centrality": {
                     "Max": int(eig_cent.max()),
                     "Avg": int(eig_cent.mean()),
