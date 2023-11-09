@@ -30,7 +30,7 @@ class CryptoTwitterTweetGraph(CryptoGraph):
         self,
     ) -> np.ndarray:
         save_file = self.data_config.graph_dir / 'stats/in_degree_centrality.json'
-        save_file.mkdir(exist_ok=True, parents=True)
+        save_file.parent.mkdir(exist_ok=True, parents=True)
 
         if not save_file.is_file():
             start = time.time()
@@ -46,7 +46,7 @@ class CryptoTwitterTweetGraph(CryptoGraph):
         self,
     ) -> np.ndarray:
         save_file = self.data_config.graph_dir / 'stats/out_degree_centrality.json'
-        save_file.mkdir(exist_ok=True, parents=True)
+        save_file.parent.mkdir(exist_ok=True, parents=True)
 
         if not save_file.is_file():
             start = time.time()
@@ -69,7 +69,7 @@ class CryptoTwitterTweetGraph(CryptoGraph):
         self,
         ) -> np.ndarray:
         save_file = self.data_config.graph_dir / 'stats/in_degree.json'
-        save_file.mkdir(exist_ok=True, parents=True)
+        save_file.parent.mkdir(exist_ok=True, parents=True)
 
         if not save_file.is_file():
             start = time.time()
@@ -84,7 +84,7 @@ class CryptoTwitterTweetGraph(CryptoGraph):
         self,
         ) -> np.ndarray:
         save_file = self.data_config.graph_dir / 'stats/out_degree.json'
-        save_file.mkdir(exist_ok=True, parents=True)
+        save_file.parent.mkdir(exist_ok=True, parents=True)
 
         if not save_file.is_file():
             start = time.time()

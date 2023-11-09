@@ -12,7 +12,7 @@ def load_default_data_config(
         dataset == 'twitter:blockchain-interoperability-attacks' 
         and graph_type == 'tweet'
     ):
-        data_config = BlockchainAttackTwitterTweetGraphConfig()
+        data_config = BlockchainAttackTwitterTweetGraphConfig
     else:
         raise Exception('Unknown data source and graph combination')
     return data_config
