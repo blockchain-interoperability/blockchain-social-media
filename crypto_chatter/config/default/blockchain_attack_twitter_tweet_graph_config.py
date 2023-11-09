@@ -32,10 +32,3 @@ class BlockchainAttackTwitterTweetGraphConfig(CryptoChatterDataConfig):
     raw_snapshot_dir = DATA_DIR / f'twitter/{index_name}/snapshots'
     graph_type = 'tweet'
     graph_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph'
-
-    def __init__(self) -> None:
-        self.raw_snapshot_dir.mkdir(parents=True, exist_ok=True)
-        self.graph_dir.mkdir(parents=True, exist_ok=True)
-        (self.graph_dir / 'components').mkdir(parents=True, exist_ok=True)
-        (self.graph_dir / 'stats').mkdir(parents=True, exist_ok=True)
-        (self.graph_dir / 'gephi').mkdir(parents=True, exist_ok=True)

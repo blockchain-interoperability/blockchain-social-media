@@ -23,8 +23,9 @@ def load_raw_data(data_config: CryptoChatterDataConfig) -> pd.DataFrame:
     Returns:
         df (pd.DataFrame): A concatenated dataframe containing all the specified columns.
     """
-    
+    data_config.raw_snapshot_dir.mkdir(exist_ok=True, parents=True)
     marker_file = data_config.raw_snapshot_dir / 'completed.txt'
+
     if not marker_file.is_file():
         chunk_size = 100000
         es = Elasticsearch(

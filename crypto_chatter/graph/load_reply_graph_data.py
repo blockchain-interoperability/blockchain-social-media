@@ -9,6 +9,7 @@ from crypto_chatter.data.load_raw_data import load_raw_data
 def load_reply_graph_data(
     data_config: CryptoChatterDataConfig
 ) -> tuple[pd.DataFrame, NodeList, EdgeList]:
+    data_config.graph_dir.mkdir(parents=True, exist_ok=True)
     graph_nodes_file = data_config.graph_dir / 'nodes.json'
     graph_edges_file = data_config.graph_dir / 'edges.json'
     graph_data_file = data_config.graph_dir / 'graph_data.pkl'

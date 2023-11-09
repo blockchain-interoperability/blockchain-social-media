@@ -30,6 +30,8 @@ class CryptoTwitterTweetGraph(CryptoGraph):
         self,
     ) -> np.ndarray:
         save_file = self.data_config.graph_dir / 'stats/in_degree_centrality.json'
+        save_file.mkdir(exist_ok=True, parents=True)
+
         if not save_file.is_file():
             start = time.time()
             in_deg_cent = nx.in_degree_centrality(self.G)
@@ -44,6 +46,8 @@ class CryptoTwitterTweetGraph(CryptoGraph):
         self,
     ) -> np.ndarray:
         save_file = self.data_config.graph_dir / 'stats/out_degree_centrality.json'
+        save_file.mkdir(exist_ok=True, parents=True)
+
         if not save_file.is_file():
             start = time.time()
             out_deg_cent = nx.out_degree_centrality(self.G)
@@ -65,6 +69,8 @@ class CryptoTwitterTweetGraph(CryptoGraph):
         self,
         ) -> np.ndarray:
         save_file = self.data_config.graph_dir / 'stats/in_degree.json'
+        save_file.mkdir(exist_ok=True, parents=True)
+
         if not save_file.is_file():
             start = time.time()
             in_degree = list(dict(self.G.in_degree(self.nodes)).values())
@@ -78,6 +84,8 @@ class CryptoTwitterTweetGraph(CryptoGraph):
         self,
         ) -> np.ndarray:
         save_file = self.data_config.graph_dir / 'stats/out_degree.json'
+        save_file.mkdir(exist_ok=True, parents=True)
+
         if not save_file.is_file():
             start = time.time()
             out_degree = list(dict(self.G.out_degree(self.nodes)).values())
@@ -92,8 +100,9 @@ class CryptoTwitterTweetGraph(CryptoGraph):
         recompute: bool = False,
         display: bool = False
         ) -> dict[str, any]:
-        overview_file = self.data_config.graph_dir / 'stats/overview.json'
-        if not overview_file.is_file() or recompute:
+        save_file = self.data_config.graph_dir / 'stats/overview.json'
+
+        if not save_file.is_file() or recompute:
             reply_count = (~self.data['quoted_status.id'].isna()).sum()
 
             start = time.time()
@@ -165,9 +174,9 @@ class CryptoTwitterTweetGraph(CryptoGraph):
                     "Min": cls_cent.min(),
                 },
             }
-            json.dump(graph_stats, open(overview_file, 'w'), indent=2)
+            json.dump(graph_stats, open(save_file, 'w'), indent=2)
         else:
-            graph_stats = json.load(open(overview_file))
+            graph_stats = json.load(open(save_file))
 
         if display:
             print(json.dumps(graph_stats, indent=2))
