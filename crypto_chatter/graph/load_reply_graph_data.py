@@ -9,9 +9,12 @@ from crypto_chatter.data.load_raw_data import load_raw_data
 def load_reply_graph_data(
     data_config: CryptoChatterDataConfig
 ) -> tuple[pd.DataFrame, NodeList, EdgeList]:
+    graph_nodes_file = data_config.graph_dir / 'nodes.json'
+    graph_edges_file = data_config.graph_dir / 'edges.json'
+    graph_data_file = data_config.graph_dir / 'graph_data.pkl'
     if (
-        not data_config.graph_nodes_file.is_file() 
-        and not data_config.graph_edges_file.is_file()
+        not graph_nodes_file.is_file() 
+        and not graph_edges_file.is_file()
     ):
         df = load_raw_data(data_config)
         has_reply = df[~df['quoted_status.id'].isna()]
@@ -36,28 +39,28 @@ def load_reply_graph_data(
 
         json.dump(
             nodes,
-            open(data_config.graph_nodes_file, 'w')
+            open(graph_nodes_file, 'w')
         )
         json.dump(
             edges,
-            open(data_config.graph_edges_file, 'w')
+            open(graph_edges_file, 'w')
         )
         
         print(f'Constructed graph with {len(nodes):,} nodes and {len(edges_to):,} edges in {int(time.time() - start)} seconds')
 
         graph_df = df[df['id'].isin(nodes)]
-        graph_df.to_pickle(data_config.graph_data_file)
+        graph_df.to_pickle(graph_data_file)
 
         print(f'Saved node and edge information to {data_config.graph_dir}')
 
     else:
         start = time.time()
-        nodes = json.load(open(data_config.graph_nodes_file))
-        edges = json.load(open(data_config.graph_edges_file))
+        nodes = json.load(open(graph_nodes_file))
+        edges = json.load(open(graph_edges_file))
         print(f'loaded graph edges in {int(time.time() - start)} seconds')
 
         start = time.time()
-        graph_df = pd.read_pickle(data_config.graph_data_file)
+        graph_df = pd.read_pickle(graph_data_file)
         print(f'loaded cached graph data in {int(time.time() - start)} seconds')
 
     return graph_df, nodes, edges

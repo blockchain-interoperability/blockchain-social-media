@@ -12,7 +12,8 @@ def load_weaky_connected_components(
     '''
     Loads the strongly connected components of the given directed graph.
     '''
-    marker_file = graph.data_config.graph_components_dir/'completed.txt'
+    graph_components_dir = graph.data_config.graph_dir / 'components'
+    marker_file = graph_components_dir/'completed.txt'
     if not marker_file.is_file():
         start = time.time()
         components = [
@@ -33,7 +34,7 @@ def load_weaky_connected_components(
                 json.dump(
                     cc,
                     open(
-                        graph.data_config.graph_components_dir / f'{i:06}.json',
+                        graph_components_dir / f'{i:06}.json',
                         'w'
                     )
                 )
@@ -43,7 +44,7 @@ def load_weaky_connected_components(
 
     else:
         start = time.time()
-        cc_files = sorted(graph.data_config.graph_components_dir.glob('*.json'))
+        cc_files = sorted(graph_components_dir.glob('*.json'))
         components = []
         with progress_bar() as progress:
             load_task = progress.add_task(description='loading component info..', total=len(cc_files))

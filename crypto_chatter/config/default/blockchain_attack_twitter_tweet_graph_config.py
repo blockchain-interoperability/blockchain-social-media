@@ -28,19 +28,14 @@ class BlockchainAttackTwitterTweetGraphConfig(CryptoChatterDataConfig):
     es_query = es_query
     data_source = data_source
     node_id_col ='id'
+    text_col ='full_text'
     raw_snapshot_dir = DATA_DIR / f'twitter/{index_name}/snapshots'
     graph_type = 'tweet'
     graph_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph'
-    graph_gephi_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph/gephi'
-    graph_components_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph/components'
-    graph_stats_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph/stats'
-    graph_edges_file = DATA_DIR / f'twitter/{index_name}/tweet-graph/edges.json'
-    graph_nodes_file = DATA_DIR / f'twitter/{index_name}/tweet-graph/nodes.json'
-    graph_data_file = DATA_DIR / f'twitter/{index_name}/tweet-graph/graph_data.pkl'
-    graph_attributes = ['full_text' 'user.id' 'user.followers_count' 'favorite_count' 'quote_count']
 
     def __init__(self) -> None:
         self.raw_snapshot_dir.mkdir(parents=True, exist_ok=True)
         self.graph_dir.mkdir(parents=True, exist_ok=True)
-        self.graph_components_dir.mkdir(parents=True, exist_ok=True)
-        self.graph_gephi_dir.mkdir(parents=True, exist_ok=True)
+        (self.graph_dir / 'components').mkdir(parents=True, exist_ok=True)
+        (self.graph_dir / 'stats').mkdir(parents=True, exist_ok=True)
+        (self.graph_dir / 'gephi').mkdir(parents=True, exist_ok=True)

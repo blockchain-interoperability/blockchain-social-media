@@ -29,7 +29,7 @@ class CryptoTwitterTweetGraph(CryptoGraph):
     def in_degree_centrality(
         self,
     ) -> np.ndarray:
-        save_file = self.data_config.graph_stats_dir / 'in_degree_centrality.json'
+        save_file = self.data_config.graph_dir / 'stats/in_degree_centrality.json'
         if not save_file.is_file():
             start = time.time()
             in_deg_cent = nx.in_degree_centrality(self.G)
@@ -43,7 +43,7 @@ class CryptoTwitterTweetGraph(CryptoGraph):
     def out_degree_centrality(
         self,
     ) -> np.ndarray:
-        save_file = self.data_config.graph_stats_dir / 'out_degree_centrality.json'
+        save_file = self.data_config.graph_dir / 'stats/out_degree_centrality.json'
         if not save_file.is_file():
             start = time.time()
             out_deg_cent = nx.out_degree_centrality(self.G)
@@ -63,8 +63,8 @@ class CryptoTwitterTweetGraph(CryptoGraph):
     
     def in_degree(
         self,
-    ) -> np.ndarray:
-        save_file = self.data_config.graph_stats_dir / 'in_degree.json'
+        ) -> np.ndarray:
+        save_file = self.data_config.graph_dir / 'stats/in_degree.json'
         if not save_file.is_file():
             start = time.time()
             in_degree = list(dict(self.G.in_degree(self.nodes)).values())
@@ -76,8 +76,8 @@ class CryptoTwitterTweetGraph(CryptoGraph):
 
     def out_degree(
         self,
-    ) -> np.ndarray:
-        save_file = self.data_config.graph_stats_dir / 'out_degree.json'
+        ) -> np.ndarray:
+        save_file = self.data_config.graph_dir / 'stats/out_degree.json'
         if not save_file.is_file():
             start = time.time()
             out_degree = list(dict(self.G.out_degree(self.nodes)).values())
@@ -91,8 +91,8 @@ class CryptoTwitterTweetGraph(CryptoGraph):
         self,
         recompute: bool = False,
         display: bool = False
-    ) -> dict[str, any]:
-        overview_file = self.data_config.graph_stats_dir / 'overview.json'
+        ) -> dict[str, any]:
+        overview_file = self.data_config.graph_dir / 'stats/overview.json'
         if not overview_file.is_file() or recompute:
             reply_count = (~self.data['quoted_status.id'].isna()).sum()
 
