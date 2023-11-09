@@ -215,17 +215,12 @@ class CryptoSubGraph:
 
     def count_hashtags(
         self,
-    ) -> tuple[np.ndarray, np.ndarray]:
-        hashtags = []
-        counts = []
-        hashtag_count = Counter([
-            tag
-            for hashtags in self.data['hashtags'].values
-            for tag in hashtags
-        ])
-        if len(hashtag_count) > 0:
-            hashtags, counts = zip(*hashtag_count.most_common())
-
-        hashtags = np.array(hashtags)
-        counts = np.array(counts)
-        return hashtags, counts
+    ) -> dict[str, int]:
+        hashtag_count = dict(
+            Counter([
+                tag
+                for hashtags in self.data['hashtags'].values
+                for tag in hashtags
+            ]).most_common()
+        )
+        return hashtag_count

@@ -4,6 +4,8 @@ import numpy as np
 import time
 import json
 
+from crypto_chatter.utils import NodeList, EdgeList
+
 from .crypto_graph import CryptoGraph
 from .load_reply_graph_data import load_reply_graph_data
 from .load_weakly_connected_components import load_weaky_connected_components 
@@ -57,6 +59,22 @@ class CryptoTwitterTweetGraph(CryptoGraph):
         else:
             out_deg_cent_values = json.load(open(save_file))
         return np.array(out_deg_cent_values)
+
+    def get_top_n_in_degree(
+        self,
+        top_n: int = 10,
+    ) -> NodeList:
+        in_deg_cent = self.in_degree_centrality()
+        in_deg_idx = in_deg_cent.argsort()[::-1]
+        highest = []
+        counter = 0
+        while len(highest) < top_n:
+            cur_idx = in_deg_idx[counter]
+            if self.nodes[cur_idx] in self.data.id.values:
+                highest += [self.nodes[cur_idx]]
+            counter += 1
+        return highest
+
 
     def load_components(
         self,
