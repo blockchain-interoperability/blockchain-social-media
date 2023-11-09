@@ -100,6 +100,17 @@ class CryptoGraph:
             cls_cent_values = json.load(open(save_file))
         return np.array(cls_cent_values)
 
+    def get_all_reachable_nodes(self, node: int) -> list[int]:
+        stack = [node]
+        reachable = []
+        while stack:
+            current = stack.pop()
+            reachable += [current]
+            for n in nx.all_neighbors(self.G, current):
+                if n not in reachable:
+                    stack += [n]
+        return reachable
+
     def get_stats(
         self,
         recompute: bool = False,
