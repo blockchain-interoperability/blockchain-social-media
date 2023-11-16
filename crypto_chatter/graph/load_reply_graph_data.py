@@ -4,28 +4,28 @@ import time
 
 from crypto_chatter.utils import progress_bar, NodeList, EdgeList
 from crypto_chatter.config import CryptoChatterDataConfig, CryptoChatterGraphConfig
-from crypto_chatter.data.load_raw_data import load_raw_data
+from crypto_chatter.data import CryptoChatterData, load_snapshots
 
 def load_reply_graph_data(
     data_config: CryptoChatterDataConfig,
     graph_config: CryptoChatterGraphConfig,
-) -> tuple[pd.DataFrame, NodeList, EdgeList]:
+) -> tuple[CryptoChatterData, NodeList, EdgeList]:
     graph_config.graph_dir.mkdir(parents=True, exist_ok=True)
     graph_nodes_file = graph_config.graph_dir / 'nodes.json'
     graph_edges_file = graph_config.graph_dir / 'edges.json'
-    graph_data_file = graph_config.graph_dir / 'graph_data.pkl'
+
+    data = CryptoChatterData(data_config, ['id','quoted_status.id'])
     if (
         not graph_nodes_file.is_file() 
         and not graph_edges_file.is_file()
     ):
-        df = load_raw_data(data_config)
-        has_reply = df[~df['quoted_status.id'].isna()]
+        has_reply = data[~data['quoted_status.id'].isna()]
         edges_to = []
         edges_from = []
 
         start = time.time()
         with progress_bar() as progress:
-            graph_task = progress.add_task('Constructing edges...', total = len(df))
+            graph_task = progress.add_task('Constructing edges...', total = len(data))
             for tweet_id, reply_id in zip(
                 has_reply['quoted_status.id'].values,
                 has_reply['id'].values
@@ -49,10 +49,6 @@ def load_reply_graph_data(
         )
         
         print(f'Constructed graph with {len(nodes):,} nodes and {len(edges_to):,} edges in {int(time.time() - start)} seconds')
-
-        graph_df = df[df['id'].isin(nodes)]
-        graph_df.to_pickle(graph_data_file)
-
         print(f'Saved node and edge information to {graph_config.graph_dir}')
 
     else:
@@ -61,8 +57,4 @@ def load_reply_graph_data(
         edges = json.load(open(graph_edges_file))
         print(f'loaded graph edges in {int(time.time() - start)} seconds')
 
-        start = time.time()
-        graph_df = pd.read_pickle(graph_data_file)
-        print(f'loaded cached graph data in {int(time.time() - start)} seconds')
-
-    return graph_df, nodes, edges
+    return data, nodes, edges

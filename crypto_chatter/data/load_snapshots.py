@@ -7,15 +7,21 @@ from crypto_chatter.utils import progress_bar
 from crypto_chatter.config import CryptoChatterDataConfig
 
 from .prettify_elastic_twitter import prettify_elastic_twitter
+from .utils import is_spam
 
-def prettify_elastic(results:list[dict], data_config:CryptoChatterDataConfig) -> pd.DataFrame:
+def prettify_elastic(
+    results:list[dict],
+    data_config:CryptoChatterDataConfig
+) -> pd.DataFrame:
     if data_config.data_source == 'twitter':
         df = prettify_elastic_twitter(results, data_config)
     elif data_config.data_source == 'reddit': 
         raise NotImplementedError('Reddit parsing is not yet implemented!')
     return df
 
-def load_raw_data(data_config: CryptoChatterDataConfig) -> pd.DataFrame:
+def load_snapshots(
+    data_config: CryptoChatterDataConfig
+) -> pd.DataFrame:
     """Grabs the specified fields from the specified index on Elasticsearch. Since results are expected to be larged, batched pickle files are generated
 
     Args:

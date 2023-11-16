@@ -33,5 +33,4 @@ class BlockchainAttackTwitterDataConfig(CryptoChatterDataConfig):
 
     def __post_init__(self):
         self.raw_snapshot_dir.mkdir(exist_ok=True,parents=True)
-        self.graph_dir.mkdir(exist_ok=True,parents=True)
-        self.embedding_dir.mkdir(exist_ok=True,parents=True)
+        self.data_dir.mkdir(exist_ok=True,parents=True)

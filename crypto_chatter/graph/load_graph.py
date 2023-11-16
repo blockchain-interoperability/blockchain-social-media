@@ -2,7 +2,7 @@ from typing import Literal
 
 from crypto_chatter.config import CryptoChatterDataConfig, CryptoChatterGraphConfig
 
-from .crypto_twitter_tweet_graph import CryptoTwitterTweetGraph
+from .crypto_twitter_tweet_graph import CryptoChatterTwitterTweetGraph
 from .crypto_chatter_graph import CryptoChatterGraph
 
 def load_graph(
@@ -13,7 +13,7 @@ def load_graph(
         data_config.data_source == 'twitter' 
         and graph_config.graph_type == 'tweet'
     ):
-        graph = CryptoTwitterTweetGraph(data_config, graph_config)
+        graph = CryptoChatterTwitterTweetGraph(data_config, graph_config)
     else:
         raise NotImplementedError('Other data sources are not implemented')
 

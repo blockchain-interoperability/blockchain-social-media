@@ -1,24 +1,32 @@
 from typing_extensions import Self
+from typing import Literal
+
 import networkx as nx
 import numpy as np
 import time
 import json
 
 from crypto_chatter.utils import NodeList, EdgeList
+from crypto_chatter.config import CryptoChatterDataConfig
 
-from .crypto_chatter_graph import CryptoChatterGraph
+from .crypto_chatter_graph import CryptoChatterGraph, CryptoChatterSubGraph
 from .load_reply_graph_data import load_reply_graph_data
 from .load_weakly_connected_components import load_weaky_connected_components 
 
-class CryptoTwitterTweetGraph(CryptoChatterGraph):
-    data_source = 'twitter'
-    def build(self) -> None:
-        '''
+DirectedNodeCentralityType = Literal['in_degree', 'closeness']
+
+class CryptoChatterTwitterTweetGraph(CryptoChatterGraph):
+    data_source = "twitter"
+    def build(
+        self,
+        data_config:CryptoChatterDataConfig,
+    ) -> None:
+        """
         Build the graph using the data from snapshot
-        '''
+        """
         start = time.time()
 
-        graph_data, nodes, edges = load_reply_graph_data(self.data_config, self.graph_config)
+        graph_data, nodes, edges = load_reply_graph_data(data_config, self.graph_config)
         G = nx.DiGraph(edges)
 
         self.G = G
@@ -26,20 +34,20 @@ class CryptoTwitterTweetGraph(CryptoChatterGraph):
         self.edges = edges
         self.data = graph_data
 
-        print(f'constructed complete reply graph in {int(time.time()-start)} seconds')
+        print(f"constructed complete reply graph in {int(time.time()-start)} seconds")
 
     def in_degree_centrality(
         self,
     ) -> np.ndarray:
-        save_file = self.graph_config.graph_dir / 'stats/in_degree_centrality.json'
+        save_file = self.graph_config.graph_dir / "stats/in_degree_centrality.json"
         save_file.parent.mkdir(exist_ok=True, parents=True)
 
         if not save_file.is_file():
             start = time.time()
             in_deg_cent = nx.in_degree_centrality(self.G)
             in_deg_cent_values = [in_deg_cent[n] for n in self.nodes]
-            print(f'computed in degree centrality in {int(time.time() - start)} seconds')
-            json.dump(in_deg_cent_values, open(save_file,'w'))
+            print(f"computed in degree centrality in {int(time.time() - start)} seconds")
+            json.dump(in_deg_cent_values, open(save_file,"w"))
         else:
             in_deg_cent_values = json.load(open(save_file))
         return np.array(in_deg_cent_values)
@@ -47,34 +55,47 @@ class CryptoTwitterTweetGraph(CryptoChatterGraph):
     def out_degree_centrality(
         self,
     ) -> np.ndarray:
-        save_file = self.graph_config.graph_dir / 'stats/out_degree_centrality.json'
+        save_file = self.graph_config.graph_dir / "stats/out_degree_centrality.json"
         save_file.parent.mkdir(exist_ok=True, parents=True)
 
         if not save_file.is_file():
             start = time.time()
             out_deg_cent = nx.out_degree_centrality(self.G)
             out_deg_cent_values = [out_deg_cent[n] for n in self.nodes]
-            print(f'computed out degree centrality in {int(time.time() - start)} seconds')
-            json.dump(out_deg_cent_values, open(save_file,'w'))
+            print(f"computed out degree centrality in {int(time.time() - start)} seconds")
+            json.dump(out_deg_cent_values, open(save_file,"w"))
         else:
             out_deg_cent_values = json.load(open(save_file))
         return np.array(out_deg_cent_values)
 
-    def get_top_n_in_degree(
+    def get_top_n(
         self,
+        by_centrality: DirectedNodeCentralityType,
         top_n: int = 10,
     ) -> NodeList:
-        in_deg_cent = self.in_degree_centrality()
-        in_deg_idx = in_deg_cent.argsort()[::-1]
-        highest = []
-        counter = 0
-        while len(highest) < top_n:
-            cur_idx = in_deg_idx[counter]
-            if self.nodes[cur_idx] in self.data.id.values:
-                highest += [self.nodes[cur_idx]]
-            counter += 1
-        return highest
+        selected = []
+        if by_centrality == 'in_degree':
+            # return self.get_top_n_in_degree(top_n)
+            in_deg_cent = self.in_degree_centrality()
+            in_deg_idx = in_deg_cent.argsort()[::-1]
+            # highest = []
+            counter = 0
+            while len(selected) < top_n:
+                cur_idx = in_deg_idx[counter]
+                if self.nodes[cur_idx] in self.data["id"].values:
+                    selected += [self.nodes[cur_idx]]
+                counter += 1
+        return selected
 
+    def get_top_n_subgraph(
+        self,
+        by_centrality: DirectedNodeCentralityType,
+        top_n: int = 10,
+    ) -> list[CryptoChatterSubGraph]:
+        return [
+            CryptoChatterSubGraph(self, node)
+            for node in self.get_top_n(by_centrality, top_n)
+        ]
 
     def load_components(
         self,
@@ -86,14 +107,14 @@ class CryptoTwitterTweetGraph(CryptoChatterGraph):
     def in_degree(
         self,
         ) -> np.ndarray:
-        save_file = self.graph_config.graph_dir / 'stats/in_degree.json'
+        save_file = self.graph_config.graph_dir / "stats/in_degree.json"
         save_file.parent.mkdir(exist_ok=True, parents=True)
 
         if not save_file.is_file():
             start = time.time()
             in_degree = list(dict(self.G.in_degree(self.nodes)).values())
-            print(f'computed in_degree stats in {int(time.time() - start)} seconds')
-            json.dump(in_degree, open(save_file, 'w'))
+            print(f"computed in_degree stats in {int(time.time() - start)} seconds")
+            json.dump(in_degree, open(save_file, "w"))
         else:
             in_degree = json.load(open(save_file))
         return np.array(in_degree)
@@ -101,14 +122,14 @@ class CryptoTwitterTweetGraph(CryptoChatterGraph):
     def out_degree(
         self,
         ) -> np.ndarray:
-        save_file = self.graph_config.graph_dir / 'stats/out_degree.json'
+        save_file = self.graph_config.graph_dir / "stats/out_degree.json"
         save_file.parent.mkdir(exist_ok=True, parents=True)
 
         if not save_file.is_file():
             start = time.time()
             out_degree = list(dict(self.G.out_degree(self.nodes)).values())
-            print(f'computed out_degree stats in {int(time.time() - start)} seconds')
-            json.dump(out_degree, open(save_file, 'w'))
+            print(f"computed out_degree stats in {int(time.time() - start)} seconds")
+            json.dump(out_degree, open(save_file, "w"))
         else:
             out_degree = json.load(open(save_file))
         return np.array(out_degree)
@@ -118,14 +139,14 @@ class CryptoTwitterTweetGraph(CryptoChatterGraph):
         recompute: bool = False,
         display: bool = False
         ) -> dict[str, any]:
-        save_file = self.graph_config.graph_dir / 'stats/overview.json'
+        save_file = self.graph_config.graph_dir / "stats/overview.json"
 
         if not save_file.is_file() or recompute:
-            reply_count = (~self.data['quoted_status.id'].isna()).sum()
+            reply_count = (~self.data["quoted_status.id"].isna()).sum()
 
             start = time.time()
             longest_path = nx.dag_longest_path(self.G)
-            print(f'found longest path in {int(time.time() - start)} seconds')
+            print(f"found longest path in {int(time.time() - start)} seconds")
 
             in_degree = self.in_degree()
             out_degree = self.out_degree()
@@ -192,7 +213,7 @@ class CryptoTwitterTweetGraph(CryptoChatterGraph):
                     "Min": cls_cent.min(),
                 },
             }
-            json.dump(graph_stats, open(save_file, 'w'), indent=2)
+            json.dump(graph_stats, open(save_file, "w"), indent=2)
         else:
             graph_stats = json.load(open(save_file))
 
