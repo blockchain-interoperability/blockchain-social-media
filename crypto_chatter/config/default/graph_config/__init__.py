@@ -1,3 +1,3 @@
 from .blockchain_attack_twitter_tweet_graph_config import BlockchainAttackTwitterTweetGraphConfig
-from .load_default_data_config import load_default_data_config
+from .load_default_graph_config import load_default_graph_config
 

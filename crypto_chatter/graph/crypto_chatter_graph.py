@@ -8,15 +8,16 @@ from collections import Counter
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pickle
 
-from crypto_chatter.config import CryptoChatterDataConfig
+from crypto_chatter.config import CryptoChatterDataConfig, CryptoChatterGraphConfig
 from crypto_chatter.utils import NodeList, EdgeList
 
-class CryptoGraph:
+class CryptoChatterGraph:
     G: nx.DiGraph
     nodes: NodeList
     edges: EdgeList
     data: pd.DataFrame
     data_config: CryptoChatterDataConfig
+    graph_config: CryptoChatterGraphConfig
     node_id_col: str
     data_source: str
     top_n_components: int 
@@ -24,8 +25,13 @@ class CryptoGraph:
     tfidf: TfidfVectorizer | None = None
     tfidf_settings: str = ''
 
-    def __init__(self, data_config: CryptoChatterDataConfig) -> None:
+    def __init__(
+        self, 
+        data_config: CryptoChatterDataConfig,
+        graph_config: CryptoChatterGraphConfig,
+    ) -> None:
         self.data_config = data_config
+        self.graph_config = graph_config
         self.build()
         
     def fit_tfidf(
@@ -38,7 +44,7 @@ class CryptoGraph:
         max_features:int = 10000,
     ) -> Self:
         self.tfidf_settings = f'{random_seed}_{random_size}_{ngram_range}_{max_df}_{min_df}_{max_features}'
-        save_file = self.data_config.graph_dir / f'stats/tfidf/{self.tfidf_settings}.pkl'
+        save_file = self.graph_config.graph_dir / f'stats/tfidf/{self.tfidf_settings}.pkl'
         save_file.parent.mkdir(parents=True, exist_ok=True)
 
         if not save_file.is_file():
@@ -71,7 +77,7 @@ class CryptoGraph:
     def degree(
         self,
     ):
-        save_file = self.data_config.graph_dir / 'stats/out_degree.json'
+        save_file = self.graph_config.graph_dir / 'stats/out_degree.json'
         save_file.parent.mkdir(parents=True, exist_ok=True)
 
         if not save_file.is_file():
@@ -86,7 +92,7 @@ class CryptoGraph:
     def degree_centrality(
         self,
     ) -> np.ndarray:
-        save_file = self.data_config.graph_dir / 'stats/degree_centrality.json'
+        save_file = self.graph_config.graph_dir / 'stats/degree_centrality.json'
         save_file.parent.mkdir(parents=True, exist_ok=True)
 
         if not save_file.is_file():
@@ -102,7 +108,7 @@ class CryptoGraph:
     def betweenness_centrality(
         self,
     ) -> np.ndarray:
-        save_file = self.data_config.graph_dir / 'stats/betweenness_centrality.json'
+        save_file = self.graph_config.graph_dir / 'stats/betweenness_centrality.json'
         save_file.parent.mkdir(parents=True, exist_ok=True)
 
         if not save_file.is_file():
@@ -118,7 +124,7 @@ class CryptoGraph:
     def eigenvector_centrality(
         self,
     ) -> np.ndarray:
-        save_file = self.data_config.graph_dir / 'stats/eigenvector_centrality.json'
+        save_file = self.graph_config.graph_dir / 'stats/eigenvector_centrality.json'
         save_file.parent.mkdir(parents=True, exist_ok=True)
 
         if not save_file.is_file():
@@ -134,7 +140,7 @@ class CryptoGraph:
     def closeness_centrality(
         self,
     ) -> np.ndarray:
-        save_file = self.data_config.graph_dir / 'stats/closeness_centrality.json'
+        save_file = self.graph_config.graph_dir / 'stats/closeness_centrality.json'
         save_file.parent.mkdir(parents=True, exist_ok=True)
 
         if not save_file.is_file():
@@ -174,7 +180,7 @@ class CryptoGraph:
         ...
 
 class CryptoSubGraph:
-    parent: CryptoGraph
+    parent: CryptoChatterGraph
     source: int
     nodes: NodeList
     graph: nx.Graph
@@ -182,7 +188,7 @@ class CryptoSubGraph:
 
     def __init__(
         self, 
-        parent: CryptoGraph, 
+        parent: CryptoChatterGraph, 
         source: int,
     ):
         self.parent = parent
@@ -195,7 +201,7 @@ class CryptoSubGraph:
         self,
         top_n: int = 100,
     ) -> dict[str, float]:
-        save_file = self.parent.data_config.graph_dir / f'subgraph/{self.source}/keywords/{self.parent.tfidf_settings}/{top_n}.json'
+        save_file = self.parent.graph_config.graph_dir / f'subgraph/{self.source}/keywords/{self.parent.tfidf_settings}/{top_n}.json'
         save_file.parent.mkdir(parents=True, exist_ok=True)
         if not save_file.is_file():
             if self.parent.tfidf is None:
@@ -217,7 +223,7 @@ class CryptoSubGraph:
         self,
         top_n:int = 100,
     ) -> dict[str, int]:
-        save_file = self.parent.data_config.graph_dir / f'subgraph/{self.source}/hashtags/{top_n}.json'
+        save_file = self.parent.graph_config.graph_dir / f'subgraph/{self.source}/hashtags/{top_n}.json'
         save_file.parent.mkdir(parents=True, exist_ok=True)
         if not save_file.is_file():
             hashtag_count = dict(

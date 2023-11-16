@@ -1,18 +1,19 @@
 from typing import Literal
 
-from crypto_chatter.config import CryptoChatterDataConfig
+from crypto_chatter.config import CryptoChatterDataConfig, CryptoChatterGraphConfig
 
 from .crypto_twitter_tweet_graph import CryptoTwitterTweetGraph
-from .crypto_graph import CryptoGraph
+from .crypto_chatter_graph import CryptoChatterGraph
 
 def load_graph(
     data_config: CryptoChatterDataConfig,
-) -> CryptoGraph:
+    graph_config: CryptoChatterGraphConfig,
+) -> CryptoChatterGraph:
     if (
         data_config.data_source == 'twitter' 
-        and data_config.graph_type == 'tweet'
+        and graph_config.graph_type == 'tweet'
     ):
-        graph = CryptoTwitterTweetGraph(data_config)
+        graph = CryptoTwitterTweetGraph(data_config, graph_config)
     else:
         raise NotImplementedError('Other data sources are not implemented')
 

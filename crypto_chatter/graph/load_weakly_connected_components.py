@@ -4,15 +4,15 @@ import time
 
 from crypto_chatter.utils import progress_bar
 
-from .crypto_graph import CryptoGraph
+from .crypto_chatter_graph import CryptoChatterGraph
 
 def load_weaky_connected_components(
-    graph: CryptoGraph
+    graph: CryptoChatterGraph
 ) -> list[list[int]]:
     '''
     Loads the strongly connected components of the given directed graph.
     '''
-    graph_components_dir = graph.data_config.graph_dir / 'components'
+    graph_components_dir = graph.graph_config.graph_dir / 'components'
     marker_file = graph_components_dir/'completed.txt'
     if not marker_file.is_file():
         start = time.time()

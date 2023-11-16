@@ -20,15 +20,18 @@ es_query['query']['bool']['must'] = {
 index_name = 'blockchain-interoperability-attacks'
 data_source = 'twitter'
 
-class BlockchainAttackTwitterTweetGraphConfig(CryptoChatterDataConfig):
+class BlockchainAttackTwitterDataConfig(CryptoChatterDataConfig):
     es_hostname = ES_HOSTNAME
     es_index = index_name
     es_columns = ES_TWITTER_COLUMNS
     es_mappings = ES_TWITTER_MAPPINGS
-    es_query = es_query
+    # es_query = es_query
     data_source = data_source
-    node_id_col ='id'
     text_col ='full_text'
     raw_snapshot_dir = DATA_DIR / f'twitter/{index_name}/snapshots'
-    graph_type = 'tweet'
-    graph_dir = DATA_DIR / f'twitter/{index_name}/tweet-graph'
+    data_dir = DATA_DIR / f'twitter/{index_name}/data'
+
+    def __post_init__(self):
+        self.raw_snapshot_dir.mkdir(exist_ok=True,parents=True)
+        self.graph_dir.mkdir(exist_ok=True,parents=True)
+        self.embedding_dir.mkdir(exist_ok=True,parents=True)

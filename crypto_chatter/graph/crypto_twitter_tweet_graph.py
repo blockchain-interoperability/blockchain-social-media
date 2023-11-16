@@ -6,11 +6,11 @@ import json
 
 from crypto_chatter.utils import NodeList, EdgeList
 
-from .crypto_graph import CryptoGraph
+from .crypto_chatter_graph import CryptoChatterGraph
 from .load_reply_graph_data import load_reply_graph_data
 from .load_weakly_connected_components import load_weaky_connected_components 
 
-class CryptoTwitterTweetGraph(CryptoGraph):
+class CryptoTwitterTweetGraph(CryptoChatterGraph):
     data_source = 'twitter'
     def build(self) -> None:
         '''
@@ -18,7 +18,7 @@ class CryptoTwitterTweetGraph(CryptoGraph):
         '''
         start = time.time()
 
-        graph_data, nodes, edges = load_reply_graph_data(self.data_config)
+        graph_data, nodes, edges = load_reply_graph_data(self.data_config, self.graph_config)
         G = nx.DiGraph(edges)
 
         self.G = G
@@ -31,7 +31,7 @@ class CryptoTwitterTweetGraph(CryptoGraph):
     def in_degree_centrality(
         self,
     ) -> np.ndarray:
-        save_file = self.data_config.graph_dir / 'stats/in_degree_centrality.json'
+        save_file = self.graph_config.graph_dir / 'stats/in_degree_centrality.json'
         save_file.parent.mkdir(exist_ok=True, parents=True)
 
         if not save_file.is_file():
@@ -47,7 +47,7 @@ class CryptoTwitterTweetGraph(CryptoGraph):
     def out_degree_centrality(
         self,
     ) -> np.ndarray:
-        save_file = self.data_config.graph_dir / 'stats/out_degree_centrality.json'
+        save_file = self.graph_config.graph_dir / 'stats/out_degree_centrality.json'
         save_file.parent.mkdir(exist_ok=True, parents=True)
 
         if not save_file.is_file():
@@ -86,7 +86,7 @@ class CryptoTwitterTweetGraph(CryptoGraph):
     def in_degree(
         self,
         ) -> np.ndarray:
-        save_file = self.data_config.graph_dir / 'stats/in_degree.json'
+        save_file = self.graph_config.graph_dir / 'stats/in_degree.json'
         save_file.parent.mkdir(exist_ok=True, parents=True)
 
         if not save_file.is_file():
@@ -101,7 +101,7 @@ class CryptoTwitterTweetGraph(CryptoGraph):
     def out_degree(
         self,
         ) -> np.ndarray:
-        save_file = self.data_config.graph_dir / 'stats/out_degree.json'
+        save_file = self.graph_config.graph_dir / 'stats/out_degree.json'
         save_file.parent.mkdir(exist_ok=True, parents=True)
 
         if not save_file.is_file():
@@ -118,7 +118,7 @@ class CryptoTwitterTweetGraph(CryptoGraph):
         recompute: bool = False,
         display: bool = False
         ) -> dict[str, any]:
-        save_file = self.data_config.graph_dir / 'stats/overview.json'
+        save_file = self.graph_config.graph_dir / 'stats/overview.json'
 
         if not save_file.is_file() or recompute:
             reply_count = (~self.data['quoted_status.id'].isna()).sum()

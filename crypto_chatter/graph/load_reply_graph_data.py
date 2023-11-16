@@ -3,16 +3,17 @@ import json
 import time
 
 from crypto_chatter.utils import progress_bar, NodeList, EdgeList
-from crypto_chatter.config import CryptoChatterDataConfig
+from crypto_chatter.config import CryptoChatterDataConfig, CryptoChatterGraphConfig
 from crypto_chatter.data.load_raw_data import load_raw_data
 
 def load_reply_graph_data(
-    data_config: CryptoChatterDataConfig
+    data_config: CryptoChatterDataConfig,
+    graph_config: CryptoChatterGraphConfig,
 ) -> tuple[pd.DataFrame, NodeList, EdgeList]:
-    data_config.graph_dir.mkdir(parents=True, exist_ok=True)
-    graph_nodes_file = data_config.graph_dir / 'nodes.json'
-    graph_edges_file = data_config.graph_dir / 'edges.json'
-    graph_data_file = data_config.graph_dir / 'graph_data.pkl'
+    graph_config.graph_dir.mkdir(parents=True, exist_ok=True)
+    graph_nodes_file = graph_config.graph_dir / 'nodes.json'
+    graph_edges_file = graph_config.graph_dir / 'edges.json'
+    graph_data_file = graph_config.graph_dir / 'graph_data.pkl'
     if (
         not graph_nodes_file.is_file() 
         and not graph_edges_file.is_file()
@@ -52,7 +53,7 @@ def load_reply_graph_data(
         graph_df = df[df['id'].isin(nodes)]
         graph_df.to_pickle(graph_data_file)
 
-        print(f'Saved node and edge information to {data_config.graph_dir}')
+        print(f'Saved node and edge information to {graph_config.graph_dir}')
 
     else:
         start = time.time()

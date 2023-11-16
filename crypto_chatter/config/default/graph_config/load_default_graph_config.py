@@ -4,7 +4,7 @@ from crypto_chatter.config import CryptoChatterDataConfig
 
 from .blockchain_attack_twitter_tweet_graph_config import BlockchainAttackTwitterTweetGraphConfig
 
-def load_default_data_config(
+def load_default_graph_config(
     dataset:str, 
     graph_type: Literal['tweet','user'],
 ) -> CryptoChatterDataConfig:

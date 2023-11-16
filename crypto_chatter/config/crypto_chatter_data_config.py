@@ -5,9 +5,9 @@ from dataclasses import dataclass
 @dataclass
 class CryptoChatterDataConfig:
     data_source: str
-    node_id_col: str
     text_col: str
     raw_snapshot_dir: Path
+    data_dir: Path
     graph_type: Literal['tweet','user']
     graph_dir: Path
     reddit_username: str | None = None

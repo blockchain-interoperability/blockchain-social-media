@@ -19,4 +19,6 @@ from .presets import (
 )
 
 from .crypto_chatter_data_config import CryptoChatterDataConfig
-from .default import load_default_data_config
+from .crypto_chatter_graph_config import CryptoChatterGraphConfig
+from .default.data_config import load_default_data_config
+from .default.graph_config import load_default_graph_config

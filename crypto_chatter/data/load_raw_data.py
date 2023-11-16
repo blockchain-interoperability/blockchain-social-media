@@ -75,7 +75,7 @@ def load_raw_data(data_config: CryptoChatterDataConfig) -> pd.DataFrame:
 
         print(f'we saved {num_rows:,} rows in {len(dataframes)} chunks in {int(time.time()-start)} seconds')
         df = pd.concat(dataframes)
-        open(marker_file, 'w').close()
+        marker_file.touch()
 
     else:
         start = time.time()

@@ -5,3 +5,4 @@ from .types import (
 )
 
 from .extract_hashtags import extract_hashtags
+from .device import device
