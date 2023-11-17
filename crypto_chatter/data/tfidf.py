@@ -4,9 +4,10 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
 import pickle
 
-from .utils import preprocess_text, is_spam
 from crypto_chatter.config import CryptoChatterDataConfig
+from crypto_chatter.utils.types import TextList
 
+from .utils import preprocess_text, is_spam
 
 
 def fit_tfidf(
@@ -49,13 +50,13 @@ def fit_tfidf(
     return tfidf
 
 def get_tfidf(
-    text: list[str]|np.ndarray|pd.Series,
+    texts: TextList,
     tfidf: TfidfVectorizer,
 ) -> tuple[list[str],list[str]]: 
     terms = tfidf.get_feature_names_out()
-    vecs = tfidf.transform(text)
+    vecs = tfidf.transform(texts)
     tfidf_scores = vecs.toarray().sum(0)
     sorted_idxs = tfidf_scores.argsort()[::-1]
-    keywords = terms[sorted_idxs]
+    keywords = list(terms[sorted_idxs])
     keyword_scores = tfidf_scores[sorted_idxs]
     return keywords, keyword_scores

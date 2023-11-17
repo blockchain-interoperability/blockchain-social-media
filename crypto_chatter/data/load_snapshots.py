@@ -14,10 +14,9 @@ def prettify_elastic(
     data_config:CryptoChatterDataConfig
 ) -> pd.DataFrame:
     if data_config.data_source == 'twitter':
-        df = prettify_elastic_twitter(results, data_config)
+        return prettify_elastic_twitter(results, data_config)
     elif data_config.data_source == 'reddit': 
         raise NotImplementedError('Reddit parsing is not yet implemented!')
-    return df
 
 def load_snapshots(
     data_config: CryptoChatterDataConfig
@@ -98,4 +97,4 @@ def load_snapshots(
         df = pd.concat(dataframes)
         print(f'Loaded cache in {int(time.time()-start)} seconds')
 
-    return df
+    return df.reset_index(drop=True)

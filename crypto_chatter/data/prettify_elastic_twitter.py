@@ -3,7 +3,10 @@ import pandas as pd
 from crypto_chatter.config import CryptoChatterDataConfig
 from crypto_chatter.utils import extract_hashtags
 
-def prettify_elastic_twitter(results:list[dict], data_config:CryptoChatterDataConfig) -> pd.DataFrame:
+def prettify_elastic_twitter(
+    results:list[dict], 
+    data_config:CryptoChatterDataConfig
+) -> pd.DataFrame:
     """Cleans up list of results into a dataframe while dropping some unncessary columns.
 
     Args:
@@ -19,7 +22,7 @@ def prettify_elastic_twitter(results:list[dict], data_config:CryptoChatterDataCo
     df = df.reindex(
         columns = df.columns.union(
             [
-                'full_text', 
+                data_config.text_col, 
                 'quoted_status.full_text',
                 'truncated'
                 'quoted_status.truncated',
@@ -29,14 +32,14 @@ def prettify_elastic_twitter(results:list[dict], data_config:CryptoChatterDataCo
 
     # If trucated is False, that means text has the full text. If True, extended_tweet.full_text has the full text.
     df['truncated'] = df['truncated'].fillna(False)
-    df['full_text'] = df['text']
-    df.loc[df['truncated'],'full_text'] = df[df['truncated']]['extended_tweet.full_text']
+    df[data_config.text_col] = df['text']
+    df.loc[df['truncated'],data_config.text_col] = df[df['truncated']]['extended_tweet.full_text']
 
     df['quoted_status.truncated'] = df['quoted_status.truncated'].fillna(False)
     df['quoted_status.full_text'] = df['quoted_status.text']
     df.loc[df['quoted_status.truncated'],'quoted_status.full_text'] = df[df['quoted_status.truncated']]['quoted_status.extended_tweet.full_text']
 
     # parse hashtags
-    df['hashtags'] = df['full_text'].apply(extract_hashtags)
+    df['hashtags'] = df[data_config.text_col].apply(extract_hashtags)
 
     return df

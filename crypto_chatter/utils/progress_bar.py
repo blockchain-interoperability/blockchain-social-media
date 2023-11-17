@@ -5,6 +5,7 @@ def progress_bar() -> progress.Progress:
         '[progress.description]{task.description}',
         progress.BarColumn(),
         '[progress.percentage]{task.percentage:>3.0f}%',
+        '({task.completed}/{task.total})',
         progress.TimeRemainingColumn(),
         progress.TimeElapsedColumn(),
         transient=True,
