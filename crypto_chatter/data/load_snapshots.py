@@ -2,8 +2,8 @@ from elasticsearch import Elasticsearch
 from elasticsearch.helpers import scan
 import pandas as pd
 import time
+from rich.progress import Progress
 
-from crypto_chatter.utils import progress_bar
 from crypto_chatter.config import CryptoChatterDataConfig
 
 from .prettify_elastic_twitter import prettify_elastic_twitter
@@ -19,7 +19,8 @@ def prettify_elastic(
         raise NotImplementedError('Reddit parsing is not yet implemented!')
 
 def load_snapshots(
-    data_config: CryptoChatterDataConfig
+    data_config: CryptoChatterDataConfig,
+    progress: Progress|None = None,
 ) -> pd.DataFrame:
     """Grabs the specified fields from the specified index on Elasticsearch. Since results are expected to be larged, batched pickle files are generated
 
@@ -56,18 +57,32 @@ def load_snapshots(
         dataframes = []
         results = []
         start = time.time()
-        with progress_bar() as progress:
-            scroll_task = progress.add_task(description='scrolling index.. ', total=doc_count)
-            for c in cursor:
-                results += [c]
-                if len(results) == chunk_size:
-                    df = prettify_elastic(results, data_config)
-                    df.to_pickle(
-                        data_config.raw_snapshot_dir / f'{len(dataframes):010d}.pkl', 
-                    )
-                    del results[:]
-                    dataframes += [df]
-                progress.update(scroll_task, advance = 1)
+
+        progress_task = None
+        if progress is not None:
+            progress_task = progress.add_task(
+                description='scrolling index..', 
+                total=doc_count
+            )
+
+        use_progress = progress is not None and progress_task is not None
+        # with progress_bar() as progress:
+
+        scroll_task = progress.add_task()
+        for c in cursor:
+            results += [c]
+            if len(results) == chunk_size:
+                df = prettify_elastic(results, data_config)
+                df.to_pickle(
+                    data_config.raw_snapshot_dir / f'{len(dataframes):010d}.pkl', 
+                )
+                del results[:]
+                dataframes += [df]
+            if use_progress:
+                progress.update(progress_task, advance = 1)
+
+        if use_progress:
+            progress.remove_task(progress_task)
 
         df = prettify_elastic(results, data_config)
         del results[:]
@@ -79,22 +94,31 @@ def load_snapshots(
         num_rows = (len(dataframes) -1) * chunk_size + len(results)
 
         print(f'we saved {num_rows:,} rows in {len(dataframes)} chunks in {int(time.time()-start)} seconds')
-        df = pd.concat(dataframes)
+        df = pd.concat(dataframes).reset_index(drop=True)
         marker_file.touch()
 
     else:
         start = time.time()
         dataframes = []
         cache_files = sorted(data_config.raw_snapshot_dir.glob('*.pkl'))
-        with progress_bar() as progress:
-            load_task = progress.add_task(
-                description='loading cache...', 
-                total=len(cache_files)
-            )
-            for file in cache_files:
-                dataframes += [pd.read_pickle(file)]
-                progress.update(load_task, advance=1)
-        df = pd.concat(dataframes)
-        print(f'Loaded cache in {int(time.time()-start)} seconds')
 
-    return df.reset_index(drop=True)
+        progress_task = None
+        if progress is not None:
+            progress_task = progress.add_task(
+                description='loading snapshots from cache..', 
+                total=doc_count
+            )
+
+        use_progress = progress is not None and progress_task is not None
+
+        for file in cache_files:
+            dataframes += [pd.read_pickle(file)]
+            if use_progress:
+                progress.update(progress_task, advance=1)
+        if use_progress:
+            progress.remove_task(progress_task)
+
+        df = pd.concat(dataframes).reset_index(drop=True)
+        print(f'Loaded snapshot cache in {int(time.time()-start)} seconds')
+
+    return df

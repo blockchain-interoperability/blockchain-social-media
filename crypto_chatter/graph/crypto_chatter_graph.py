@@ -1,67 +1,55 @@
-from typing import Literal
-from typing_extensions import Self
 import time
 import networkx as nx
 import numpy as np
-import pandas as pd
 import json
 from collections import Counter
 from pathlib import Path
+from rich.progress import Progress
 
-from crypto_chatter.config import CryptoChatterDataConfig, CryptoChatterGraphConfig
+from crypto_chatter.config import CryptoChatterGraphConfig
 from crypto_chatter.data import CryptoChatterData
 from crypto_chatter.utils.types import (
     NodeList,
     EdgeList,
-    NodeToIndexMapping,
     EdgeAttributeKind,
     NodeAttributeKind,
     CentralityKind,
     DegreeKind,
 )
 
-# from .crypto_chatter_sub_graph import CryptoChatterSubGraph
 from .degree import compute_degree
 from .centrality import compute_centrality
-from .edge_attributes import get_edge_attributes
-from .node_attributes import get_node_attributes
-from .load_graph_data import load_graph_data
-# from .node_attributes import 
+from .edge_attributes import get_edge_attribute
+from .node_attributes import get_node_attribute
+from .build_graph import build_graph
 
 class CryptoChatterSubGraph:
     id: str
-    parent: 'CryptoChatterGraph'
+    parent: "CryptoChatterGraph"
     # source: int
     nodes: NodeList
     edges: EdgeList
     graph: nx.Graph
-    data: CryptoChatterData
+    # data: CryptoChatterData
     cache_dir: Path
 
     def __init__(
         self, 
         _id: str,
-        parent: 'CryptoChatterGraph', 
+        # source: int,
+        parent: "CryptoChatterGraph", 
         nodes: NodeList,
     ):
+        start = time.time()
         self.id = _id
-        self.parent = parent
         # self.source = source
-        self.nodes = nodes
-        self.graph = self.parent.G.subgraph(self.nodes)
-        self.edges = self.graph.edges(self.nodes)
+        self.parent = parent
         self.cache_dir = self.parent.graph_config.graph_dir / f"subgraph/{_id}"
         self.cache_dir.mkdir(parents=True, exist_ok=True)
-        self.data = CryptoChatterData(
-            self.parent.data.data_config,
-            df = self.parent.data.df.iloc[
-                [
-                    self.parent.node_to_index[n] 
-                    for n in self.nodes 
-                    if self.parent.node_to_index[n] != -1
-                ]
-            ]
-        )
+
+        self.nodes = nodes
+        self.G = self.parent.G.subgraph(self.nodes)
+        self.edges = self.G.edges(self.nodes)
 
     def degree(
         self,
@@ -79,7 +67,7 @@ class CryptoChatterSubGraph:
             if self.parent.data.tfidf is None:
                 self.parent.data.fit_tfidf()
             terms = self.parent.data.tfidf.get_feature_names_out()
-            vecs = self.parent.data.tfidf.transform(self.data.text())
+            vecs = self.parent.data.tfidf.transform(self.parent.data.get('text', self.nodes_in_data))
             tfidf_scores = vecs.toarray().sum(0)
             sorted_idxs = tfidf_scores.argsort()[::-1]
             keywords = terms[sorted_idxs][:top_n]
@@ -101,7 +89,7 @@ class CryptoChatterSubGraph:
             hashtag_count = dict(
                 Counter([
                     tag
-                    for hashtags in self.data["hashtags"].values
+                    for hashtags in self.parent.data.get("hashtags", self.nodes_in_data)
                     for tag in hashtags
                 ]).most_common()[:top_n]
             )
@@ -115,54 +103,72 @@ class CryptoChatterSubGraph:
         node_attributes: list[NodeAttributeKind] = [],
         edge_attributes: list[EdgeAttributeKind] = [],
     ) -> None:
-
-        for att in node_attributes:
-            nx.set_node_attributes()
-            self.data[att]
-        ...
+        start=time.time()
+        for attr in node_attributes:
+            nx.set_node_attributes(
+                G=self.G,
+                values=get_node_attribute(
+                    nodes=self.nodes_in_data,
+                    data=self.parent.data,
+                    kind=attr
+                ),
+                name=attr
+            )
+        for attr in edge_attributes:
+            nx.set_edge_attributes(
+                G=self.G,
+                values=get_edge_attribute(
+                    edges=self.edges_in_data,
+                    data=self.parent.data,
+                    kind=attr
+                ),
+                name=attr
+            )
+        print(f"exported to gephi graph in {int(time.time()-start)} seconds")
+        nx.write_gexf(self.G, self.cache_dir / "graph.gexf")
 
 class CryptoChatterGraph:
     G: nx.DiGraph
     nodes: NodeList
     edges: EdgeList
-    node_to_index: NodeToIndexMapping
     data: CryptoChatterData
     graph_config: CryptoChatterGraphConfig
     data_source: str
     top_n_components: int 
     components: list[NodeList] | None = None
+    progress: Progress|None = None
+    use_progress: bool = False
 
     def __init__(
         self, 
+        data: CryptoChatterData,
         graph_config: CryptoChatterGraphConfig,
-        data_config: CryptoChatterDataConfig,
-        columns: list[str]|None = None,
+        progress: Progress|None = None,
     ) -> None:
         self.graph_config = graph_config
-        self.build(data_config, columns)
+        self.progress = progress
+        self.use_progress = progress is not None
+        self.data = data
+        self.build(data)
 
     def build(
         self,
-        data_config:CryptoChatterDataConfig,
-        columns: list[str]|None = None,
+        data: CryptoChatterData,
     ) -> None:
         """
         Build the graph using the data from snapshot
         """
         start = time.time()
 
-        graph_data, nodes, edges, node_to_index = load_graph_data(
-            data_config,
-            self.graph_config,
-            columns,
+        nodes, edges = build_graph(
+            data=data,
+            graph_config=self.graph_config,
         )
         G = nx.DiGraph(edges)
 
         self.G = G
         self.nodes = nodes
         self.edges = edges
-        self.node_to_index = node_to_index
-        self.data = graph_data
 
         print(f"constructed complete reply graph in {int(time.time()-start)} seconds")
 
@@ -188,35 +194,45 @@ class CryptoChatterGraph:
             kind=kind
         )
 
-    def get_top_n_nodes(
+    def get_top_nodes(
         self,
         by_centrality: CentralityKind,
         top_n: int = 10,
     ) -> NodeList:
-        selected = []
-        centrality = self.centrality(by_centrality)
-        centrality_idx = centrality.argsort()[::-1]
-        counter = 0
-        while len(selected) < top_n:
-            cur_idx = centrality_idx[counter]
-            if self.nodes[cur_idx] in self.data["id"].values:
-                selected += [self.nodes[cur_idx]]
-            counter += 1
-        return selected
+        centrality_idx = self.centrality(by_centrality).argsort()[::-1]
+        return [self.nodes[i] for i in centrality_idx[:top_n]]
 
-    def get_top_n_subgraphs(
+    def get_subgraphs(
         self,
         by_centrality: CentralityKind,
         top_n: int = 10,
     ) -> list[CryptoChatterSubGraph]:
-        return [
-            CryptoChatterSubGraph(
-                f'{by_centrality}_{str(node)}',
-                parent=self,
-                nodes=self.get_all_reachable_nodes(node)
+        start = time.time()
+        subgraphs = []
+        if self.use_progress:
+            progress_task = self.progress.add_task(
+                description="loading subgraphs..",
+                total=top_n,
             )
-            for node in self.get_top_n_nodes(by_centrality, top_n)
-        ]
+        for node in self.get_top_nodes(by_centrality, top_n):
+            subgraph_id = f"{by_centrality}_{str(node)}"
+            subgraph_nodes = self.get_all_reachable_nodes(node)
+            subgraphs += [
+                CryptoChatterSubGraph(
+                    subgraph_id,
+                    parent=self,
+                    nodes=subgraph_nodes,
+                )
+            ]
+
+            if self.use_progress:
+                self.progress.advance(progress_task)
+
+        if self.use_progress:
+            self.progress.remove_task(progress_task)
+
+        print(f"loaded subgraphs by {by_centrality} in {int(time.time() - start)} seconds")
+        return subgraphs
 
     def get_all_reachable_nodes(
         self, 
@@ -232,11 +248,6 @@ class CryptoChatterGraph:
                     stack += [neighbor]
         return reachable
 
-    def export_gephi(
-        self,
-    ) -> None:
-        ...
-
     def get_stats(
         self,
         recompute: bool = False,
@@ -251,13 +262,13 @@ class CryptoChatterGraph:
             longest_path = nx.dag_longest_path(self.G)
             print(f"found longest path in {int(time.time() - start)} seconds")
 
-            in_degree = self.degree('in')
-            out_degree = self.degree('out')
-            deg_cent = self.centrality('degree')
-            in_deg_cent = self.centrality('in_degree')
+            in_degree = self.degree("in")
+            out_degree = self.degree("out")
+            deg_cent = self.centrality("degree")
+            in_deg_cent = self.centrality("in_degree")
             # bet_cent = self.betweenness_centrality()
-            eig_cent = self.centrality('eigenvector')
-            cls_cent = self.centrality('closeness')
+            eig_cent = self.centrality("eigenvector")
+            cls_cent = self.centrality("closeness")
             
             # self.load_components()
             # components_size = np.array([len(cc) for cc in self.components])
