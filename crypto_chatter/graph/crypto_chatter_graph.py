@@ -13,6 +13,8 @@ from crypto_chatter.utils.types import (
     EdgeList,
     EdgeAttributeKind,
     NodeAttributeKind,
+    SubGraphKind,
+    ReachableKind,
     CentralityKind,
     DegreeKind,
 )
@@ -22,31 +24,26 @@ from .centrality import compute_centrality
 from .edge_attributes import get_edge_attribute
 from .node_attributes import get_node_attribute
 from .build_graph import build_graph
+from .reachable import get_reachable
 
 class CryptoChatterSubGraph:
     id: str
     parent: "CryptoChatterGraph"
-    # source: int
     nodes: NodeList
     edges: EdgeList
     graph: nx.Graph
-    # data: CryptoChatterData
     cache_dir: Path
 
     def __init__(
         self, 
         _id: str,
-        # source: int,
         parent: "CryptoChatterGraph", 
         nodes: NodeList,
     ):
-        start = time.time()
         self.id = _id
-        # self.source = source
         self.parent = parent
         self.cache_dir = self.parent.graph_config.graph_dir / f"subgraph/{_id}"
         self.cache_dir.mkdir(parents=True, exist_ok=True)
-
         self.nodes = nodes
         self.G = self.parent.G.subgraph(self.nodes)
         self.edges = self.G.edges(self.nodes)
@@ -97,7 +94,7 @@ class CryptoChatterSubGraph:
         else:
             hashtag_count = json.load(open(save_file))
         return hashtag_count
-    
+
     def export_gephi(
         self,
         node_attributes: list[NodeAttributeKind] = [],
@@ -202,9 +199,10 @@ class CryptoChatterGraph:
         centrality_idx = self.centrality(by_centrality).argsort()[::-1]
         return [self.nodes[i] for i in centrality_idx[:top_n]]
 
-    def get_subgraphs(
+    def get_subgraphs_centrality(
         self,
-        by_centrality: CentralityKind,
+        centrality_kind: CentralityKind,
+        reachable_kind: ReachableKind,
         top_n: int = 10,
     ) -> list[CryptoChatterSubGraph]:
         start = time.time()
@@ -214,9 +212,21 @@ class CryptoChatterGraph:
                 description="loading subgraphs..",
                 total=top_n,
             )
-        for node in self.get_top_nodes(by_centrality, top_n):
-            subgraph_id = f"{by_centrality}_{str(node)}"
-            subgraph_nodes = self.get_all_reachable_nodes(node)
+        for node in self.get_top_nodes(centrality_kind, top_n):
+            subgraph_id = f"centrality/{centrality_kind}/{reachable_kind}/{str(node)}"
+            nodes_file = self.graph_config.graph_dir / f"subgraph/{subgraph_id}/nodes.json"
+            nodes_file.parent.mkdir(parents=True, exist_ok=True)
+
+            if not nodes_file.is_file():
+                subgraph_nodes = get_reachable(
+                    G=self.G, 
+                    node=node,
+                    kind=reachable_kind,
+                )
+                json.dump(subgraph_nodes, open(nodes_file, "w"))
+            else:
+                subgraph_nodes = json.load(open(nodes_file))
+
             subgraphs += [
                 CryptoChatterSubGraph(
                     subgraph_id,
@@ -231,22 +241,25 @@ class CryptoChatterGraph:
         if self.use_progress:
             self.progress.remove_task(progress_task)
 
-        print(f"loaded subgraphs by {by_centrality} in {int(time.time() - start)} seconds")
+        print(f"loaded subgraphs by {centrality_kind} in {int(time.time() - start)} seconds")
         return subgraphs
 
-    def get_all_reachable_nodes(
-        self, 
-        node: int,
-    ) -> NodeList:
-        stack = [node]
-        reachable = []
-        while stack:
-            current = stack.pop()
-            reachable += [current]
-            for neighbor in nx.all_neighbors(self.G, current):
-                if neighbor not in reachable:
-                    stack += [neighbor]
-        return reachable
+    def get_subgraphs(
+        self,
+        subgraph_kind: SubGraphKind,
+        top_n: int = 10,
+        **kwargs
+    ) -> list[CryptoChatterSubGraph]:
+        if subgraph_kind == "centrality":
+            centrality_kind = kwargs.get("centrality")
+            reachable_kind = kwargs.get("reachable")
+            return self.get_subgraphs_centrality(
+                centrality_kind=centrality_kind,
+                reachable_kind=reachable_kind,
+                top_n=top_n,
+            )
+        else:
+            raise NotImplementedError(f"{subgraph_kind} subgraph kind is not implemented!")
 
     def get_stats(
         self,

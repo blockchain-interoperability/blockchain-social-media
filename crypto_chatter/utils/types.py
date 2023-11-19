@@ -21,6 +21,9 @@ DirectedCentralityKind = Literal['in_degree', 'out_degree']
 UndirectedCentralityKind = Literal['degree', 'closeness', 'eigenvector']
 CentralityKind = Literal[UndirectedCentralityKind, DirectedCentralityKind]
 
+SubGraphKind = Literal['centrality', 'component']
+ReachableKind = Literal['directed', 'undirected', 'reversed']
+
 AttributeValues = list[str|float|int]
 
 NodeAttributeKind = Literal['text','sentiment']

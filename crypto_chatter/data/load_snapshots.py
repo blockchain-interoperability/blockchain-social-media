@@ -7,7 +7,6 @@ from rich.progress import Progress
 from crypto_chatter.config import CryptoChatterDataConfig
 
 from .prettify_elastic_twitter import prettify_elastic_twitter
-from .utils import is_spam
 
 def prettify_elastic(
     results:list[dict],

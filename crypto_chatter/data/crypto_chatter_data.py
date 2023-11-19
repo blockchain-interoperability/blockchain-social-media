@@ -182,7 +182,6 @@ class CryptoChatterData:
             if ids is None else 
             ids
         )
-
         # commenting this check out b/c it takes way too long.
         # if any(i not in self.ids for i in target_ids):
         #     raise ValueError('Invalid ids provided')

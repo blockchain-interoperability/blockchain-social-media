@@ -3,7 +3,7 @@ import json
 import time
 
 from crypto_chatter.data import CryptoChatterData
-from crypto_chatter.config import CryptoChatterDataConfig, CryptoChatterGraphConfig
+from crypto_chatter.config import CryptoChatterGraphConfig
 from crypto_chatter.utils.types import (
     NodeList, 
     EdgeList,
@@ -12,7 +12,7 @@ from crypto_chatter.utils.types import (
 def build_graph(
     data: CryptoChatterData,
     graph_config: CryptoChatterGraphConfig,
-) -> tuple[CryptoChatterData, NodeList, EdgeList]:
+) -> tuple[NodeList, EdgeList]:
     graph_config.graph_dir.mkdir(parents=True, exist_ok=True)
     graph_nodes_file = graph_config.graph_dir / "nodes.json"
     graph_edges_file = graph_config.graph_dir / "edges.json"
@@ -40,8 +40,21 @@ def build_graph(
                     data.ids
                 )
             )]
-            edges_from = has_outgoing[graph_config.edge_from_col].astype(int).tolist()
-            edges_to = has_outgoing[graph_config.edge_to_col].astype(int).tolist()
+
+            # need to filter by nan first b/c we can't convert to int
+            has_text = data[data.data_config.text_col].notna()
+            from_edge_valid = data[graph_config.edge_from_col].notna()
+            to_edge_valid = data[graph_config.edge_to_col].notna()
+            has_valid_values = data[(has_text & from_edge_valid & to_edge_valid)]
+
+            all_to_edge = has_valid_values[graph_config.edge_to_col].astype(int)
+            all_from_edge = has_valid_values[graph_config.edge_from_col].astype(int)
+
+            nodes_in_ids = (all_to_edge.isin(data.ids) & all_from_edge.isin(data.ids))
+
+            edges_from = all_to_edge[nodes_in_ids]
+            edges_to = all_from_edge[nodes_in_ids]
+
             nodes = list(set(edges_to) | set(edges_from))
             edges = list(zip(edges_from, edges_to))
         else:
