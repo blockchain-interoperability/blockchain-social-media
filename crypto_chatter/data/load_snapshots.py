@@ -2,20 +2,25 @@ from elasticsearch import Elasticsearch
 from elasticsearch.helpers import scan
 import pandas as pd
 import time
+from rich.progress import Progress
 
-from crypto_chatter.utils import progress_bar
 from crypto_chatter.config import CryptoChatterDataConfig
 
 from .prettify_elastic_twitter import prettify_elastic_twitter
 
-def prettify_elastic(results:list[dict], data_config:CryptoChatterDataConfig) -> pd.DataFrame:
+def prettify_elastic(
+    results:list[dict],
+    data_config:CryptoChatterDataConfig
+) -> pd.DataFrame:
     if data_config.data_source == 'twitter':
-        df = prettify_elastic_twitter(results, data_config)
+        return prettify_elastic_twitter(results, data_config)
     elif data_config.data_source == 'reddit': 
         raise NotImplementedError('Reddit parsing is not yet implemented!')
-    return df
 
-def load_raw_data(data_config: CryptoChatterDataConfig) -> pd.DataFrame:
+def load_snapshots(
+    data_config: CryptoChatterDataConfig,
+    progress: Progress|None = None,
+) -> pd.DataFrame:
     """Grabs the specified fields from the specified index on Elasticsearch. Since results are expected to be larged, batched pickle files are generated
 
     Args:
@@ -23,8 +28,9 @@ def load_raw_data(data_config: CryptoChatterDataConfig) -> pd.DataFrame:
     Returns:
         df (pd.DataFrame): A concatenated dataframe containing all the specified columns.
     """
-    
+    data_config.raw_snapshot_dir.mkdir(exist_ok=True, parents=True)
     marker_file = data_config.raw_snapshot_dir / 'completed.txt'
+
     if not marker_file.is_file():
         chunk_size = 100000
         es = Elasticsearch(
@@ -50,18 +56,32 @@ def load_raw_data(data_config: CryptoChatterDataConfig) -> pd.DataFrame:
         dataframes = []
         results = []
         start = time.time()
-        with progress_bar() as progress:
-            scroll_task = progress.add_task(description='scrolling index.. ', total=doc_count)
-            for c in cursor:
-                results += [c]
-                if len(results) == chunk_size:
-                    df = prettify_elastic(results, data_config)
-                    df.to_pickle(
-                        data_config.raw_snapshot_dir / f'{len(dataframes):010d}.pkl', 
-                    )
-                    del results[:]
-                    dataframes += [df]
-                progress.update(scroll_task, advance = 1)
+
+        progress_task = None
+        if progress is not None:
+            progress_task = progress.add_task(
+                description='scrolling index..', 
+                total=doc_count
+            )
+
+        use_progress = progress is not None and progress_task is not None
+        # with progress_bar() as progress:
+
+        scroll_task = progress.add_task()
+        for c in cursor:
+            results += [c]
+            if len(results) == chunk_size:
+                df = prettify_elastic(results, data_config)
+                df.to_pickle(
+                    data_config.raw_snapshot_dir / f'{len(dataframes):010d}.pkl', 
+                )
+                del results[:]
+                dataframes += [df]
+            if use_progress:
+                progress.update(progress_task, advance = 1)
+
+        if use_progress:
+            progress.remove_task(progress_task)
 
         df = prettify_elastic(results, data_config)
         del results[:]
@@ -73,22 +93,31 @@ def load_raw_data(data_config: CryptoChatterDataConfig) -> pd.DataFrame:
         num_rows = (len(dataframes) -1) * chunk_size + len(results)
 
         print(f'we saved {num_rows:,} rows in {len(dataframes)} chunks in {int(time.time()-start)} seconds')
-        df = pd.concat(dataframes)
-        open(marker_file, 'w').close()
+        df = pd.concat(dataframes).reset_index(drop=True)
+        marker_file.touch()
 
     else:
         start = time.time()
         dataframes = []
         cache_files = sorted(data_config.raw_snapshot_dir.glob('*.pkl'))
-        with progress_bar() as progress:
-            load_task = progress.add_task(
-                description='loading cache...', 
-                total=len(cache_files)
+
+        progress_task = None
+        if progress is not None:
+            progress_task = progress.add_task(
+                description='loading snapshots from cache..', 
+                total=doc_count
             )
-            for file in cache_files:
-                dataframes += [pd.read_pickle(file)]
-                progress.update(load_task, advance=1)
-        df = pd.concat(dataframes)
-        print(f'Loaded cache in {int(time.time()-start)} seconds')
+
+        use_progress = progress is not None and progress_task is not None
+
+        for file in cache_files:
+            dataframes += [pd.read_pickle(file)]
+            if use_progress:
+                progress.update(progress_task, advance=1)
+        if use_progress:
+            progress.remove_task(progress_task)
+
+        df = pd.concat(dataframes).reset_index(drop=True)
+        print(f'Loaded snapshot cache in {int(time.time()-start)} seconds')
 
     return df

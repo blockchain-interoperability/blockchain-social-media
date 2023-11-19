@@ -6,5 +6,4 @@ steemit/steemit.log
 *.pyc
 *.log
 test.ipynb
-test.py
 .DS_Store
