@@ -48,6 +48,6 @@ def compute_degree(
     else:
         by_nodes = np.load(open(save_file, 'rb'))
 
-    print(f"Computed {kind} centrality in {int(time.time() - start)} seconds")
+    print(f"Computed {kind} centrality in {time.time() - start:.2f} seconds")
     return by_nodes
 

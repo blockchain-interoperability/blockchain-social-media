@@ -84,7 +84,7 @@ class CryptoChatterData:
         (self.cache_dir/'completed.txt').touch()
         self.available_columns = df.columns.tolist()
         del df
-        print(f'Built CryptoChatterData in {int(time.time() - start)} seconds')
+        print(f'Built CryptoChatterData in {time.time() - start:.2f} seconds')
 
     def has_ids( 
         self,
@@ -127,7 +127,7 @@ class CryptoChatterData:
                 self.progress.remove_task(progress_task)
 
             self.df = pd.concat(loaded_cols, axis=1)
-            print(f'refreshed with {columns} in {int(time.time() - start)} seconds')
+            print(f'refreshed with {columns} in {time.time() - start:.2f} seconds')
 
         else:
             new_cols = (
@@ -159,7 +159,7 @@ class CryptoChatterData:
 
                 new_df = pd.concat(loaded_cols, axis=1)
                 self.df = pd.concat([self.df, new_df], axis=1)
-                print(f'loaded {new_cols} in {int(time.time() - start)} seconds')
+                print(f'loaded {new_cols} in {time.time() - start:.2f} seconds')
 
         self.columns = self.df.columns.tolist()
 

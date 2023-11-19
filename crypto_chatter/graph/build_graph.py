@@ -69,13 +69,13 @@ def build_graph(
             open(graph_edges_file, "w")
         )
         
-        print(f"Constructed graph with {len(nodes):,} nodes and {len(edges_to):,} edges in {int(time.time() - start)} seconds")
+        print(f"Constructed graph with {len(nodes):,} nodes and {len(edges_to):,} edges in {time.time() - start:.2f} seconds")
         print(f"Saved node and edge information to {graph_config.graph_dir}")
 
     else:
         start = time.time()
         nodes = json.load(open(graph_nodes_file))
         edges = json.load(open(graph_edges_file))
-        print(f"loaded graph edges in {int(time.time() - start)} seconds")
+        print(f"loaded graph edges in {time.time() - start:.2f} seconds")
 
     return nodes, edges

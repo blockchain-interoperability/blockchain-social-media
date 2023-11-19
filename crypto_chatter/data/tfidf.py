@@ -44,7 +44,7 @@ def fit_tfidf(
         )
         tfidf.fit(subset)
         pickle.dump(tfidf, open(save_file,"wb"))
-        print(f"computed tfidf and saved in {int(time.time() - start)} seconds")
+        print(f"computed tfidf and saved in {time.time() - start:.2f} seconds")
     else:
         tfidf = pickle.load(open(save_file, "rb"))
     return tfidf

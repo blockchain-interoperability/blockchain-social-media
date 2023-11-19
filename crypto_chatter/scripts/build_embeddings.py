@@ -1,5 +1,5 @@
 from crypto_chatter.data import CryptoChatterData
-from crypto_chatter.config import CryptoChatterDataConfig, CryptoChatterGraphConfig
+from crypto_chatter.config import CryptoChatterDataConfig
 from crypto_chatter.utils import progress_bar
 
 progress = progress_bar()

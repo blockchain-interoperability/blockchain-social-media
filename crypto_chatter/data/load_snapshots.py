@@ -92,7 +92,7 @@ def load_snapshots(
 
         num_rows = (len(dataframes) -1) * chunk_size + len(results)
 
-        print(f'we saved {num_rows:,} rows in {len(dataframes)} chunks in {int(time.time()-start)} seconds')
+        print(f'we saved {num_rows:,} rows in {len(dataframes)} chunks in {time.time()-start:.2f} seconds')
         df = pd.concat(dataframes).reset_index(drop=True)
         marker_file.touch()
 
@@ -118,6 +118,6 @@ def load_snapshots(
             progress.remove_task(progress_task)
 
         df = pd.concat(dataframes).reset_index(drop=True)
-        print(f'Loaded snapshot cache in {int(time.time()-start)} seconds')
+        print(f'Loaded snapshot cache in {time.time()-start:.2f} seconds')
 
     return df

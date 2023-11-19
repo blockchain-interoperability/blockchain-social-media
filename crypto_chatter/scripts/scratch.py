@@ -1,6 +1,12 @@
 from crypto_chatter.data import CryptoChatterData
-from crypto_chatter.graph import CryptoChatterGraph
-from crypto_chatter.config import CryptoChatterDataConfig, CryptoChatterGraphConfig
+from crypto_chatter.graph import (
+    CryptoChatterGraph,
+    CryptoChatterSubGraphBuilder
+)
+from crypto_chatter.config import (
+    CryptoChatterDataConfig,
+    CryptoChatterGraphConfig
+)
 
 dataset = 'twitter:blockchain-interoperability-attacks'
 graph_type = 'tweet'
@@ -16,12 +22,13 @@ graph = CryptoChatterGraph(
     graph_config=graph_config,
 )
 
-subgraphs = graph.get_subgraphs(
+builder = CryptoChatterSubGraphBuilder(graph)
+
+subgraphs = builder.get_subgraphs(
     subgraph_kind='centrality',
-    top_n=100,
+    top_n=10,
     centrality='in_degree', 
     reachable='undirected',
 )
 
-for i, s in enumerate(subgraphs):
-    print(i, len(s.nodes))
+

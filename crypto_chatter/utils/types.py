@@ -23,7 +23,7 @@ CentralityKind = Literal[UndirectedCentralityKind, DirectedCentralityKind]
 
 SubGraphKind = Literal['centrality', 'component']
 ReachableKind = Literal['directed', 'undirected', 'reversed']
-
+ComponentKind = Literal['strong', 'weak']
 AttributeValues = list[str|float|int]
 
 NodeAttributeKind = Literal['text','sentiment']

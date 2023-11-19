@@ -36,7 +36,7 @@ def compute_centrality(
         values = centrality_functions[kind](G)
         by_nodes = np.array([values[n] for n in nodes])
         np.save(open(save_file, 'wb'), by_nodes)
-        print(f"Computed {kind} centrality in {int(time.time() - start)} seconds")
+        print(f"Computed {kind} centrality in {time.time() - start:.2f} seconds")
     else:
         by_nodes = np.load(open(save_file, 'rb'))
 

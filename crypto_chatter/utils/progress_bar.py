@@ -1,12 +1,22 @@
-from rich import progress
-
-def progress_bar() -> progress.Progress:
-    return progress.Progress(
-        '[progress.description]{task.description}',
-        progress.BarColumn(),
-        '[progress.percentage]{task.percentage:>3.0f}%',
-        '({task.completed}/{task.total})',
-        progress.TimeRemainingColumn(),
-        progress.TimeElapsedColumn(),
+from rich.progress import (
+    Progress,
+    TextColumn,
+    BarColumn,
+    TimeRemainingColumn,
+    TimeElapsedColumn,
+    MofNCompleteColumn,
+    SpinnerColumn,
+)
+def progress_bar() -> Progress:
+    return Progress(
+        TextColumn("[progress.description]{task.description}"),
+        TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
+        BarColumn(),
+        MofNCompleteColumn(),
+        SpinnerColumn("growVertical"),
+        TextColumn("•"),
+        TimeElapsedColumn(),
+        TextColumn("•"),
+        TimeRemainingColumn(),
         transient=True,
     )
