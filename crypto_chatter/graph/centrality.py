@@ -21,23 +21,16 @@ centrality_functions = {
 def compute_centrality(
     G: nx.Graph,
     nodes: NodeList,
-    graph_config:CryptoChatterGraphConfig,
     kind: CentralityKind,
 ) -> np.ndarray:
-    if not graph_config.is_directed and kind in typing.get_args(DirectedCentralityKind):
+    if not isinstance(G, nx.DiGraph) and kind in typing.get_args(DirectedCentralityKind):
         raise ValueError(f"Centrality kind [{kind}] is not supported for undirected graphs")
     if kind not in centrality_functions:
         raise ValueError(f"Centrality kind [{kind}] is not supported")
 
-    save_file = graph_config.graph_dir / f"stats/centrality/{kind}.npy"
-    save_file.parent.mkdir(exist_ok=True, parents=True)
-    if not save_file.is_file():
-        start = time.time()
-        values = centrality_functions[kind](G)
-        by_nodes = np.array([values[n] for n in nodes])
-        np.save(open(save_file, 'wb'), by_nodes)
-        print(f"Computed {kind} centrality in {time.time() - start:.2f} seconds")
-    else:
-        by_nodes = np.load(open(save_file, 'rb'))
+    start = time.time()
+    values = centrality_functions[kind](G)
+    by_nodes = np.array([values[n] for n in nodes])
+    print(f"Computed {kind} centrality in {time.time() - start:.2f} seconds")
 
     return by_nodes

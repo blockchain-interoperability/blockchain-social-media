@@ -7,55 +7,44 @@ import time
 
 from crypto_chatter.config import CryptoChatterDataConfig
 from crypto_chatter.utils.types import (
-    Sentiment,
     IdList,
     TextList,
 )
 
 from .load_snapshots import load_snapshots
 from .embeddings import get_sbert_embeddings
-from .sentiment import get_roberta_sentiments
-from .tfidf import fit_tfidf, get_tfidf
+from .sentiment import get_roberta_sentiments, Sentiment
+from .tfidf import fit_tfidf, get_tfidf, TfidfConfig
 
 class CryptoChatterData:
     data_config: CryptoChatterDataConfig
     columns: list[str]
     available_columns: list[str] 
-    df: pd.DataFrame|None = None
     tfidf: TfidfVectorizer | None = None
-    tfidf_settings: str = ""
     cache_dir: Path | None = None
-    lite_mode: bool = False
     ids: np.ndarray
     progress: Progress|None
     use_progress: bool = False
+    tfidf_config: TfidfConfig | None
 
     def __init__(
         self,
         data_config: CryptoChatterDataConfig,
         columns: list[str] = [],
-        df: pd.DataFrame | None = None,
         progress: Progress|None = None,
     ) -> None:
-        if df is None:
-            # if df is not provided, we are using cached mode. 
-            self.cache_dir = data_config.data_dir / 'parsed'
-            self.cache_dir.mkdir(parents=True, exist_ok=True)
-            self.data_config = data_config
-            if not self.is_built: self.build()
-            self.load(
-                [self.data_config.id_col, self.data_config.text_col]+columns,
-                refresh=True
-            )
+        # if df is not provided, we are using cached mode. 
+        self.cache_dir = data_config.data_dir / 'parsed'
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
+        self.data_config = data_config
+        if not self.is_built:
+            self.build()
         else:
-            # if df is provided, we are using lite mode.
-            self.lite_mode = True
-            self.data_config = data_config
-            self.df = df
-            self.columns = df.columns.tolist()
-            if data_config.text_col not in self.columns:
-                raise ValueError(f'Text column [{data_config.text_col}] must be in columns for lite mode')
-
+            self.available_columns = [f.stem for f in self.cache_dir.glob('*.pkl')]
+        self.load(
+            [self.data_config.id_col, self.data_config.text_col]+columns,
+            refresh=True
+        )
         self.progress = progress
         self.use_progress = progress is not None
 
@@ -63,7 +52,7 @@ class CryptoChatterData:
 
     @property
     def is_built(self):
-        return (self.cache_dir/'completed.txt').is_file() or self.lite_mode
+        return (self.cache_dir/'completed.txt').is_file()
 
     def reset_ids(self):
         self.ids = self.df[self.data_config.id_col].values
@@ -71,7 +60,7 @@ class CryptoChatterData:
 
     def build(self) -> None:
         # Only happens on the first time. Populates the columns into pickles inside the cache folder
-        if self.is_built or self.lite_mode: return
+        if self.is_built: return
         print('Building CyrptoChatterData..')
         start = time.time()
         df = load_snapshots(
@@ -79,8 +68,21 @@ class CryptoChatterData:
             progress=self.progress,
         )
         df.index = df[self.data_config.id_col].values
+
+
+        if self.use_progress:
+            save_task = self.progress.add_task(
+                description='saving columns..',
+                total=len(df.columns),
+            )
+
         for c in df.columns:
             df[c].to_pickle(self.cache_dir / f'{c}.pkl')
+            if self.use_progress:
+                self.progress.advance(save_task)
+        if self.use_progress:
+            self.progress.remove_task(save_task)
+
         (self.cache_dir/'completed.txt').touch()
         self.available_columns = df.columns.tolist()
         del df
@@ -94,14 +96,25 @@ class CryptoChatterData:
             ids = np.array(ids)
         mask = np.isin(ids, self.ids, assume_unique=True)
         return mask
+    
+    def drop(
+        self,
+        columns: list[str],
+    ) -> None:
+        if any(c not in self.columns for c in columns):
+            raise ValueError(f'Unknown columns: {columns}')
+        for c in columns:
+            del self.df[c]
+        self.columns = [c for c in self.columns if c not in columns]
 
     def load(
         self,
         columns:list[str],
         refresh: bool = False,
     ) -> None:
-        if self.lite_mode or not columns: return
-
+        if not columns: return
+        if any(c not in self.available_columns for c in columns):
+            raise ValueError(f'Unknown columns: {columns}')
         columns = sorted(set(columns))
         print(f'loading {columns}..')
 
@@ -206,34 +219,41 @@ class CryptoChatterData:
                 model_name=model_name,
                 progress=self.progress,
             )
+        elif col == 'clean_text':
+            return 
+
         elif col in self.columns:
             return self.df[col].loc[target_ids].values
-
         else:
             raise ValueError(f'Unknown column: {col}')
 
     def fit_tfidf(
         self, 
         random_seed:int = 0,
-        random_size:int = 1000000,
+        random_size:int = int(1e6),
         ngram_range:tuple[int,int] = (1, 1),
         max_df:float|int = 1.0,
         min_df:float|int = 1,
-        max_features:int = 10000,
+        max_features:int = int(1e4),
     ) -> None:
+        self.tfidf_config = TfidfConfig(
+            random_seed=random_seed,
+            random_size=random_size,
+            ngram_range=ngram_range,
+            max_df=max_df,
+            min_df=min_df,
+            max_features=max_features,
+        )
         self.tfidf = fit_tfidf(
-            self.text(),
-            self.data_config,
-            random_seed = random_seed,
-            random_size = random_size,
-            ngram_range = ngram_range,
-            max_df = max_df,
-            min_df = min_df,
-            max_features = max_features,
+            text=self.get('text'),
+            cache_dir = self.data_config.data_dir,
+            config=self.tfidf_config,
         )
 
     def get_tfidf(
         self,
         texts: TextList,
-    ) -> tuple[list[str], list[str]]:
+    ) -> dict[str,float]:
+        if self.tfidf is None:
+            raise ValueError("tfidf is not fitted")
         return get_tfidf(texts, self.tfidf)

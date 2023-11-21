@@ -15,7 +15,6 @@ UndirectedDegreeKind = Literal['all']
 DegreeKind = Literal[UndirectedDegreeKind, DirectedDegreeKind]
 
 SentimentKind = Literal['negative', 'neutral', 'positive']
-Sentiment = dict[SentimentKind, float]
 
 DirectedCentralityKind = Literal['in_degree', 'out_degree']
 UndirectedCentralityKind = Literal['degree', 'closeness', 'eigenvector']
@@ -26,8 +25,10 @@ ReachableKind = Literal['directed', 'undirected', 'reversed']
 ComponentKind = Literal['strong', 'weak']
 AttributeValues = list[str|float|int]
 
-NodeAttributeKind = Literal['text','sentiment']
+NodeAttributeKind = Literal['text','sentiment_positive','sentiment_negative','sentiment_neutral']
 NodeAttribute = dict[int, str|float|int]
 
 EdgeAttributeKind = Literal['emb_cosine_sim']
-EdgeAttribute = dict[tuple[int,int], str|float|int]
+EdgeAttribute = dict[tuple[int,int],str|float|int]
+
+ShortestPathKind = Literal['directed', 'undirected', 'reversed']

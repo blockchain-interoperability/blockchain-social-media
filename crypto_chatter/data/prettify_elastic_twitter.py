@@ -3,6 +3,8 @@ import pandas as pd
 from crypto_chatter.config import CryptoChatterDataConfig
 from crypto_chatter.utils import extract_hashtags
 
+from .text import extract_hashtags
+
 def prettify_elastic_twitter(
     results:list[dict], 
     data_config:CryptoChatterDataConfig
@@ -19,16 +21,6 @@ def prettify_elastic_twitter(
     df = pd.json_normalize(results)
     df = df.drop(columns=df.columns[~df.columns.str.contains('_source')])
     df.columns = df.columns.str.replace('_source.','')
-    df = df.reindex(
-        columns = df.columns.union(
-            [
-                data_config.text_col, 
-                'quoted_status.full_text',
-                'truncated'
-                'quoted_status.truncated',
-            ] + data_config.es_columns
-        )
-    )
 
     # If trucated is False, that means text has the full text. If True, extended_tweet.full_text has the full text.
     df['truncated'] = df['truncated'].fillna(False)
@@ -38,6 +30,14 @@ def prettify_elastic_twitter(
     df['quoted_status.truncated'] = df['quoted_status.truncated'].fillna(False)
     df['quoted_status.full_text'] = df['quoted_status.text']
     df.loc[df['quoted_status.truncated'],'quoted_status.full_text'] = df[df['quoted_status.truncated']]['quoted_status.extended_tweet.full_text']
+
+    # find quoted tweets that have valid text and add as well.
+    quoted_cols = df.columns[df.columns.str.contains('quoted_status.')]
+    regular_cols = df.columns[~df.columns.str.contains('quoted_status.')]
+    quote_has_text = (~df['quoted_status.text'].isna() & ~df['quoted_status.extended_tweet.full_text'].isna())
+    quoted_df = df[quote_has_text][quoted_cols]
+    quoted_df.columns = quoted_df.columns.str.replace('quoted_status.', '')
+    df = pd.concat([df[regular_cols], quoted_df]).shape
 
     # parse hashtags
     df['hashtags'] = df[data_config.text_col].apply(extract_hashtags)

@@ -8,7 +8,7 @@ from crypto_chatter.utils.types import (
     IdList
 )
 
-from .utils import preprocess_text
+from .text import preprocess_text
 
 def get_sbert_embeddings(
     text: list[str]|np.ndarray,

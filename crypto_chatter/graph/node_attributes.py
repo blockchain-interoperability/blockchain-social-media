@@ -1,5 +1,4 @@
 import typing
-import numpy as np
 from functools import partial
 
 from crypto_chatter.data import CryptoChatterData
@@ -46,6 +45,6 @@ def get_node_attribute(
             nodes=nodes,
             data=data,
         )
-        return dict(zip(valid_nodes, values))
+        return dict(zip(nodes, values))
     else:
         raise ValueError(f'Unknown node attribute kind: {kind}')

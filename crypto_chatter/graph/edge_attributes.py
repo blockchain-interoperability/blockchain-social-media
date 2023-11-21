@@ -26,7 +26,7 @@ def get_edge_emb_cosine_similarity(
         for node_a, node_b in edges
     ]
 
-    return values
+    return [float(v) for v in values]
 
 edge_attr_functions = {
     'emb_cosine_sim': get_edge_emb_cosine_similarity,
@@ -42,6 +42,6 @@ def get_edge_attribute(
             edges=edges,
             data=data
         )
-        return dict(zip(valid_edges, values))
+        return dict(zip(edges, values))
     else:
         raise ValueError(f'Unknown node attribute kind: {kind}')

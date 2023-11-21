@@ -4,190 +4,240 @@ import numpy as np
 import json
 from collections import Counter
 from pathlib import Path
-from rich.progress import Progress
 
-from crypto_chatter.config import CryptoChatterGraphConfig
 from crypto_chatter.data import CryptoChatterData
 from crypto_chatter.utils.types import (
     NodeList,
     EdgeList,
+    EdgeAttribute,
+    NodeAttribute,
     EdgeAttributeKind,
     NodeAttributeKind,
-    SubGraphKind,
+    ComponentKind,
     ReachableKind,
     CentralityKind,
     DegreeKind,
+    ShortestPathKind,
 )
 
+from .components import get_components
 from .degree import compute_degree
 from .centrality import compute_centrality
 from .edge_attributes import get_edge_attribute
 from .node_attributes import get_node_attribute
-from .build_graph import build_graph
 from .reachable import get_reachable
+from .shortest_path import get_shortest_path
 
 class CryptoChatterGraph:
-    G: nx.DiGraph
+    id: str
+    source: int|None=None
+    G: nx.Graph
     nodes: NodeList
     edges: EdgeList
-    data: CryptoChatterData
-    graph_config: CryptoChatterGraphConfig
-    data_source: str
-    top_n_components: int 
-    components: list[NodeList] | None = None
-    progress: Progress|None
-    use_progress: bool = False
+    cache_dir: Path
 
     def __init__(
-        self, 
-        data: CryptoChatterData,
-        graph_config: CryptoChatterGraphConfig,
-        progress: Progress|None = None,
-    ) -> None:
-        self.graph_config = graph_config
-        self.data = data
-        self.progress = progress
-        self.use_progress = progress is not None
-        self.build(data)
-
-    def build(
         self,
-        data: CryptoChatterData,
+        _id: str,
+        G: nx.Graph,
+        nodes: NodeList,
+        edges: EdgeList,
+        cache_dir: Path,
+        source: int|None=None,
     ) -> None:
-        """
-        Build the graph using the data from snapshot
-        """
-        start = time.time()
-
-        nodes, edges = build_graph(
-            data=data,
-            graph_config=self.graph_config,
-        )
-        G = nx.DiGraph(edges)
-
+        self.id = _id
         self.G = G
         self.nodes = nodes
         self.edges = edges
-
-        print(f"constructed complete reply graph in {time.time()-start:.2f} seconds")
+        self.cache_dir = cache_dir / self.id
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
+        self.source = None
 
     def degree(
         self,
         kind: DegreeKind,
     ) -> np.ndarray:
-        return compute_degree(
-            G=self.G, 
-            nodes=self.nodes, 
-            graph_config=self.graph_config,
-            kind=kind
-        )
+        save_file = self.cache_dir / f"stats/degree/{kind}.npy"
+        save_file.parent.mkdir(exist_ok=True, parents=True)
+        if not save_file.is_file():
+            degree = compute_degree(
+                G=self.G,
+                nodes=self.nodes,
+                # graph_config=self.graph_config,
+                kind=kind,
+            )
+            np.save(open(save_file, "wb"), degree)
+        else:
+            degree = np.load(open(save_file, "rb"))
+        return degree
 
-    def centrality(
-        self,
-        kind: CentralityKind
-    ) -> np.ndarray:
-        return compute_centrality(
-            G=self.G, 
-            nodes=self.nodes, 
-            graph_config=self.graph_config,
-            kind=kind
-        )
+    def centrality(self, kind: CentralityKind) -> np.ndarray:
+        save_file = self.cache_dir / f"stats/centrality/{kind}.npy"
+        save_file.parent.mkdir(exist_ok=True, parents=True)
+        if not save_file.is_file():
+            centrality = compute_centrality(G=self.G, nodes=self.nodes, kind=kind)
+            np.save(open(save_file, "wb"), centrality)
+        else:
+            centrality = np.load(open(save_file, "rb"))
+        return centrality
 
     def reachable(
         self,
-        node:int,
+        node: int,
         kind: ReachableKind,
     ) -> NodeList:
-        return get_reachable(
-            G=self.G,
-            node=node,
-            kind=kind,
-        )
-
-    def get_stats(
-        self,
-        recompute: bool = False,
-        display: bool = False
-    ) -> dict[str, any]:
-        save_file = self.graph_config.graph_dir / "stats/overview.json"
-
-        if not save_file.is_file() or recompute:
-            reply_count = (~self.data["quoted_status.id"].isna()).sum()
-
-            start = time.time()
-            longest_path = nx.dag_longest_path(self.G)
-            print(f"found longest path in {time.time() - start:.2f} seconds")
-
-            in_degree = self.degree("in")
-            out_degree = self.degree("out")
-            deg_cent = self.centrality("degree")
-            in_deg_cent = self.centrality("in_degree")
-            # bet_cent = self.betweenness_centrality()
-            eig_cent = self.centrality("eigenvector")
-            cls_cent = self.centrality("closeness")
-            
-            # self.load_components()
-            # components_size = np.array([len(cc) for cc in self.components])
-
-            graph_stats = {
-                "Reply Tweets": {
-                    "Count": f"{reply_count:,}",
-                    "Ratio": f"{reply_count/len(self.data)*100:.2f}%"
-                },
-                "Standalone Tweets": {
-                    "Count": f"{len(self.data)-reply_count:,}",
-                    "Ratio": f"{(len(self.data)-reply_count)/len(self.data)*100:.2f}%"
-                },
-                "Node Count": len(self.nodes),
-                "Edge Count": len(self.edges),
-                "In-Degree": {
-                    "Max": int(in_degree.max()),
-                    "Avg": float(in_degree.mean()),
-                    "Min": int(in_degree.min()),
-                },
-                "Out-Degree": {
-                    "Max": int(out_degree.max()),
-                    "Avg": float(out_degree.mean()),
-                    "Min": int(out_degree.min()),
-                },
-                "Longest Path": len(longest_path),
-                # "Connected Components Count": len(self.components),
-                # "Conncted Compoenents Size": {
-                #     "Max": int(components_size.max()),
-                #     "Avg": int(components_size.mean()),
-                #     "Min": int(components_size.min()),
-                # },
-                "Degree Centrality": {
-                    "Max": deg_cent.max(),
-                    "Avg": deg_cent.mean(),
-                    "Min": deg_cent.min(),
-                },
-                "InDegree Centrality": {
-                    "Max": in_deg_cent.max(),
-                    "Avg": in_deg_cent.mean(),
-                    "Min": in_deg_cent.min(),
-                },
-                # "Betweenness Centrality": {
-                #     "Max": bet_cent.max(),
-                #     "Avg": bet_cent.mean(),
-                #     "Min": bet_cent.min(),
-                # },
-                "Eigenvector Centrality": {
-                    "Max": eig_cent.max(),
-                    "Avg": eig_cent.mean(),
-                    "Min": eig_cent.min(),
-                },
-                "Closeness Centrality": {
-                    "Max": cls_cent.max(),
-                    "Avg": cls_cent.mean(),
-                    "Min": cls_cent.min(),
-                },
-            }
-            json.dump(graph_stats, open(save_file, "w"), indent=2)
+        reachable_nodes_file = self.cache_dir / f"reachable/{kind}/{node}.json"
+        reachable_nodes_file.parent.mkdir(parents=True, exist_ok=True)
+        if not reachable_nodes_file.is_file():
+            reachable_nodes = get_reachable(
+                G=self.G,
+                node=node,
+                kind=kind,
+            )
+            json.dump(reachable_nodes, open(reachable_nodes_file, "w"))
         else:
-            graph_stats = json.load(open(save_file))
+            reachable_nodes = json.load(open(reachable_nodes_file))
+        return reachable_nodes
 
-        if display:
-            print(json.dumps(graph_stats, indent=2))
+    def shortest_path(
+        self,
+        source: int, 
+        kind: ShortestPathKind,
+    ):
+        shortest_path_file = self.cache_dir / f"shortest_path/{kind}.json"
+        shortest_path_file.parent.mkdir(parents=True, exist_ok=True)
+        if not shortest_path_file.is_file():
+            shortest_path = get_shortest_path(
+                G=self.G,
+                source=source,
+                nodes=self.nodes,
+                kind=kind,
+            )
+            json.dump(shortest_path, open(shortest_path_file, "w"))
+        else:
+            shortest_path = json.load(open(shortest_path_file))
+        return shortest_path
 
-        return graph_stats
+    def components(
+        self,
+        component_kind: ComponentKind,
+    ) -> list[NodeList]:
+        components_file = self.cache_dir / f"components/{component_kind}.json"
+        components_file.parent.mkdir(parents=True, exist_ok=True)
+        if not components_file.is_file():
+            components = get_components(
+                self.G,
+                component_kind=component_kind,
+            )
+            json.dump(components, open(components_file, "w"))
+        else:
+            components = json.load(open(components_file))
+        return components
+
+    def get_unique_tokens(
+        self, 
+        data: CryptoChatterData,
+    ):
+        ...
+
+    def get_keywords(
+        self,
+        data: CryptoChatterData,
+        top_n: int = 100,
+    ) -> dict[str, float]:
+        save_file = self.cache_dir / f"stats/keywords/{data.tfidf_config}/{top_n}.json"
+        save_file.parent.mkdir(parents=True, exist_ok=True)
+        if not save_file.is_file():
+            keywords_with_score = data.get_tfidf(
+                    texts=data.get("text", self.nodes)
+                )
+
+            json.dump(keywords_with_score, open(save_file, "w"))
+        else:
+            keywords_with_score = json.load(open(save_file))
+
+        return keywords_with_score
+
+    def count_hashtags(
+        self,
+        data: CryptoChatterData,
+        top_n: int = 100,
+    ) -> dict[str, int]:
+        save_file = self.cache_dir / f"stats/hashtags/{top_n}.json"
+        save_file.parent.mkdir(parents=True, exist_ok=True)
+        if not save_file.is_file():
+            hashtag_count = dict(
+                Counter(
+                    [
+                        tag
+                        for hashtags in data.get("hashtags", self.nodes)
+                        for tag in hashtags
+                    ]
+                ).most_common()[:top_n]
+            )
+            json.dump(hashtag_count, open(save_file, "w"))
+        else:
+            hashtag_count = json.load(open(save_file))
+        return hashtag_count
+
+    def get_node_attribute(
+        self,
+        data: CryptoChatterData,
+        kind: NodeAttributeKind,
+    ) -> NodeAttribute:
+        node_attr_file = self.cache_dir / f"node_attributes/{kind}.json"
+        node_attr_file.parent.mkdir(parents=True, exist_ok=True)
+        if not node_attr_file.is_file():
+            node_attr = get_node_attribute(nodes=self.nodes, data=data, kind=kind)
+            json.dump(node_attr, open(node_attr_file, "w"))
+        else:
+            node_attr = json.load(open(node_attr_file))
+        return node_attr
+
+    def get_edge_attribute(
+        self,
+        data: CryptoChatterData,
+        kind: EdgeAttributeKind,
+    ) -> EdgeAttribute:
+        edge_attr_file = self.cache_dir / f"edge_attributes/{kind}.json"
+        edge_attr_file.parent.mkdir(parents=True, exist_ok=True)
+        if not edge_attr_file.is_file():
+            edge_attr = get_edge_attribute(edges=self.edges, data=data, kind=kind)
+            json.dump(
+                {
+                    "keys": list(edge_attr.keys()),
+                    "values": list(edge_attr.values())
+                }, 
+                open(edge_attr_file, "w")
+            )
+        else:
+            edge_attr = json.load(open(edge_attr_file))
+            edge_attr = dict(
+                zip(
+                    [tuple(e) for e in edge_attr["keys"]],
+                    edge_attr["values"],
+                )
+            )
+        return edge_attr
+
+    def export_gephi(
+        self,
+        data: CryptoChatterData,
+        node_attributes: list[NodeAttributeKind] = [],
+        edge_attributes: list[EdgeAttributeKind] = [],
+    ) -> None:
+        start = time.time()
+        for attr in node_attributes:
+            nx.set_node_attributes(
+                G=self.G,
+                values=self.get_node_attribute(data=data, kind=attr),
+                name=attr,
+            )
+        for attr in edge_attributes:
+            nx.set_edge_attributes(
+                G=self.G,
+                values=self.get_edge_attribute(data=data, kind=attr),
+                name=attr,
+            )
+        print(f"exported to gephi graph in {time.time()-start:.2f} seconds")
+        nx.write_gexf(self.G, self.cache_dir / "graph.gexf")

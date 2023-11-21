@@ -1,46 +1,51 @@
 import time
 import numpy as np
-import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
+from sklearn.feature_extraction.text import TfidfVectorizer
+from pathlib import Path
 import pickle
+from dataclasses import dataclass
 
-from crypto_chatter.config import CryptoChatterDataConfig
 from crypto_chatter.utils.types import TextList
 
-from .utils import preprocess_text, is_spam
+from .text import clean_text, is_spam, STOP_WORDS
 
+@dataclass
+class TfidfConfig:
+    random_seed:int = 0
+    random_size:int = int(1e6)
+    ngram_range:tuple[int,int] = (1, 1)
+    max_df:float|int = 1.0
+    min_df:int = 1
+    max_features:int = 10000
+
+    def __repr__(self):
+        return f"{self.random_seed}_{self.random_size}_{self.ngram_range}_{self.max_df}_{self.min_df}_{self.max_features}"
 
 def fit_tfidf(
-    # self,
-    text: list[str]|np.ndarray|pd.Series,
-    data_config: CryptoChatterDataConfig,
-    random_seed:int = 0,
-    random_size:int = 1000000,
-    ngram_range:tuple[int,int] = (1, 1),
-    max_df:float|int = 1.0,
-    min_df:float|int = 1,
-    max_features:int = 10000,
+    text: TextList,
+    cache_dir: Path,
+    config: TfidfConfig,
 ) -> TfidfVectorizer:
-    tfidf_settings = f"{random_seed}_{random_size}_{ngram_range}_{max_df}_{min_df}_{max_features}"
-    save_file = data_config.data_dir / f"tfidf/{tfidf_settings}.pkl"
+    save_file = cache_dir / f"tfidf/{config}.pkl"
     save_file.parent.mkdir(parents=True, exist_ok=True)
-
-    stop_words = list(ENGLISH_STOP_WORDS | set(['https', '@']))
 
     if not save_file.is_file():
         start = time.time()
-        rng = np.random.RandomState(random_seed)
+        rng = np.random.RandomState(config.random_seed)
         # first filter out spam
         not_spam = [t for t in text if not is_spam(t)]
         # Then get random indices
-        random_idxs = rng.permutation(np.arange(len(not_spam)))[:random_size]
-        subset = [preprocess_text(not_spam[i]) for i in random_idxs]
+        if config.random_size > 0:
+            random_idxs = rng.permutation(np.arange(len(not_spam)))[:config.random_size]
+        else:
+            random_idxs = np.arange(len(not_spam))
+        subset = [clean_text(not_spam[i]) for i in random_idxs]
         tfidf = TfidfVectorizer(
-            stop_words=stop_words,
-            ngram_range=ngram_range,
-            max_df=max_df,
-            min_df=min_df,
-            max_features=max_features,
+            stop_words=STOP_WORDS,
+            ngram_range=config.ngram_range,
+            max_df=config.max_df,
+            min_df=config.min_df,
+            max_features=config.max_features,
         )
         tfidf.fit(subset)
         pickle.dump(tfidf, open(save_file,"wb"))
@@ -52,11 +57,11 @@ def fit_tfidf(
 def get_tfidf(
     texts: TextList,
     tfidf: TfidfVectorizer,
-) -> tuple[list[str],list[str]]: 
+) -> dict[str,float]:
     terms = tfidf.get_feature_names_out()
     vecs = tfidf.transform(texts)
     tfidf_scores = vecs.toarray().sum(0)
     sorted_idxs = tfidf_scores.argsort()[::-1]
     keywords = list(terms[sorted_idxs])
     keyword_scores = tfidf_scores[sorted_idxs]
-    return keywords, keyword_scores
+    return dict(zip(keywords, keyword_scores))

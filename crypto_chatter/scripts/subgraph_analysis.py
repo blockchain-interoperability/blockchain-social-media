@@ -1,7 +1,6 @@
 from crypto_chatter.data import CryptoChatterData
 from crypto_chatter.graph import (
-    CryptoChatterGraph,
-    CryptoChatterSubGraphBuilder
+    CryptoChatterGraphBuilder
 )
 from crypto_chatter.config import (
     CryptoChatterDataConfig,
@@ -9,7 +8,7 @@ from crypto_chatter.config import (
 )
 from crypto_chatter.utils import progress_bar
 
-top_n = 1000
+top_n = 100
 
 progress = progress_bar()
 progress.start()
@@ -24,25 +23,25 @@ data = CryptoChatterData(
     progress=progress,
 )
 
-graph = CryptoChatterGraph(
+builder = CryptoChatterGraphBuilder(
     data=data,
     graph_config=graph_config,
     progress=progress,
 )
 
-builder = CryptoChatterSubGraphBuilder(
-    graph=graph,
-    progress=progress,
-)
+graph = builder.get_graph()
 
 idc_subgraphs = builder.get_subgraphs(
-    subgraph_kind='centrality',
+    graph=graph,
+    kind='centrality',
     top_n=top_n,
-    centrality='in_degree', 
+    centrality='degree', 
     reachable='undirected',
 )
+
 wcc_subgraphs = builder.get_subgraphs(
-    subgraph_kind='component',
+    graph=graph,
+    kind='component',
     component='weak',
     top_n=top_n,
 )
@@ -50,8 +49,8 @@ wcc_subgraphs = builder.get_subgraphs(
 subgraphs = idc_subgraphs+wcc_subgraphs
 subgraph_task = progress.add_task('Generating for subgraphs..', total=len(subgraphs))
 for subgraph in idc_subgraphs+wcc_subgraphs:
-    data.get('embedding', subgraph.nodes)
-    data.get('sentiment', subgraph.nodes)
+    data.get('embedding',subgraph.nodes)
+
     progress.advance(subgraph_task)
 
 progress.stop()

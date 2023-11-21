@@ -1,5 +1,6 @@
 import numpy as np
 import json
+from dataclasses import dataclass
 from rich.progress import Progress
 from transformers import (
     AutoTokenizer,
@@ -11,13 +12,38 @@ from transformers import (
 from crypto_chatter.config import CryptoChatterDataConfig
 from crypto_chatter.utils import device
 from crypto_chatter.utils.types import (
-    Sentiment,
     IdList,
 )
 
-from .utils import preprocess_text
+from .text import preprocess_text
 
 logging.set_verbosity_error()
+
+class Sentiment:
+    positive: float
+    negative: float
+    neutral: float
+
+    def overall(self) -> str:
+        return max([
+            (self.positive, 'positive'), 
+            (self.negative, 'negative'), 
+            (self.neutral, 'neutral'),
+        ])[1]
+
+    def to_dict(self):
+        return {
+            "positive": self.positive,
+            "negative": self.negative,
+            "neutral": self.neutral,
+        }
+
+    def to_list(self):
+        return [
+            self.positive,
+            self.negative,
+            self.neutral,
+        ]
 
 def get_roberta_sentiments(
     text: list[str]|np.ndarray,
@@ -68,7 +94,7 @@ def get_roberta_sentiments(
                 raise e
 
             json.dump(sentiment, open(save_file, "w"))
-        sentiments += [sentiment]
+        sentiments += [Sentiment(**sentiment)]
         if use_progress:
             progress.advance(progress_task)
 

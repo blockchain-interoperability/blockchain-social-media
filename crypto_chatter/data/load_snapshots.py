@@ -65,7 +65,6 @@ def load_snapshots(
             )
 
         use_progress = progress is not None and progress_task is not None
-        # with progress_bar() as progress:
 
         scroll_task = progress.add_task()
         for c in cursor:
