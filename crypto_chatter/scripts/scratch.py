@@ -6,33 +6,31 @@ from crypto_chatter.utils import progress_bar
 import numpy as np
 from collections import Counter
 
-progress = progress_bar()
-progress.start()
-dataset = "twitter:blockchain-interoperability-attacks"
-graph_type = "tweet"
-data_config = CryptoChatterDataConfig(dataset)
-graph_config = CryptoChatterGraphConfig(data_config, graph_type)
-data = CryptoChatterData(
-    data_config=data_config,
-    columns=["hashtags"],
-    progress=progress,
-)
-builder = CryptoChatterGraphBuilder(
-    data=data,
-    graph_config=graph_config,
-    progress=progress,
-)
+with progress_bar() as progress:
+    dataset = "twitter:blockchain-interoperability-attacks"
+    graph_type = "tweet"
+    data_config = CryptoChatterDataConfig(dataset)
+    graph_config = CryptoChatterGraphConfig(data_config, graph_type)
+    data = CryptoChatterData(
+        data_config=data_config,
+        columns=["hashtags"],
+        progress=progress,
+    )
+    builder = CryptoChatterGraphBuilder(
+        data=data,
+        graph_config=graph_config,
+        progress=progress,
+    )
 
-graph = builder.get_graph()
-subgraphs = builder.get_subgraphs(
-    graph=graph,
-    kind="centrality",
-    top_n=10,
-    centrality="in_degree",
-    reachable="undirected",
-)
+    graph = builder.get_graph()
+    subgraphs = builder.get_subgraphs(
+        graph=graph,
+        kind="centrality",
+        top_n=10,
+        centrality="in_degree",
+        reachable="undirected",
+    )
 
-progress.stop()
 quit()
 
 sg = subgraphs[0]
