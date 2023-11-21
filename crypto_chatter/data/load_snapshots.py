@@ -104,7 +104,7 @@ def load_snapshots(
         if progress is not None:
             progress_task = progress.add_task(
                 description='loading snapshots from cache..', 
-                total=doc_count
+                total=len(cache_files)
             )
 
         use_progress = progress is not None and progress_task is not None

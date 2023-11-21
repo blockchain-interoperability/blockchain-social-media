@@ -1,10 +1,13 @@
 from crypto_chatter.data import CryptoChatterData
 from crypto_chatter.graph import CryptoChatterGraphBuilder
 from crypto_chatter.config import CryptoChatterDataConfig, CryptoChatterGraphConfig
+from crypto_chatter.utils import progress_bar
 
 import numpy as np
 from collections import Counter
 
+progress = progress_bar()
+progress.start()
 dataset = "twitter:blockchain-interoperability-attacks"
 graph_type = "tweet"
 data_config = CryptoChatterDataConfig(dataset)
@@ -12,10 +15,12 @@ graph_config = CryptoChatterGraphConfig(data_config, graph_type)
 data = CryptoChatterData(
     data_config=data_config,
     columns=["hashtags"],
+    progress=progress,
 )
 builder = CryptoChatterGraphBuilder(
     data=data,
     graph_config=graph_config,
+    progress=progress,
 )
 
 graph = builder.get_graph()
@@ -26,6 +31,9 @@ subgraphs = builder.get_subgraphs(
     centrality="in_degree",
     reachable="undirected",
 )
+
+progress.stop()
+quit()
 
 sg = subgraphs[0]
 shortest_path = sg.shortest_path(

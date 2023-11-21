@@ -3,6 +3,7 @@ import networkx as nx
 import numpy as np
 import json
 from collections import Counter
+import shutil
 from pathlib import Path
 
 from crypto_chatter.data import CryptoChatterData
@@ -52,6 +53,10 @@ class CryptoChatterGraph:
         self.cache_dir = cache_dir / self.id
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.source = None
+
+    def clear_cache(self) -> None:
+        shutil.rmtree(self.cache_dir)
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
 
     def degree(
         self,
@@ -134,18 +139,21 @@ class CryptoChatterGraph:
             components = json.load(open(components_file))
         return components
 
-    def get_unique_tokens(
-        self, 
-        data: CryptoChatterData,
-    ):
-        ...
+    def diameter(self) -> int:
+        save_file = self.cache_dir / "stats/diameter.json"
+        save_file.parent.mkdir(parents=True, exist_ok=True)
+        if not save_file.is_file():
+            diameter = nx.diameter(self.G)
+            json.dump({'diameter': diameter}, open(save_file, "w"))
+        else:
+            diameter = json.load(open(save_file))['diameter']
+        return diameter
 
     def get_keywords(
         self,
         data: CryptoChatterData,
-        top_n: int = 100,
     ) -> dict[str, float]:
-        save_file = self.cache_dir / f"stats/keywords/{data.tfidf_config}/{top_n}.json"
+        save_file = self.cache_dir / f"stats/keywords/{data.tfidf_config}.json"
         save_file.parent.mkdir(parents=True, exist_ok=True)
         if not save_file.is_file():
             keywords_with_score = data.get_tfidf(
@@ -163,7 +171,7 @@ class CryptoChatterGraph:
         data: CryptoChatterData,
         top_n: int = 100,
     ) -> dict[str, int]:
-        save_file = self.cache_dir / f"stats/hashtags/{top_n}.json"
+        save_file = self.cache_dir / f"stats/hashtags.json"
         save_file.parent.mkdir(parents=True, exist_ok=True)
         if not save_file.is_file():
             hashtag_count = dict(

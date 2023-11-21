@@ -37,6 +37,9 @@ class CryptoChatterData:
         self.cache_dir = data_config.data_dir / 'parsed'
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.data_config = data_config
+        self.progress = progress
+        self.use_progress = progress is not None
+
         if not self.is_built:
             self.build()
         else:
@@ -45,9 +48,6 @@ class CryptoChatterData:
             [self.data_config.id_col, self.data_config.text_col]+columns,
             refresh=True
         )
-        self.progress = progress
-        self.use_progress = progress is not None
-
         self.reset_ids()
 
     @property
@@ -68,7 +68,6 @@ class CryptoChatterData:
             progress=self.progress,
         )
         df.index = df[self.data_config.id_col].values
-
 
         if self.use_progress:
             save_task = self.progress.add_task(

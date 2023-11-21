@@ -15,18 +15,11 @@ with progress_bar() as progress:
     snotshot_task = progress.add_task('Cleaning snapshots..', total=len(snapshots))
     for snapshot in snapshots:
         df = pd.read_pickle(snapshot)
-        # print('loaded snapshot', snapshot.name)
-
 
         has_bad_col = 'truncatedquoted_status.truncated' in df.columns
         needs_stacking = any(df.columns.str.contains('quoted_status'))
         already_cleaned = 'clean_text' in df.columns
         already_tagged = 'hashtags' in df.columns
-
-        # print(df.columns)
-        # print(has_bad_col, needs_stacking, already_cleaned, already_tagged)
-        # quit()
-
         
         if has_bad_col:
             del df['truncatedquoted_status.truncated']
