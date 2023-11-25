@@ -61,11 +61,11 @@ def prettify_elastic_twitter(
         hashtags += [extract_hashtags(text)]
         cleaned_text += [clean_text(text)]
 
-        if prorgess is not None:
+        if progess is not None:
             progress.advance(clean_task)
     if progress is not None:
         progress.remove_task(clean_task)
-    df['hashtags'] = hathtags
+    df['hashtags'] = hashtags
     df['clean_text'] = cleaned_text
 
     return df
