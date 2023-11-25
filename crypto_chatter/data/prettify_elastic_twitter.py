@@ -4,7 +4,7 @@ from rich.progress import Progress
 from crypto_chatter.config import CryptoChatterDataConfig
 from crypto_chatter.utils import extract_hashtags
 
-from .text import extract_hashtags,clean_text
+from .text import extract_hashtags, clean_text
 
 def prettify_elastic_twitter(
     results:list[dict], 
@@ -54,18 +54,18 @@ def prettify_elastic_twitter(
 
     # parse hashtags and clean text
     hashtags = []
-    clean_text = []
+    cleaned_text = []
     if progress is not None:
         clean_task = progress.add_task("cleaning text..", total=len(df))
     for text in df[data_config.text_col].values:
         hashtags += [extract_hashtags(text)]
-        clean_text += [clean_text(text)]
+        cleaned_text += [clean_text(text)]
 
         if prorgess is not None:
             progress.advance(clean_task)
     if progress is not None:
         progress.remove_task(clean_task)
     df['hashtags'] = hathtags
-    df['clean_text'] = clean_text
+    df['clean_text'] = cleaned_text
 
     return df
