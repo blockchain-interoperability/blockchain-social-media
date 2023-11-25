@@ -19,6 +19,7 @@ def prettify_elastic_twitter(
     Returns:
         df (pd.DataFrame): Concatenated dataframe with indexes reset
     """
+    print('my progress is', progress)
     if progress is not None:
         parse_task = progress.add_task("Parsing df..", total=4)
 
