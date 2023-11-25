@@ -10,10 +10,11 @@ from .prettify_elastic_twitter import prettify_elastic_twitter
 
 def prettify_elastic(
     results:list[dict],
-    data_config:CryptoChatterDataConfig
+    data_config:CryptoChatterDataConfig,
+    progress: Progress|None = None,
 ) -> pd.DataFrame:
     if data_config.data_source == 'twitter':
-        return prettify_elastic_twitter(results, data_config)
+        return prettify_elastic_twitter(results, data_config, progress)
     elif data_config.data_source == 'reddit': 
         raise NotImplementedError('Reddit parsing is not yet implemented!')
 
@@ -66,7 +67,7 @@ def load_snapshots(
 
         use_progress = progress is not None and progress_task is not None
 
-        scroll_task = progress.add_task()
+        progress_task = progress.add_task()
         for c in cursor:
             results += [c]
             if len(results) == chunk_size:
@@ -82,7 +83,7 @@ def load_snapshots(
         if use_progress:
             progress.remove_task(progress_task)
 
-        df = prettify_elastic(results, data_config)
+        df = prettify_elastic(results, data_config, progress)
         del results[:]
         df.to_pickle(
             data_config.raw_snapshot_dir / f'{len(dataframes):010d}.pkl', 

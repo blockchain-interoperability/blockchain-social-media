@@ -7,7 +7,7 @@
 - user.created_at
 - user.followers_count
 - user.friends_count
-# - geo 
+- geo 
 # - user.geo_enabled 
 # - user.location
 - quote_count
@@ -32,3 +32,5 @@
 - quoted_status.favorite_count
 - in_reply_to_status_id
 - in_reply_to_user_id
+- quoted_status.in_reply_to_status_id
+- quoted_status.in_reply_to_user_id
