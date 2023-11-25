@@ -65,9 +65,6 @@ def load_snapshots(
                 total=doc_count
             )
 
-        use_progress = progress is not None and progress_task is not None
-
-        progress_task = progress.add_task('scrolling index', total=doc_count)
         for c in cursor:
             results += [c]
             if len(results) == chunk_size:
@@ -77,10 +74,10 @@ def load_snapshots(
                 )
                 del results[:]
                 dataframes += [df]
-            if use_progress:
+            if progress is not None:
                 progress.update(progress_task, advance = 1)
 
-        if use_progress:
+        if progress is not None:
             progress.remove_task(progress_task)
 
         df = prettify_elastic(results, data_config, progress)
@@ -108,13 +105,11 @@ def load_snapshots(
                 total=len(cache_files)
             )
 
-        use_progress = progress is not None and progress_task is not None
-
         for file in cache_files:
             dataframes += [pd.read_pickle(file)]
-            if use_progress:
+            if progress is not None:
                 progress.update(progress_task, advance=1)
-        if use_progress:
+        if progress is not None:
             progress.remove_task(progress_task)
 
         df = pd.concat(dataframes).reset_index(drop=True)
