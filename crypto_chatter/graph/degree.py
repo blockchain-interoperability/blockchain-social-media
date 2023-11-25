@@ -40,6 +40,6 @@ def compute_degree(
     start = time.time()
     values = get_degree_func(G, kind)(nodes)
     by_nodes = np.array([values[n] for n in nodes])
-    print(f"Computed {kind} centrality in {time.time() - start:.2f} seconds")
+    print(f"Computed {kind} degree in {time.time() - start:.2f} seconds")
     return by_nodes
 

@@ -19,6 +19,7 @@ from .text import preprocess_text
 
 logging.set_verbosity_error()
 
+@dataclass
 class Sentiment:
     positive: float
     negative: float

@@ -3,7 +3,7 @@ import pandas as pd
 from crypto_chatter.config import CryptoChatterDataConfig
 from crypto_chatter.utils import extract_hashtags
 
-from .text import extract_hashtags
+from .text import extract_hashtags,clean_text
 
 def prettify_elastic_twitter(
     results:list[dict], 
@@ -33,13 +33,14 @@ def prettify_elastic_twitter(
 
     # find quoted tweets that have valid text and add as well.
     quoted_cols = df.columns[df.columns.str.contains('quoted_status.')]
-    regular_cols = df.columns[~df.columns.str.contains('quoted_status.')]
+    regular_cols = df.columns[~df.columns.str.contains('quoted_status.')].tolist() + ['quoted_status.id']
     quote_has_text = (~df['quoted_status.text'].isna() & ~df['quoted_status.extended_tweet.full_text'].isna())
     quoted_df = df[quote_has_text][quoted_cols]
     quoted_df.columns = quoted_df.columns.str.replace('quoted_status.', '')
-    df = pd.concat([df[regular_cols], quoted_df]).shape
+    df = pd.concat([df[regular_cols], quoted_df])
 
     # parse hashtags
     df['hashtags'] = df[data_config.text_col].apply(extract_hashtags)
+    df[data_config.clean_text_col] = df[data_config.text_col].apply(clean_text)
 
     return df

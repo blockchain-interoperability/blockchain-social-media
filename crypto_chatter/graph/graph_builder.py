@@ -1,10 +1,12 @@
 import networkx as nx
+from networkx.readwrite.gml import re
 from rich.progress import Progress
 
 from crypto_chatter.data import CryptoChatterData
 from crypto_chatter.config import CryptoChatterGraphConfig
 from crypto_chatter.utils.types import (
     ComponentKind,
+    CommunityKind,
     SubGraphKind,
     ReachableKind,
     CentralityKind,
@@ -69,6 +71,15 @@ class CryptoChatterGraphBuilder:
                 top_n=top_n,
                 component_kind=component_kind,
             )
+        elif kind == "community":
+            community_kind = kwargs.get("community")
+            random_seed = kwargs.get("random_seed", 0)
+            return self.get_subgraphs_communities(
+                graph=graph,
+                top_n=top_n,
+                community_kind=community_kind,
+                random_seed=random_seed,
+            )
         else:
             raise NotImplementedError(
                 f"{subgraph_kind} subgraph kind is not implemented!"
@@ -91,10 +102,10 @@ class CryptoChatterGraphBuilder:
         centrality_idx = graph.centrality(centrality_kind).argsort()[::-1]
         for i, idx in enumerate(centrality_idx[:top_n]):
             node = graph.nodes[idx]
-            reachable_nodes = graph.reachable(
+            reachable_nodes = list(graph.reachable(
                 node=node,
                 kind=reachable_kind,
-            )
+            ).keys())
 
             subgraph_id = f"subgraph/centrality/{centrality_kind}-{reachable_kind}/{i}-{int(node)}"
             G = graph.G.subgraph(reachable_nodes)
@@ -127,7 +138,7 @@ class CryptoChatterGraphBuilder:
         components = graph.components(component_kind)
         if self.use_progress:
             progress_task = self.progress.add_task(
-                description=f"loading subgraphs by wcc..",
+                description=f"loading subgraphs by {component_kind} component..",
                 total=top_n,
             )
 
@@ -145,6 +156,47 @@ class CryptoChatterGraphBuilder:
                     cache_dir=self.graph_config.graph_dir,
                 )
             ]
+            if self.use_progress:
+                self.progress.advance(progress_task)
+
+        if self.use_progress:
+            self.progress.remove_task(progress_task)
+
+        return subgraphs
+
+    def get_subgraphs_communities(
+        self,
+        graph: CryptoChatterGraph,
+        top_n: int,
+        community_kind: CommunityKind,
+        random_seed: int=0,
+    ):
+        communities = graph.communities(
+            kind=community_kind,
+            random_seed=random_seed,
+        )
+
+        if self.use_progress:
+            progress_task = self.progress.add_task(
+                description=f"loading subgraphs by {community_kind} community..",
+                total=top_n,
+            )
+
+        subgraphs = []
+        for i,community in enumerate(communities[:top_n]):
+            subgraph_id = f"subgraph/community/{community_kind}_{random_seed}/{i}"
+            G = graph.G.subgraph(community)
+            edges = list(graph.G.edges(community))
+            subgraphs += [
+                CryptoChatterGraph(
+                    _id=subgraph_id,
+                    G=G,
+                    nodes=community,
+                    edges=edges,
+                    cache_dir=self.graph_config.graph_dir,
+                )
+            ]
+
             if self.use_progress:
                 self.progress.advance(progress_task)
 

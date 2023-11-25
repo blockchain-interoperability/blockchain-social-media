@@ -19,6 +19,7 @@ from crypto_chatter.utils.types import (
     CentralityKind,
     DegreeKind,
     ShortestPathKind,
+    CommunityKind,
 )
 
 from .components import get_components
@@ -28,6 +29,7 @@ from .edge_attributes import get_edge_attribute
 from .node_attributes import get_node_attribute
 from .reachable import get_reachable
 from .shortest_path import get_shortest_path
+from .communities import get_communities
 
 class CryptoChatterGraph:
     id: str
@@ -79,74 +81,86 @@ class CryptoChatterGraph:
     def centrality(self, kind: CentralityKind) -> np.ndarray:
         save_file = self.cache_dir / f"stats/centrality/{kind}.npy"
         save_file.parent.mkdir(exist_ok=True, parents=True)
-        if not save_file.is_file():
+        try:
+            with open(save_file, "rb") as f:
+                centrality = np.load(f)
+        except (FileNotFoundError):
             centrality = compute_centrality(G=self.G, nodes=self.nodes, kind=kind)
-            np.save(open(save_file, "wb"), centrality)
-        else:
-            centrality = np.load(open(save_file, "rb"))
+            with open(save_file, "wb") as f:
+                np.save(f, centrality)
         return centrality
 
     def reachable(
         self,
         node: int,
         kind: ReachableKind,
-    ) -> NodeList:
+    ) -> dict[int,NodeList]:
         reachable_nodes_file = self.cache_dir / f"reachable/{kind}/{node}.json"
         reachable_nodes_file.parent.mkdir(parents=True, exist_ok=True)
-        if not reachable_nodes_file.is_file():
+        node = int(node)
+
+        try:
+            with open(reachable_nodes_file, "r") as f:
+                reachable_nodes = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
             reachable_nodes = get_reachable(
                 G=self.G,
                 node=node,
                 kind=kind,
             )
-            json.dump(reachable_nodes, open(reachable_nodes_file, "w"))
-        else:
-            reachable_nodes = json.load(open(reachable_nodes_file))
+            with open(reachable_nodes_file, "w") as f:
+                json.dump(reachable_nodes, f)
         return reachable_nodes
-
-    def shortest_path(
-        self,
-        source: int, 
-        kind: ShortestPathKind,
-    ):
-        shortest_path_file = self.cache_dir / f"shortest_path/{kind}.json"
-        shortest_path_file.parent.mkdir(parents=True, exist_ok=True)
-        if not shortest_path_file.is_file():
-            shortest_path = get_shortest_path(
-                G=self.G,
-                source=source,
-                nodes=self.nodes,
-                kind=kind,
-            )
-            json.dump(shortest_path, open(shortest_path_file, "w"))
-        else:
-            shortest_path = json.load(open(shortest_path_file))
-        return shortest_path
 
     def components(
         self,
-        component_kind: ComponentKind,
+        kind: ComponentKind,
     ) -> list[NodeList]:
-        components_file = self.cache_dir / f"components/{component_kind}.json"
+        components_file = self.cache_dir / f"components/{kind}.json"
         components_file.parent.mkdir(parents=True, exist_ok=True)
-        if not components_file.is_file():
-            components = get_components(
-                self.G,
-                component_kind=component_kind,
-            )
-            json.dump(components, open(components_file, "w"))
-        else:
-            components = json.load(open(components_file))
+        try:
+            with open(components_file, "r") as f:
+                components = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            with open(components_file, "w") as f:
+                components = get_components(
+                    G=self.G,
+                    component_kind=kind,
+                )
+                json.dump(components, f)
         return components
+
+
+    def communities(
+        self, 
+        kind: CommunityKind,
+        random_seed: int,
+    ) -> list[NodeList]:
+        save_file = self.cache_dir / f"communities/{kind}_{random_seed}.json"
+        save_file.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            with open(save_file, "r") as f:
+                communities = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            with open(save_file, "w") as f:
+                communities = get_communities(
+                    G=self.G,
+                    community_kind=kind,
+                    random_seed=random_seed,
+                )
+                json.dump(communities, f)
+        return communities
 
     def diameter(self) -> int:
         save_file = self.cache_dir / "stats/diameter.json"
         save_file.parent.mkdir(parents=True, exist_ok=True)
-        if not save_file.is_file():
-            diameter = nx.diameter(self.G)
-            json.dump({'diameter': diameter}, open(save_file, "w"))
-        else:
-            diameter = json.load(open(save_file))['diameter']
+        try:
+            with open(save_file, "r") as f:
+                diameter = json.load(f)['diameter']
+        except (FileNotFoundError, json.JSONDecodeError):
+            with open(save_file, "w") as f:
+                diameter = nx.diameter(self.G)
+                json.dump({'diameter': diameter}, f)
         return diameter
 
     def get_keywords(
@@ -155,15 +169,15 @@ class CryptoChatterGraph:
     ) -> dict[str, float]:
         save_file = self.cache_dir / f"stats/keywords/{data.tfidf_config}.json"
         save_file.parent.mkdir(parents=True, exist_ok=True)
-        if not save_file.is_file():
-            keywords_with_score = data.get_tfidf(
-                    texts=data.get("text", self.nodes)
+        try:
+            with open(save_file, "r") as f:
+                keywords_with_score = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            with open(save_file, "w") as f:
+                keywords_with_score = data.get_tfidf(
+                    texts=data.get("clean_text", self.nodes)
                 )
-
-            json.dump(keywords_with_score, open(save_file, "w"))
-        else:
-            keywords_with_score = json.load(open(save_file))
-
+                json.dump(keywords_with_score, f)
         return keywords_with_score
 
     def count_hashtags(
@@ -173,19 +187,21 @@ class CryptoChatterGraph:
     ) -> dict[str, int]:
         save_file = self.cache_dir / f"stats/hashtags.json"
         save_file.parent.mkdir(parents=True, exist_ok=True)
-        if not save_file.is_file():
-            hashtag_count = dict(
-                Counter(
-                    [
-                        tag
-                        for hashtags in data.get("hashtags", self.nodes)
-                        for tag in hashtags
-                    ]
-                ).most_common()[:top_n]
-            )
-            json.dump(hashtag_count, open(save_file, "w"))
-        else:
-            hashtag_count = json.load(open(save_file))
+        try:
+            with open(save_file, "r") as f:
+                hashtag_count = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            with open(save_file, "w") as f:
+                hashtag_count = dict(
+                    Counter(
+                        [
+                            tag
+                            for hashtags in data.get("hashtags", self.nodes)
+                            for tag in hashtags
+                        ]
+                    ).most_common()[:top_n]
+                )
+                json.dump(hashtag_count, f)
         return hashtag_count
 
     def get_node_attribute(
@@ -195,11 +211,13 @@ class CryptoChatterGraph:
     ) -> NodeAttribute:
         node_attr_file = self.cache_dir / f"node_attributes/{kind}.json"
         node_attr_file.parent.mkdir(parents=True, exist_ok=True)
-        if not node_attr_file.is_file():
-            node_attr = get_node_attribute(nodes=self.nodes, data=data, kind=kind)
-            json.dump(node_attr, open(node_attr_file, "w"))
-        else:
-            node_attr = json.load(open(node_attr_file))
+        try:
+            with open(node_attr_file, "r") as f:
+                node_attr = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            with open(node_attr_file, "w") as f:
+                node_attr = get_node_attribute(nodes=self.nodes, data=data, kind=kind)
+                json.dump(node_attr, f)
         return node_attr
 
     def get_edge_attribute(
@@ -209,23 +227,22 @@ class CryptoChatterGraph:
     ) -> EdgeAttribute:
         edge_attr_file = self.cache_dir / f"edge_attributes/{kind}.json"
         edge_attr_file.parent.mkdir(parents=True, exist_ok=True)
-        if not edge_attr_file.is_file():
-            edge_attr = get_edge_attribute(edges=self.edges, data=data, kind=kind)
-            json.dump(
-                {
+        try:
+            with open(edge_attr_file, "r") as f:
+                edge_attr = json.load(f)
+                edge_attr = dict(
+                    zip(
+                        [tuple(e) for e in edge_attr["keys"]],
+                        edge_attr["values"],
+                    )
+                )
+        except (FileNotFoundError, json.JSONDecodeError):
+            with open(edge_attr_file, "w") as f:
+                edge_attr = get_edge_attribute(edges=self.edges, data=data, kind=kind)
+                json.dump({
                     "keys": list(edge_attr.keys()),
                     "values": list(edge_attr.values())
-                }, 
-                open(edge_attr_file, "w")
-            )
-        else:
-            edge_attr = json.load(open(edge_attr_file))
-            edge_attr = dict(
-                zip(
-                    [tuple(e) for e in edge_attr["keys"]],
-                    edge_attr["values"],
-                )
-            )
+                }, f)
         return edge_attr
 
     def export_gephi(

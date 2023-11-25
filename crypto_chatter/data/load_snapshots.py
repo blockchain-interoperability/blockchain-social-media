@@ -117,6 +117,6 @@ def load_snapshots(
             progress.remove_task(progress_task)
 
         df = pd.concat(dataframes).reset_index(drop=True)
-        print(f'Loaded snapshot cache in {time.time()-start:.2f} seconds')
+        print(f'Loaded snapshot cache [{len(df)}] rows in {time.time()-start:.2f} seconds')
 
     return df

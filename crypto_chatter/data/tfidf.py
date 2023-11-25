@@ -64,4 +64,4 @@ def get_tfidf(
     sorted_idxs = tfidf_scores.argsort()[::-1]
     keywords = list(terms[sorted_idxs])
     keyword_scores = tfidf_scores[sorted_idxs]
-    return dict(zip(keywords, keyword_scores))
+    return list(zip(keywords, keyword_scores))

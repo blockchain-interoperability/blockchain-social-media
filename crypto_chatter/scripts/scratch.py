@@ -1,63 +1,122 @@
 from crypto_chatter.data import CryptoChatterData
 from crypto_chatter.graph import CryptoChatterGraphBuilder
 from crypto_chatter.config import CryptoChatterDataConfig, CryptoChatterGraphConfig
+from crypto_chatter.config.path import FIGS_DIR
 from crypto_chatter.utils import progress_bar
 
+import time
 import numpy as np
+import pandas as pd
 from collections import Counter
 
-with progress_bar() as progress:
-    dataset = "twitter:blockchain-interoperability-attacks"
-    graph_type = "tweet"
-    data_config = CryptoChatterDataConfig(dataset)
-    graph_config = CryptoChatterGraphConfig(data_config, graph_type)
-    data = CryptoChatterData(
-        data_config=data_config,
-        columns=["hashtags"],
-        progress=progress,
-    )
-    builder = CryptoChatterGraphBuilder(
-        data=data,
-        graph_config=graph_config,
-        progress=progress,
-    )
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-    graph = builder.get_graph()
-    subgraphs = builder.get_subgraphs(
-        graph=graph,
-        kind="centrality",
-        top_n=10,
-        centrality="in_degree",
-        reachable="undirected",
-    )
 
-quit()
+dataset = "twitter:blockchain-interoperability-attacks"
+graph_type = "tweet"
 
-sg = subgraphs[0]
-shortest_path = sg.shortest_path(
-    source=sg.source,
-    kind="reversed",
+data_config = CryptoChatterDataConfig(dataset)
+graph_config = CryptoChatterGraphConfig(data_config, graph_type)
+
+data = CryptoChatterData(
+    data_config=data_config,
+    columns=["hashtags"],
 )
 
-neighbor_by_depth = dict()
-for n, path in shortest_path.items():
-    depth = path["length"]
-    neighbor_by_depth.setdefault("depth", []).append(n)
+data.fit_tfidf()
+print(f"data has {len(data):,} rows")
 
-for d, nodes in neighbor_by_depth.items():
-    sent = data.get("sentiment", nodes)
-    sent_count = Counter([s.overall() for s in sent])
-    sent_sum = np.stack([s.to_list() for s in sent]).sum(0)
-    by_sum = ["positive", "negative", "neutral"][sent_sum.argmax()]
 
-    print(f"Depth {d}: {len(nodes)}")
-    print(
-        f"Positive: {sent_count['positive']}/{len(nodes)} -- {sent_count['positive']/len(nodes):.2f}%"
+builder = CryptoChatterGraphBuilder(
+    data=data,
+    graph_config=graph_config,
+)
+
+graph = builder.get_graph()
+
+print(f"Tweet Graph has {len(graph.nodes):,} nodes and {len(graph.edges):,} edges")
+
+subgraphs = builder.get_subgraphs(
+    graph=graph,
+    top_n=100,
+    kind="centrality",
+    centrality="in_degree",
+    reachable="undirected",
+) + builder.get_subgraphs(
+    graph=graph,
+    top_n=100,
+    kind="component",
+    component="weak",
+) + builder.get_subgraphs(
+    graph=graph,
+    top_n=100,
+    kind="community",
+    community="louvain",
+    random_seed=0
+)
+
+for i, sg in enumerate(subgraphs):
+    kws = pd.DataFrame(
+        sg.get_keywords(
+            data=data,
+        ),
+        columns=["keyword", "score"],
     )
-    print(
-        f"Negative: {sent_count['negative']}/{len(nodes)} -- {sent_count['negative']/len(nodes):.2f}%"
+
+    edge_sims = pd.DataFrame(
+        [
+            dict(
+                node_from=n1,
+                node_to=n2,
+                sim=sim,
+            )
+            for (n1, n2), sim in sg.get_edge_attribute(
+                data=data, kind="emb_cosine_sim"
+            ).items()
+        ]
     )
-    print(
-        f"Neutral: {sent_count['neutral']}/{len(nodes)} -- {sent_count['neutral']/len(nodes):.2f}%"
+
+    print("#" * 80)
+    print(f"SG {i} -- {sg.id}")
+    print("=" * 80)
+    print("EDGE SIMILARITIES")
+    print("  AVG:",edge_sims["sim"].mean())
+    print("  STD:",edge_sims["sim"].std())
+    print("  MAX:",edge_sims["sim"].max())
+    print("  MIN:",edge_sims["sim"].min())
+    print("=" * 80)
+    print("KEYWORDS")
+    print(kws.iloc[:10].to_markdown(index=False))
+
+"""
+degree plot
+"""
+
+def plot_graph_degree(
+    graph,
+    title,
+    filename="degree_dist",
+    **kwargs,
+):
+    fig, ax = plt.subplots(figsize=(6, 6))
+    degrees = graph.degree("all")
+    cc = Counter(degrees)
+    df = pd.DataFrame(cc.items(), columns=["Degree", "Count"])
+
+    sns.scatterplot(
+        data=df,
+        x="Degree",
+        y="Count",
+        ax=ax,
+    ).set(
+        title=title,
+        **kwargs,
     )
-    print(f"By Sum: {by_sum}")
+
+    fig.tight_layout()
+    fig.savefig(FIGS_DIR / f"{filename}.png", bbox_inches="tight", dpi=300)
+
+    return fig
+
+# plot_graph_degree(sg, "Degree Distribution", "subgraph_1_deg_dist")

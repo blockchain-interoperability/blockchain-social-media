@@ -34,7 +34,7 @@ class CryptoChatterData:
         progress: Progress|None = None,
     ) -> None:
         # if df is not provided, we are using cached mode. 
-        self.cache_dir = data_config.data_dir / 'parsed'
+        self.cache_dir = data_config.data_dir / "parsed"
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.data_config = data_config
         self.progress = progress
@@ -43,7 +43,7 @@ class CryptoChatterData:
         if not self.is_built:
             self.build()
         else:
-            self.available_columns = [f.stem for f in self.cache_dir.glob('*.pkl')]
+            self.available_columns = [f.stem for f in self.cache_dir.glob("*.pkl")]
         self.load(
             [self.data_config.id_col, self.data_config.text_col]+columns,
             refresh=True
@@ -52,7 +52,7 @@ class CryptoChatterData:
 
     @property
     def is_built(self):
-        return (self.cache_dir/'completed.txt').is_file()
+        return (self.cache_dir/"completed.txt").is_file()
 
     def reset_ids(self):
         self.ids = self.df[self.data_config.id_col].values
@@ -61,31 +61,32 @@ class CryptoChatterData:
     def build(self) -> None:
         # Only happens on the first time. Populates the columns into pickles inside the cache folder
         if self.is_built: return
-        print('Building CyrptoChatterData..')
+        print("Building CyrptoChatterData..")
         start = time.time()
         df = load_snapshots(
             data_config=self.data_config,
             progress=self.progress,
         )
+        df.drop_dupliates(subset=["id"],keep="first",inplace=False)
         df.index = df[self.data_config.id_col].values
 
         if self.use_progress:
             save_task = self.progress.add_task(
-                description='saving columns..',
+                description="saving columns..",
                 total=len(df.columns),
             )
 
         for c in df.columns:
-            df[c].to_pickle(self.cache_dir / f'{c}.pkl')
+            df[c].to_pickle(self.cache_dir / f"{c}.pkl")
             if self.use_progress:
                 self.progress.advance(save_task)
         if self.use_progress:
             self.progress.remove_task(save_task)
 
-        (self.cache_dir/'completed.txt').touch()
+        (self.cache_dir/"completed.txt").touch()
         self.available_columns = df.columns.tolist()
         del df
-        print(f'Built CryptoChatterData in {time.time() - start:.2f} seconds')
+        print(f"Built CryptoChatterData in {time.time() - start:.2f} seconds")
 
     def has_ids( 
         self,
@@ -95,13 +96,13 @@ class CryptoChatterData:
             ids = np.array(ids)
         mask = np.isin(ids, self.ids, assume_unique=True)
         return mask
-    
+
     def drop(
         self,
         columns: list[str],
     ) -> None:
         if any(c not in self.columns for c in columns):
-            raise ValueError(f'Unknown columns: {columns}')
+            raise ValueError(f"Unknown columns: {columns}")
         for c in columns:
             del self.df[c]
         self.columns = [c for c in self.columns if c not in columns]
@@ -113,9 +114,9 @@ class CryptoChatterData:
     ) -> None:
         if not columns: return
         if any(c not in self.available_columns for c in columns):
-            raise ValueError(f'Unknown columns: {columns}')
+            raise ValueError(f"Unknown columns: {columns}")
         columns = sorted(set(columns))
-        print(f'loading {columns}..')
+        print(f"loading {columns}..")
 
         # if refresh is True, we overwrite the previous columns
         if refresh:
@@ -125,13 +126,13 @@ class CryptoChatterData:
 
             if self.use_progress:
                 progress_task = self.progress.add_task(
-                    description='loading columns',
+                    description="loading columns",
                     total=len(columns),
                 )
 
             loaded_cols = []
             for c in columns:
-                loaded_cols += [pd.read_pickle(self.cache_dir / f'{c}.pkl')]
+                loaded_cols += [pd.read_pickle(self.cache_dir / f"{c}.pkl")]
                 if self.use_progress:
                     self.progress.advance(progress_task)
 
@@ -139,7 +140,7 @@ class CryptoChatterData:
                 self.progress.remove_task(progress_task)
 
             self.df = pd.concat(loaded_cols, axis=1)
-            print(f'refreshed with {columns} in {time.time() - start:.2f} seconds')
+            print(f"refreshed with {columns} in {time.time() - start:.2f} seconds")
 
         else:
             new_cols = (
@@ -153,14 +154,14 @@ class CryptoChatterData:
 
                 if self.use_progress:
                     progress_task = self.progress.add_task(
-                        description='loading columns',
+                        description="loading columns",
                         total=len(columns),
                     )
 
                 loaded_cols = []
                 for c in new_cols:
                     loaded_cols += [
-                        pd.read_pickle(self.cache_dir / f'{c}.pkl')
+                        pd.read_pickle(self.cache_dir / f"{c}.pkl")
                     ]
 
                     if self.use_progress:
@@ -171,7 +172,7 @@ class CryptoChatterData:
 
                 new_df = pd.concat(loaded_cols, axis=1)
                 self.df = pd.concat([self.df, new_df], axis=1)
-                print(f'loaded {new_cols} in {time.time() - start:.2f} seconds')
+                print(f"loaded {new_cols} in {time.time() - start:.2f} seconds")
 
         self.columns = self.df.columns.tolist()
 
@@ -196,35 +197,32 @@ class CryptoChatterData:
         )
         # commenting this check out b/c it takes way too long.
         # if any(i not in self.ids for i in target_ids):
-        #     raise ValueError('Invalid ids provided')
+        #     raise ValueError("Invalid ids provided")
 
-        if col == 'text':
+        if col == "text":
             return self.df[self.data_config.text_col].loc[target_ids].values
-        elif col == 'sentiment':
-            model_name = kwargs.get('model_name', "cardiffnlp/twitter-roberta-base-sentiment-latest")
+        elif col == "sentiment":
+            model_name = kwargs.get("model_name", "cardiffnlp/twitter-roberta-base-sentiment-latest")
             return get_roberta_sentiments(
-                text=self.get('text',target_ids),
+                text=self.get("text",target_ids),
                 data_config=self.data_config,
                 ids=target_ids, 
                 model_name=model_name,
                 progress=self.progress,
             )
-        elif col == 'embedding':
-            model_name = kwargs.get('model_name', "all-MiniLM-L12-v2")
+        elif col == "embedding":
+            model_name = kwargs.get("model_name", "all-MiniLM-L12-v2")
             return get_sbert_embeddings(
-                text=self.get('text',target_ids),
+                text=self.get("text",target_ids),
                 data_config=self.data_config,
                 ids=target_ids, 
                 model_name=model_name,
                 progress=self.progress,
             )
-        elif col == 'clean_text':
-            return 
-
         elif col in self.columns:
             return self.df[col].loc[target_ids].values
         else:
-            raise ValueError(f'Unknown column: {col}')
+            raise ValueError(f"Unknown column: {col}")
 
     def fit_tfidf(
         self, 
@@ -235,6 +233,7 @@ class CryptoChatterData:
         min_df:float|int = 1,
         max_features:int = int(1e4),
     ) -> None:
+        self.load([self.data_config.clean_text_col])
         self.tfidf_config = TfidfConfig(
             random_seed=random_seed,
             random_size=random_size,
@@ -244,7 +243,7 @@ class CryptoChatterData:
             max_features=max_features,
         )
         self.tfidf = fit_tfidf(
-            text=self.get('text'),
+            text=self.get(self.data_config.clean_text_col),
             cache_dir = self.data_config.data_dir,
             config=self.tfidf_config,
         )
