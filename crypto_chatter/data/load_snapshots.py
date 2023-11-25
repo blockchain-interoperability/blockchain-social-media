@@ -67,7 +67,7 @@ def load_snapshots(
 
         use_progress = progress is not None and progress_task is not None
 
-        progress_task = progress.add_task()
+        progress_task = progress.add_task('scrolling index', total=doc_count)
         for c in cursor:
             results += [c]
             if len(results) == chunk_size:
