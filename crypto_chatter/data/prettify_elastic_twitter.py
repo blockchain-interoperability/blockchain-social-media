@@ -61,7 +61,7 @@ def prettify_elastic_twitter(
         hashtags += [extract_hashtags(text)]
         cleaned_text += [clean_text(text)]
 
-        if progess is not None:
+        if progress is not None:
             progress.advance(clean_task)
     if progress is not None:
         progress.remove_task(clean_task)
