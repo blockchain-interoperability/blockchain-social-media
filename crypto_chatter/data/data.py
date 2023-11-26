@@ -67,7 +67,6 @@ class CryptoChatterData:
             data_config=self.data_config,
             progress=self.progress,
         )
-        df.drop_dupliates(subset=["id"],keep="first",inplace=False)
         df.index = df[self.data_config.id_col].values
 
         if self.use_progress:
