@@ -21,21 +21,21 @@ class CryptoChatterGraphConfig:
         graph_type: GraphKind,
     ):
         if graph_type in typing.get_args(TwitterGraphKind):
-            if data_config.data_source != 'twitter':
-                raise Exception('Twitter graph types are only supported for Twitter data sources')
-            if graph_type == 'tweet-quote':
-                self.edge_from_col = 'id'
-                self.edge_to_col = 'quoted_status.id'
+            if data_config.data_source != "twitter":
+                raise Exception("Twitter graph types are only supported for Twitter data sources")
+            if graph_type == "tweet-quote":
+                self.edge_from_col = "id"
+                self.edge_to_col = "quoted_status.id"
                 self.is_directed = True
-            elif graph_type == 'tweet-reply':
-                self.edge_from_col = 'id'
-                self.edge_to_col = 'in_reply_to_status_id'
+            elif graph_type == "tweet-reply":
+                self.edge_from_col = "id"
+                self.edge_to_col = "in_reply_to_status_id"
                 self.is_directed = True
             else:
-                raise NotImplementedError(f'{graph_type} graph type is yet implemented!')
+                raise NotImplementedError(f"{graph_type} graph type is yet implemented!")
         else:
-            raise NotImplementedError(f'{graph_type} graph type is yet implemented!')
+            raise NotImplementedError(f"{graph_type} graph type is yet implemented!")
 
         self.graph_type = graph_type
-        self.graph_dir = data_config.data_dir.parent / 'graphs' / graph_type
+        self.graph_dir = data_config.data_dir.parent / "graphs" / graph_type
         self.graph_dir.mkdir(parents=True, exist_ok=True)
