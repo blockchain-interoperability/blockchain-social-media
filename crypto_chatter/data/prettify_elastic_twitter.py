@@ -19,7 +19,6 @@ def prettify_elastic_twitter(
     Returns:
         df (pd.DataFrame): Concatenated dataframe with indexes reset
     """
-    print('my progress is', progress)
     if progress is not None:
         parse_task = progress.add_task("Parsing df..", total=4)
 
@@ -51,7 +50,6 @@ def prettify_elastic_twitter(
     df = pd.concat([df[regular_cols], quoted_df])
     if progress is not None:
         progress.advance(parse_task)
-        progress.remove_task(parse_task)
 
     # parse hashtags and clean text
     hashtags = []
@@ -64,9 +62,12 @@ def prettify_elastic_twitter(
 
         if progress is not None:
             progress.advance(clean_task)
-    if progress is not None:
-        progress.remove_task(clean_task)
+
     df['hashtags'] = hashtags
     df['clean_text'] = cleaned_text
+
+    if progress is not None:
+        progress.remove_task(parse_task)
+        progress.remove_task(clean_task)
 
     return df

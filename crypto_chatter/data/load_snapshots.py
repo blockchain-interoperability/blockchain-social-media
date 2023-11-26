@@ -14,7 +14,11 @@ def prettify_elastic(
     progress: Progress|None = None,
 ) -> pd.DataFrame:
     if data_config.data_source == 'twitter':
-        return prettify_elastic_twitter(results, data_config, progress)
+        return prettify_elastic_twitter(
+            results=results, 
+            data_config=data_config,
+            progress=progress
+        )
     elif data_config.data_source == 'reddit': 
         raise NotImplementedError('Reddit parsing is not yet implemented!')
 
@@ -58,7 +62,6 @@ def load_snapshots(
         results = []
         start = time.time()
 
-        progress_task = None
         if progress is not None:
             progress_task = progress.add_task(
                 description='scrolling index..', 
@@ -68,7 +71,11 @@ def load_snapshots(
         for c in cursor:
             results += [c]
             if len(results) == chunk_size:
-                df = prettify_elastic(results, data_config)
+                df = prettify_elastic(
+                    results=results, 
+                    data_config=data_config,
+                    progress=progress,
+                )
                 df.to_pickle(
                     data_config.raw_snapshot_dir / f'{len(dataframes):010d}.pkl', 
                 )
@@ -77,10 +84,14 @@ def load_snapshots(
             if progress is not None:
                 progress.update(progress_task, advance = 1)
 
+
+        df = prettify_elastic(
+            results=results, 
+            data_config=data_config,
+            progress=progress,
+        )
         if progress is not None:
             progress.remove_task(progress_task)
-
-        df = prettify_elastic(results, data_config, progress)
         del results[:]
         df.to_pickle(
             data_config.raw_snapshot_dir / f'{len(dataframes):010d}.pkl', 
