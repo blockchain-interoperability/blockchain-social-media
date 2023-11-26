@@ -19,27 +19,19 @@ def prettify_elastic_twitter(
     Returns:
         df (pd.DataFrame): Concatenated dataframe with indexes reset
     """
-    if progress is not None:
-        parse_task = progress.add_task("Parsing df..", total=4)
 
     df = pd.json_normalize(results)
     df = df.drop(columns=df.columns[~df.columns.str.contains("_source")])
     df.columns = df.columns.str.replace("_source.","")
-    if progress is not None:
-        progress.advance(parse_task)
 
     # If trucated is False, that means text has the full text. If True, extended_tweet.full_text has the full text.
     df["truncated"] = df["truncated"].fillna(False)
     df[data_config.text_col] = df["text"]
     df.loc[df["truncated"],data_config.text_col] = df[df["truncated"]]["extended_tweet.full_text"]
-    if progress is not None:
-        progress.advance(parse_task)
 
     df["quoted_status.truncated"] = df["quoted_status.truncated"].fillna(False)
     df["quoted_status.full_text"] = df["quoted_status.text"]
     df.loc[df["quoted_status.truncated"],"quoted_status.full_text"] = df[df["quoted_status.truncated"]]["quoted_status.extended_tweet.full_text"]
-    if progress is not None:
-        progress.advance(parse_task)
 
     # find quoted tweets that have valid text and add as well.
     quoted_cols = df.columns[df.columns.str.contains("quoted_status.")]
@@ -48,8 +40,6 @@ def prettify_elastic_twitter(
     quoted_df = df[quote_has_text][quoted_cols]
     quoted_df.columns = quoted_df.columns.str.replace("quoted_status.", "")
     df = pd.concat([df[regular_cols], quoted_df])
-    if progress is not None:
-        progress.advance(parse_task)
 
     # parse hashtags and clean text
     # hashtags = []
@@ -67,7 +57,6 @@ def prettify_elastic_twitter(
     # df["clean_text"] = cleaned_text
 
     # if progress is not None:
-    #     progress.remove_task(parse_task)
     #     progress.remove_task(clean_task)
 
     return df
