@@ -1,10 +1,12 @@
 import time
+import pandas as pd
 import networkx as nx
 import numpy as np
 import json
 from collections import Counter
 import shutil
 from pathlib import Path
+from rich.progress import Progress
 
 from crypto_chatter.data import CryptoChatterData
 from crypto_chatter.utils.types import (
@@ -18,7 +20,6 @@ from crypto_chatter.utils.types import (
     ReachableKind,
     CentralityKind,
     DegreeKind,
-    ShortestPathKind,
     CommunityKind,
 )
 
@@ -28,12 +29,12 @@ from .centrality import compute_centrality
 from .edge_attributes import get_edge_attribute
 from .node_attributes import get_node_attribute
 from .reachable import get_reachable
-from .shortest_path import get_shortest_path
 from .communities import get_communities
+
 
 class CryptoChatterGraph:
     id: str
-    source: int|None=None
+    source: int | None = None
     G: nx.Graph
     nodes: NodeList
     edges: EdgeList
@@ -46,7 +47,6 @@ class CryptoChatterGraph:
         nodes: NodeList,
         edges: EdgeList,
         cache_dir: Path,
-        source: int|None=None,
     ) -> None:
         self.id = _id
         self.G = G
@@ -84,7 +84,7 @@ class CryptoChatterGraph:
         try:
             with open(save_file, "rb") as f:
                 centrality = np.load(f)
-        except (FileNotFoundError):
+        except FileNotFoundError:
             centrality = compute_centrality(G=self.G, nodes=self.nodes, kind=kind)
             with open(save_file, "wb") as f:
                 np.save(f, centrality)
@@ -94,14 +94,15 @@ class CryptoChatterGraph:
         self,
         node: int,
         kind: ReachableKind,
-    ) -> dict[int,NodeList]:
+    ) -> dict[int, NodeList]:
         reachable_nodes_file = self.cache_dir / f"reachable/{kind}/{node}.json"
         reachable_nodes_file.parent.mkdir(parents=True, exist_ok=True)
         node = int(node)
 
         try:
             with open(reachable_nodes_file, "r") as f:
-                reachable_nodes = json.load(f)
+                reachable_nodes = {int(k): v for k, v in json.load(f).items()}
+
         except (FileNotFoundError, json.JSONDecodeError):
             reachable_nodes = get_reachable(
                 G=self.G,
@@ -130,9 +131,8 @@ class CryptoChatterGraph:
                 json.dump(components, f)
         return components
 
-
     def communities(
-        self, 
+        self,
         kind: CommunityKind,
         random_seed: int,
     ) -> list[NodeList]:
@@ -151,17 +151,17 @@ class CryptoChatterGraph:
                 json.dump(communities, f)
         return communities
 
-    def diameter(self) -> int:
-        save_file = self.cache_dir / "stats/diameter.json"
-        save_file.parent.mkdir(parents=True, exist_ok=True)
-        try:
-            with open(save_file, "r") as f:
-                diameter = json.load(f)['diameter']
-        except (FileNotFoundError, json.JSONDecodeError):
-            with open(save_file, "w") as f:
-                diameter = nx.diameter(self.G)
-                json.dump({'diameter': diameter}, f)
-        return diameter
+    # def diameter(self) -> int:
+    #     save_file = self.cache_dir / "stats/diameter.json"
+    #     save_file.parent.mkdir(parents=True, exist_ok=True)
+    #     try:
+    #         with open(save_file, "r") as f:
+    #             diameter = json.load(f)['diameter']
+    #     except (FileNotFoundError, json.JSONDecodeError):
+    #         with open(save_file, "w") as f:
+    #             diameter = nx.diameter(self.G)
+    #             json.dump({'diameter': diameter}, f)
+    #     return diameter
 
     def get_keywords(
         self,
@@ -238,11 +238,18 @@ class CryptoChatterGraph:
                 )
         except (FileNotFoundError, json.JSONDecodeError):
             with open(edge_attr_file, "w") as f:
-                edge_attr = get_edge_attribute(edges=self.edges, data=data, kind=kind)
-                json.dump({
-                    "keys": list(edge_attr.keys()),
-                    "values": list(edge_attr.values())
-                }, f)
+                edge_attr = get_edge_attribute(
+                    edges=self.edges,
+                    data=data,
+                    kind=kind,
+                )
+                json.dump(
+                    {
+                        "keys": list(edge_attr.keys()),
+                        "values": list(edge_attr.values()),
+                    },
+                    f,
+                )
         return edge_attr
 
     def export_gephi(
@@ -266,3 +273,138 @@ class CryptoChatterGraph:
             )
         print(f"exported to gephi graph in {time.time()-start:.2f} seconds")
         nx.write_gexf(self.G, self.cache_dir / "graph.gexf")
+
+    def stats(
+        self,
+        data: CryptoChatterData,
+        include_edge: bool = False,
+        include_keywords: bool = False,
+        recompute: bool = False,
+        progress: Progress | None = None,
+    ) -> str:
+        stats_file = self.cache_dir / "stats/stats.json"
+        edge_stats_file = self.cache_dir / "stats/edge_stats.json"
+        stats_file.parent.mkdir(parents=True, exist_ok=True)
+
+        output = ""
+        if progress is not None:
+            num_task = 1 + int(include_edge) + int(include_keywords)
+            task = progress.add_task("Calculating stats", total=num_task)
+
+        if not stats_file.is_file() or recompute:
+            stats = [
+                {"Type": "Node Count", "Val": len(self.nodes)},
+                {"Type": "Edge Count", "Val": len(self.edges)},
+            ]
+
+            undir = self.G.to_undirected()
+            if nx.is_connected(undir):
+                print("getting undir diam")
+                stats += [
+                    {"Type": "Undirected Diamater", "Val": nx.diameter(undir)},
+                ]
+            else:
+                stats += [
+                    {"Type": "Undirected Diamater", "Val": -1},
+                ]
+
+            if self.G.is_directed() and nx.is_strongly_connected(self.G):
+                print("getting dir diam")
+                stats += [
+                    {"Type": "Directed Diamater", "Val": nx.diameter(self.G)},
+                ]
+            else:
+                stats += [
+                    {"Type": "Directed Diamater", "Val": -1},
+                ]
+
+            deg = self.degree(kind="all")
+            stats += [
+                {"Type": "Degree Average", "Val": np.mean(deg)},
+                {"Type": "Degree Median", "Val": int(np.median(deg))},
+                {"Type": "Degree STD", "Val": np.std(deg)},
+                {"Type": "Degree Max", "Val": int(np.max(deg))},
+                {"Type": "Degree Min", "Val": int(np.min(deg))},
+            ]
+
+            if self.G.is_directed():
+                in_deg = self.degree(kind="in")
+                stats += [
+                    {"Type": "In Degree Average", "Val": np.mean(in_deg)},
+                    {"Type": "In Degree Median", "Val": int(np.median(in_deg))},
+                    {"Type": "In Degree STD", "Val": np.std(in_deg)},
+                    {"Type": "In Degree Max", "Val": int(np.max(in_deg))},
+                    {"Type": "In Degree Min", "Val": int(np.min(in_deg))},
+                ]
+
+                out_deg = self.degree(kind="out")
+                stats += [
+                    {"Type": "Out Degree Average", "Val": np.mean(out_deg)},
+                    {"Type": "Out Degree Median", "Val": int(np.median(out_deg))},
+                    {"Type": "Out Degree STD", "Val": np.std(out_deg)},
+                    {"Type": "Out Degree Max", "Val": int(np.max(out_deg))},
+                    {"Type": "Out Degree Min", "Val": int(np.min(out_deg))},
+                ]
+
+            json.dump(stats, open(stats_file, "w"))
+
+        else:
+            stats = json.load(open(stats_file, "r"))
+        stats = pd.DataFrame(stats)
+        output += "**GRAPH STATS**\n"
+        output += stats.to_markdown(index=False, floatfmt=".0f")
+        output += "\n\n"
+
+        if progress is not None:
+            progress.advance(task)
+
+        if include_edge:
+            if not edge_stats_file.is_file() or recompute:
+                edge_sims = pd.DataFrame(
+                    [
+                        dict(
+                            node_from=n1,
+                            node_to=n2,
+                            sim=sim,
+                        )
+                        for (n1, n2), sim in self.get_edge_attribute(
+                            data=data, kind="emb_cosine_sim"
+                        ).items()
+                    ]
+                )
+
+                edge_stats = [
+                    {"Type": "Edge Sim Average", "Val": edge_sims["sim"].mean()},
+                    {"Type": "Edge Sim STD", "Val": edge_sims["sim"].std()},
+                    {"Type": "Edge Sim Max", "Val": int(edge_sims["sim"].max())},
+                    {"Type": "Edge Sim Min", "Val": int(edge_sims["sim"].min())},
+                ]
+                json.dump(edge_stats, open(edge_stats_file, "w"))
+            else:
+                edge_stats = json.load(open(edge_stats_file, "r"))
+            edge_stats = pd.DataFrame(edge_stats)
+            output += "**EDGE STATS**\n"
+            output += edge_stats.to_markdown(index=False, floatfmt=".4f")
+            output += "\n\n"
+            if progress is not None:
+                progress.advance(task)
+
+        if include_keywords:
+            keywords = [
+                {"Keyword": kw, "Score": sc}
+                for kw, sc in self.get_keywords(
+                    data=data,
+                )
+            ]
+            keywords = pd.DataFrame(keywords)
+            output += "**KEYWORDS**\n"
+            output += keywords.to_markdown(index=False, floatfmt=".2f")
+            output += "\n\n"
+
+            if progress is not None:
+                progress.advance(task)
+
+        if progress is not None:
+            progress.remove_task(task)
+
+        return output

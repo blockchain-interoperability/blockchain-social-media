@@ -117,7 +117,7 @@ class CryptoChatterGraphBuilder:
                     nodes=reachable_nodes,
                     edges=edges,
                     cache_dir=self.graph_config.graph_dir,
-                    source=node,
+                    # source=node,
                 )
             ]
 

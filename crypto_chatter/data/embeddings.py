@@ -43,8 +43,6 @@ def get_sbert_embeddings(
         sentence_embeddings = F.normalize(sentence_embeddings, p=2, dim=1)
         return sentence_embeddings[0].detach().cpu().numpy()
 
-    # model = SentenceTransformer(model_name, device=device)
-
     progress_task = None
     if progress is not None:
         progress_task = progress.add_task(
@@ -59,10 +57,6 @@ def get_sbert_embeddings(
         if save_file.is_file(): 
             embedding = np.load(open(save_file, "rb"))
         else:
-            # embedding = model.encode(
-            #     preprocess_text(one_text),
-            #     convert_to_numpy=True,
-            # )
             embedding = generate(
                 preprocess_text(one_text),
             )

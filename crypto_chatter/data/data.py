@@ -67,6 +67,14 @@ class CryptoChatterData:
             data_config=self.data_config,
             progress=self.progress,
         )
+        # drop duplicate tweets
+        df = df.drop_duplicates(
+            subset=[self.data_config.id_col],
+            keep='first',
+            inplace=False,
+        )
+        # set the tweet ids to index. convert to int beforehand
+        df[self.data_config.id_col] = df[self.data_config.id_col].astype(int)
         df.index = df[self.data_config.id_col].values
 
         if self.use_progress:
@@ -229,7 +237,7 @@ class CryptoChatterData:
         random_size:int = int(1e6),
         ngram_range:tuple[int,int] = (1, 1),
         max_df:float|int = 1.0,
-        min_df:float|int = 1,
+        min_df:int = 1,
         max_features:int = int(1e4),
     ) -> None:
         self.load([self.data_config.clean_text_col])
@@ -241,8 +249,11 @@ class CryptoChatterData:
             min_df=min_df,
             max_features=max_features,
         )
+        # print('trying to get col?')
+        text = self.get(self.data_config.clean_text_col)
+        # print('going to fit tfidf..')
         self.tfidf = fit_tfidf(
-            text=self.get(self.data_config.clean_text_col),
+            text=text,
             cache_dir = self.data_config.data_dir,
             config=self.tfidf_config,
         )
