@@ -11,7 +11,8 @@ def load_graph_data(
 ) -> pd.DataFrame:
     if not data_config.graph_data_file.is_file():
         raw_df = load_raw_data(data_config)
-        graph_df = raw_df[raw_df['id'].isin(nodes)]
+        graph_df = raw_df
+        # graph_df = raw_df[raw_df['id'].isin(nodes)]
         graph_df.to_pickle(data_config.graph_data_file)
         print('saved graph data to cache')
     else:

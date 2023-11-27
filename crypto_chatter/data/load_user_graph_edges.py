@@ -14,6 +14,8 @@ def load_user_graph_edges(
         and not data_config.graph_edges_file.is_file()
     ):
         df = load_raw_data(data_config)
+        # all_data = load_raw_data(data_config)
+        # df = all_data.head(10000)
         has_quoter = df[~df['user.id'].isna() & ~df['quoted_status.user.id'].isna()]
         edges_to = []
         edges_from = []
@@ -21,12 +23,12 @@ def load_user_graph_edges(
         start = time.time()
         with progress_bar() as progress:
             graph_task = progress.add_task('Constructing edges...', total = len(df))
-            for quoter_id, user_id in zip(
+            for quoter_id, tweeter_id in zip(
                 has_quoter['user.id'].values,
                 has_quoter['quoted_status.user.id'].values
             ):
-                edges_to += [quoter_id]
-                edges_from += [user_id]
+                edges_to += [int(quoter_id)]
+                edges_from += [int(tweeter_id)]
                 progress.update(graph_task, advance =1)
 
         nodes = list(set(edges_to) | set(edges_from))
