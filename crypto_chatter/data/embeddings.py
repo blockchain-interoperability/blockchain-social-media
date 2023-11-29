@@ -2,7 +2,7 @@ import torch
 import torch.nn.functional as F
 from rich.progress import Progress
 import numpy as np
-from sentence_transformers import SentenceTransformer
+# from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, AutoModel
 
 from crypto_chatter.config import CryptoChatterDataConfig

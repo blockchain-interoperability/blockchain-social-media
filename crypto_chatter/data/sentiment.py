@@ -13,6 +13,7 @@ from crypto_chatter.config import CryptoChatterDataConfig
 from crypto_chatter.utils import device
 from crypto_chatter.utils.types import (
     IdList,
+    SentimentKind,
 )
 
 from .text import preprocess_text
@@ -38,6 +39,12 @@ class Sentiment:
             "negative": self.negative,
             "neutral": self.neutral,
         }
+
+    def __getitem__(
+        self,
+        key: SentimentKind,
+    ) -> float:
+        return self.to_dict()[key]
 
     def to_list(self):
         return [
@@ -65,7 +72,10 @@ def get_roberta_sentiments(
             preprocess_text(text), 
             return_tensors="pt"
         )
-        logits = model(**tokenized_text)[0][0].softmax(dim=0).cpu()
+        logits = model(
+            input_ids=tokenized_text.input_ids[:,:512],
+            attention_mask=tokenized_text.attention_mask[:,:512],
+        )[0][0].softmax(dim=0).cpu()
         return {
             label: logits[_id].item()
             for _id, label in config.id2label.items()

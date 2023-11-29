@@ -24,25 +24,19 @@ class CryptoChatterDataConfig:
     text_col: str = "full_text"
     clean_text_col: str = "clean_text"
 
-    def __init__(
-        self,
-        config_name: str
-    ) -> None:
+    def __init__(self, config_name: str) -> None:
         config_dir = BASE_CONFIG_DIR / config_name
         data_source, index_name = config_name.split(":")
-        columns = yaml.safe_load(open(config_dir/"columns.yaml"))
-        query = yaml.safe_load(open(config_dir/"query.yaml"))
-        mappings = yaml.safe_load(open(config_dir/"mappings.yaml"))
+        columns = yaml.safe_load(open(config_dir / "columns.yaml"))
+        query = yaml.safe_load(open(config_dir / "query.yaml"))
+        mappings = yaml.safe_load(open(config_dir / "mappings.yaml"))
 
-        if (config_dir/"keywords.yaml").is_file():
-            keywords = yaml.safe_load(open(config_dir/"keywords.yaml"))
+        if (config_dir / "keywords.yaml").is_file():
+            keywords = yaml.safe_load(open(config_dir / "keywords.yaml"))
             query["query"]["bool"]["must"] = {
                 "simple_query_string": {
                     "query": " ".join(keywords),
-                    "fields": [
-                        "text",
-                        "extended_tweet.full_text"
-                    ],
+                    "fields": ["text", "extended_tweet.full_text"],
                 }
             }
 

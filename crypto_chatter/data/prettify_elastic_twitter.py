@@ -35,28 +35,28 @@ def prettify_elastic_twitter(
 
     # find quoted tweets that have valid text and add as well.
     quoted_cols = df.columns[df.columns.str.contains("quoted_status.")]
-    regular_cols = df.columns[~df.columns.str.contains("quoted_status.")].tolist() + ["quoted_status.id"]
+    regular_cols = df.columns[~df.columns.str.contains("quoted_status.")].tolist() + ["quoted_status.id", "quoted_status.user.id"]
     quote_has_text = (~df["quoted_status.text"].isna() & ~df["quoted_status.extended_tweet.full_text"].isna())
     quoted_df = df[quote_has_text][quoted_cols]
     quoted_df.columns = quoted_df.columns.str.replace("quoted_status.", "")
     df = pd.concat([df[regular_cols], quoted_df])
 
     # parse hashtags and clean text
-    # hashtags = []
-    # cleaned_text = []
-    # if progress is not None:
-    #     clean_task = progress.add_task("cleaning text..", total=len(df))
-    # for text in df[data_config.text_col].values:
-    #     hashtags += [extract_hashtags(text)]
-    #     cleaned_text += [clean_text(text)]
+    hashtags = []
+    cleaned_text = []
+    if progress is not None:
+        clean_task = progress.add_task("cleaning text..", total=len(df))
+    for text in df[data_config.text_col].values:
+        hashtags += [extract_hashtags(text)]
+        cleaned_text += [clean_text(text)]
 
-    #     if progress is not None:
-    #         progress.advance(clean_task)
+        if progress is not None:
+            progress.advance(clean_task)
 
-    # df["hashtags"] = hashtags
-    # df["clean_text"] = cleaned_text
+    df["hashtags"] = hashtags
+    df["clean_text"] = cleaned_text
 
-    # if progress is not None:
-    #     progress.remove_task(clean_task)
+    if progress is not None:
+        progress.remove_task(clean_task)
 
     return df

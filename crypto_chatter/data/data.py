@@ -16,14 +16,15 @@ from .embeddings import get_sbert_embeddings
 from .sentiment import get_roberta_sentiments, Sentiment
 from .tfidf import fit_tfidf, get_tfidf, TfidfConfig
 
+
 class CryptoChatterData:
     data_config: CryptoChatterDataConfig
     columns: list[str]
-    available_columns: list[str] 
+    available_columns: list[str]
     tfidf: TfidfVectorizer | None = None
     cache_dir: Path | None = None
     ids: np.ndarray
-    progress: Progress|None
+    progress: Progress | None
     use_progress: bool = False
     tfidf_config: TfidfConfig | None
 
@@ -31,9 +32,9 @@ class CryptoChatterData:
         self,
         data_config: CryptoChatterDataConfig,
         columns: list[str] = [],
-        progress: Progress|None = None,
+        progress: Progress | None = None,
     ) -> None:
-        # if df is not provided, we are using cached mode. 
+        # if df is not provided, we are using cached mode.
         self.cache_dir = data_config.data_dir / "parsed"
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.data_config = data_config
@@ -45,14 +46,13 @@ class CryptoChatterData:
         else:
             self.available_columns = [f.stem for f in self.cache_dir.glob("*.pkl")]
         self.load(
-            [self.data_config.id_col, self.data_config.text_col]+columns,
-            refresh=True
+            [self.data_config.id_col, self.data_config.text_col] + columns, refresh=True
         )
         self.reset_ids()
 
     @property
     def is_built(self):
-        return (self.cache_dir/"completed.txt").is_file()
+        return (self.cache_dir / "completed.txt").is_file()
 
     def reset_ids(self):
         self.ids = self.df[self.data_config.id_col].values
@@ -60,7 +60,8 @@ class CryptoChatterData:
 
     def build(self) -> None:
         # Only happens on the first time. Populates the columns into pickles inside the cache folder
-        if self.is_built: return
+        if self.is_built:
+            return
         print("Building CyrptoChatterData..")
         start = time.time()
         df = load_snapshots(
@@ -70,7 +71,7 @@ class CryptoChatterData:
         # drop duplicate tweets
         df = df.drop_duplicates(
             subset=[self.data_config.id_col],
-            keep='first',
+            keep="first",
             inplace=False,
         )
         # set the tweet ids to index. convert to int beforehand
@@ -84,25 +85,23 @@ class CryptoChatterData:
             )
 
         for c in df.columns:
-            df[c].to_pickle(self.cache_dir / f"{c}.pkl")
+            col = df[c]
+
+            if c in self.data_config.int_cols:
+                col = col.astype(int)
+
+            col.to_pickle(self.cache_dir / f"{c}.pkl")
+
             if self.use_progress:
                 self.progress.advance(save_task)
+
         if self.use_progress:
             self.progress.remove_task(save_task)
 
-        (self.cache_dir/"completed.txt").touch()
+        (self.cache_dir / "completed.txt").touch()
         self.available_columns = df.columns.tolist()
         del df
         print(f"Built CryptoChatterData in {time.time() - start:.2f} seconds")
-
-    def has_ids( 
-        self,
-        ids: IdList
-    ) -> np.ndarray:
-        if not isinstance(ids, np.ndarray): 
-            ids = np.array(ids)
-        mask = np.isin(ids, self.ids, assume_unique=True)
-        return mask
 
     def drop(
         self,
@@ -116,10 +115,11 @@ class CryptoChatterData:
 
     def load(
         self,
-        columns:list[str],
+        columns: list[str],
         refresh: bool = False,
     ) -> None:
-        if not columns: return
+        if not columns:
+            return
         if any(c not in self.available_columns for c in columns):
             raise ValueError(f"Unknown columns: {columns}")
         columns = sorted(set(columns))
@@ -128,8 +128,10 @@ class CryptoChatterData:
         # if refresh is True, we overwrite the previous columns
         if refresh:
             start = time.time()
-            try: del self.df
-            except AttributeError: pass
+            try:
+                del self.df
+            except AttributeError:
+                pass
 
             if self.use_progress:
                 progress_task = self.progress.add_task(
@@ -151,9 +153,7 @@ class CryptoChatterData:
 
         else:
             new_cols = (
-                columns 
-                if refresh else
-                [c for c in columns if c not in self.columns]
+                columns if refresh else [c for c in columns if c not in self.columns]
             )
             # drop duplicate columns
             if new_cols:
@@ -167,9 +167,7 @@ class CryptoChatterData:
 
                 loaded_cols = []
                 for c in new_cols:
-                    loaded_cols += [
-                        pd.read_pickle(self.cache_dir / f"{c}.pkl")
-                    ]
+                    loaded_cols += [pd.read_pickle(self.cache_dir / f"{c}.pkl")]
 
                     if self.use_progress:
                         self.progress.advance(progress_task)
@@ -186,7 +184,9 @@ class CryptoChatterData:
     def __len__(self) -> int:
         return len(self.df)
 
-    def __getitem__(self, key: str|pd.Series|np.ndarray) -> pd.DataFrame|pd.Series:
+    def __getitem__(
+        self, key: str | pd.Series | np.ndarray
+    ) -> pd.DataFrame | pd.Series:
         if isinstance(key, str) and key not in self.columns:
             self.load([key])
         return self.df[key]
@@ -194,14 +194,10 @@ class CryptoChatterData:
     def get(
         self,
         col: str,
-        ids: IdList|None = None,
+        ids: IdList | None = None,
         **kwargs,
-    ) -> TextList|list[Sentiment]|np.ndarray:
-        target_ids = (
-            self.ids 
-            if ids is None else 
-            ids
-        )
+    ) -> TextList | list[Sentiment] | np.ndarray:
+        target_ids = self.ids if ids is None else ids
         # commenting this check out b/c it takes way too long.
         # if any(i not in self.ids for i in target_ids):
         #     raise ValueError("Invalid ids provided")
@@ -209,20 +205,22 @@ class CryptoChatterData:
         if col == "text":
             return self.df[self.data_config.text_col].loc[target_ids].values
         elif col == "sentiment":
-            model_name = kwargs.get("model_name", "cardiffnlp/twitter-roberta-base-sentiment-latest")
+            model_name = kwargs.get(
+                "model_name", "cardiffnlp/twitter-roberta-base-sentiment-latest"
+            )
             return get_roberta_sentiments(
-                text=self.get("text",target_ids),
+                text=self.get("text", target_ids),
                 data_config=self.data_config,
-                ids=target_ids, 
+                ids=target_ids,
                 model_name=model_name,
                 progress=self.progress,
             )
         elif col == "embedding":
             model_name = kwargs.get("model_name", "all-MiniLM-L12-v2")
             return get_sbert_embeddings(
-                text=self.get("text",target_ids),
+                text=self.get("text", target_ids),
                 data_config=self.data_config,
-                ids=target_ids, 
+                ids=target_ids,
                 model_name=model_name,
                 progress=self.progress,
             )
@@ -232,13 +230,13 @@ class CryptoChatterData:
             raise ValueError(f"Unknown column: {col}")
 
     def fit_tfidf(
-        self, 
-        random_seed:int = 0,
-        random_size:int = int(1e6),
-        ngram_range:tuple[int,int] = (1, 1),
-        max_df:float|int = 1.0,
-        min_df:int = 1,
-        max_features:int = int(1e4),
+        self,
+        random_seed: int = 0,
+        random_size: int = int(1e6),
+        ngram_range: tuple[int, int] = (1, 1),
+        max_df: float | int = 1.0,
+        min_df: int = 1,
+        max_features: int = int(1e4),
     ) -> None:
         self.load([self.data_config.clean_text_col])
         self.tfidf_config = TfidfConfig(
@@ -254,14 +252,14 @@ class CryptoChatterData:
         # print('going to fit tfidf..')
         self.tfidf = fit_tfidf(
             text=text,
-            cache_dir = self.data_config.data_dir,
+            cache_dir=self.data_config.data_dir,
             config=self.tfidf_config,
         )
 
     def get_tfidf(
         self,
         texts: TextList,
-    ) -> dict[str,float]:
+    ) -> dict[str, float]:
         if self.tfidf is None:
             raise ValueError("tfidf is not fitted")
         return get_tfidf(texts, self.tfidf)
