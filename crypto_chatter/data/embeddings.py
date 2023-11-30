@@ -39,7 +39,9 @@ def get_sbert_embeddings(
         encoded_input = tokenizer([text], padding=True, truncation=True, return_tensors='pt')
         with torch.no_grad():
             model_output = model(
-                **encoded_input
+                input_ids = encoded_input['input_ids'].to(device),
+                token_type_ids = encoded_input['token_type_ids'].to(device),
+                attention_mask = encoded_input['attention_mask'].to(device),
             )
         sentence_embeddings = mean_pooling(model_output, encoded_input['attention_mask'])
         sentence_embeddings = F.normalize(sentence_embeddings, p=2, dim=1)
