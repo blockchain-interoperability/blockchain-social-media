@@ -28,11 +28,13 @@ class Sentiment:
     neutral: float
 
     def overall(self) -> str:
-        return max([
-            (self.positive, 'positive'), 
-            (self.negative, 'negative'), 
-            (self.neutral, 'neutral'),
-        ])[1]
+        return max(
+            [
+                (self.positive, "positive"),
+                (self.negative, "negative"),
+                (self.neutral, "neutral"),
+            ]
+        )[1]
 
     def to_dict(self):
         return {
@@ -58,33 +60,42 @@ def setup_model(model_name: str):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     # config = AutoConfig.from_pretrained(model_name)
     model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
-    def analyze(texts:str):
+
+    def analyze(texts: str):
         # TODO: fix the cuda integration for this.. not going to use it most likely though
         tokenized_text = tokenizer(
-            texts, 
+            texts,
             padding=True,
             truncation=True,
             return_tensors="pt",
         )
-        logits = model(
-            input_ids=tokenized_text.input_ids[:,:512].to(device),
-            attention_mask=tokenized_text.attention_mask[:,:512].to(device),
-        ).logits.softmax(dim=1).detach().cpu().numpy()
+        logits = (
+            model(
+                input_ids=tokenized_text.input_ids[:, :512].to(device),
+                attention_mask=tokenized_text.attention_mask[:, :512].to(device),
+            )
+            .logits.softmax(dim=1)
+            .detach()
+            .cpu()
+            .numpy()
+        )
         return logits
 
     return analyze, model, tokenizer
 
+
 def get_roberta_sentiments(
-    text: list[str]|np.ndarray,
+    text: list[str] | np.ndarray,
     data_config: CryptoChatterDataConfig,
     ids: IdList,
-    model_name:str = "cardiffnlp/twitter-roberta-base-sentiment-latest",
+    model_name: str = "cardiffnlp/twitter-roberta-base-sentiment-latest",
     batch_size: int = 256,
-    progress: Progress|None = None,
+    progress: Progress | None = None,
 ) -> list[Sentiment]:
-    if device == 'cpu': batch_size = 128
+    if device == "cpu":
+        batch_size = 128
     save_dir = data_config.data_dir / "sentiment" / model_name.replace("/", "_")
-    save_dir.mkdir(exist_ok=True,parents=True)
+    save_dir.mkdir(exist_ok=True, parents=True)
 
     all_sentiments = np.zeros((len(text), 3))
     save_files = [save_dir / f"{int(i)}.npy" for i in ids]
@@ -115,14 +126,14 @@ def get_roberta_sentiments(
 
         for offset in range(0, len(incomplete_idxs), batch_size):
             batch_text = [
-                preprocess_text(text[j]) 
-                for j in incomplete_idxs[offset:offset+batch_size]
+                preprocess_text(text[j])
+                for j in incomplete_idxs[offset : offset + batch_size]
             ]
             new_sentiments = analyze(texts=batch_text)
 
             for batch_idx, sentiment in enumerate(new_sentiments):
-                np.save(open(incomplete_files[offset+batch_idx], "wb"),sentiment)
-                all_sentiments[incomplete_idxs[offset+batch_idx]] = sentiment
+                np.save(open(incomplete_files[offset + batch_idx], "wb"), sentiment)
+                all_sentiments[incomplete_idxs[offset + batch_idx]] = sentiment
 
             if progress is not None:
                 progress.advance(progress_task)
