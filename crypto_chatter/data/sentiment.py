@@ -116,17 +116,9 @@ def get_roberta_sentiments(
             ]
             new_sentiments = analyze(texts=batch_text)
 
-            if progress is not None:
-                batch_task = progress.add_task("saving batch results..", total=len(new_sentiments))
-
             for batch_idx, sentiment in enumerate(new_sentiments):
                 np.save(open(incomplete_files[offset+batch_idx], "wb"),sentiment)
                 all_sentiments[incomplete_idxs[offset+batch_idx]] = sentiment
-                if progress is not None:
-                    progress.advance(batch_task)
-
-            if progress is not None:
-                progress.remove_task(batch_task)
 
             if progress is not None:
                 progress.advance(progress_task)

@@ -86,17 +86,9 @@ def get_sbert_embeddings(
             ]
             new_embeddings = generate(texts=batch_text)
 
-            if progress is not None:
-                batch_task = progress.add_task("saving batch results..", total=len(new_sentiments))
-
             for batch_idx, embedding in enumerate(new_embeddings):
                 np.save(open(incomplete_files[offset+batch_idx], "wb"),embedding)
                 all_embeddings[incomplete_idxs[offset+batch_idx]] = embedding
-                if progress is not None:
-                    progress.advance(batch_task)
-
-            if progress is not None:
-                progress.remove_task(batch_task)
 
             if progress is not None:
                 progress.advance(progress_task)
