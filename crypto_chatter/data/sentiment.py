@@ -73,8 +73,8 @@ def get_roberta_sentiments(
             return_tensors="pt"
         )
         logits = model(
-            input_ids=tokenized_text.input_ids[:,:512],
-            attention_mask=tokenized_text.attention_mask[:,:512],
+            input_ids=tokenized_text.input_ids[:,:512].to(device),
+            attention_mask=tokenized_text.attention_mask[:,:512].to(device),
         )[0][0].softmax(dim=0).cpu()
         return {
             label: logits[_id].item()
