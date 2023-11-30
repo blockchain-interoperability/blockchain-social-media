@@ -49,7 +49,7 @@ def get_sbert_embeddings(
     data_config: CryptoChatterDataConfig,
     ids: IdList,
     model_name:str = "all-MiniLM-L12-v2",
-    batch_size: int = 512,
+    batch_size: int = 256,
     progress: Progress|None = None,
 ) -> None:
     if device == 'cpu': batch_size = 128

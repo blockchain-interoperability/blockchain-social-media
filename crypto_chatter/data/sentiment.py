@@ -79,7 +79,7 @@ def get_roberta_sentiments(
     data_config: CryptoChatterDataConfig,
     ids: IdList,
     model_name:str = "cardiffnlp/twitter-roberta-base-sentiment-latest",
-    batch_size: int = 512,
+    batch_size: int = 256,
     progress: Progress|None = None,
 ) -> list[Sentiment]:
     if device == 'cpu': batch_size = 128
