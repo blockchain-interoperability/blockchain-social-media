@@ -8,6 +8,7 @@ from crypto_chatter.utils import progress_bar
 from crypto_chatter.config.path import REPORT_DIR
 
 tweet_graph_node_attributes=[
+    "text",
     "sentiment_positive",
     "sentiment_negative",
     "sentiment_neutral",

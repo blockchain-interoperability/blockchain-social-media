@@ -27,7 +27,6 @@ def setup_model(model_name: str):
     model = AutoModel.from_pretrained(f"sentence-transformers/{model_name}").to(device)
 
     def generate(texts: list[str]) -> np.ndarray:
-        print(f"received {len(texts)} texts")
         encoded_input = tokenizer(
             texts, padding=True, truncation=True, return_tensors="pt"
         )
