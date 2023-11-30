@@ -3,19 +3,19 @@ from crypto_chatter.graph import CryptoChatterGraphBuilder
 from crypto_chatter.config import CryptoChatterDataConfig, CryptoChatterGraphConfig
 from crypto_chatter.utils import progress_bar
 
-progress = progress_bar()
-progress.start()
+# progress = progress_bar()
+# progress.start()
 
 dataset = "twitter:blockchain-interoperability-attacks"
 data_config = CryptoChatterDataConfig(dataset)
 data = CryptoChatterData(
     data_config,
-    progress=progress,
+    # progress=progress,
 )
 
 data.load([data.data_config.clean_text_col])
 
-graph_kind = f"tweet-quote"
+graph_kind = f"tweet-reply"
 graph_config = CryptoChatterGraphConfig(
     data_config=data_config,
     graph_kind=graph_kind,

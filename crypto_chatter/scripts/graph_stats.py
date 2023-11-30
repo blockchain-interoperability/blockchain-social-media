@@ -7,13 +7,58 @@ from crypto_chatter.config import CryptoChatterDataConfig, CryptoChatterGraphCon
 from crypto_chatter.utils import progress_bar
 from crypto_chatter.config.path import REPORT_DIR
 
+tweet_graph_node_attributes=[
+    # "sentiment_positive",
+    # "sentiment_negative",
+    # "sentiment_neutral",
+    "retweet_count",
+    "favorite_count",
+    "quote_count",
+    "reply_count",
+]
+tweet_graph_edge_attributes=[
+    # "emb_cosine_sim"
+]
+
+user_graph_node_attributes=[
+    "followers_count",
+    "friends_count",
+    "avg_retweet_count",
+    "avg_quote_count",
+    "avg_reply_count",
+    "avg_favorite_count",
+    "total_retweet_count",
+    "total_quote_count",
+    "total_reply_count",
+    "total_favorite_count",
+    # "avg_sentiment_positive",
+    # "avg_sentiment_negative",
+    # "avg_sentiment_neutral",
+]
+user_graph_edge_attributes=[
+    "total_quote_count",
+    "total_reply_count",
+    "avg_quote_count",
+    "avg_reply_count",
+]
+
 @click.command()
-@click.argument('tweet_graph_kind')
+@click.argument('graph_kind')
 @click.option('--top_n', default=10)
 def subgraph_stats(
-    tweet_graph_kind: Literal['reply','quote'],
+    graph_kind: Literal['tweet-reply','tweet-quote', 'user-reply','user-quote'],
     top_n: int,
 ) -> None:
+
+    if 'tweet' in graph_kind:
+        node_attributes = tweet_graph_node_attributes
+        edge_attributes = tweet_graph_edge_attributes
+    elif 'user' in graph_kind:
+        node_attributes = user_graph_node_attributes
+        edge_attributes = user_graph_edge_attributes
+    else:
+        raise ValueError(f"graph_kind must be one of ['tweet-reply','tweet-quote', 'user-reply','user-quote']")
+
     progress = progress_bar()
     progress.start()
 
@@ -27,7 +72,7 @@ def subgraph_stats(
     data.load([data.data_config.clean_text_col])
     data.fit_tfidf()
 
-    graph_kind = f"tweet-{tweet_graph_kind}"
+    # graph_kind = f"tweet-{tweet_graph_kind}"
     graph_config = CryptoChatterGraphConfig(
         data_config=data_config,
         graph_kind=graph_kind,
@@ -58,19 +103,8 @@ def subgraph_stats(
 
     small_graph.export_gephi(
         data=data,
-        node_attributes=[
-            "text",
-            "sentiment_positive",
-            "sentiment_negative",
-            "sentiment_neutral",
-            "retweet_count",
-            "favorite_count",
-            "quote_count",
-            "reply_count",
-        ],
-        edge_attributes=[
-            "emb_cosine_sim"
-        ],
+        node_attributes=node_attributes,
+        edge_attributes=edge_attributes,
         progress=progress,
     )
 
@@ -85,51 +119,48 @@ def subgraph_stats(
     output_stream.write(
         small_graph.stats(
             data=data,
-            node_attributes=[
-                "sentiment_positive",
-                "sentiment_negative",
-                "sentiment_neutral",
-                "retweet_count",
-                "favorite_count",
-                "quote_count",
-                "reply_count",
-            ],
-            edge_attributes=[
-                "emb_cosine_sim"
-            ],
+            node_attributes=node_attributes,
+            edge_attributes=edge_attributes,
             include_keywords=True,
             progress=progress
         )
     )
 
-    subgraphs = {
-        # "In Degree Centrality": builder.get_subgraphs(
-        #     graph=graph,
-        #     top_n=top_n,
-        #     kind="centrality",
-        #     centrality="in_degree",
-        #     reachable="undirected",
-        # ),
-        "Weakly Connnected Components": builder.get_subgraphs(
-            graph=graph,
-            top_n=top_n,
-            kind="component",
-            component="weak",
-        ),
-        # "Louvain Community": builder.get_subgraphs(
-        #     graph=graph,
-        #     top_n=top_n,
-        #     kind="community",
-        #     community="louvain",
-        #     random_seed=0,
-        # ),
-        # "Strongly Connected Components": builder.get_subgraphs(
-        #     graph=graph,
-        #     top_n=top_n,
-        #     kind="component",
-        #     component="strong",
-        # ),
-    }
+    if 'tweet' in graph_kind:
+        subgraphs = {
+            # "In Degree Centrality": builder.get_subgraphs(
+            #     graph=graph,
+            #     top_n=top_n,
+            #     kind="centrality",
+            #     centrality="in_degree",
+            #     reachable="undirected",
+            # ),
+            "Weakly Connnected Components": builder.get_subgraphs(
+                graph=graph,
+                top_n=top_n,
+                kind="component",
+                component="weak",
+            ),
+            # "Louvain Community": builder.get_subgraphs(
+            #     graph=graph,
+            #     top_n=top_n,
+            #     kind="community",
+            #     community="louvain",
+            #     random_seed=0,
+            # ),
+        }
+
+    elif 'user' in graph_kind:
+        subgraphs = {
+            "Strongly Connected Components": builder.get_subgraphs(
+                graph=graph,
+                top_n=top_n,
+                kind="component",
+                component="strong",
+            ),
+        }
+    else:
+        raise ValueError(f"graph_kind must be one of ['tweet-reply','tweet-quote', 'user-reply','user-quote']")
 
     output_stream.write(f"## {graph_kind.capitalize()} Subgraphs\n")
     for sg_type, subgraphs in subgraphs.items():
@@ -139,19 +170,8 @@ def subgraph_stats(
             print(f"Subgraph {sg_type} -- {i} has {len(sg.nodes):,} nodes and {len(sg.edges):,} edges")
             sg.export_gephi(
                 data=data,
-                node_attributes=[
-                    "text",
-                    "sentiment_positive",
-                    "sentiment_negative",
-                    "sentiment_neutral",
-                    "retweet_count",
-                    "favorite_count",
-                    "quote_count",
-                    "reply_count",
-                ],
-                edge_attributes=[
-                    "emb_cosine_sim"
-                ],
+                node_attributes=node_attributes,
+                edge_attributes=edge_attributes,
                 progress=progress,
             )
 
@@ -161,18 +181,8 @@ def subgraph_stats(
             output_stream.write(
                 sg.stats(
                     data=data,
-                    node_attributes=[
-                        "sentiment_positive",
-                        "sentiment_negative",
-                        "sentiment_neutral",
-                        "retweet_count",
-                        "favorite_count",
-                        "quote_count",
-                        "reply_count",
-                    ],
-                    edge_attributes=[
-                        "emb_cosine_sim"
-                    ],
+                    node_attributes=node_attributes,
+                    edge_attributes=edge_attributes,
                     include_keywords=True,
                     progress=progress
                 )
