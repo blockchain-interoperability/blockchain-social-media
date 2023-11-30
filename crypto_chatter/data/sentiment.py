@@ -62,13 +62,13 @@ def setup_model(model_name: str):
         # TODO: fix the cuda integration for this.. not going to use it most likely though
         tokenized_text = tokenizer(
             texts, 
-            return_tensors="pt",
             padding=True,
             truncation=True,
+            return_tensors="pt",
         )
         logits = model(
-            input_ids=tokenized_text.input_ids.to(device),
-            attention_mask=tokenized_text.attention_mask.to(device),
+            input_ids=tokenized_text.input_ids[:,:512].to(device),
+            attention_mask=tokenized_text.attention_mask[:,:512].to(device),
         ).logits.softmax(dim=1).detach().cpu().numpy()
         return logits
 
