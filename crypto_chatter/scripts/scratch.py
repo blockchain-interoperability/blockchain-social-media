@@ -15,7 +15,7 @@ data = CryptoChatterData(
 
 data.load([data.data_config.clean_text_col])
 
-graph_kind = f"tweet-reply"
+graph_kind = f"tweet-quote"
 graph_config = CryptoChatterGraphConfig(
     data_config=data_config,
     graph_kind=graph_kind,
@@ -26,6 +26,14 @@ builder = CryptoChatterGraphBuilder(
 )
 
 graph = builder.get_graph()
+
+
+small_graph = builder.random_reduce(
+    graph=graph,
+    random_edges_size=int(8e5),
+    random_seed=0,
+)
+len(small_graph.nodes), len(small_graph.edges)
 
 # subgraphs = builder.get_subgraphs(
 #     graph=graph,

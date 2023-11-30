@@ -52,7 +52,7 @@ def subgraph_stats(
 
     small_graph = builder.random_reduce(
         graph=graph,
-        random_nodes_size=int(7e3),
+        random_nodes_size=int(8e5),
         random_seed=0,
     )
 
