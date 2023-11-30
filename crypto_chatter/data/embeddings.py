@@ -62,7 +62,11 @@ def get_sbert_embeddings(
 
     for i, file in enumerate(save_files):
         if file.is_file():
-            all_embeddings[i] = np.load(open(file, "rb"))
+            try:
+                all_embeddings[i] = np.load(open(file, "rb"))
+            except:
+                incomplete_idxs += [i]
+                incomplete_files += [file]
         else:
             incomplete_idxs += [i]
             incomplete_files += [file]
