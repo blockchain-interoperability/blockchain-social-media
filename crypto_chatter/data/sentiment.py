@@ -1,4 +1,5 @@
 import numpy as np
+import math
 import json
 from dataclasses import dataclass
 from rich.progress import Progress
@@ -53,66 +54,76 @@ class Sentiment:
             self.neutral,
         ]
 
+def setup_model(model_name: str):
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    # config = AutoConfig.from_pretrained(model_name)
+    model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
+    def analyze(texts:str):
+        # TODO: fix the cuda integration for this.. not going to use it most likely though
+        tokenized_text = tokenizer(
+            texts, 
+            return_tensors="pt",
+            padding=True,
+            truncation=True,
+        )
+        logits = model(
+            input_ids=tokenized_text.input_ids.to(device),
+            attention_mask=tokenized_text.attention_mask.to(device),
+        ).logits.softmax(dim=1).detach().cpu().numpy()
+        return logits
+
+    return analyze, model, tokenizer
+
 def get_roberta_sentiments(
     text: list[str]|np.ndarray,
     data_config: CryptoChatterDataConfig,
     ids: IdList,
     model_name:str = "cardiffnlp/twitter-roberta-base-sentiment-latest",
+    batch_size: int = 512,
     progress: Progress|None = None,
 ) -> list[Sentiment]:
     save_dir = data_config.data_dir / "sentiment" / model_name.replace("/", "_")
     save_dir.mkdir(exist_ok=True,parents=True)
 
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    config = AutoConfig.from_pretrained(model_name)
-    model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
-    def analyze(text:str):
-        # TODO: fix the cuda integration for this.. not going to use it most likely though
-        tokenized_text = tokenizer(
-            preprocess_text(text), 
-            return_tensors="pt"
-        )
-        logits = model(
-            input_ids=tokenized_text.input_ids[:,:512].to(device),
-            attention_mask=tokenized_text.attention_mask[:,:512].to(device),
-        )[0][0].softmax(dim=0).cpu()
-        return {
-            label: logits[_id].item()
-            for _id, label in config.id2label.items()
-        }
+    all_sentiments = np.zeros((len(text), 3))
+    save_files = [save_dir / f"{int(i)}.npy" for i in ids]
+    incomplete_idxs, incomplete_files = [], []
 
-    progress_task = None
-    if progress is not None:
-        progress_task = progress.add_task(
-            description="analyzing sentiment..",
-            total=len(text)
-        )
-
-    use_progress = progress is not None and progress_task is not None
-    sentiments = []
-
-    for i, one_text in zip(ids, text):
-        save_file = save_dir / f"{int(i)}.json"
-        if save_file.is_file():
-            sentiment = json.load(open(save_file))
+    for i, file in enumerate(save_files):
+        if file.is_file():
+            all_sentiments[i] = np.load(open(file, "rb"))
         else:
-            try:
-                sentiment = analyze(one_text)
-            except Exception as e:
-                print(e)
-                print(i)
-                print(one_text)
-                raise e
+            incomplete_idxs += [i]
+            incomplete_files += [file]
 
-            json.dump(sentiment, open(save_file, "w"))
-        sentiments += [Sentiment(**sentiment)]
-        if use_progress:
-            progress.advance(progress_task)
+    if len(incomplete_idxs) > 0:
+        num_iters = math.ceil(len(incomplete_idxs) / batch_size)
 
-    if use_progress:
-        progress.remove_task(progress_task)
+        progress_task = None
+        if progress is not None:
+            progress_task = progress.add_task(
+                "analyzing sentiment..",
+                total=num_iters,
+            )
 
-    del model
-    del tokenizer
+        analyze, model, tokenizer = setup_model(model_name)
 
-    return sentiments
+        for offset in range(0, len(incomplete_idxs), batch_size):
+            batch_text = [
+                preprocess_text(text[j]) 
+                for j in incomplete_idxs[offset:offset+batch_size]
+            ]
+            new_sentiments = analyze(texts=batch_text)
+            for batch_idx, sentiment in enumerate(new_sentiments):
+                np.save(open(incomplete_files[offset+batch_idx], "wb"),sentiment)
+                all_sentiments[incomplete_idxs[offset+batch_idx]] = sentiment
+            if progress is not None:
+                progress.advance(progress_task)
+
+        if progress is not None:
+            progress.remove_task(progress_task)
+
+        del model
+        del tokenizer
+
+    return [Sentiment(*s) for s in all_sentiments]

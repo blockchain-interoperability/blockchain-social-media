@@ -16,7 +16,6 @@ from crypto_chatter.utils.types import (
 from .graph import CryptoChatterGraph
 from .build_graph import build_graph
 
-
 class CryptoChatterGraphBuilder:
     data: CryptoChatterData
     graph_config: CryptoChatterGraphConfig

@@ -8,16 +8,16 @@ from crypto_chatter.utils import progress_bar
 from crypto_chatter.config.path import REPORT_DIR
 
 tweet_graph_node_attributes=[
-    # "sentiment_positive",
-    # "sentiment_negative",
-    # "sentiment_neutral",
+    "sentiment_positive",
+    "sentiment_negative",
+    "sentiment_neutral",
     "retweet_count",
     "favorite_count",
     "quote_count",
     "reply_count",
 ]
 tweet_graph_edge_attributes=[
-    # "emb_cosine_sim"
+    "emb_cosine_sim"
 ]
 
 user_graph_node_attributes=[
@@ -121,7 +121,7 @@ def subgraph_stats(
             data=data,
             node_attributes=node_attributes,
             edge_attributes=edge_attributes,
-            include_keywords=True,
+            # include_keywords=True,
             progress=progress
         )
     )
@@ -183,7 +183,7 @@ def subgraph_stats(
                     data=data,
                     node_attributes=node_attributes,
                     edge_attributes=edge_attributes,
-                    include_keywords=True,
+                    include_keywords=('tweet' in graph_kind),
                     progress=progress
                 )
             )
