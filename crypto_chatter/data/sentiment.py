@@ -5,6 +5,7 @@ from rich.progress import Progress
 from transformers import (
     AutoTokenizer,
     AutoModelForSequenceClassification,
+    AutoConfig,
     logging,
 )
 
@@ -56,7 +57,7 @@ class Sentiment:
 
 def setup_model(model_name: str):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    # config = AutoConfig.from_pretrained(model_name)
+    config = AutoConfig.from_pretrained(model_name)
     model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
 
     def analyze(texts: str):
@@ -79,7 +80,7 @@ def setup_model(model_name: str):
         )
         return logits
 
-    return analyze, model, tokenizer
+    return analyze, model, tokenizer 
 
 def get_roberta_sentiments(
     text: list[str] | np.ndarray,

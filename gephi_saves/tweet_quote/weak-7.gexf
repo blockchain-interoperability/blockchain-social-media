@@ -6,7 +6,7 @@
   <graph defaultedgetype="directed" mode="static" name="">
     <attributes mode="static" class="node">
       <attribute id="0" title="Text" type="string" />
-      <attribute id="1" title="Sentiment Composite" type="double" />
+      <attribute id="1" title="Sentiment Composite" type="float" />
       <attribute id="2" title="Retweet Count" type="double" />
       <attribute id="3" title="Favorite Count" type="double" />
       <attribute id="4" title="Quote Count" type="double" />
@@ -16,7 +16,7 @@
       <node id="1590650596641902592" label="1590650596641902592">
         <attvalues>
           <attvalue for="0" value="Getting very nasty for #lunc soon. Whales getting tired pumping it. MCAP decreasing daily. #luncscam #luncdump $lunc https://t.co/KCpK72O39r" />
-          <attvalue for="1" value="0.9308086037635803" />
+          <attvalue for="1" value="-0.9308086037635803" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -26,7 +26,7 @@
       <node id="1595383989983903744" label="1595383989983903744">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/JIIcW7pKbF" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -36,7 +36,7 @@
       <node id="1593570652501422080" label="1593570652501422080">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/yLbuQNYu9b" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -46,7 +46,7 @@
       <node id="1590672457828270080" label="1590672457828270080">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/moW2aJsPs7" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -56,7 +56,7 @@
       <node id="1593933399789821952" label="1593933399789821952">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/3bz6HDkGBv" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -66,7 +66,7 @@
       <node id="1591036967055425536" label="1591036967055425536">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/6WahgA94il" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -76,7 +76,7 @@
       <node id="1595020582009331712" label="1595020582009331712">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/a4vn9ixxxZ" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -86,7 +86,7 @@
       <node id="1590664684369158144" label="1590664684369158144">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and lower lows daily. #luncscam #luncdump https://t.co/ZARIISRR6k" />
-          <attvalue for="1" value="0.7518103122711182" />
+          <attvalue for="1" value="-0.7518103122711182" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -96,7 +96,7 @@
       <node id="1591759186375094272" label="1591759186375094272">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/VV8a7XEAHx" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -106,7 +106,7 @@
       <node id="1591759398002905088" label="1591759398002905088">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/P4FTLkBfHB" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -116,7 +116,7 @@
       <node id="1592119012326244352" label="1592119012326244352">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/sOlw0dqELh" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -126,7 +126,7 @@
       <node id="1594296489970659328" label="1594296489970659328">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/Qz5ZY6o0Dk" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -136,7 +136,7 @@
       <node id="1594297807862919168" label="1594297807862919168">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/L27oQ4iOP7" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -146,7 +146,7 @@
       <node id="1591401180823187456" label="1591401180823187456">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/3bz6HDkGBv" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -156,7 +156,7 @@
       <node id="1592483938014228480" label="1592483938014228480">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/Qanwjbttsh" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -166,7 +166,7 @@
       <node id="1590661732992970752" label="1590661732992970752">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and lower lows daily. #luncscam #luncdump https://t.co/FyumMYxzqr" />
-          <attvalue for="1" value="0.7518103122711182" />
+          <attvalue for="1" value="-0.7518103122711182" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -176,7 +176,7 @@
       <node id="1594658389308895232" label="1594658389308895232">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/moW2aJsPs7" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -186,7 +186,7 @@
       <node id="1591396897855795200" label="1591396897855795200">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/sOlw0dqELh" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -196,7 +196,7 @@
       <node id="1593570827932692480" label="1593570827932692480">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/nOQaZWk8dO" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -206,7 +206,7 @@
       <node id="1591401159805308928" label="1591401159805308928">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/VV8a7XE2RZ" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -216,7 +216,7 @@
       <node id="1593570850372030464" label="1593570850372030464">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/s5xdErMaXn" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -226,7 +226,7 @@
       <node id="1592483935791222784" label="1592483935791222784">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/ZARIITa0ks" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -236,7 +236,7 @@
       <node id="1590672634634964992" label="1590672634634964992">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/Qz5ZY6o0Dk" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -246,7 +246,7 @@
       <node id="1590671555583152128" label="1590671555583152128">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/5b3jV6WFns" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -256,7 +256,7 @@
       <node id="1592483946859991040" label="1592483946859991040">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/s5xdErMIMV" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -266,7 +266,7 @@
       <node id="1593207892429377536" label="1593207892429377536">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/Qz5ZY6o0Dk" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -276,7 +276,7 @@
       <node id="1595018112491196416" label="1595018112491196416">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/sOlw0dqELh" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -286,7 +286,7 @@
       <node id="1592848897227231232" label="1592848897227231232">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/bGdYJTvTUt" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -296,7 +296,7 @@
       <node id="1591035991976202240" label="1591035991976202240">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/NVcTU6y44S" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -306,7 +306,7 @@
       <node id="1595383531097575424" label="1595383531097575424">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/s5xdEruzyN" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -316,7 +316,7 @@
       <node id="1594658336464850944" label="1594658336464850944">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/urxOO3Rxzd" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -326,7 +326,7 @@
       <node id="1592122016760725504" label="1592122016760725504">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/a4vn9ixxxZ" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -336,7 +336,7 @@
       <node id="1592484014077902848" label="1592484014077902848">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/a4vn9ixxxZ" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -346,7 +346,7 @@
       <node id="1590671721585311744" label="1590671721585311744">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/JIIcW7qi1d" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -356,7 +356,7 @@
       <node id="1591759222261547008" label="1591759222261547008">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/Os9NFL6pr4" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -366,7 +366,7 @@
       <node id="1591035496251392000" label="1591035496251392000">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/Qz5ZY6o0Dk" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -376,7 +376,7 @@
       <node id="1595020624388190208" label="1595020624388190208">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/4jYf5t2fpm" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -386,7 +386,7 @@
       <node id="1595020636065132544" label="1595020636065132544">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/6WahgzQV4d" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -396,7 +396,7 @@
       <node id="1592122067205652480" label="1592122067205652480">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/6WahgA94il" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -406,7 +406,7 @@
       <node id="1591036616088649728" label="1591036616088649728">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/vFpSbwI4im" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -416,7 +416,7 @@
       <node id="1591762641361731584" label="1591762641361731584">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/Ic6DR3aTGE" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -426,7 +426,7 @@
       <node id="1591396860010594304" label="1591396860010594304">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/Os9NFL6pr4" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -436,7 +436,7 @@
       <node id="1593208454759743488" label="1593208454759743488">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/6WahgA94il" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -446,7 +446,7 @@
       <node id="1592845015226941440" label="1592845015226941440">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/C6MmVbhVIM" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -456,7 +456,7 @@
       <node id="1592483878060851200" label="1592483878060851200">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/Os9NFL6pr4" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -466,7 +466,7 @@
       <node id="1593933757396189184" label="1593933757396189184">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/a4vn9ixxxZ" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -476,7 +476,7 @@
       <node id="1591401126192381952" label="1591401126192381952">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/moW2aJsPs7" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -486,7 +486,7 @@
       <node id="1592844727220862976" label="1592844727220862976">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/zPiSRl6M3x" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -496,7 +496,7 @@
       <node id="1593208372446527488" label="1593208372446527488">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/t5jxMDGml4" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -506,7 +506,7 @@
       <node id="1595383055791054848" label="1595383055791054848">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/XYhMkfeIN6" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -516,7 +516,7 @@
       <node id="1595382397981319168" label="1595382397981319168">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/yLbuQOg5xL" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -526,7 +526,7 @@
       <node id="1594658849193353216" label="1594658849193353216">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/XYhMkfeIN6" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -536,7 +536,7 @@
       <node id="1592122016530063360" label="1592122016530063360">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/bGdYJTvTUt" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -546,7 +546,7 @@
       <node id="1593933506177966080" label="1593933506177966080">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/t5jxMDod6W" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -556,7 +556,7 @@
       <node id="1593933519239028736" label="1593933519239028736">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/JIIcW7Hl3d" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -566,7 +566,7 @@
       <node id="1592848912888782848" label="1592848912888782848">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/XYhMkfeIN6" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -576,7 +576,7 @@
       <node id="1593933538818396160" label="1593933538818396160">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/wjRMZ4ClmY" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -586,7 +586,7 @@
       <node id="1594297894718541824" label="1594297894718541824">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/fGMMV9kvrt" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -596,7 +596,7 @@
       <node id="1594658298120507392" label="1594658298120507392">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/Os9NFL6pr4" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -606,7 +606,7 @@
       <node id="1594293416028147712" label="1594293416028147712">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/zPiSRl6M3x" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -616,7 +616,7 @@
       <node id="1592483963259736064" label="1592483963259736064">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/W0BhzA0uDG" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -626,7 +626,7 @@
       <node id="1590672043108093952" label="1590672043108093952">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/5wWKA6a4ww" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -636,7 +636,7 @@
       <node id="1593208302544261120" label="1593208302544261120">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/5b3jV6WFns" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -646,7 +646,7 @@
       <node id="1591397566062956544" label="1591397566062956544">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/671wQSGYaz" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -656,7 +656,7 @@
       <node id="1591036531569233920" label="1591036531569233920">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/a4vn9ixxxZ" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -666,7 +666,7 @@
       <node id="1592119829594804224" label="1592119829594804224">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/JIIcW7qi1d" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -676,7 +676,7 @@
       <node id="1595020498572054528" label="1595020498572054528">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/bGdYJTvTUt" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -686,7 +686,7 @@
       <node id="1590664743974768640" label="1590664743974768640">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and lower lows daily. #luncscam #luncdump https://t.co/C6MmVbhVIM" />
-          <attvalue for="1" value="0.7518103122711182" />
+          <attvalue for="1" value="-0.7518103122711182" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -696,7 +696,7 @@
       <node id="1592844765833281536" label="1592844765833281536">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/eVmsSR6YPd" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -706,7 +706,7 @@
       <node id="1593933378385952768" label="1593933378385952768">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/xVfmdPqYSI" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -716,7 +716,7 @@
       <node id="1592483912777084928" label="1592483912777084928">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/VV8a7XEAHx" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -726,7 +726,7 @@
       <node id="1590665670114816000" label="1590665670114816000">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and lower lows daily. #luncscam #luncdump https://t.co/6WahgA94il" />
-          <attvalue for="1" value="0.7518103122711182" />
+          <attvalue for="1" value="-0.7518103122711182" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -736,7 +736,7 @@
       <node id="1594297675398393856" label="1594297675398393856">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/bGdYJTvTUt" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -746,7 +746,7 @@
       <node id="1591760035616796672" label="1591760035616796672">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/3xTqOqpLlF" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -756,7 +756,7 @@
       <node id="1593208512557232128" label="1593208512557232128">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/a4vn9ixxxZ" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -766,7 +766,7 @@
       <node id="1590665458285686784" label="1590665458285686784">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and lower lows daily. #luncscam #luncdump https://t.co/a4vn9ixxxZ" />
-          <attvalue for="1" value="0.7518103122711182" />
+          <attvalue for="1" value="-0.7518103122711182" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -776,7 +776,7 @@
       <node id="1591397133244313600" label="1591397133244313600">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/mxc3a5dWkD" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -786,7 +786,7 @@
       <node id="1590671518455181312" label="1590671518455181312">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/ukTd6ZjQ6V" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -796,7 +796,7 @@
       <node id="1593208307967488000" label="1593208307967488000">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/4jYf5tkoDu" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -806,7 +806,7 @@
       <node id="1591401193896833024" label="1591401193896833024">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/urxOO3Rxzd" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -816,7 +816,7 @@
       <node id="1593570651910045696" label="1593570651910045696">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/JIIcW7pKbF" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -826,7 +826,7 @@
       <node id="1595020539608825856" label="1595020539608825856">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/6WahgA8wsN" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -836,7 +836,7 @@
       <node id="1592844769427738624" label="1592844769427738624">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/xVfmdPqYSI" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -846,7 +846,7 @@
       <node id="1594293375821221888" label="1594293375821221888">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/3KtryjfEq9" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -856,7 +856,7 @@
       <node id="1593570588697788416" label="1593570588697788416">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/XYhMkfeaXy" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -866,7 +866,7 @@
       <node id="1592848919763255296" label="1592848919763255296">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/urxOO3Rxzd" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />
@@ -876,7 +876,7 @@
       <node id="1594658261927706624" label="1594658261927706624">
         <attvalues>
           <attvalue for="0" value="Facts #lunc market cap is decreasing daily. $lunc price is seeing lower highs and higher lows daily. #luncscam #luncdump https://t.co/VV8a7XE2RZ" />
-          <attvalue for="1" value="0.7751740217208862" />
+          <attvalue for="1" value="-0.7751740217208862" />
           <attvalue for="2" value="0.0" />
           <attvalue for="3" value="0.0" />
           <attvalue for="4" value="0.0" />

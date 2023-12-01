@@ -52,8 +52,8 @@ ID: subgraph/component/weak/0
 **NODE STATS**
 | Type                             |       Val |
 |:---------------------------------|----------:|
-| Node Sentiment Composite Average |   -0.4082 |
-| Node Sentiment Composite STD     |    0.4294 |
+| Node Sentiment Composite Average |    0.3037 |
+| Node Sentiment Composite STD     |    0.4829 |
 | Node Sentiment Composite Max     |    0.0000 |
 | Node Sentiment Composite Min     |    0.0000 |
 | Node Retweet Count Average       |    0.5788 |
@@ -116,8 +116,8 @@ ID: subgraph/component/weak/1
 **NODE STATS**
 | Type                             |       Val |
 |:---------------------------------|----------:|
-| Node Sentiment Composite Average |   -0.0902 |
-| Node Sentiment Composite STD     |    0.4506 |
+| Node Sentiment Composite Average |    0.4069 |
+| Node Sentiment Composite STD     |    0.5916 |
 | Node Sentiment Composite Max     |    0.0000 |
 | Node Sentiment Composite Min     |    0.0000 |
 | Node Retweet Count Average       |    0.2154 |
@@ -178,28 +178,28 @@ ID: subgraph/component/weak/2
 | Out Degree Min     |     0 |
 
 **NODE STATS**
-| Type                             |    Val |
-|:---------------------------------|-------:|
-| Node Sentiment Composite Average | 0.4010 |
-| Node Sentiment Composite STD     | 0.5682 |
-| Node Sentiment Composite Max     | 0.0000 |
-| Node Sentiment Composite Min     | 0.0000 |
-| Node Retweet Count Average       | 0.0000 |
-| Node Retweet Count STD           | 0.0000 |
-| Node Retweet Count Max           | 0.0000 |
-| Node Retweet Count Min           | 0.0000 |
-| Node Favorite Count Average      | 0.0000 |
-| Node Favorite Count STD          | 0.0000 |
-| Node Favorite Count Max          | 0.0000 |
-| Node Favorite Count Min          | 0.0000 |
-| Node Quote Count Average         | 0.0000 |
-| Node Quote Count STD             | 0.0000 |
-| Node Quote Count Max             | 0.0000 |
-| Node Quote Count Min             | 0.0000 |
-| Node Reply Count Average         | 0.0000 |
-| Node Reply Count STD             | 0.0000 |
-| Node Reply Count Max             | 0.0000 |
-| Node Reply Count Min             | 0.0000 |
+| Type                             |     Val |
+|:---------------------------------|--------:|
+| Node Sentiment Composite Average | -0.3632 |
+| Node Sentiment Composite STD     |  0.6521 |
+| Node Sentiment Composite Max     |  0.0000 |
+| Node Sentiment Composite Min     |  0.0000 |
+| Node Retweet Count Average       |  0.0000 |
+| Node Retweet Count STD           |  0.0000 |
+| Node Retweet Count Max           |  0.0000 |
+| Node Retweet Count Min           |  0.0000 |
+| Node Favorite Count Average      |  0.0000 |
+| Node Favorite Count STD          |  0.0000 |
+| Node Favorite Count Max          |  0.0000 |
+| Node Favorite Count Min          |  0.0000 |
+| Node Quote Count Average         |  0.0000 |
+| Node Quote Count STD             |  0.0000 |
+| Node Quote Count Max             |  0.0000 |
+| Node Quote Count Min             |  0.0000 |
+| Node Reply Count Average         |  0.0000 |
+| Node Reply Count STD             |  0.0000 |
+| Node Reply Count Max             |  0.0000 |
+| Node Reply Count Min             |  0.0000 |
 
 **KEYWORDS**
 | Keyword   |   Score |
@@ -242,28 +242,28 @@ ID: subgraph/component/weak/3
 | Out Degree Min     |     0 |
 
 **NODE STATS**
-| Type                             |     Val |
-|:---------------------------------|--------:|
-| Node Sentiment Composite Average | -0.1234 |
-| Node Sentiment Composite STD     |  0.5463 |
-| Node Sentiment Composite Max     |  0.0000 |
-| Node Sentiment Composite Min     |  0.0000 |
-| Node Retweet Count Average       |  0.0000 |
-| Node Retweet Count STD           |  0.0000 |
-| Node Retweet Count Max           |  0.0000 |
-| Node Retweet Count Min           |  0.0000 |
-| Node Favorite Count Average      |  0.0000 |
-| Node Favorite Count STD          |  0.0000 |
-| Node Favorite Count Max          |  0.0000 |
-| Node Favorite Count Min          |  0.0000 |
-| Node Quote Count Average         |  0.0000 |
-| Node Quote Count STD             |  0.0000 |
-| Node Quote Count Max             |  0.0000 |
-| Node Quote Count Min             |  0.0000 |
-| Node Reply Count Average         |  0.0000 |
-| Node Reply Count STD             |  0.0000 |
-| Node Reply Count Max             |  0.0000 |
-| Node Reply Count Min             |  0.0000 |
+| Type                             |    Val |
+|:---------------------------------|-------:|
+| Node Sentiment Composite Average | 0.0630 |
+| Node Sentiment Composite STD     | 0.5524 |
+| Node Sentiment Composite Max     | 0.0000 |
+| Node Sentiment Composite Min     | 0.0000 |
+| Node Retweet Count Average       | 0.0000 |
+| Node Retweet Count STD           | 0.0000 |
+| Node Retweet Count Max           | 0.0000 |
+| Node Retweet Count Min           | 0.0000 |
+| Node Favorite Count Average      | 0.0000 |
+| Node Favorite Count STD          | 0.0000 |
+| Node Favorite Count Max          | 0.0000 |
+| Node Favorite Count Min          | 0.0000 |
+| Node Quote Count Average         | 0.0000 |
+| Node Quote Count STD             | 0.0000 |
+| Node Quote Count Max             | 0.0000 |
+| Node Quote Count Min             | 0.0000 |
+| Node Reply Count Average         | 0.0000 |
+| Node Reply Count STD             | 0.0000 |
+| Node Reply Count Max             | 0.0000 |
+| Node Reply Count Min             | 0.0000 |
 
 **KEYWORDS**
 | Keyword   |   Score |
@@ -308,8 +308,8 @@ ID: subgraph/component/weak/4
 **NODE STATS**
 | Type                             |        Val |
 |:---------------------------------|-----------:|
-| Node Sentiment Composite Average |     0.0198 |
-| Node Sentiment Composite STD     |     0.5724 |
+| Node Sentiment Composite Average |     0.1734 |
+| Node Sentiment Composite STD     |     0.6938 |
 | Node Sentiment Composite Max     |     0.0000 |
 | Node Sentiment Composite Min     |     0.0000 |
 | Node Retweet Count Average       |     1.3288 |
@@ -372,8 +372,8 @@ ID: subgraph/component/weak/5
 **NODE STATS**
 | Type                             |      Val |
 |:---------------------------------|---------:|
-| Node Sentiment Composite Average |  -0.3324 |
-| Node Sentiment Composite STD     |   0.4552 |
+| Node Sentiment Composite Average |   0.3422 |
+| Node Sentiment Composite STD     |   0.4780 |
 | Node Sentiment Composite Max     |   0.0000 |
 | Node Sentiment Composite Min     |   0.0000 |
 | Node Retweet Count Average       |   0.0380 |
@@ -436,8 +436,8 @@ ID: subgraph/component/weak/6
 **NODE STATS**
 | Type                             |       Val |
 |:---------------------------------|----------:|
-| Node Sentiment Composite Average |    0.1112 |
-| Node Sentiment Composite STD     |    0.6497 |
+| Node Sentiment Composite Average |   -0.1172 |
+| Node Sentiment Composite STD     |    0.6489 |
 | Node Sentiment Composite Max     |    0.0000 |
 | Node Sentiment Composite Min     |    0.0000 |
 | Node Retweet Count Average       |    0.8619 |
@@ -500,8 +500,8 @@ ID: subgraph/component/weak/7
 **NODE STATS**
 | Type                             |      Val |
 |:---------------------------------|---------:|
-| Node Sentiment Composite Average |  -0.0664 |
-| Node Sentiment Composite STD     |   0.4976 |
+| Node Sentiment Composite Average |   0.3498 |
+| Node Sentiment Composite STD     |   0.6411 |
 | Node Sentiment Composite Max     |   0.0000 |
 | Node Sentiment Composite Min     |   0.0000 |
 | Node Retweet Count Average       |   0.1095 |
@@ -564,8 +564,8 @@ ID: subgraph/component/weak/8
 **NODE STATS**
 | Type                             |       Val |
 |:---------------------------------|----------:|
-| Node Sentiment Composite Average |    0.0271 |
-| Node Sentiment Composite STD     |    0.1814 |
+| Node Sentiment Composite Average |    0.8823 |
+| Node Sentiment Composite STD     |    0.3634 |
 | Node Sentiment Composite Max     |    0.0000 |
 | Node Sentiment Composite Min     |    0.0000 |
 | Node Retweet Count Average       |    0.1784 |
@@ -626,28 +626,28 @@ ID: subgraph/component/weak/9
 | Out Degree Min     |     0 |
 
 **NODE STATS**
-| Type                             |     Val |
-|:---------------------------------|--------:|
-| Node Sentiment Composite Average | -0.0862 |
-| Node Sentiment Composite STD     |  0.5563 |
-| Node Sentiment Composite Max     |  0.0000 |
-| Node Sentiment Composite Min     |  0.0000 |
-| Node Retweet Count Average       |  0.0000 |
-| Node Retweet Count STD           |  0.0000 |
-| Node Retweet Count Max           |  0.0000 |
-| Node Retweet Count Min           |  0.0000 |
-| Node Favorite Count Average      |  0.0000 |
-| Node Favorite Count STD          |  0.0000 |
-| Node Favorite Count Max          |  0.0000 |
-| Node Favorite Count Min          |  0.0000 |
-| Node Quote Count Average         |  0.0000 |
-| Node Quote Count STD             |  0.0000 |
-| Node Quote Count Max             |  0.0000 |
-| Node Quote Count Min             |  0.0000 |
-| Node Reply Count Average         |  0.0000 |
-| Node Reply Count STD             |  0.0000 |
-| Node Reply Count Max             |  0.0000 |
-| Node Reply Count Min             |  0.0000 |
+| Type                             |    Val |
+|:---------------------------------|-------:|
+| Node Sentiment Composite Average | 0.0352 |
+| Node Sentiment Composite STD     | 0.5710 |
+| Node Sentiment Composite Max     | 0.0000 |
+| Node Sentiment Composite Min     | 0.0000 |
+| Node Retweet Count Average       | 0.0000 |
+| Node Retweet Count STD           | 0.0000 |
+| Node Retweet Count Max           | 0.0000 |
+| Node Retweet Count Min           | 0.0000 |
+| Node Favorite Count Average      | 0.0000 |
+| Node Favorite Count STD          | 0.0000 |
+| Node Favorite Count Max          | 0.0000 |
+| Node Favorite Count Min          | 0.0000 |
+| Node Quote Count Average         | 0.0000 |
+| Node Quote Count STD             | 0.0000 |
+| Node Quote Count Max             | 0.0000 |
+| Node Quote Count Min             | 0.0000 |
+| Node Reply Count Average         | 0.0000 |
+| Node Reply Count STD             | 0.0000 |
+| Node Reply Count Max             | 0.0000 |
+| Node Reply Count Min             | 0.0000 |
 
 **KEYWORDS**
 | Keyword   |   Score |
