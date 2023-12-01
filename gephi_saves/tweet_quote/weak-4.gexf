@@ -1,0 +1,1240 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-12-01">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="Text" type="string" />
+      <attribute id="1" title="Sentiment Composite" type="float" />
+      <attribute id="2" title="Retweet Count" type="double" />
+      <attribute id="3" title="Favorite Count" type="double" />
+      <attribute id="4" title="Quote Count" type="double" />
+      <attribute id="5" title="Reply Count" type="double" />
+    </attributes>
+    <nodes>
+      <node id="1591774928969535488" label="1591774928969535488">
+        <attvalues>
+          <attvalue for="0" value="🚨BREAKING NEWS:&#10;&#10;Plutus does not need to provide &quot;proof of reserves&quot;&#10;&#10;(Self custody bro...!) 😉" />
+          <attvalue for="1" value="-0.5847765803337097" />
+          <attvalue for="2" value="81.0" />
+          <attvalue for="3" value="383.0" />
+          <attvalue for="4" value="82.0" />
+          <attvalue for="5" value="48.0" />
+        </attvalues>
+      </node>
+      <node id="1592227352225914880" label="1592227352225914880">
+        <attvalues>
+          <attvalue for="0" value="@MartiniGuyYT The #FTX situation shows the need for #NonCustodial crypto projects like #Plutus visa card. All my $PLU is safe in MetaMask and I get up to 8% rewards on purchases. If trust in the project isn’t mandatory, people will trust the project.&#10;&#10;https://t.co/huGC9NCi6L&#10;&#10;#WhyISwitched" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592222338363584512" label="1592222338363584512">
+        <attvalues>
+          <attvalue for="0" value="@WuBlockchain https://t.co/SS6vESITua&#10;&#10;I recommend have a look @plutus that enables you to earn your crypto with their card and you can stake still having full control of your funds. Just saying, maybe you want to check that out. In EEA you can even trade on their p2p Dex 💪 #WhyISwitched $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592229234780651520" label="1592229234780651520">
+        <attvalues>
+          <attvalue for="0" value="@cryptowizardBTC @cryptocom The #FTX situation shows the need for #NonCustodial crypto projects like #Plutus visa card. All my $PLU is safe in MetaMask and I get up to 8% rewards on purchases. If trust in the project isn’t mandatory, people will trust the project.&#10;&#10;https://t.co/huGC9NCi6L&#10;&#10;#WhyISwitched" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592065686066675712" label="1592065686066675712">
+        <attvalues>
+          <attvalue for="0" value="@AltcoinDailyio Not your keys, not your crypto. Which is why I switched from CDC's visa to Plutus'. Stake in your own wallet and sell off whenever you want if they decide to change the terms.&#10;#WhyISwitched #NonCustodial $PLU&#10;https://t.co/08ok2buvHz" />
+          <attvalue for="1" value="0.5054160356521606" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591921736987316224" label="1591921736987316224">
+        <attvalues>
+          <attvalue for="0" value="@StackerSatoshi https://t.co/SS6vESITua&#10;&#10;I sold my CRO long time ago and will never hold any crypto that I can‘t keep in my own wallet. Not your keys 🔑 not your crypto 🤷🏻‍♂️. That is why I have @Plutus now. Staking is great. And with that I only trust myself 😎 🔐&#10;&#10;#WhyISwitched #NonCustodial $PLU" />
+          <attvalue for="1" value="-0.5285417437553406" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591776288804855808" label="1591776288804855808">
+        <attvalues>
+          <attvalue for="0" value="Not your keys?&#10;&#10;Then it’s Crypto.coms crypto, not yours. &#10;&#10;$PLU" />
+          <attvalue for="1" value="0.5122803449630737" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592073544225402880" label="1592073544225402880">
+        <attvalues>
+          <attvalue for="0" value="@AaronDBennett @cryptocom Why do people get mad when someone wants to own their crypto? It is one of the reasons why I switched from CDC's visa to Plutus'. I can stake in my own wallet and move my coins when I want.&#10;Not your keys, not your crypto.&#10;#WhyISwitched #NonCustodial $PLU&#10;https://t.co/08ok2bv3x7" />
+          <attvalue for="1" value="0.571311354637146" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591918502000365568" label="1591918502000365568">
+        <attvalues>
+          <attvalue for="0" value="@rovercrc https://t.co/FqpnzuyTBj Big exchange token, check. Run by a shady person, check. Shady behaviour, check. Better ditch them and move to reputable platforms. #WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.903987467288971" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592211508788101120" label="1592211508788101120">
+        <attvalues>
+          <attvalue for="0" value="@MartiniGuyYT If #CRO goes to zero we need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.M&#10;https://t.co/j4QuaS1MHd" />
+          <attvalue for="1" value="-0.6721141934394836" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592214261660778496" label="1592214261660778496">
+        <attvalues>
+          <attvalue for="0" value="@CryptoGParty @cryptocom #CRO is in trouble. We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/j4QuaS1MHd" />
+          <attvalue for="1" value="0.6480648517608643" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592134669465956352" label="1592134669465956352">
+        <attvalues>
+          <attvalue for="0" value="@MartiniGuyYT https://t.co/t2Q26OcXYM&#10;&#10;With everything that is going on in the crypto world, non-custodial is a must&#10;#WhyISwitched $PLU" />
+          <attvalue for="1" value="-0.566940188407898" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592229642098061312" label="1592229642098061312">
+        <attvalues>
+          <attvalue for="0" value="@HukAleksandra @MarioNawfal The #FTX situation shows the need for #NonCustodial crypto projects like #Plutus visa card. All my $PLU is safe in MetaMask and I get up to 8% rewards on purchases. If trust in the project isn’t mandatory, people will trust the project.&#10;&#10;https://t.co/huGC9NCPWj&#10;&#10;#WhyISwitched" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592149046759927808" label="1592149046759927808">
+        <attvalues>
+          <attvalue for="0" value="@MartiniGuyYT We shouldn't have to trust CEXs, crypto should be decentralised and trustless. #WhyISwitched $PLU https://t.co/xNQDMBN545" />
+          <attvalue for="1" value="-0.558049201965332" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592221392564793344" label="1592221392564793344">
+        <attvalues>
+          <attvalue for="0" value="@rovercrc I know that @Plutus isn't. Crypto debit card which is the best on the market.&#10;You can order your own and switch from #CRO :&#10;https://t.co/bx8oxUFCTB&#10;https://t.co/BUjiWvzPCz&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="-0.5043137073516846" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591921477775142912" label="1591921477775142912">
+        <attvalues>
+          <attvalue for="0" value="@ClassyCrypto_ @cryptocom https://t.co/SS6vESITua&#10;&#10;I sold my CRO long time ago and will never hold any crypto that I can‘t keep in my own wallet. Not your keys 🔑 not your crypto 🤷🏻‍♂️. That is why I have @Plutus now. Staking is great. And with that I only trust myself 😎 🔐&#10;&#10;#WhyISwitched #NonCustodial $PLU" />
+          <attvalue for="1" value="-0.5286425948143005" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592066198057136128" label="1592066198057136128">
+        <attvalues>
+          <attvalue for="0" value="@rovercrc Not your keys, not your crypto. There should be no reason for an exchange to hold your crypto locked for half a year. Which is why I switched from CDC's visa to Plutus'. Stake in your own wallet and sell when you want to.&#10;#WhyISwitched #NonCustodial $PLU&#10;https://t.co/08ok2bv3x7" />
+          <attvalue for="1" value="0.7355125546455383" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592230074400796672" label="1592230074400796672">
+        <attvalues>
+          <attvalue for="0" value="@rovercrc The #FTX situation shows the need for #NonCustodial crypto projects like #Plutus visa card. All my $PLU is safe in MetaMask and I get up to 8% rewards on purchases. If trust in the project isn’t mandatory, people will trust the project.&#10;&#10;https://t.co/huGC9NCPWj&#10;&#10;#WhyISwitched" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591917922175578112" label="1591917922175578112">
+        <attvalues>
+          <attvalue for="0" value="@CryptoKing_NFT https://t.co/FqpnzuyTBj Let's just withdraw our crypto and keep in a hardware wallet for a few weeks to be sure. #WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="-0.7817432284355164" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592228254555205632" label="1592228254555205632">
+        <attvalues>
+          <attvalue for="0" value="@StackerSatoshi The #FTX situation shows the need for #NonCustodial crypto projects like #Plutus visa card. All my $PLU is safe in MetaMask and I get up to 8% rewards on purchases. If trust in the project isn’t mandatory, people will trust the project.&#10;&#10;https://t.co/huGC9NCPWj&#10;&#10;#WhyISwitched" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592231814344896512" label="1592231814344896512">
+        <attvalues>
+          <attvalue for="0" value="@CryptoKing_NFT The #FTX situation shows the need for #NonCustodial crypto projects like #Plutus visa card. All my $PLU is safe in MetaMask and I get up to 8% rewards on purchases. If trust in the project isn’t mandatory, people will trust the project.&#10;&#10;https://t.co/huGC9NCPWj&#10;&#10;#WhyISwitched" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591901504918941696" label="1591901504918941696">
+        <attvalues>
+          <attvalue for="0" value="@cryptowizardBTC @cryptocom https://t.co/PcR2mQxec0&#10;&#10;PLU rules, CRO drools &#10;&#10;Plutus is BY FAR the best crypto rewards bank 🏦&#10;&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592066136581238784" label="1592066136581238784">
+        <attvalues>
+          <attvalue for="0" value="@rovercrc Not your keys, not your crypto. THere should be no reason for an exchange to hold your crypto locked for half a year. Which is why I switched from CDC's visa to Plutus'. Stake in your own wallet and sell when you want to.&#10;#WhyISwitched #NonCustodial $PLU&#10;https://t.co/08ok2bv3x7" />
+          <attvalue for="1" value="0.7143383622169495" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591901910466195456" label="1591901910466195456">
+        <attvalues>
+          <attvalue for="0" value="@AltcoinDailyio https://t.co/PcR2mQxec0&#10;&#10;PLU rules, CRO drools &#10;&#10;Plutus is BY FAR the best crypto rewards bank 🏦&#10;&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592215281648431104" label="1592215281648431104">
+        <attvalues>
+          <attvalue for="0" value="@cryptowizardBTC @cryptocom #CRO is in trouble. We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/j4QuaS1MHd" />
+          <attvalue for="1" value="0.6480648517608643" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592214499523981312" label="1592214499523981312">
+        <attvalues>
+          <attvalue for="0" value="@TheMoonCarl I used to hold #CRO. We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/wutfcGpzgo" />
+          <attvalue for="1" value="-0.7490302324295044" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591919116411367424" label="1591919116411367424">
+        <attvalues>
+          <attvalue for="0" value="@StackerSatoshi https://t.co/FqpnzuyTBj If all the CEXs are covering each other for funds for their proof of reserves, then we could see them all crash down and head into the longest crypto winter ever. #WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.8331514000892639" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591902122483847168" label="1591902122483847168">
+        <attvalues>
+          <attvalue for="0" value="@CryptoKing_NFT https://t.co/PcR2mQwGms&#10;&#10;PLU rules, CRO drools &#10;&#10;Plutus is BY FAR the best crypto rewards bank 🏦&#10;&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592067906501808128" label="1592067906501808128">
+        <attvalues>
+          <attvalue for="0" value="@chainsawdotcom Not your keys, not your crypto. I switched from CDC's visa to Plutus'. Stake in your own wallet and sell when you want to. Don't let an exchange hold your coins while they can change the terms whenever they want.&#10;#WhyISwitched #NonCustodial $PLU&#10;https://t.co/08ok2buvHz" />
+          <attvalue for="1" value="-0.490927517414093" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591902923780460544" label="1591902923780460544">
+        <attvalues>
+          <attvalue for="0" value="@CryptoGParty @cryptocom https://t.co/v0jhLhJZu1&#10;&#10;Up to 8% rewards with PLU,&#10;Loving using Plutus, bought so much crypto using my hard earned cash, with PLU I can earn it through rewards from every day spending! It’s a no brainer 👍🏼 try it, you won’t regret it 🚀 &#10;#WhyISwitched#NonCustodial @plutus" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592229452108468224" label="1592229452108468224">
+        <attvalues>
+          <attvalue for="0" value="@ClassyCrypto_ @cryptocom The #FTX situation shows the need for #NonCustodial crypto projects like #Plutus visa card. All my $PLU is safe in MetaMask and I get up to 8% rewards on purchases. If trust in the project isn’t mandatory, people will trust the project.&#10;&#10;https://t.co/huGC9NCi6L&#10;&#10;#WhyISwitched" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591891458428211200" label="1591891458428211200">
+        <attvalues>
+          <attvalue for="0" value="@StackerSatoshi Crypto com only vreates scandals. There ist nothing trustworthy anymore. Plutus is the company using the main value of crypto currency’s right. Here the proof. Leave crypto go for plutus and enjoy dex, the main value of crypto. https://t.co/cTcpG56GFs" />
+          <attvalue for="1" value="0.6019297242164612" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591901962383101952" label="1591901962383101952">
+        <attvalues>
+          <attvalue for="0" value="@WhaleChart https://t.co/PcR2mQwGms&#10;&#10;PLU rules, CRO drools &#10;&#10;Plutus is BY FAR the best crypto rewards bank 🏦&#10;&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591918631247646720" label="1591918631247646720">
+        <attvalues>
+          <attvalue for="0" value="@HukAleksandra @MarioNawfal https://t.co/FqpnzuylLL I feel sorry for all the people who have lost money and about to lose everything when CDC falls, but it will be a good thing for crypto long-term. #WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.46242520213127136" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591906179512504320" label="1591906179512504320">
+        <attvalues>
+          <attvalue for="0" value="@rovercrc https://t.co/v0jhLhJZu1&#10;&#10;Up to 8% rewards with PLU,&#10;Loving using Plutus, bought so much crypto using my hard earned cash, with PLU I can earn it through rewards from every day spending! It’s a no brainer 👍🏼 try it, you won’t regret it 🚀 &#10;#WhyISwitched#NonCustodial @plutus" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591901799430197248" label="1591901799430197248">
+        <attvalues>
+          <attvalue for="0" value="@Eunicedwong https://t.co/PcR2mQwGms&#10;&#10;PLU rules, CRO drools &#10;&#10;Plutus is BY FAR the best crypto rewards bank 🏦&#10;&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591921660403372032" label="1591921660403372032">
+        <attvalues>
+          <attvalue for="0" value="@MartiniGuyYT https://t.co/SS6vESIlEC&#10;&#10;I sold my CRO long time ago and will never hold any crypto that I can‘t keep in my own wallet. Not your keys 🔑 not your crypto 🤷🏻‍♂️. That is why I have @Plutus now. Staking is great. And with that I only trust myself 😎 🔐&#10;&#10;#WhyISwitched #NonCustodial $PLU" />
+          <attvalue for="1" value="-0.5285417437553406" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592183550195142656" label="1592183550195142656">
+        <attvalues>
+          <attvalue for="0" value="@HukAleksandra @MarioNawfal You presented is also important. &quot;Not your keys, not your crypto&quot; removes one more out of many dangers nowadays (apart from hacking cold wallets) Self custody is what I could recommend as well. Read below please&#10;https://t.co/HkHtd8b0wt&#10;#WhyISwitched #NonCustodial $PLU" />
+          <attvalue for="1" value="-0.6286340355873108" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592076871298322432" label="1592076871298322432">
+        <attvalues>
+          <attvalue for="0" value="@realOscarRamos1 @cryptocom Insolvent or not, taking ownership of your coins is never a bad idea.&#10;Not your keys, not your crypto.&#10;Why lock a stake for six months if you can stake in your own wallet and move it whenever YOU want?&#10;#WhyISwitched #NonCustodial $PLU&#10;https://t.co/08ok2bv3x7" />
+          <attvalue for="1" value="-0.6525977849960327" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592213716434669568" label="1592213716434669568">
+        <attvalues>
+          <attvalue for="0" value="@StackerSatoshi If #CRO goes to zero we need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/j4QuaS1eRF" />
+          <attvalue for="1" value="-0.6723411083221436" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592139443238227968" label="1592139443238227968">
+        <attvalues>
+          <attvalue for="0" value="@MartiniGuyYT Time for everyone to take control of their crypto.  Keep it off exchanges.  Utilise projects like @plutus which is non-custodial and has no stake lock up to earn crypto through spending!  #WhyISwitched $PLU&#10;https://t.co/tdcL5C748X" />
+          <attvalue for="1" value="-0.6068580746650696" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591901569121144832" label="1591901569121144832">
+        <attvalues>
+          <attvalue for="0" value="@ClassyCrypto_ @cryptocom https://t.co/PcR2mQxec0&#10;&#10;PLU rules, CRO drools &#10;&#10;Plutus is BY FAR the best crypto rewards bank 🏦&#10;&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592215587681599488" label="1592215587681599488">
+        <attvalues>
+          <attvalue for="0" value="@TheDustyBC #CRO is in trouble. We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/j4QuaS1MHd" />
+          <attvalue for="1" value="0.6528767943382263" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592215519775817728" label="1592215519775817728">
+        <attvalues>
+          <attvalue for="0" value="@HukAleksandra @MarioNawfal #CRO is in trouble. We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/j4QuaS1MHd" />
+          <attvalue for="1" value="0.6480648517608643" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592288666390757376" label="1592288666390757376">
+        <attvalues>
+          <attvalue for="0" value="@elliotrades Attention CRO &amp;amp; FTX users! This can't happen with Plutus. It's decentralised. Your keys, your crypto. NO lockups. Up to 8% cashback with their debit card. I earn 8% as I am G.O.A.T staking level.&#10;&#10;Come join Amex 3.0&#10;&#10;https://t.co/R68UhC4yMe&#10;&#10;#WhyISwitched #NonCustodial $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591918848718295040" label="1591918848718295040">
+        <attvalues>
+          <attvalue for="0" value="@TheDustyBC Moved away from CRO and https://t.co/ZW3HhCEyTh when they forgot about why customers used them #WhyISwitched holding your own crypto is the way forward. #NonCustodial with Plutus is the future $PLU https://t.co/DdNiaE2g2l" />
+          <attvalue for="1" value="-0.6533983945846558" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591918030908706816" label="1591918030908706816">
+        <attvalues>
+          <attvalue for="0" value="@WhaleChart https://t.co/FqpnzuyTBj Keep your crypto away from any CEX, they're all as bad as each other. #WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.9196187853813171" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592228995449618432" label="1592228995449618432">
+        <attvalues>
+          <attvalue for="0" value="@TheMoonCarl The #FTX situation shows the need for #NonCustodial crypto projects like #Plutus visa card. All my $PLU is safe in MetaMask and I get up to 8% rewards on purchases. If trust in the project isn’t mandatory, people will trust the project.&#10;&#10;https://t.co/huGC9NCPWj&#10;&#10;#WhyISwitched" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591922567602110464" label="1591922567602110464">
+        <attvalues>
+          <attvalue for="0" value="@CryptoGParty @cryptocom Self custody is the only way for me. I can sleep tight knowing my funds are safe and of course there's no need for a proof of reserve for this cashback utility token :)&#10;https://t.co/3QpRHoqVj4&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591923074085289984" label="1591923074085289984">
+        <attvalues>
+          <attvalue for="0" value="@ClassyCrypto_ @cryptocom Self custody is the only way for me. I can sleep tight knowing my funds are safe and of course there's no need for a proof of reserve for this cashback utility token :)&#10;https://t.co/3QpRHoqVj4&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592140656105095168" label="1592140656105095168">
+        <attvalues>
+          <attvalue for="0" value="@MartiniGuyYT Stay safe and switch to #plutus crypto cashback card. Up to 8% cashback on every purchase plus other perks, and most importantly self custody, your staked $plu is held on your own metamask wallet under your full control.&#10;&#10;#WhyISwitched $PLU&#10;&#10;https://t.co/Gaf9v86SGd" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592230857779314688" label="1592230857779314688">
+        <attvalues>
+          <attvalue for="0" value="@AltcoinDailyio The #FTX situation shows the need for #NonCustodial crypto projects like #Plutus visa card. All my $PLU is safe in MetaMask and I get up to 8% rewards on purchases. If trust in the project isn’t mandatory, people will trust the project.&#10;&#10;https://t.co/huGC9NCPWj&#10;&#10;#WhyISwitched" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592074495048974336" label="1592074495048974336">
+        <attvalues>
+          <attvalue for="0" value="@CryptoTea_ Why not take it off of every exchange.&#10;Not your keys, not your crypto.&#10;It is one of the reasons why I switched from CDC's visa to Plutus'. I can stake in my own wallet and move my coins whenever I want.&#10;#WhyISwitched #NonCustodial $PLU&#10;https://t.co/08ok2bv3x7" />
+          <attvalue for="1" value="0.5009397268295288" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591901309246275584" label="1591901309246275584">
+        <attvalues>
+          <attvalue for="0" value="@CryptoGParty @cryptocom https://t.co/PcR2mQxec0&#10;&#10;PLU rules, CRO drools &#10;&#10;Plutus is BY FAR the best crypto rewards bank 🏦&#10;&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591918702009942016" label="1591918702009942016">
+        <attvalues>
+          <attvalue for="0" value="@ClassyCrypto_ @cryptocom https://t.co/FqpnzuyTBj Just move everything to a hardware wallet maybe? Experience crypto how it should be, reject centralised platforms. #WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="-0.7291154861450195" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592216790238920704" label="1592216790238920704">
+        <attvalues>
+          <attvalue for="0" value="@WhaleChart #CRO is in trouble. We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/j4QuaS1MHd" />
+          <attvalue for="1" value="0.6528767943382263" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592216970321362944" label="1592216970321362944">
+        <attvalues>
+          <attvalue for="0" value="@ClassyCrypto_ @cryptocom #CRO is in trouble. We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/j4QuaS1MHd" />
+          <attvalue for="1" value="0.6480648517608643" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591923038869946368" label="1591923038869946368">
+        <attvalues>
+          <attvalue for="0" value="@CryptoKing_NFT Self custody is the only way for me. I can sleep tight knowing my funds are safe and of course there's no need for a proof of reserve for this cashback utility token :)&#10;https://t.co/3QpRHoqVj4&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592216546738601984" label="1592216546738601984">
+        <attvalues>
+          <attvalue for="0" value="@RyanRotolo #CRO is in trouble. We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/j4QuaS1MHd" />
+          <attvalue for="1" value="0.6528767943382263" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592215773770317824" label="1592215773770317824">
+        <attvalues>
+          <attvalue for="0" value="@rovercrc #CRO is the next #FTT. We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched&#10;https://t.co/j4QuaS1MHd" />
+          <attvalue for="1" value="-0.7341442704200745" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591922047055462400" label="1591922047055462400">
+        <attvalues>
+          <attvalue for="0" value="@plutus Self custody is the only way for me. I can sleep tight knowing my funds are safe and of course there's no need for a proof of reserve for this cashback utility token :)&#10;https://t.co/3QpRHoqVj4&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592228718340186112" label="1592228718340186112">
+        <attvalues>
+          <attvalue for="0" value="@CryptoGParty @cryptocom The #FTX situation shows the need for #NonCustodial crypto projects like #Plutus visa card. All my $PLU is safe in MetaMask and I get up to 8% rewards on purchases. If trust in the project isn’t mandatory, people will trust the project.&#10;&#10;https://t.co/huGC9NCi6L&#10;&#10;#WhyISwitched" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591892652823388160" label="1591892652823388160">
+        <attvalues>
+          <attvalue for="0" value="@StackerSatoshi It looks like centralised exchanges will need some kind of regulation going forward to protect customers and be transparent. Will the USDC and Cro sent to FTX be customers crypto.  Keeping crypto in your own wallet is the only option in times like these." />
+          <attvalue for="1" value="-0.7502042651176453" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591901125745287168" label="1591901125745287168">
+        <attvalues>
+          <attvalue for="0" value="@MartiniGuyYT https://t.co/PcR2mQwGms&#10;&#10;PLU rules, CRO drools &#10;&#10;Plutus is BY FAR the best crypto rewards bank 🏦&#10;&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591922847617884160" label="1591922847617884160">
+        <attvalues>
+          <attvalue for="0" value="@TheMoonCarl Self custody is the only way for me. I can sleep tight knowing my funds are safe and of course there's no need for a proof of reserve for this cashback utility token :)&#10;https://t.co/3QpRHoqntw&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592216728452440064" label="1592216728452440064">
+        <attvalues>
+          <attvalue for="0" value="@AltcoinDailyio #CRO is in trouble. We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/j4QuaS1eRF" />
+          <attvalue for="1" value="0.6489144563674927" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591918105525198848" label="1591918105525198848">
+        <attvalues>
+          <attvalue for="0" value="@AltcoinDailyio https://t.co/FqpnzuylLL Because it's a scam exchange just like CDC, Binance, and all the rest. Crypto should be decentralised. #WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.9038354754447937" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591902354701426688" label="1591902354701426688">
+        <attvalues>
+          <attvalue for="0" value="@StackerSatoshi https://t.co/v0jhLhJZu1&#10;&#10;Loving using Plutus, bought so much crypto using my hard earned cash, with PLU I can earn it through rewards from every day spending! It’s a no brainer 👍🏼&#10;#WhyISwitched#NonCustodial @plutus" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592215400648941568" label="1592215400648941568">
+        <attvalues>
+          <attvalue for="0" value="@ClassyCrypto_ @cryptocom #CRO is in trouble. We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/j4QuaS1eRF" />
+          <attvalue for="1" value="0.6447629332542419" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592217291319828480" label="1592217291319828480">
+        <attvalues>
+          <attvalue for="0" value="@CryptoKing_NFT #CRO is in trouble. We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/j4QuaS1MHd" />
+          <attvalue for="1" value="0.6528767943382263" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592229856443392000" label="1592229856443392000">
+        <attvalues>
+          <attvalue for="0" value="@TheDustyBC The #FTX situation shows the need for #NonCustodial crypto projects like #Plutus visa card. All my $PLU is safe in MetaMask and I get up to 8% rewards on purchases. If trust in the project isn’t mandatory, people will trust the project.&#10;&#10;https://t.co/huGC9NTSYj&#10;&#10;#WhyISwitched" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592214059575042048" label="1592214059575042048">
+        <attvalues>
+          <attvalue for="0" value="@StackerSatoshi #CRO is in trouble. We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/j4QuaS1MHd" />
+          <attvalue for="1" value="0.6528767943382263" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591901446630694912" label="1591901446630694912">
+        <attvalues>
+          <attvalue for="0" value="@TheMoonCarl https://t.co/PcR2mQxec0&#10;&#10;PLU rules, CRO drools &#10;&#10;Plutus is BY FAR the best crypto rewards bank 🏦&#10;&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591904552651218944" label="1591904552651218944">
+        <attvalues>
+          <attvalue for="0" value="@ClassyCrypto_ @cryptocom https://t.co/v0jhLhKxjz&#10;&#10;Loving using Plutus app, bought so much crypto using my hard earned cash but with PLU I can earn it through rewards from every day spending! It’s a no brainer 👍🏼 try it, you won’t regret it 🚀 &#10;#WhyISwitched#NonCustodial @plutus" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591921808277921792" label="1591921808277921792">
+        <attvalues>
+          <attvalue for="0" value="@CryptoGParty @cryptocom https://t.co/SS6vESITua&#10;&#10;I sold my CRO long time ago and will never hold any crypto that I can‘t keep in my own wallet. Not your keys 🔑 not your crypto 🤷🏻‍♂️. That is why I have @Plutus now. Staking is great. And with that I only trust myself 😎 🔐&#10;&#10;#WhyISwitched #NonCustodial $PLU" />
+          <attvalue for="1" value="-0.5286425948143005" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591922182493724672" label="1591922182493724672">
+        <attvalues>
+          <attvalue for="0" value="@MartiniGuyYT Self custody is the only way for me. I can sleep tight knowing my funds are safe and of course there's no need for a proof of reserve for this cashback utility token :)&#10;https://t.co/3QpRHoqVj4&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592230275408596992" label="1592230275408596992">
+        <attvalues>
+          <attvalue for="0" value="@realOscarRamos1 @cryptocom The #FTX situation shows the need for #NonCustodial crypto projects like #Plutus visa card. All my $PLU is safe in MetaMask and I get up to 8% rewards on purchases. If trust in the project isn’t mandatory, people will trust the project.&#10;&#10;https://t.co/huGC9NCPWj&#10;&#10;#WhyISwitched" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592215214652788736" label="1592215214652788736">
+        <attvalues>
+          <attvalue for="0" value="@cryptowizardBTC #CRO is in trouble. We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/j4QuaS1MHd" />
+          <attvalue for="1" value="0.6528767943382263" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591891562635857920" label="1591891562635857920">
+        <attvalues>
+          <attvalue for="0" value="@StackerSatoshi I’m so glad that I can enjoy the plutus perks all while having self custody! Best crypto cashback credit card!" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592228298784116736" label="1592228298784116736">
+        <attvalues>
+          <attvalue for="0" value="Sorry mate. This was the same issue i was facing on my metamask . I had to write to the instant Support team and they helped me rectify. This is the link. Goodluck &#10;https://t.co/Ht9SFXfu3R" />
+          <attvalue for="1" value="-0.5535732507705688" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592231610115837952" label="1592231610115837952">
+        <attvalues>
+          <attvalue for="0" value="@ClassyCrypto_ @cryptocom The #FTX situation shows the need for #NonCustodial crypto projects like #Plutus visa card. All my $PLU is safe in MetaMask and I get up to 8% rewards on purchases. If trust in the project isn’t mandatory, people will trust the project.&#10;&#10;https://t.co/huGC9NCPWj&#10;&#10;#WhyISwitched" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591901650872324096" label="1591901650872324096">
+        <attvalues>
+          <attvalue for="0" value="@MartiniGuyYT https://t.co/v0jhLhKxjz&#10;&#10;Loving using Plutus, bought so much crypto using my hard earned cash, with PLU I can earn it through rewards from every day spending! It’s a no brainer 👍🏼&#10;#WhyISwitched#NonCustodial @plutus" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592272517351510016" label="1592272517351510016">
+        <attvalues>
+          <attvalue for="0" value="@MartiniGuyYT Attention CRO &amp;amp; FTX users! This can't happen with Plutus. It's decentralised. Your keys, your crypto. NO lockups. Up to 8% cashback with their debit card. I earn 8% as I am G.O.A.T staking level.&#10;&#10;Come join Amex 3.0&#10;&#10;https://t.co/R68UhC4yMe&#10;&#10;#WhyISwitched #NonCustodial $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592216195197210624" label="1592216195197210624">
+        <attvalues>
+          <attvalue for="0" value="@Eunicedwong #CRO is in trouble. We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/j4QuaS1MHd" />
+          <attvalue for="1" value="0.6528767943382263" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591922368162992128" label="1591922368162992128">
+        <attvalues>
+          <attvalue for="0" value="@StackerSatoshi Self custody is the only way for me. I can sleep tight knowing my funds are safe and of course there's no need for a proof of reserve for this cashback utility token :)&#10;https://t.co/3QpRHoqVj4&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591921938435575808" label="1591921938435575808">
+        <attvalues>
+          <attvalue for="0" value="@cryptowizardBTC @cryptocom https://t.co/SS6vESITua&#10;&#10;I sold my CRO long time ago and will never hold any crypto that I can‘t keep in my own wallet. Not your keys 🔑 not your crypto 🤷🏻‍♂️. That is why I have @Plutus now. Staking is great. And with that I only trust myself 😎 🔐&#10;&#10;#WhyISwitched #NonCustodial $PLU" />
+          <attvalue for="1" value="-0.5286425948143005" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592216060723630080" label="1592216060723630080">
+        <attvalues>
+          <attvalue for="0" value="@realOscarRamos1 @cryptocom #CRO is in trouble? We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/j4QuaS1MHd" />
+          <attvalue for="1" value="0.532358705997467" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591890814229450752" label="1591890814229450752">
+        <attvalues>
+          <attvalue for="0" value="@StackerSatoshi https://t.co/6KnFSul7zo sticking with $plu. I'd like to see exchanges work were your crypto is held in your wallet, not theirs." />
+          <attvalue for="1" value="-0.7484610676765442" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592099846110220288" label="1592099846110220288">
+        <attvalues>
+          <attvalue for="0" value="@HukAleksandra @MarioNawfal #NonCustodial services are important. For this type of scams to end we all need to make the right decisions when it comes to saving our crypto. #PLU gives you that and no proof of reserves are needed. #WhyISwitched&#10;&#10;https://t.co/ZuXWOY56xS" />
+          <attvalue for="1" value="-0.5086676478385925" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591932561093427200" label="1591932561093427200">
+        <attvalues>
+          <attvalue for="0" value="@AltcoinDailyio https://t.co/SS6vESITua&#10;&#10;I sold my CRO long time ago and will never hold any crypto that I can‘t keep in my own wallet. Not your keys 🔑 not your crypto 🤷🏻‍♂️. That is why I have @Plutus now. Staking is great. And with that I only trust myself 😎 🔐&#10;&#10;#WhyISwitched #NonCustodial $PLU" />
+          <attvalue for="1" value="-0.5285417437553406" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591901609810079744" label="1591901609810079744">
+        <attvalues>
+          <attvalue for="0" value="@TheDustyBC https://t.co/PcR2mQxec0&#10;&#10;PLU rules, CRO drools &#10;&#10;Plutus is BY FAR the best crypto rewards bank 🏦&#10;&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592230682394505216" label="1592230682394505216">
+        <attvalues>
+          <attvalue for="0" value="@RyanRotolo The #FTX situation shows the need for #NonCustodial crypto projects like #Plutus visa card. All my $PLU is safe in MetaMask and I get up to 8% rewards on purchases. If trust in the project isn’t mandatory, people will trust the project.&#10;&#10;https://t.co/huGC9NCPWj&#10;&#10;#WhyISwitched" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591903824616501248" label="1591903824616501248">
+        <attvalues>
+          <attvalue for="0" value="@TheMoonCarl https://t.co/v0jhLhKxjz&#10;&#10;Don’t trust CRO.&#10;Plutus I do trust!!&#10;Loving using Plutus, bought so much crypto using my hard earned cash, with PLU I can earn it through rewards from every day spending! It’s a no brainer 👍🏼 you won’t regret it 🚀 &#10;#WhyISwitched#NonCustodial @plutus" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591901865914281984" label="1591901865914281984">
+        <attvalues>
+          <attvalue for="0" value="@RyanRotolo https://t.co/PcR2mQxec0&#10;&#10;PLU rules, CRO drools &#10;&#10;Plutus is BY FAR the best crypto rewards bank 🏦&#10;&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591922092609777664" label="1591922092609777664">
+        <attvalues>
+          <attvalue for="0" value="@HukAleksandra @MarioNawfal https://t.co/SS6vESITua&#10;&#10;I sold my CRO long time ago and will never hold any crypto that I can‘t keep in my own wallet. Not your keys 🔑 not your crypto 🤷🏻‍♂️. That is why I have @Plutus now. Staking is great. And with that I only trust myself 😎 🔐&#10;&#10;#WhyISwitched #NonCustodial $PLU" />
+          <attvalue for="1" value="-0.5286425948143005" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592230476345126912" label="1592230476345126912">
+        <attvalues>
+          <attvalue for="0" value="@Eunicedwong The #FTX situation shows the need for #NonCustodial crypto projects like #Plutus visa card. All my $PLU is safe in MetaMask and I get up to 8% rewards on purchases. If trust in the project isn’t mandatory, people will trust the project.&#10;&#10;https://t.co/huGC9NCPWj&#10;&#10;#WhyISwitched" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591901666244440064" label="1591901666244440064">
+        <attvalues>
+          <attvalue for="0" value="@rovercrc https://t.co/PcR2mQxec0&#10;&#10;PLU rules, CRO drools &#10;&#10;Plutus is BY FAR the best crypto rewards bank 🏦&#10;&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592068399584391168" label="1592068399584391168">
+        <attvalues>
+          <attvalue for="0" value="@Bitboy_Crypto @cryptocom Owning my crypto is why I switched from CDC's visa to Plutus'. I can stake in my own wallet and sell when I want. Don't let an exchange hold your coins while they can change the terms whenever they want.&#10;#WhyISwitched #NonCustodial $PLU&#10;https://t.co/08ok2bv3x7" />
+          <attvalue for="1" value="-0.7109891176223755" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592218545941016576" label="1592218545941016576">
+        <attvalues>
+          <attvalue for="0" value="@WuBlockchain #CRO is in trouble. We need to remember that we are the ones responsible to chose where we store our crypto. Either in centralised exchanges that can mismanage our funds our we can opt by #NonCustodial like $PLU. My coins are safe. That's #WhyISwitched.&#10;https://t.co/9ZFVYKZlwo" />
+          <attvalue for="1" value="0.6426922082901001" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591892615850782720" label="1591892615850782720">
+        <attvalues>
+          <attvalue for="0" value="@StackerSatoshi With all the stuff happening in Crypto it's clear that self custody is the only way... https://t.co/858xxnYWUc" />
+          <attvalue for="1" value="-0.7252500057220459" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="2.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591922821596315648" label="1591922821596315648">
+        <attvalues>
+          <attvalue for="0" value="@cryptowizardBTC @cryptocom Self custody is the only way for me. I can sleep tight knowing my funds are safe and of course there's no need for a proof of reserve for this cashback utility token :)&#10;https://t.co/3QpRHoqntw&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592133670525091840" label="1592133670525091840">
+        <attvalues>
+          <attvalue for="0" value="@MartiniGuyYT Whilst I don’t want anyone to get Rekt, there’s a lot of learning from this. CDC was a great intro to earning crypto with their cards. New market leader - with @plutus - better cashback (up to 8%), non-custodial (mine is on ledger) and due to expand to US.&#10;https://t.co/qOK1ghtkeH" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591901208553340928" label="1591901208553340928">
+        <attvalues>
+          <attvalue for="0" value="@StackerSatoshi https://t.co/PcR2mQwGms&#10;&#10;PLU rules, CRO drools &#10;&#10;Plutus is BY FAR the best crypto rewards bank 🏦&#10;&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591900521656639488" label="1591900521656639488">
+        <attvalues>
+          <attvalue for="0" value="@MartiniGuyYT This is why I’ve told my friends to get their crypto off https://t.co/C9NkBOhkzL, if it fails plutus will take off massively #plutus #whyiswitched #noncustodial #plu" />
+          <attvalue for="1" value="-0.4576505422592163" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591901737837027328" label="1591901737837027328">
+        <attvalues>
+          <attvalue for="0" value="@realOscarRamos1 @cryptocom https://t.co/PcR2mQxec0&#10;&#10;PLU rules, CRO drools &#10;&#10;Plutus is BY FAR the best crypto rewards bank 🏦&#10;&#10;#WhyISwitched / #NonCustodial / $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591908011966357504" label="1591908011966357504">
+        <attvalues>
+          <attvalue for="0" value="@WhaleChart Not your keys, not your crypto. Which is why I switched from CDC's visa to Plutus'. Stake in your own wallet and sell off whenever you want if they decide to change the terms.&#10;#WhyISwitched #NonCustodial $PLU&#10;https://t.co/lSLAZHRuVi" />
+          <attvalue for="1" value="0.5121520161628723" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591904168998207488" label="1591904168998207488">
+        <attvalues>
+          <attvalue for="0" value="@cryptowizardBTC @cryptocom https://t.co/v0jhLhKxjz&#10;&#10;Loving using Plutus, bought so much crypto using my hard earned cash, with PLU I can earn it through rewards from every day spending! It’s a no brainer 👍🏼 try it, you won’t regret it 🚀 &#10;#WhyISwitched#NonCustodial @plutus" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591807188988821504" label="1591807188988821504">
+        <attvalues>
+          <attvalue for="0" value="@plutus is amazing and if you've not already got one of their cards, I'd highly recommend it.&#10;&#10;3% #crypto cashback on EVERYTHING 🔥🔥" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592231365520621568" label="1592231365520621568">
+        <attvalues>
+          <attvalue for="0" value="@WhaleChart The #FTX situation shows the need for #NonCustodial crypto projects like #Plutus visa card. All my $PLU is safe in MetaMask and I get up to 8% rewards on purchases. If trust in the project isn’t mandatory, people will trust the project.&#10;&#10;https://t.co/huGC9NCi6L&#10;&#10;#WhyISwitched" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591893526350118912" label="1591893526350118912">
+        <attvalues>
+          <attvalue for="0" value="@StackerSatoshi I strongly discourage CEX like https://t.co/sMZV5BqcnP to keep your money. A very wise movement is to use non custodial wallet like https://t.co/hY7OEO8NgZ. Stay safe and get rewards taking advantage of Plutus utility token. https://t.co/6jzWc4Za18" />
+          <attvalue for="1" value="-0.6168963313102722" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592134968939102208" label="1592134968939102208">
+        <attvalues>
+          <attvalue for="0" value="@MartiniGuyYT https://t.co/SS6vESIlEC&#10;&#10;I recommend have a look @plutus that enables you to earn your crypto with their card and you can stake still having full control of your funds. Just saying, maybe you want to check that out. In EEA you can even trade on their p2p Dex 💪 #WhyISwitched $PLU" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="1591774928969535488" target="1592227352225914880" id="0" />
+      <edge source="1591774928969535488" target="1592229234780651520" id="1" />
+      <edge source="1591774928969535488" target="1592065686066675712" id="2" />
+      <edge source="1591774928969535488" target="1592222338363584512" id="3" />
+      <edge source="1591774928969535488" target="1591921736987316224" id="4" />
+      <edge source="1591774928969535488" target="1591776288804855808" id="5" />
+      <edge source="1591774928969535488" target="1592073544225402880" id="6" />
+      <edge source="1591774928969535488" target="1591918502000365568" id="7" />
+      <edge source="1591774928969535488" target="1592211508788101120" id="8" />
+      <edge source="1591774928969535488" target="1591901910466195456" id="9" />
+      <edge source="1591774928969535488" target="1592213716434669568" id="10" />
+      <edge source="1591774928969535488" target="1592074495048974336" id="11" />
+      <edge source="1591774928969535488" target="1592272517351510016" id="12" />
+      <edge source="1591774928969535488" target="1592066136581238784" id="13" />
+      <edge source="1591774928969535488" target="1591901309246275584" id="14" />
+      <edge source="1591774928969535488" target="1591891458428211200" id="15" />
+      <edge source="1591774928969535488" target="1591901504918941696" id="16" />
+      <edge source="1591774928969535488" target="1592139443238227968" id="17" />
+      <edge source="1591774928969535488" target="1592230682394505216" id="18" />
+      <edge source="1591774928969535488" target="1591921660403372032" id="19" />
+      <edge source="1591774928969535488" target="1591918702009942016" id="20" />
+      <edge source="1591774928969535488" target="1592217291319828480" id="21" />
+      <edge source="1591774928969535488" target="1592214261660778496" id="22" />
+      <edge source="1591774928969535488" target="1592215587681599488" id="23" />
+      <edge source="1591774928969535488" target="1591903824616501248" id="24" />
+      <edge source="1591774928969535488" target="1591901962383101952" id="25" />
+      <edge source="1591774928969535488" target="1592216790238920704" id="26" />
+      <edge source="1591774928969535488" target="1592215519775817728" id="27" />
+      <edge source="1591774928969535488" target="1592216970321362944" id="28" />
+      <edge source="1591774928969535488" target="1592183550195142656" id="29" />
+      <edge source="1591774928969535488" target="1592229856443392000" id="30" />
+      <edge source="1591774928969535488" target="1591918631247646720" id="31" />
+      <edge source="1591774928969535488" target="1592288666390757376" id="32" />
+      <edge source="1591774928969535488" target="1591893526350118912" id="33" />
+      <edge source="1591774928969535488" target="1591807188988821504" id="34" />
+      <edge source="1591774928969535488" target="1591901865914281984" id="35" />
+      <edge source="1591774928969535488" target="1592216195197210624" id="36" />
+      <edge source="1591774928969535488" target="1592076871298322432" id="37" />
+      <edge source="1591774928969535488" target="1592228995449618432" id="38" />
+      <edge source="1591774928969535488" target="1592215281648431104" id="39" />
+      <edge source="1591774928969535488" target="1591922092609777664" id="40" />
+      <edge source="1591774928969535488" target="1592216728452440064" id="41" />
+      <edge source="1591774928969535488" target="1592229452108468224" id="42" />
+      <edge source="1591774928969535488" target="1591901569121144832" id="43" />
+      <edge source="1591774928969535488" target="1591922368162992128" id="44" />
+      <edge source="1591774928969535488" target="1592214499523981312" id="45" />
+      <edge source="1591774928969535488" target="1591918105525198848" id="46" />
+      <edge source="1591774928969535488" target="1592228718340186112" id="47" />
+      <edge source="1591774928969535488" target="1592230476345126912" id="48" />
+      <edge source="1591774928969535488" target="1591919116411367424" id="49" />
+      <edge source="1591774928969535488" target="1592218545941016576" id="50" />
+      <edge source="1591774928969535488" target="1591922567602110464" id="51" />
+      <edge source="1591774928969535488" target="1592134968939102208" id="52" />
+      <edge source="1591774928969535488" target="1591892652823388160" id="53" />
+      <edge source="1591774928969535488" target="1591923038869946368" id="54" />
+      <edge source="1591774928969535488" target="1591901666244440064" id="55" />
+      <edge source="1591774928969535488" target="1592216546738601984" id="56" />
+      <edge source="1591774928969535488" target="1592214059575042048" id="57" />
+      <edge source="1591774928969535488" target="1591918848718295040" id="58" />
+      <edge source="1591774928969535488" target="1592133670525091840" id="59" />
+      <edge source="1591774928969535488" target="1591892615850782720" id="60" />
+      <edge source="1591774928969535488" target="1591901125745287168" id="61" />
+      <edge source="1591774928969535488" target="1591902122483847168" id="62" />
+      <edge source="1591774928969535488" target="1591901446630694912" id="63" />
+      <edge source="1591774928969535488" target="1591904552651218944" id="64" />
+      <edge source="1591774928969535488" target="1591921938435575808" id="65" />
+      <edge source="1591774928969535488" target="1592068399584391168" id="66" />
+      <edge source="1591774928969535488" target="1591901609810079744" id="67" />
+      <edge source="1591774928969535488" target="1591921808277921792" id="68" />
+      <edge source="1591774928969535488" target="1591923074085289984" id="69" />
+      <edge source="1591774928969535488" target="1592230275408596992" id="70" />
+      <edge source="1591774928969535488" target="1592067906501808128" id="71" />
+      <edge source="1591774928969535488" target="1591918030908706816" id="72" />
+      <edge source="1591774928969535488" target="1591922182493724672" id="73" />
+      <edge source="1591774928969535488" target="1592134669465956352" id="74" />
+      <edge source="1591774928969535488" target="1592231365520621568" id="75" />
+      <edge source="1591774928969535488" target="1592230074400796672" id="76" />
+      <edge source="1591774928969535488" target="1591900521656639488" id="77" />
+      <edge source="1591774928969535488" target="1592140656105095168" id="78" />
+      <edge source="1591774928969535488" target="1592216060723630080" id="79" />
+      <edge source="1591774928969535488" target="1592215214652788736" id="80" />
+      <edge source="1591774928969535488" target="1591922847617884160" id="81" />
+      <edge source="1591774928969535488" target="1591901737837027328" id="82" />
+      <edge source="1591774928969535488" target="1591922821596315648" id="83" />
+      <edge source="1591774928969535488" target="1591890814229450752" id="84" />
+      <edge source="1591774928969535488" target="1592230857779314688" id="85" />
+      <edge source="1591774928969535488" target="1592229642098061312" id="86" />
+      <edge source="1591774928969535488" target="1592215773770317824" id="87" />
+      <edge source="1591774928969535488" target="1592149046759927808" id="88" />
+      <edge source="1591774928969535488" target="1591917922175578112" id="89" />
+      <edge source="1591774928969535488" target="1592228254555205632" id="90" />
+      <edge source="1591774928969535488" target="1591906179512504320" id="91" />
+      <edge source="1591774928969535488" target="1592231610115837952" id="92" />
+      <edge source="1591774928969535488" target="1591904168998207488" id="93" />
+      <edge source="1591774928969535488" target="1591908011966357504" id="94" />
+      <edge source="1591774928969535488" target="1591902354701426688" id="95" />
+      <edge source="1591774928969535488" target="1592099846110220288" id="96" />
+      <edge source="1591774928969535488" target="1591901799430197248" id="97" />
+      <edge source="1591774928969535488" target="1592221392564793344" id="98" />
+      <edge source="1591774928969535488" target="1591932561093427200" id="99" />
+      <edge source="1591774928969535488" target="1592231814344896512" id="100" />
+      <edge source="1591774928969535488" target="1591901650872324096" id="101" />
+      <edge source="1591774928969535488" target="1592215400648941568" id="102" />
+      <edge source="1591774928969535488" target="1591921477775142912" id="103" />
+      <edge source="1591774928969535488" target="1591901208553340928" id="104" />
+      <edge source="1591774928969535488" target="1592066198057136128" id="105" />
+      <edge source="1591774928969535488" target="1591902923780460544" id="106" />
+      <edge source="1591774928969535488" target="1591891562635857920" id="107" />
+      <edge source="1591774928969535488" target="1591922047055462400" id="108" />
+      <edge source="1592228254555205632" target="1592228298784116736" id="109" />
+    </edges>
+  </graph>
+</gexf>

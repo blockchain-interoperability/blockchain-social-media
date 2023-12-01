@@ -54,11 +54,11 @@ def get_sbert_embeddings(
     data_config: CryptoChatterDataConfig,
     ids: IdList,
     model_name: str = "all-MiniLM-L12-v2",
-    batch_size: int = 256,
+    batch_size: int = 128,
     progress: Progress | None = None,
 ) -> None:
-    if device == "cpu":
-        batch_size = 128
+    # if device == "cpu":
+    #     batch_size = 128
     save_dir = data_config.data_dir / "embeddings" / model_name
     save_dir.mkdir(exist_ok=True, parents=True)
 

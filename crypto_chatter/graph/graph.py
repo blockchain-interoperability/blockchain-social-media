@@ -39,7 +39,6 @@ from .communities import get_communities
 from . import node_attribute
 from . import edge_attribute
 
-
 class CryptoChatterGraph:
     id: str
     source: int | None = None
@@ -188,7 +187,13 @@ class CryptoChatterGraph:
             with open(save_file, "r") as f:
                 keywords_with_score = json.load(f)
         except (FileNotFoundError, json.JSONDecodeError):
-            node_ids = list(chain.from_iterable(self.node_to_ids.values()))
+            if "tweet" in self.kind: 
+                node_ids = self.nodes
+            elif "user" in self.kind:
+                node_ids = list(chain.from_iterable(self.node_to_ids[n] for n in self.nodes))
+            else:
+                raise ValueError(f"Keywords not implemented for: {self.kind}")
+                
             keywords_with_score = data.get_tfidf(texts=data.get("clean_text", node_ids))
             with open(save_file, "w") as f:
                 json.dump(keywords_with_score, f)
@@ -411,9 +416,8 @@ class CryptoChatterGraph:
 
         node_stats = []
         for node_attr in node_attributes:
-            # print(node_attr)
             if node_attr == "text":
-                pass
+                continue
             node_val = pd.DataFrame(
                 [
                     dict(

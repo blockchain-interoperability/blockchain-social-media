@@ -1,12 +1,10 @@
 import numpy as np
 import math
-import json
 from dataclasses import dataclass
 from rich.progress import Progress
 from transformers import (
     AutoTokenizer,
     AutoModelForSequenceClassification,
-    AutoConfig,
     logging,
 )
 
@@ -41,7 +39,16 @@ class Sentiment:
             "positive": self.positive,
             "negative": self.negative,
             "neutral": self.neutral,
+            "composite": self.composite(),
         }
+
+    def composite(self) -> float:
+        if self.positive > self.negative and self.positive > self.neutral:
+            return self.positive
+        elif self.negative > self.positive and self.negative > self.neutral: 
+            return -self.negative
+        else:
+            return 0.0
 
     def __getitem__(
         self,
@@ -83,17 +90,16 @@ def setup_model(model_name: str):
 
     return analyze, model, tokenizer
 
-
 def get_roberta_sentiments(
     text: list[str] | np.ndarray,
     data_config: CryptoChatterDataConfig,
     ids: IdList,
     model_name: str = "cardiffnlp/twitter-roberta-base-sentiment-latest",
-    batch_size: int = 256,
+    batch_size: int = 128,
     progress: Progress | None = None,
 ) -> list[Sentiment]:
-    if device == "cpu":
-        batch_size = 128
+    # if device == "cpu":
+    #     batch_size = 128
     save_dir = data_config.data_dir / "sentiment" / model_name.replace("/", "_")
     save_dir.mkdir(exist_ok=True, parents=True)
 

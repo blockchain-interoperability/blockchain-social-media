@@ -42,6 +42,7 @@ node_attr_functions = {
     "sentiment_positive": partial(get_node_sentiment, kind="positive"),
     "sentiment_negative": partial(get_node_sentiment, kind="negative"),
     "sentiment_neutral": partial(get_node_sentiment, kind="neutral"),
+    "sentiment_composite": partial(get_node_sentiment, kind="composite"),
     "text": partial(get_node_attr, attr_name="text"),
     "retweet_count": partial(get_node_attr, attr_name="retweet_count"),
     "favorite_count": partial(get_node_attr, attr_name="favorite_count"),

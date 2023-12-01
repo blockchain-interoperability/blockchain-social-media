@@ -16,7 +16,7 @@ UndirectedDegreeKind = Literal["all"]
 DegreeKind = Literal[UndirectedDegreeKind, DirectedDegreeKind]
 DiameterKind = Literal["directed", "undirected"]
 
-SentimentKind = Literal["negative", "neutral", "positive"]
+SentimentKind = Literal["negative", "neutral", "positive", "composite"]
 
 DirectedCentralityKind = Literal["in_degree", "out_degree"]
 UndirectedCentralityKind = Literal["degree", "closeness", "eigenvector"]

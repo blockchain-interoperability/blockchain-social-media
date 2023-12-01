@@ -9,16 +9,17 @@ from crypto_chatter.config.path import REPORT_DIR
 
 tweet_graph_node_attributes=[
     "text",
-    "sentiment_positive",
-    "sentiment_negative",
-    "sentiment_neutral",
+    # "sentiment_positive",
+    # "sentiment_negative",
+    # "sentiment_neutral",
+    "sentiment_composite",
     "retweet_count",
     "favorite_count",
     "quote_count",
     "reply_count",
 ]
 tweet_graph_edge_attributes=[
-    "emb_cosine_sim"
+    # "emb_cosine_sim"
 ]
 
 user_graph_node_attributes=[
@@ -96,36 +97,33 @@ def subgraph_stats(
         )
     )
 
-    small_graph = builder.random_reduce(
-        graph=graph,
-        random_nodes_size=int(8e5),
-        random_seed=0,
-    )
+    # small_graph = builder.random_reduce(
+    #     graph=graph,
+    #     random_nodes_size=int(8e5),
+    #     random_seed=0,
+    # )
 
-    small_graph.export_gephi(
-        data=data,
-        node_attributes=node_attributes,
-        edge_attributes=edge_attributes,
-        progress=progress,
-    )
+    # small_graph.export_gephi(
+    #     data=data,
+    #     node_attributes=node_attributes,
+    #     edge_attributes=edge_attributes,
+    #     progress=progress,
+    # )
 
-    output_stream.write(
-        f"## {graph_kind.capitalize()} Graph Random Edge Sample Stats:\n\n"
-    )
-    output_stream.write(f"[gephi file]({str(small_graph.cache_dir/'graph.gexf')})\n")
+    # output_stream.write(
+    #     f"## {graph_kind.capitalize()} Graph Random Edge Sample Stats:\n\n"
+    # )
+    # output_stream.write(f"[gephi file]({str(small_graph.cache_dir/'graph.gexf')})\n")
 
-    # output_stream.close()
-    # return
-
-    output_stream.write(
-        small_graph.stats(
-            data=data,
-            node_attributes=node_attributes,
-            edge_attributes=edge_attributes,
-            # include_keywords=True,
-            progress=progress
-        )
-    )
+    # output_stream.write(
+    #     small_graph.stats(
+    #         data=data,
+    #         node_attributes=node_attributes,
+    #         edge_attributes=edge_attributes,
+    #         # include_keywords=True,
+    #         progress=progress
+    #     )
+    # )
 
     if 'tweet' in graph_kind:
         subgraphs = {

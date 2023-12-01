@@ -63,12 +63,12 @@ class CryptoChatterGraphBuilder:
         graph_name = ''
         if random_edges_size is not None:
             edges = rng.permutation(graph.edges)[:random_edges_size].tolist()
-            nodes = list(set(chain(*edges)))
+            nodes = list(set(chain.from_iterable(edges)))
             graph_name = f"sampled_edges_{random_edges_size}_{random_seed}"
         elif random_nodes_size is not None:
             start_nodes = rng.permutation(graph.nodes)[:random_nodes_size].tolist()
             edges = list(graph.G.edges(start_nodes))
-            nodes = list(set(chain(*edges)))
+            nodes = list(set(chain.from_iterable(edges)))
             graph_name = f"sampled_nodes_{random_nodes_size}_{random_seed}"
         else:
             raise ValueError("must specify either random_edge_size or random_node_size")
@@ -88,27 +88,32 @@ class CryptoChatterGraphBuilder:
         graph: CryptoChatterGraph,
         kind: SubGraphKind,
         top_n: int = 10,
-        **kwargs,
+        centrality: CentralityKind | None = None,
+        reachable: ReachableKind | None = None,
+        component: ComponentKind | None = None,
+        community: CommunityKind | None = None,
+        random_seed: int = 0,
     ) -> list[CryptoChatterGraph]:
         if kind == "centrality":
-            centrality_kind = kwargs.get("centrality")
-            reachable_kind = kwargs.get("reachable")
+            if centrality is None or reachable is None:
+                raise Exception("Must specify centrality and reachable")
             subgraphs = self.get_subgraphs_centrality(
                 graph=graph,
-                centrality_kind=centrality_kind,
-                reachable_kind=reachable_kind,
+                centrality_kind=centrality,
+                reachable_kind=reachable,
                 top_n=top_n,
             )
         elif kind == "component":
-            component_kind = kwargs.get("component")
+            if component is None:
+                raise Exception("Must specify component")
             subgraphs = self.get_subgraphs_components(
                 graph=graph,
                 top_n=top_n,
-                component_kind=component_kind,
+                component_kind=component,
             )
         elif kind == "community":
-            community_kind = kwargs.get("community")
-            random_seed = kwargs.get("random_seed", 0)
+            if community is None:
+                raise Exception("Must specify community")
             subgraphs = self.get_subgraphs_communities(
                 graph=graph,
                 top_n=top_n,
@@ -117,7 +122,7 @@ class CryptoChatterGraphBuilder:
             )
         else:
             raise NotImplementedError(
-                f"{subgraph_kind} subgraph kind is not implemented!"
+                f"{kind} subgraph kind is not implemented!"
             )
         subgraphs = [sg for sg in subgraphs if len(sg.nodes) > 1 and len(sg.edges) > 1]
         return subgraphs
