@@ -47,7 +47,7 @@ node_attr_functions = {
     "retweet_count": partial(get_node_attr, attr_name="retweet_count"),
     "favorite_count": partial(get_node_attr, attr_name="favorite_count"),
     "quote_count": partial(get_node_attr, attr_name="quote_count"),
-    "reply_count": partial(get_node_attr, attr_name="reply_count")
+    "reply_count": partial(get_node_attr, attr_name="reply_count"),
 }
 
 def get_tweet_node_attribute(

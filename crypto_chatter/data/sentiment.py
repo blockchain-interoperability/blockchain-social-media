@@ -21,20 +21,11 @@ logging.set_verbosity_error()
 
 @dataclass
 class Sentiment:
-    positive: float
     negative: float
     neutral: float
+    positive: float
 
-    def overall(self) -> str:
-        return max(
-            [
-                (self.positive, "positive"),
-                (self.negative, "negative"),
-                (self.neutral, "neutral"),
-            ]
-        )[1]
-
-    def to_dict(self):
+    def dict(self):
         return {
             "positive": self.positive,
             "negative": self.negative,
@@ -54,13 +45,13 @@ class Sentiment:
         self,
         key: SentimentKind,
     ) -> float:
-        return self.to_dict()[key]
+        return self.dict()[key]
 
-    def to_list(self):
+    def list(self):
         return [
-            self.positive,
             self.negative,
             self.neutral,
+            self.positive,
         ]
 
 def setup_model(model_name: str):

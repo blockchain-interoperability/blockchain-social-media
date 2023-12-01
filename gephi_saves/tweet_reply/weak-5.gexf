@@ -6,11 +6,11 @@
   <graph defaultedgetype="directed" mode="static" name="">
     <attributes mode="static" class="node">
       <attribute id="0" title="Text" type="string" />
-      <attribute id="1" title="Sentiment Composite" type="float" />
-      <attribute id="2" title="Retweet Count" type="float" />
-      <attribute id="3" title="Favorite Count" type="float" />
-      <attribute id="4" title="Quote Count" type="float" />
-      <attribute id="5" title="Reply Count" type="float" />
+      <attribute id="1" title="Sentiment Composite" type="double" />
+      <attribute id="2" title="Retweet Count" type="double" />
+      <attribute id="3" title="Favorite Count" type="double" />
+      <attribute id="4" title="Quote Count" type="double" />
+      <attribute id="5" title="Reply Count" type="double" />
     </attributes>
     <nodes>
       <node id="1595120943915204608" label="1595120943915204608">
