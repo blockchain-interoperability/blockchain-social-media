@@ -3,3 +3,4 @@ from .crypto_reply_graph import CryptoReplyGraph
 from .crypto_user_graph import CryptoUserGraph
 from .crypto_twitter_reply_graph import CryptoTwitterReplyGraph
 from .crypto_twitter_user_graph import CryptoTwitterUserGraph
+from .crypto_twitter_user_reply_graph import CryptoTwitterUserReplyGraph

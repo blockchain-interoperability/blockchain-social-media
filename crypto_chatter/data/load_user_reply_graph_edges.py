@@ -14,20 +14,21 @@ def load_user_reply_graph_edges(
         and not data_config.graph_edges_file.is_file()
     ):
         df = load_raw_data(data_config)
+        print(df.columns)
         # all_data = load_raw_data(data_config)
         # df = all_data.head(10000)
-        has_quoter = df[~df['user.id'].isna() & ~df['quoted_status.user.id'].isna()]
+        has_replier = df[~df['user.id'].isna() & ~df['in_reply_to_user_id'].isna()]
         edges_to = []
         edges_from = []
 
         start = time.time()
         with progress_bar() as progress:
             graph_task = progress.add_task('Constructing edges...', total = len(df))
-            for quoter_id, tweeter_id in zip(
-                has_quoter['user.id'].values,
-                has_quoter['quoted_status.user.id'].values
+            for replier_id, tweeter_id in zip(
+                has_replier['user.id'].values,
+                has_replier['in_reply_to_user_id'].values
             ):
-                edges_to += [int(quoter_id)]
+                edges_to += [int(replier_id)]
                 edges_from += [int(tweeter_id)]
                 progress.update(graph_task, advance =1)
 
