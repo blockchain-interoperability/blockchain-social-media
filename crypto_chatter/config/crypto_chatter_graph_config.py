@@ -9,7 +9,7 @@ from crypto_chatter.utils.types import (
 from .crypto_chatter_data_config import CryptoChatterDataConfig
 
 class CryptoChatterGraphConfig:
-    graph_type: GraphKind
+    graph_kind: GraphKind
     graph_dir: Path
     edge_from_col: str
     edge_to_col: str

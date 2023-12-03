@@ -41,7 +41,14 @@ def build_graph(
             from_edge_valid = data[graph_config.edge_from_col].notna()
             to_edge_valid = data[graph_config.edge_to_col].notna()
 
-            valid = data[(has_text & from_edge_valid & to_edge_valid)]
+            if 'tweet' in graph_config.graph_kind:
+                is_valid = has_text&from_edge_valid&to_edge_valid
+            elif 'user' in graph_config.graph_kind:
+                is_valid = from_edge_valid&to_edge_valid
+            else:
+                raise NotImplementedError(f"{graph_config.graph_kind} graph type is yet implemented!")
+
+            valid = data[is_valid]
 
             all_edges_to = valid[graph_config.edge_to_col].astype(int)
             all_edges_from = valid[graph_config.edge_from_col].astype(int)
