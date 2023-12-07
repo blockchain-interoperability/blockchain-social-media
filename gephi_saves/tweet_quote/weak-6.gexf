@@ -1,0 +1,1064 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-12-01">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="Text" type="string" />
+      <attribute id="1" title="Sentiment Composite" type="float" />
+      <attribute id="2" title="Retweet Count" type="double" />
+      <attribute id="3" title="Favorite Count" type="double" />
+      <attribute id="4" title="Quote Count" type="double" />
+      <attribute id="5" title="Reply Count" type="double" />
+    </attributes>
+    <nodes>
+      <node id="1590311980422029312" label="1590311980422029312">
+        <attvalues>
+          <attvalue for="0" value="Whales will keep pumping and dumping #lunc until holders bags are completely worthless. #luncscam #luncdump $lunc https://t.co/KmruB94n5U" />
+          <attvalue for="1" value="-0.8623790144920349" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592122088990871552" label="1592122088990871552">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/yBz2XyQSnv" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591036772099952640" label="1591036772099952640">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/ExHnXC7kE8" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593933640840269824" label="1593933640840269824">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/dVl41TIsXI" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593576308755210240" label="1593576308755210240">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/ijrqRfuuWG" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1594296365622099968" label="1594296365622099968">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/Yrw1VwsuG7" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1594659072506482688" label="1594659072506482688">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/az3QsfhOaO" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591397117964128256" label="1591397117964128256">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/dVl41TIsXI" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1595383613243396096" label="1595383613243396096">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/az3QsfhOaO" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590664799125635072" label="1590664799125635072">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/DN8bdciKON" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590672171185340416" label="1590672171185340416">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/Nm7990EWsY" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592849051770564608" label="1592849051770564608">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/xoROOhFOx1" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592122145353920512" label="1592122145353920512">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/BOvOBu9Gb3" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591400510611156992" label="1591400510611156992">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/yBz2XyQSnv" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590675662712762368" label="1590675662712762368">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/dVl41TrpVI" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591400549345554432" label="1591400549345554432">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/2kXEyoY1oK" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591397039006707712" label="1591397039006707712">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/DloC9WKClq" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590661627476865024" label="1590661627476865024">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/1raFc6i8zM" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593933517410693120" label="1593933517410693120">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/Rh9UFVM8s5" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590650922186993664" label="1590650922186993664">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/DRo10Ho5yE" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1595020700116742144" label="1595020700116742144">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/ExHnXC7kE8" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593933591561793536" label="1593933591561793536">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/Hqo1dOxmEA" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1595021040366882816" label="1595021040366882816">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/dVl41TqS6a" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592844843776348160" label="1592844843776348160">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/8KIJShKA1I" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593210737882959872" label="1593210737882959872">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/tMGVprywEO" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591763167218372608" label="1591763167218372608">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/Hqo1dOxmEA" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590675347858919424" label="1590675347858919424">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/O5kd8jAGTI" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592119910268014592" label="1592119910268014592">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/k2dt83sXUB" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593207725399609344" label="1593207725399609344">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/Yrw1VwsuG7" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591400653796282368" label="1591400653796282368">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/xoROOhFOx1" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591763250651484160" label="1591763250651484160">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/ExHnXC7kE8" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1595383915463593984" label="1595383915463593984">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/BOvOBtRwWV" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590675707260456960" label="1590675707260456960">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/o833LA33ob" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592484035238166528" label="1592484035238166528">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/BOvOBu9Gb3" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1594658372024139776" label="1594658372024139776">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/34stIJNA3v" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590648115572637696" label="1590648115572637696">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/k2dt83sXUB" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591036606647238656" label="1591036606647238656">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/fgaGokTX6U" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1595018191721594880" label="1595018191721594880">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/DloC9WKClq" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591397002461741056" label="1591397002461741056">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/34stIJNA3v" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590664854289154048" label="1590664854289154048">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/f3sv5exdyS" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591040658768560128" label="1591040658768560128">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/aJt4kL4vZ3" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593210580248461312" label="1593210580248461312">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/Hqo1dOxmEA" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591040569853509632" label="1591040569853509632">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/niCGrcE1Yp" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593210622132781056" label="1593210622132781056">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/yBz2XyQSnv" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593570823490740224" label="1593570823490740224">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/k2dt83sq53" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591400582748807168" label="1591400582748807168">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/BOvOBu98lv" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593933691486580736" label="1593933691486580736">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/KeTuzZDv73" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591763134171471872" label="1591763134171471872">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/8KIJShKA1I" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590671878951428096" label="1590671878951428096">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/1X7T34YsMf" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592849066719076352" label="1592849066719076352">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/PzN41T1acC" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592484100115685376" label="1592484100115685376">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/m4eE1RmpsJ" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592844802990956544" label="1592844802990956544">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/57wnphUvTM" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1594293453911121920" label="1594293453911121920">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/P4qOdASFXy" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592483947287830528" label="1592483947287830528">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/34stIJNA3v" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593576123559911424" label="1593576123559911424">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/uSpAuO6ey3" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592848976092749824" label="1592848976092749824">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/yBz2XyQSnv" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593207769062334464" label="1593207769062334464">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/ocid9YKqw6" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592484081287434240" label="1592484081287434240">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/DN8bdciKON" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593933689855299584" label="1593933689855299584">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/k2dt83sXUB" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591036861358952448" label="1591036861358952448">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/YKXkBoT5M6" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592484059196051456" label="1592484059196051456">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/lNWk0sDYCK" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1594658438432575488" label="1594658438432575488">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/xoROOhFOx1" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1594658333524643840" label="1594658333524643840">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/2kXEyoY1oK" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592849023018618880" label="1592849023018618880">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/Hqo1dOxmEA" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590672254140305408" label="1590672254140305408">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/Yrw1VwsuG7" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1594297825365741568" label="1594297825365741568">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/yBz2XyQSnv" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590650511543668736" label="1590650511543668736">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/MJ00Dc4Wap" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1594297979888111616" label="1594297979888111616">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/oGFHmPB87S" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591759259104350208" label="1591759259104350208">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/2kXEyoY1oK" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592844944787804160" label="1592844944787804160">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/Q57Flt0MK0" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591759825163423744" label="1591759825163423744">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/eGjDSCJRvF" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592483985179185152" label="1592483985179185152">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/2kXEyoY1oK" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1594658493809987584" label="1594658493809987584">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/niCGrcE1Yp" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593208399969517568" label="1593208399969517568">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/dVl41TrpVI" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593933499223851008" label="1593933499223851008">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/AXMwlTs5fj" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591763192040271872" label="1591763192040271872">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/AXMwlTKetr" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591759291564044288" label="1591759291564044288">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/34stIJNA3v" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592848995218763776" label="1592848995218763776">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/az3QsfhOaO" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592119088763252736" label="1592119088763252736">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/DloC9WKClq" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1595020588690845696" label="1595020588690845696">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/yBz2XyQSnv" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1595382531582734336" label="1595382531582734336">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/6iweegPiTt" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592484146190102528" label="1592484146190102528">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/ExHnXC7kE8" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592844892115709952" label="1592844892115709952">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/f3sv5exdyS" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593933549346123776" label="1593933549346123776">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/ExHnXC7kE8" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591759534821109760" label="1591759534821109760">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/o833LA33ob" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1595020743468777472" label="1595020743468777472">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/AXMwlTJGDT" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593570784030621696" label="1593570784030621696">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/az3Qsfhglg" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1595392361906978816" label="1595392361906978816">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/wD94Z50Uhc" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593570762786361344" label="1593570762786361344">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/6iweeh6lVt" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593933452163698688" label="1593933452163698688">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/8KIJShsqNA" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1594293488635764736" label="1594293488635764736">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/57wnphUvTM" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591035136187195392" label="1591035136187195392">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/Yrw1VwsuG7" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591040148447559680" label="1591040148447559680">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/d4ggw57EDd" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1594297864884146176" label="1594297864884146176">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/2kXEypf4qK" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593575876049850368" label="1593575876049850368">
+        <attvalues>
+          <attvalue for="0" value="#lunc recent pump was caused by greedy heartless whales who will take your hard earned money. #luncscam #luncdump $lunc https://t.co/XScQBPqYpZ" />
+          <attvalue for="1" value="-0.933790385723114" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="1590311980422029312" target="1592122088990871552" id="0" />
+      <edge source="1590311980422029312" target="1591036772099952640" id="1" />
+      <edge source="1590311980422029312" target="1594296365622099968" id="2" />
+      <edge source="1590311980422029312" target="1593576308755210240" id="3" />
+      <edge source="1590311980422029312" target="1593933640840269824" id="4" />
+      <edge source="1590311980422029312" target="1594659072506482688" id="5" />
+      <edge source="1590311980422029312" target="1591397117964128256" id="6" />
+      <edge source="1590311980422029312" target="1595383613243396096" id="7" />
+      <edge source="1590311980422029312" target="1590664799125635072" id="8" />
+      <edge source="1590311980422029312" target="1591763134171471872" id="9" />
+      <edge source="1590311980422029312" target="1592122145353920512" id="10" />
+      <edge source="1590311980422029312" target="1591400510611156992" id="11" />
+      <edge source="1590311980422029312" target="1591397002461741056" id="12" />
+      <edge source="1590311980422029312" target="1595383915463593984" id="13" />
+      <edge source="1590311980422029312" target="1591763250651484160" id="14" />
+      <edge source="1590311980422029312" target="1592849066719076352" id="15" />
+      <edge source="1590311980422029312" target="1593933517410693120" id="16" />
+      <edge source="1590311980422029312" target="1590672171185340416" id="17" />
+      <edge source="1590311980422029312" target="1590671878951428096" id="18" />
+      <edge source="1590311980422029312" target="1593933691486580736" id="19" />
+      <edge source="1590311980422029312" target="1592484100115685376" id="20" />
+      <edge source="1590311980422029312" target="1594297864884146176" id="21" />
+      <edge source="1590311980422029312" target="1590675707260456960" id="22" />
+      <edge source="1590311980422029312" target="1594658372024139776" id="23" />
+      <edge source="1590311980422029312" target="1595020743468777472" id="24" />
+      <edge source="1590311980422029312" target="1593933689855299584" id="25" />
+      <edge source="1590311980422029312" target="1594297979888111616" id="26" />
+      <edge source="1590311980422029312" target="1592844843776348160" id="27" />
+      <edge source="1590311980422029312" target="1591763192040271872" id="28" />
+      <edge source="1590311980422029312" target="1591400549345554432" id="29" />
+      <edge source="1590311980422029312" target="1593210737882959872" id="30" />
+      <edge source="1590311980422029312" target="1590664854289154048" id="31" />
+      <edge source="1590311980422029312" target="1590675662712762368" id="32" />
+      <edge source="1590311980422029312" target="1593570762786361344" id="33" />
+      <edge source="1590311980422029312" target="1590661627476865024" id="34" />
+      <edge source="1590311980422029312" target="1593570784030621696" id="35" />
+      <edge source="1590311980422029312" target="1592844802990956544" id="36" />
+      <edge source="1590311980422029312" target="1594293453911121920" id="37" />
+      <edge source="1590311980422029312" target="1592483947287830528" id="38" />
+      <edge source="1590311980422029312" target="1591759291564044288" id="39" />
+      <edge source="1590311980422029312" target="1590648115572637696" id="40" />
+      <edge source="1590311980422029312" target="1591763167218372608" id="41" />
+      <edge source="1590311980422029312" target="1591759259104350208" id="42" />
+      <edge source="1590311980422029312" target="1592848995218763776" id="43" />
+      <edge source="1590311980422029312" target="1593576123559911424" id="44" />
+      <edge source="1590311980422029312" target="1592844944787804160" id="45" />
+      <edge source="1590311980422029312" target="1591036606647238656" id="46" />
+      <edge source="1590311980422029312" target="1592848976092749824" id="47" />
+      <edge source="1590311980422029312" target="1592119088763252736" id="48" />
+      <edge source="1590311980422029312" target="1591040658768560128" id="49" />
+      <edge source="1590311980422029312" target="1591036861358952448" id="50" />
+      <edge source="1590311980422029312" target="1590675347858919424" id="51" />
+      <edge source="1590311980422029312" target="1592484059196051456" id="52" />
+      <edge source="1590311980422029312" target="1591759825163423744" id="53" />
+      <edge source="1590311980422029312" target="1593207769062334464" id="54" />
+      <edge source="1590311980422029312" target="1593570823490740224" id="55" />
+      <edge source="1590311980422029312" target="1595020588690845696" id="56" />
+      <edge source="1590311980422029312" target="1591397039006707712" id="57" />
+      <edge source="1590311980422029312" target="1593933499223851008" id="58" />
+      <edge source="1590311980422029312" target="1592119910268014592" id="59" />
+      <edge source="1590311980422029312" target="1595392361906978816" id="60" />
+      <edge source="1590311980422029312" target="1591400582748807168" id="61" />
+      <edge source="1590311980422029312" target="1595018191721594880" id="62" />
+      <edge source="1590311980422029312" target="1594658438432575488" id="63" />
+      <edge source="1590311980422029312" target="1594658493809987584" id="64" />
+      <edge source="1590311980422029312" target="1595382531582734336" id="65" />
+      <edge source="1590311980422029312" target="1592484146190102528" id="66" />
+      <edge source="1590311980422029312" target="1594658333524643840" id="67" />
+      <edge source="1590311980422029312" target="1593210580248461312" id="68" />
+      <edge source="1590311980422029312" target="1590650922186993664" id="69" />
+      <edge source="1590311980422029312" target="1593207725399609344" id="70" />
+      <edge source="1590311980422029312" target="1592849023018618880" id="71" />
+      <edge source="1590311980422029312" target="1595020700116742144" id="72" />
+      <edge source="1590311980422029312" target="1592844892115709952" id="73" />
+      <edge source="1590311980422029312" target="1591040569853509632" id="74" />
+      <edge source="1590311980422029312" target="1590672254140305408" id="75" />
+      <edge source="1590311980422029312" target="1593933452163698688" id="76" />
+      <edge source="1590311980422029312" target="1593933591561793536" id="77" />
+      <edge source="1590311980422029312" target="1593933549346123776" id="78" />
+      <edge source="1590311980422029312" target="1595021040366882816" id="79" />
+      <edge source="1590311980422029312" target="1592849051770564608" id="80" />
+      <edge source="1590311980422029312" target="1591400653796282368" id="81" />
+      <edge source="1590311980422029312" target="1594293488635764736" id="82" />
+      <edge source="1590311980422029312" target="1592483985179185152" id="83" />
+      <edge source="1590311980422029312" target="1591035136187195392" id="84" />
+      <edge source="1590311980422029312" target="1593210622132781056" id="85" />
+      <edge source="1590311980422029312" target="1591040148447559680" id="86" />
+      <edge source="1590311980422029312" target="1593208399969517568" id="87" />
+      <edge source="1590311980422029312" target="1590650511543668736" id="88" />
+      <edge source="1590311980422029312" target="1592484035238166528" id="89" />
+      <edge source="1590311980422029312" target="1594297825365741568" id="90" />
+      <edge source="1590311980422029312" target="1592484081287434240" id="91" />
+      <edge source="1590311980422029312" target="1591759534821109760" id="92" />
+      <edge source="1590311980422029312" target="1593575876049850368" id="93" />
+    </edges>
+  </graph>
+</gexf>

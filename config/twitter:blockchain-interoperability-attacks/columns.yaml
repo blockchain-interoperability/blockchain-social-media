@@ -8,8 +8,8 @@
 - user.followers_count
 - user.friends_count
 - geo 
-- user.geo_enabled 
-- user.location
+# - user.geo_enabled 
+# - user.location
 - quote_count
 - reply_count
 - retweet_count
@@ -23,10 +23,14 @@
 - quoted_status.user.created_at
 - quoted_status.user.followers_count
 - quoted_status.user.friends_count
-- quoted_status.geo
-- quoted_status.user.geo_enabled
-- quoted_status.user.location
+# - quoted_status.geo
+# - quoted_status.user.geo_enabled
+# - quoted_status.user.location
 - quoted_status.quote_count
 - quoted_status.reply_count
 - quoted_status.retweet_count
 - quoted_status.favorite_count
+- in_reply_to_status_id
+- in_reply_to_user_id
+- quoted_status.in_reply_to_status_id
+- quoted_status.in_reply_to_user_id

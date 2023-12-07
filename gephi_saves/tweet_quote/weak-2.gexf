@@ -1,0 +1,1504 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-12-01">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="Text" type="string" />
+      <attribute id="1" title="Sentiment Composite" type="double" />
+      <attribute id="2" title="Retweet Count" type="double" />
+      <attribute id="3" title="Favorite Count" type="double" />
+      <attribute id="4" title="Quote Count" type="double" />
+      <attribute id="5" title="Reply Count" type="double" />
+    </attributes>
+    <nodes>
+      <node id="1592925743478345728" label="1592925743478345728">
+        <attvalues>
+          <attvalue for="0" value="Announcement from @zksync 🟣 &#10;&#10;2/3 of tokens are reserved for their ecosystem, subject to transparent distribution.&#10;&#10;They are premiering Bankless show as we speak.&#10;&#10;Right now, they have opened wallet submission for their snapshot: https://t.co/7gfEQjKyJV&#10;&#10; Hurry up, get in!🪂" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="258.0" />
+          <attvalue for="4" value="2031.0" />
+          <attvalue for="5" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="1592937057860849664" label="1592937057860849664">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Apropro7 @ME3_nft @tehMoonwalkeR @Aretheytea @residnt_weasel @MNabeelNabeelk1 @AnonyCryptoMous @Mart81107517 @CryptoMansaMusa @ClownishOyster @byobu4 @CaptainCrypto29 @s_mr_mousavi @HamidJa18898810 @NotRentner" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592954247397904384" label="1592954247397904384">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @anh7714 @GhaosQasim @rhada401 @BadmusridwanA @SHIELD0080 @vietkho19846021 @Depresedmichael @RaduPolly @gsgsgs1905gsg @husnainaliasif @jh23_jh23 @nomansys" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592936604217540608" label="1592936604217540608">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Dhruv02151 @thelittletrade1 @RahulKhan1818 @thanakorn25198 @jan_roehl @Timonnn18 @crowned_king__ @dandan297451770 @eboaboibo @BeaconChain @0xqqo @NnDkpt @Dan11835139 @Luka72703817 @waseem4415282" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592938333092851712" label="1592938333092851712">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @SaulKmbur @0xYamii @freshpreshy69 @John10789340 @liushuhang86 @alibalali67 @idaratbn @CryptoColeslaw @gkirpalani @Saadofficial_ @72721982ei @Truesociar @kotirro @franncisco86" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592931644549500928" label="1592931644549500928">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @isavazh @barneszacharia2 @llamacorn888 @V8gue @tashtekin @Sander11233762 @albertasani1997 @TheAlphaRadar @qwerbnb111 @BradyGWright @Lexlegis5 @guidobedarida @crypto_url" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592943708030504960" label="1592943708030504960">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @GFdmss @tismitchie @Nftlord21 @3lochukxx @voudecripto @JsonParser @gbeny007 @ZiggyLoMein @Ezpraye @Venkyvinky" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592945416789598208" label="1592945416789598208">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @meadow__00 @igpratomo @SomboonSp @lolllolllolo @basangtopy @mrstego1 @kenjove1 @Dai_Stable @erikbzhang @weakhand_gg @0xpepeEth @amin_elgazzar @N1CKE4RN @niyi_dokun @TradeFlowsGroup" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592990674034786304" label="1592990674034786304">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @MJahangirifard @meritianlife @_The_Jayce_ @Kakarot_1212 @nahnil_ok @MohdAki66769127 @Dinuxen @ruuhansi @ULTRA13696123" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592983526634565632" label="1592983526634565632">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @shinybadger @KallolKh @ChonmageF @qwerty689909245 @selimmmmmh @RPRP9979 @pennystockz414 @CezaryMusiol @Abeyreex @RichJamCoach @Matheusmdlc @Crypton5511 @cryptolearningk @Midejrib1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592986617727549440" label="1592986617727549440">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @noureasy @mistablista567 @inform9ja @mhingle18 @ATIKURR420 @Maguimahia @0xab42 @Marian31753804 @PerryXavierT1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592972684224532480" label="1592972684224532480">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @leopereznardo67 @handoi99 @kanobidark @instarotaro @Maranjii @guifp123 @UCivilo @SoyenchTaganov @venolol @Krypto2324 @Crypt0vlog @Yazannaffa00 @MisicAleks @sportgram1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592951611571474432" label="1592951611571474432">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Zaziz139 @aliab3dcrypto @wuxinhua01 @kavinomni @Blackwellgroup5 @MagicGeraldXXL @535trader @LeonardII13 @natedagger" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592980410929393664" label="1592980410929393664">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @leepek123 @kyle_edison4 @yunansum @ChelseaVirga @guivzkubi @theseany @Mondal1999S @a_j729 @k_ayomipo @FriedBankrupt @wanandontcare @itisdire @CliffordLynch19 @lxbtc888 @Adam86138343" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592958218309087232" label="1592958218309087232">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @evopurit @apoorvlathey @DhimasBagusSep5 @Valentine_philz @Jdelacruz419 @QY_Tokenize @jakster248 @panahi_nasrin @asheeshjidixit" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592960376614039552" label="1592960376614039552">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Bella2425373508 @Qareen_eth @GAureille @Manathersky_ @MastaPopoo @zoom43755270 @Shuaiwen536 @ryeont @kdkdoteth @shashiee13" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592970016336785408" label="1592970016336785408">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Tytaninc @hungysloth @KatsuoSuke @SosnowiczS @miroslawnagas @13thCrypto @RomainENR @zeroa8b8 @qminh2912 @ArthurUeda @Book3543 @eddie_Hola15 @Jay_cee_99 @Ramanjuneja76 @DineroSuites" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592949799082684416" label="1592949799082684416">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @wi_krypto @Turhhaann @MonsterPunk5 @ishareushare @Metinze11344656 @WrCryptopian @GaneshG19760838 @GgfreakHobbies @cafeconcriptos @chris42dao @Rudy_Antara_ @hr1_bobo" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592986230710759424" label="1592986230710759424">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @0xAstroBee @donhylo @stakeados @0xboodle @Sylvest30733995 @officialinflue5 @Airdrop_Hamster @luke_streck @CSamdrop @RobberFarm @adampolish @NryptoCoob" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592952046491430912" label="1592952046491430912">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @evanpana @laUwbMvD5ehDwfa @Lay56Nights @lincolnfidel @blake_uni @Saleh45880290 @GuleKhient @low__brow @fyrasblog @0x4erDak" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592962614094884864" label="1592962614094884864">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @ShadowM57877238 @omitao777 @Phlaser247 @IReCharly @yash19102001 @Jericho99_ @GregMerson @laptopengineer @UrFavBrownGuy @ck13_sc @charissol @frdaynights @rmankrypto @jaddoescad" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592995549065932800" label="1592995549065932800">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @kyubin_Cry @WWeinye @Shasta__Khan @bayman1991 @muhammadakored2 @Touclair @itzimportant @108Maia108 @gerardguiu @demigod_zen @ch_ril0 @e1endee" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592956003213275136" label="1592956003213275136">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Fate0407 @COLORSLABS @MQonso @lets_getfree @SnegaSenatorova @miqu4321 @HashRare @mhubert81 @ajieprackoso @Caio_Jobim @NanFoundation @KyudoChandler @sergio_monton @boeingcmn" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592963072955936768" label="1592963072955936768">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @iam_m_global @La_Fayette_2017 @thebeginner0 @EasonChiang @jojayangelu @cryptohunkstar @TritonBranded @lucavaz92 @awrnsscampaignv @Kuba30398267 @NguynTh39438704 @jasonwchiu @yxtan138 @mesagunmurmu" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592933524423995392" label="1592933524423995392">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @BUUUUUUUUUUUUTT @McLovin8897 @yuta08230935 @RgkhnDnmz @bhitpostn @Tealsoul_ @MACIO84 @JonathanAdona19 @Onwuasoanyacol1 @DanilKasianenko @haluo90486001 @dxhod" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592966909968150528" label="1592966909968150528">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @0xRugbull @mvanon007 @polar_blanket @_cryptomonnaie @PEACEFX3 @jonabelle10 @Vimal24471968 @oelibla @nvrgveup001" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592940181115445248" label="1592940181115445248">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @egunmogaji_ @danieluch03 @jpaine @HectorM76940129 @D33pM1nd @6ktvP @wangyon81352473 @8Cn8yfBx5agUGco @me_trail_blazer @SamMolloy7700" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592944152114700288" label="1592944152114700288">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @vsahasrarav @perezno69 @mr_s_trader @bright_abbot @Kristian_Gill @Cs8ZHPBc0k2C5hT @Grievesy91 @utan_utan_1 @EsperDreamz @bookiesnitmare @cTi99753105 @MtunezOfficial @Nur17765472 @iamdiarrhoea @budtezdorovymi" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592967758207066112" label="1592967758207066112">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @yo_ho_pudding @tyrone4kt @jshaust @AboloreOwosheni @ij_will @SAMYESHUA_01 @I_am_Subcaptain @sovpoker @AkhileshDubba @EthelynSteinbe1 @hodlmasterjr @jr_Stevenn @0xbull0" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592968661467533312" label="1592968661467533312">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @maybe__21 @Ayisha973 @BabaEgbesu @themaxplanck @diudontdothat @TheBenMeadows @ghostframes @TheCodaddy @liendong305 @Gregordinias @ayuhlmt @ILiketoCope @ItsOdez @Victor96192258 @defikamuy" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592959489090916352" label="1592959489090916352">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Artemida55 @the_burmer @ofanaMr @chaarr77 @FuegoCooks @MisterBrad2 @ALTEREDtrading @Milan_Kent @0xVelo @Irena_NL @KumarPrince0456" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592991141087285248" label="1592991141087285248">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @PoptartShartEth @RufusBandito @fdarkpaw1 @peemazii @wytsisup1 @zhepant @linhye2811 @ergintoros @Alpha0857 @sebastian_linda @Martincrypto96" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592935668430540800" label="1592935668430540800">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @N1_NodeOne @eagleculture_18 @porunapalta @MCVoiculescu @Veraciouspay @Flanalog @kreatureofhaviq @Octop0us @GhMaclean @naychi89073055 @Ariqsp2 @kapookpukluk @ADETOLATaiwo20 @ChrizWOD" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592946718827761664" label="1592946718827761664">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @cadamsroed7 @zwalletz @yons_1010 @thakkarakash10 @Ryl_ornot_Ryl @yagura_crypto @SanderRegtuijt @grey_mate @Cookingjj @emreturn @JSarge_ @astroid_ust @susua112 @srich93 @qVLs6CzIDcwbkQd" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592950701571047424" label="1592950701571047424">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @CryptoGucci @shitaverse @becklyn06 @MarcusMolly69 @tishdemsas @junkie_defi @patipon_amphet @PickACrypto @TinCh53054927 @evtikhonov @dipankargiri98 @Prelektro @andrejatem @ali97ai" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592958631825506304" label="1592958631825506304">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @webdapps @PrmaxStudio @aseunalgang @Benjamin_HQ @0055211evg @RebelPinscher @MMattfnm @otto_meta_ @EJseong95" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592982128870162432" label="1592982128870162432">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @KarnanSatchith1 @CryptoNewBie___ @Setiadiramdan3 @crypto_evo_0 @thorloki6 @HerryGu31307441 @weiwei29934228 @Roking17615030 @TwTTournoi @VasuNagpal5 @mee740 @masonic_tweets @masud_basheer @toshiba168 @Teddy_Pod" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592970907911606272" label="1592970907911606272">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Divaviaa3 @mingmingbbs @pil_coin @Duicymill @chalomeon @20kobe04 @olbarnoti02 @ThursdayCapital @andpi314 @yeowster_ @mimichu_nft" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592944626507599872" label="1592944626507599872">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @kevin_borgh @DeonsTony @GeorgeDk3999 @probablyEternel @0xkishin @puneetdogra64 @AlJack2287 @jpg_james @Gram_w_zielone @tycoon_sj @piaodaoal @dcacharya26 @fanzi61282436 @Cactusoda_" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592934419924647936" label="1592934419924647936">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Clare_blue345 @LovePeaceCHN @Cermak_2x2 @Ninepz2 @oscar19826 @Longan_7 @CryptoMoon15 @abrag781 @btc_ad" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592967328836485120" label="1592967328836485120">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @EdoInv @BertieMcnaryy @as_tuss @tidragon @0x_seal @Sebas41030706 @DAVE73561766 @ethereumgwei @XFT_is_coming @asifchach" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592973986249703424" label="1592973986249703424">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @voisinduzero @Jakub_Hermaski @Billtorichman @Trevor_WHuang @Tiannah5533 @onronynft @beeteegg @Army_yg44 @akbartredao" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592945013289517056" label="1592945013289517056">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @luka_2022 @EssoGamingz @mfsparkz @Whys_Profit @tether_io_ @xrpot @chigbuinc @MayaDev88630647 @peropone5965 @0xwastemon @MellbyeStolen @whatsfloor" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592973125687574528" label="1592973125687574528">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @ELIXIR0765 @hungplayboyy @doodle7270 @JTMAKINO @dh_vali @JZiaTries @DavidAdekanla @wee_crypt0 @ngmi2k @ENGINE952217781 @MDAPE33" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592953340136026112" label="1592953340136026112">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @InfluencerOfw @adrianhj80 @NFT_Shivek @VICMORE47951666 @cvsThal @mikremikey @Sanlalex1 @vikram_bhujbal @0xPamp @_Dreambit_ @bigman7911" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592971744415219712" label="1592971744415219712">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @PlatinumVasser @tallgraffe @stpaul99 @Thecaptain2525 @sathar007 @Hardleyart @xbrigantexx @0xSago @52HzShrimp @apesop_rocky @0xdenni @roi09091999 @EddMartian" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592951133605363712" label="1592951133605363712">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @basuseb @thebigbillz @ninodefashion @HHbead00 @SilasYayoi @zhangfangjun1 @reemar_martin @Adam35853638 @shahzaibbaig @julieslime @DavidPour5 @PZdreamer @Chching_ @datdotdoe" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592955541353299968" label="1592955541353299968">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @0xcallmenikolai @0xCalvin @Dariusz98557302 @raybeet92 @NikhilC36537627 @my_airdrop @BIFROCKDAO_VC @matrix_neooo @EnekoLambarri @GramHaryoo @abhishek_shaw_" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592981265283973120" label="1592981265283973120">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @dushdac @jumperchow @Anonymous778866 @kenkaydee @0xPraxeo @vinceweckstrom @kevinn_0x @sqihenz @_b2b2020" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592997300141719552" label="1592997300141719552">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @GalanteGobbi @jiangxiansen11 @Marky8882 @Rosario18La @usertwi03626722 @mrhelboyy @Ivancitooo777 @jonahrobrts @Adityaxshrma @BlankerLin @Cpt_Crypto_boy @Alexcold13 @unshakablemamba @Cryptourist9 @ricardorojascp" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592947088132046848" label="1592947088132046848">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @rediempti @goblin_gob1 @brlck974 @dfsabugal @nftsToki @geceesendemir1 @dracshark @CapibaraAgent @Jack_lovex @mnm57" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592988483513352192" label="1592988483513352192">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Goertii @vinodoberoi_009 @FranASoto1 @elonmusk_Web3 @shoaib_soban @PressburgPrince @cryptobytz @onthefritzNFT @cLarry8888 @shnedisingh @steffenbruinsma" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592996839942651904" label="1592996839942651904">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Izzyblack0 @Benek53651727 @kato_888 @TonyCh1ll @SnowWolf_AVAX @amitbhatti68 @zem0cripx0 @brianyooner @Willlllzy @let_it_crumble" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592970462786879488" label="1592970462786879488">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @boompathompong @SelfSimilar8 @MaCrypto2020 @Proteus416 @CryptoxJiuCai @eth_is_money @ridethemars @samhuda89 @WisdomBrut @MacBrandy5 @TheWalapy @z7039585 @kkk111225" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592987566734684160" label="1592987566734684160">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @definyeth @MickValz @bqbayaga @EricKellogg121 @CryptoNoob8 @cryptolorian0x @patrick_A_B @cemerkan @Sun_day4085 @bkm9165 @Honey_badgerizi @Alfredomosmen @Goldiesim1 @Shiba_Anna" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592966464822161408" label="1592966464822161408">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @boyruffy_ @Wongism @WhilingUSDoll @ManilaScrapFold @Stanleyhype @mroynaldig @YorokaK @LeoK4z4m4 @leex_levy @idkwhatiseth @Wollishofen7 @ineligiblebloke @Chiranjib_1 @igtrustq @ChestnutPhil" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592960795163340800" label="1592960795163340800">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @CalisHulk @top7ido @Don471408544 @KC15426629 @0xnandos @0xBoru @zhoux773 @nik0xla @TomasSuchanek @POPAICHAT @aeaea81" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592984416632332288" label="1592984416632332288">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @CryptoXpirate @KAKA_20210 @TGavazon @jjalinka8591 @richcavington @ayush_nfa @repka41303507 @SaraLi0329 @ThusBoat @KhangHo13702268" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592966015763111936" label="1592966015763111936">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @KryptoBezSciemy @thejonas2201 @luiscm88 @dokudoku1219 @KoobfcE @Strayalien_eth @oneanzzero @juliusb75 @RichHzDao @Quirkverse @greysimmons1 @neur_ex @cokinator2" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592936124007079936" label="1592936124007079936">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Juancho54171854 @Messilona400 @mysun091991 @gxc1273611106 @sleepengineer1 @KanjiriETH @nileshkhaitan @JudeAlagba @dr_ridab @iraklii152 @Monk2400 @zkchun @0xGBridge" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592956451869581312" label="1592956451869581312">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @0xadib @mouhamedfatim @NasterSN @aseppirmanto105 @ankurluniya @CryptonimK @JohnSmi23947619 @konan5732 @TrcAlexis @mikedemarais" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592987064240201728" label="1592987064240201728">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @srt_crypto @ilmeaalim @BenInvest4 @RSRROSE @toru_arbi @kayzee006 @tong21030177 @Julee64980145 @ogarcourage @eldnsd @nwala_francis" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592991977145917440" label="1592991977145917440">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @yupeng62524283 @CryptoSauce2036 @nub310072 @salilwan @Minhnguyen831 @BDM93_KM @Anton33033701 @facz31 @PauloPradoCL @KryptoSmerf" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592957774035419136" label="1592957774035419136">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @EnricPedro @RogerKerr @gavin4469 @ArafatEasin9 @Kent06820021 @Ethereum_ethh @EBRSO_eth @NFTCraZyFr0G @crlnglo" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592993260535808000" label="1592993260535808000">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @jibarlu @itzOBF @push_intern @AlisherOrazalin @ManlikealvinNFT @darki456 @AshisPa14038584 @nakaishi24 @SamScolari @snookipollizi @Demolished67 @Tanahlott @Yo_itzmeDil @cntinuoschicken" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592947544840994816" label="1592947544840994816">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @NadiiaKaras @bryptoRomi @ccttml @Helkem0 @tobi_loba20 @SeoulRower @mithun0880 @Woody4L @condishh @guillaumecelan1 @ElenaKlaici @nguyenvan88 @ZhouYaYa @Aldolase16" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592948899500941312" label="1592948899500941312">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @0xcatmario @AltcoinsAnalyst @_AroundTheSun_ @TheoSagniez @BOUNCE2941 @DobleeJ1 @Sytrimi @big_bonobo @esren__ @bright_amazing @0xunusual" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592961708360077312" label="1592961708360077312">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Hawkeye10s @ArtemSetlichni @aryanReddy017 @pigza6459 @withraminn @jarnotweets @JonathanLieberm @nwabritish @slickric0x @memechanzy @Prince_Ligero02 @bearturbo17 @SpineSwitch @Israel26107573 @Element_abdul" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592965578758950912" label="1592965578758950912">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Apotheosis721 @DERRO17 @ThinTallTosin @vanilla__milk @bennybackwood_ @hereandn0where @KenBlou @zardthecreator @TH3MATRIXISR3AL @bdalnas00053827" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592992401953787904" label="1592992401953787904">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @murakamesan @elkonzo @33_bainaru @stanovelli @Amiancha @chainprogrammer @vladodenda @hhaaaeee @Jhalander1 @HavingTwoFaces @0xMett" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592957299542593536" label="1592957299542593536">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @TONE10LITE @VuongNg27302559 @Guillermo @iretioluwa44 @tomwanhh @Runner930 @Radar_Fi @PeanutUmbrella @Moonboy962 @HashemianPedram @ovsyaniks @Ecc9999 @ninghuabo" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592972213350961152" label="1592972213350961152">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @SDFSDF12160405 @willydsnow @JackBolonias @Cle_ritas @joaquin_nunez @TheBlockDaddy @prion_hp @NicoNiculus @baestcoin @LinkRF1996 @Sashlah23 @j_tobo @macwind" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592930805189578752" label="1592930805189578752">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Trangmoon1985 @flame_922 @notantifragile @szazdi @hondwo @Vaiaki1 @SlashCurio @Dmilejsky @jailbaad @Honey_Wealth11 @macevoy_eth @cookiebopper @Lincoln1_o @cursedhorses @omegafattyasses" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592991546055725056" label="1592991546055725056">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Azof2134 @mcsikdog @angoshisanema @sens779 @JanisKey95 @richeereagan @Urameshi_Trades @696_eth @Hazaru59 @greeniedoteth @WhoIsBlank888 @djcuku @SunbinPark4" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592983074706690048" label="1592983074706690048">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @TheCryptoBruvs @shazils @kangmurphy @Krzyszt05660835 @estrapalucios @S_Yusuf_R @behtin1 @Adityamasal2 @AlexJ9555" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592959075138293760" label="1592959075138293760">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @k44a5asi @qarif23 @wiz0miko @KKsui7onsX6Z7F @ANDowaymeh @ussu_ussu_ussu @JordanDRyan @dineroslimz @N0N_fung1bl3_J @0xice9" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592964317305262080" label="1592964317305262080">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @CriptoInvoker @BrianSolitaire2 @mukeshmundo @halcyonprice @EgwumaMarvelou1 @myway50000 @tim56613 @FaRAZ9990 @termizi1985 @AntonBezB" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592952451380170752" label="1592952451380170752">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @drecrypted @whit3diam0nd @okdecoding @bmacedo1993 @ermanoztezer @ericghoz @Cryptoyoyo64 @p99774 @0xHabibi @RamonGehrig @papta07 @theriversiever @alxblock_chain" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592993714007592960" label="1592993714007592960">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @deadhare4 @Emircnshn @fedupoffed @NFTCollector_05 @trout1973 @AfolabiDamisola @Kuljira29557299 @Eduardo29132116 @idavitalik @chestnet2000 @cryptobilz" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592941524387778560" label="1592941524387778560">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Louexes @3than6hen @Fer1978_crypto @kocoinmerd @eustace_crypto @kabakcekirdegi @jewishfarmerETH @BossLad55060448 @bk13842 @AdrianKosiorek3 @MargaretNowak8 @lqeQJ0ebQpNSYpH @huanghuxiaosage" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592938805212106752" label="1592938805212106752">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @kritiker19 @danest @patrimonasia @0xfust @obscurio_sharkz @GmanGrib @Eduardo32276906 @ticobingofr @AlikadicAmar @mukeyabi @10088eth" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592939250668163072" label="1592939250668163072">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @MangyanH @CryptoHelden @MbaukwuMichael @fujii2468 @jamess_lens @IslamajKlodian @Thebabbass @CindyMcilvenna @rs20b @uppsne @CryptoEra9 @Artasorias @adewunmigrac" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592937892577693696" label="1592937892577693696">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @ShinobiOfCrypto @TripleONO @RamzaBeo @fomosaurus @0xPJCooper @Emmaz2021 @NnaemekaAj @DD121981 @microBrin @BingleBit @akp111_eth @yshoeb123 @lowkeymork @VuLich86" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592931202448904192" label="1592931202448904192">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @HJJHXX @MonteCarlo1865 @STUPID69GENIUS @eneojo_abraham @KnuthVera @tzsqbtc @maciekwyso @tito_cda @yuccie_eth" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592995067354304512" label="1592995067354304512">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Bellphegorz @palvea333 @Domien89 @hape78873942 @0xTYZ @fedebianu @davesg_ @17nftcatcher @Investormadame @OfomaFranklin @chubbysharks @WackoMako" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592961277424734208" label="1592961277424734208">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @DonJavi05_hn @amar_k22 @YeaYupMhmm @usur520 @rompecriks @papa_pon_0920 @helloworld5409 @DavidWang97 @Mr_Ranker_" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592952869267083264" label="1592952869267083264">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @pleezseedeez @my_dog_on_a_bee @Bulls13095813 @neolee97091415 @only1franchesco @Beverleyangel88 @xsj06 @Dance191919 @Armansoheili21 @helloworldty @winxml @ihsanozev" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592992821409386496" label="1592992821409386496">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Marco3_0 @wannaToken @Ajatz02 @arcane707 @picsou0x @ModernEremite @Koinevangelist @Ayomhi874038891 @splytverse @twosub2783 @cryptorun0" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592956866711425024" label="1592956866711425024">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @rovertred @CryptoMasster @SerVeek @0xE0da @ItuFerguso @Jflimlim @0keneth @ZweiVan @Toey_Worathep @samscrypto_ @telvmi @SethDannyYak @jakub_rusiecki @runnercorunho @Zeebbles3" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592988936854736896" label="1592988936854736896">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @DeltronBurro @RemziCakmak4 @qli0709 @eliflight @Artiflex42 @SOORIYA36909083 @thanhhoang_eth @ThreetothePower @anna__ermakova @Mupnup @no_shame4" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592932575756324864" label="1592932575756324864">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Dark_of_you @xiaov222 @YousefHatamleh1 @souravbanik234 @Aram39291641 @jingxinchewu88 @stebco_eth @SignalsStation @crayZ_one @zaheraltier @nullpackets @der_Mo75 @168qqlmx433772 @NFT_genesisclub @sebastian654591" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592933985667420160" label="1592933985667420160">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @jackbcoin @heytranks @Mishumiszu @kucchiaio84 @BlockVein @HODL_but_NAFA @Sailingtobefree @lai_ethan @TheNexusSol @prashant_brj @Spacebone" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592994168041017344" label="1592994168041017344">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @ChrisHy11002117 @HuldahDXY @sokunbi_taofeek @cryptojsb @jon4runner @rrifat21 @CrypticNFT @slashyanyanlens @sam__cee @mightylockz @ductr0990" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592954649631690752" label="1592954649631690752">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @sajbrz @EdgarDyachenko @lewisjah03 @CummyMoses @jyontara @Malamore19 @mariahcray2 @Mateusz66345324 @davidersky69" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592937422354288640" label="1592937422354288640">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @FrekoB10 @NftAlerts0 @CangjieArt @neeglapt @triberio1 @mundi8500 @Lulu__Chan7 @polodonberh @KpinvDigimarket @saitamakhan @SamuelK90194015 @RookietraderAR" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592941091762102272" label="1592941091762102272">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Chukwue07793530 @oxdamola @SidemonB @saitam_lfz @nbatuhang @CryptoLaird @chief_sgt @woke33e @SamuelXeus @iam_gpes @will_bay81 @seyfo @JanHenkG @Adamuso1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592985751901569024" label="1592985751901569024">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @liamzhueth @HuynhHongNam3 @CalvinC1997 @mk2v_ @hypmind_j @mfqbrhm @zyc968259 @nullbitx8 @Amatullah840 @CoolanFabian @CheechnKong" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592995979711873024" label="1592995979711873024">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @saudadeeeeeeee @BigDrewCrypto1 @keyrxng @uhohrypto @nicholaspoljak @voyagetocythera @Nguyenb82214698 @Sameh7 @Raghav078 @KanIbrahimee" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592969566384422912" label="1592969566384422912">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @MarvelShivam @NubDubCrypto @cryptoking618 @linktadpole @Abdulhafezkhaan @Habeeb_Oguns @NearyukTV @elvisiromu @Tibetin51 @MEAQureshi @cycivan @bullishliving @Crypto_Komorebi" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592964756172046336" label="1592964756172046336">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @muggetsu1 @0xcuriousrabbit @CyrilWe @boldrack @Ahmed45548885 @TochizziPraiz @dk20460000 @airsurgeon @Redllne1 @Putulis @SlotheCapital @molipcc" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592981717970976768" label="1592981717970976768">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Ellychoo1 @stavrosioannou9 @NdererWa @6lack_panther @renilpa @burningart7 @William_GYW @Elbrosso @Gromlin1606 @blakehunsicker" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592947966825807872" label="1592947966825807872">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @prodizy @JulianLendFlare @L2DAO_Intern @t_enki @LasithaSayuran1 @AbdulazizMalam @ustan110 @younghisham @Zen_Trades1 @Shiloh_mymy @ZavarzinSergey @nuno_martins21 @sonoco___ @Da_mo3 @diopprof" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592982608836640768" label="1592982608836640768">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @CathyMi70018423 @mjwigham @PyJnr7 @0xa16z @re_dial_ed @candyn4might @DocteurLopez @themaxkoe @SirPedrodGreat" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592932108246593536" label="1592932108246593536">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @SOJU_1999 @FreeSMSNumber @lip_eeee @marcusngjm @OlL39435125 @BrochardBenjam1 @levolev @Theta2018 @Bash_Buu @LeilaFo27171749 @tyunechow @y39303098" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592939729355681792" label="1592939729355681792">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @cryptomaxks @Craze_Lattern @Chandler_Oates @BullishBK @akaGatorNFT @dee_abimzy @skatensurf_ @cryptoenthu55 @ShadabAslam @OuiMesieur @lukinhadornelas" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592980829000839168" label="1592980829000839168">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @MS_CNFT @heynimsi @OnNetFiT @eayeffectspro1 @seyhadsk @OccamsRazrr @h_dalci @Gentrazor1 @star16133665 @carlosher91 @CindyNiblett8 @gkqsvvxrty" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592965170414104576" label="1592965170414104576">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @baikin_icp @WalidKdiri @bumb1ebee_ @solana_papi @lane_starling @rruhlen @Arya_Spirit @Rict__ @Cishanjia_" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592948444200857600" label="1592948444200857600">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @duynft @mazimoto_1990 @ApeWzrd @0xTijan @turtle_investor @JackSeville3 @Alphaseeker9 @GuceYang @Wade98532266 @RafsOwn @Vinith_Kishore @JwJinw" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592953782094426112" label="1592953782094426112">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @dionelNFTs @tsunade8817 @ricardo_reolon @bscgemster @dontpanicv @0xHanskerom @0xVex @DijeetalArz @punksded_eth @KZBinance" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592989800440950784" label="1592989800440950784">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @garooh @Hondou66 @MarsDroid1 @arol_isqandar @lyslexiee @ZielonyMis @CJ6696R @Old_school_defi @Dodo_la_Soudure @ohm_hassan @SofSukh @FanybagusW @jajomak77" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592968200031203328" label="1592968200031203328">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @sockawoo @playbigtime @RTIIINFT @techmoneymedia @clitonmaita @kadak0697 @dont_ask_vi @tushura777 @JV_crypto" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592984888294404096" label="1592984888294404096">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @_MrDefi @PepeTunderPower @Otitokoro6 @rishabhkandari @Nguyenson8688 @shaeer_c @madnomad00 @RomanSe37887352 @Retroscapeco @FarasulN @chichi1031moon @Rigo_dgg @Bitcoiner2020 @prince_nero_" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592950272422473728" label="1592950272422473728">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @dedikrcm @therealbglin @Ishaya001 @Temo_RH @Kanebb396689996 @ponchowannie @itsatimewaste @FTauste @ethannn56 @Ragnar1356 @adayKAK @Elvira190885 @orijame @KDA9922" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592990237781037056" label="1592990237781037056">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @MixedMuggle @blackoutbab @RM_Crypto1 @NWeeranut @FValuta @DavideBrbr @0xDrogon @krzyswirk @goska_sta @radziohan @Ramb0x4 @The_Merovingian @iamzdiamond @NFTBilly5 @Dunphy0778" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592935255123447808" label="1592935255123447808">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Majax_fx @kazushiipe @master192323 @Shangri3La @deadbyrage @srisiwan @CKhemar @bubblebee117 @NoahProse @paulka007 @HabideenOlonade @winnerhelystorm @shijinlong558 @Robin03313810" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592949348102328320" label="1592949348102328320">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @pulis0828 @amc1111111 @7jahana @chouEma87 @Frapln @DominikJeitler @AdebayoAyotun14 @Abdulbaki2000 @mindseal00" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592942426515066880" label="1592942426515066880">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @delight_josh @morgan_nev @BOsantai @nftportalnews @laughingfoxeth @blockthrills @Bartek_77 @weilaicheng88 @Godilionaire" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592946274973933568" label="1592946274973933568">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @suraj_navgire @CaioGustavo96 @trade_ayan @Jma212121 @ChrisLong116 @moonofmooner @ha_jaewon @0xClap @doge_ravi @maac27043972" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592945854260076544" label="1592945854260076544">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @onenameneo @Daffy_81 @thuyquynh205 @alighol1338 @Kilom5551 @Rajatco09534668 @StevenNevins @BarnacleShinobi @inhajoojoo @DJ___Turbo" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592988003643056128" label="1592988003643056128">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @MGokhanA35 @afczucc @eazy1886 @QianMo85229356 @JstarCS @tropicalgus24 @DuYaKnow @pedro13guerrero @fuzhu15332342 @ChisomEdwin5" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592969125542125568" label="1592969125542125568">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @nambivicky @Tun75306330 @heistxbt @Joel278351184 @sebbydev @netprophett @chuuukz @100000000_ok @wolnanazwaa" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592971330303188992" label="1592971330303188992">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @maroka_uchiyama @amartinbh @lifeisaponzi @JacobFox11 @ilya_move @6nitch @j_rekay @mphilmak @SubcaptainX @Optimis72209668 @0xChrisCosmos" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592963958876823552" label="1592963958876823552">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @vantrucsp @MardulR @suku_cant_dev @moiso @ChinaMan_Can @_dhruv_chauhan_ @CatBonkBin @cryptomoogle @SJalang69 @jtracyusmc @DeDiasanger @LpThun" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592940621991665664" label="1592940621991665664">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @NFT_CryptoFish @Eromosele97 @Gibaracione @RayMegabyte @instigating @metadravidian @javielcambiador @estebancrw @Estarossa_guy @dexnanxed @AmyyCrypto" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592959928670773248" label="1592959928670773248">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @kathyland2022 @nerd_json @TylerCFA @Phantom1336 @jsdvhhvfdxdf @huei69 @MrMoses111 @metajb7274 @10nixenK0 @TreeWaterfall @xodegen @nayt_nya @Sidselloe @IsaacOlusolaEm1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592934817070735360" label="1592934817070735360">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Kerimoks @VerasNFT_ @0xsteffiD @DinhThuan1 @VirtuJozo @Johniolaa @Token_Ona @Tisoga @MastMahool4 @Frank90701678 @lit_xbt @grasyang6865 @damlkbulut" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592962143368142848" label="1592962143368142848">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Edu_Bracamonte @especulacion_ @lavalouieth @khangbuik1 @daikwojustin2 @ElzenVd @Dog1Danny @icecoldbina @utopictroll @cryptochadcap" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592985334819586048" label="1592985334819586048">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @cannalbantt @_ibrahimdervis @Marcel_812 @cardanorocks10 @Tola_niii @lyinass @Silvaserger @CTWatching @DeFiMoore1 @bon26606" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592983968663539712" label="1592983968663539712">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Chamo0000 @selina86237535 @Abdulrasaq04 @Ferhat32164800 @gauravnegi19 @Faruq619 @jantexxxx @black_cat_nft @JeanetteFarrell @DisruptionHedge @Fatboy_1982 @Jacksondel6 @Talsadoum__" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592942856943304704" label="1592942856943304704">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @pepebullzooka @Hillu69 @houye1688 @VardCrypto @0xterrylee @AinaKanou @CKTAjith @jakemoore1987 @zelisemeksiz @Soumya2557 @ANGELO1898 @Shoukat73313620" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592941954060648448" label="1592941954060648448">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @KingsleyAmaobi1 @IamAdiG @Pacha994_ @Nikolai456789 @Philipiaczek @lillakshay @Rusyda01 @Thonymiles1 @MatthewOsas5 @georgethms1 @Iam_DrKish @ZakutanskyA" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592933060978540544" label="1592933060978540544">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @RavinRishmantha @magicalrabbit06 @Schleiff7 @jcastro_eth @MarcUs25908546 @iceycoffeee @bimasatria5298 @ninaray @anvahemmanuel00 @BardOfTheEther @tycoonooo @ifeanyi_orisa @mahm00damer" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592996429479673856" label="1592996429479673856">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @aswad_forever @Gametrader @illustrious_eth @bagofincome @machinecoach @graphicaldot @AreguamenF @breeezyyyy2 @ezidinma_p @KryptoEmeryt @randomdudeelol @yceis @notbenedikt_ @Phiccolos @sophina2501" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592994611987087360" label="1592994611987087360">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @tran1zz @svv279 @yarmun1 @JumpyWizard7861 @vlearn00 @MirrorLand9 @SpacedPainter @Saeed89655060 @btclabs_eth" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592963532475301888" label="1592963532475301888">
+        <attvalues>
+          <attvalue for="0" value="Zksync token is live?? @Jmo_1900 @saigononbikes @altcoinavenger @AsepArdi5 @ftabhax @welder_thomas @Kafka_CP @keelor_karan @PaulTTran @123_seasons @moneypads" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="1592925743478345728" target="1592937057860849664" id="0" />
+      <edge source="1592925743478345728" target="1592936604217540608" id="1" />
+      <edge source="1592925743478345728" target="1592954247397904384" id="2" />
+      <edge source="1592925743478345728" target="1592931644549500928" id="3" />
+      <edge source="1592925743478345728" target="1592938333092851712" id="4" />
+      <edge source="1592925743478345728" target="1592943708030504960" id="5" />
+      <edge source="1592925743478345728" target="1592945416789598208" id="6" />
+      <edge source="1592925743478345728" target="1592990674034786304" id="7" />
+      <edge source="1592925743478345728" target="1592983526634565632" id="8" />
+      <edge source="1592925743478345728" target="1592961277424734208" id="9" />
+      <edge source="1592925743478345728" target="1592953782094426112" id="10" />
+      <edge source="1592925743478345728" target="1592986617727549440" id="11" />
+      <edge source="1592925743478345728" target="1592973986249703424" id="12" />
+      <edge source="1592925743478345728" target="1592971744415219712" id="13" />
+      <edge source="1592925743478345728" target="1592946274973933568" id="14" />
+      <edge source="1592925743478345728" target="1592956451869581312" id="15" />
+      <edge source="1592925743478345728" target="1592945013289517056" id="16" />
+      <edge source="1592925743478345728" target="1592987566734684160" id="17" />
+      <edge source="1592925743478345728" target="1592948899500941312" id="18" />
+      <edge source="1592925743478345728" target="1592946718827761664" id="19" />
+      <edge source="1592925743478345728" target="1592992821409386496" id="20" />
+      <edge source="1592925743478345728" target="1592947544840994816" id="21" />
+      <edge source="1592925743478345728" target="1592932108246593536" id="22" />
+      <edge source="1592925743478345728" target="1592956866711425024" id="23" />
+      <edge source="1592925743478345728" target="1592973125687574528" id="24" />
+      <edge source="1592925743478345728" target="1592988936854736896" id="25" />
+      <edge source="1592925743478345728" target="1592970907911606272" id="26" />
+      <edge source="1592925743478345728" target="1592987064240201728" id="27" />
+      <edge source="1592925743478345728" target="1592945854260076544" id="28" />
+      <edge source="1592925743478345728" target="1592984888294404096" id="29" />
+      <edge source="1592925743478345728" target="1592950272422473728" id="30" />
+      <edge source="1592925743478345728" target="1592932575756324864" id="31" />
+      <edge source="1592925743478345728" target="1592939729355681792" id="32" />
+      <edge source="1592925743478345728" target="1592951133605363712" id="33" />
+      <edge source="1592925743478345728" target="1592949799082684416" id="34" />
+      <edge source="1592925743478345728" target="1592988483513352192" id="35" />
+      <edge source="1592925743478345728" target="1592968661467533312" id="36" />
+      <edge source="1592925743478345728" target="1592959489090916352" id="37" />
+      <edge source="1592925743478345728" target="1592986230710759424" id="38" />
+      <edge source="1592925743478345728" target="1592944626507599872" id="39" />
+      <edge source="1592925743478345728" target="1592959075138293760" id="40" />
+      <edge source="1592925743478345728" target="1592942856943304704" id="41" />
+      <edge source="1592925743478345728" target="1592935255123447808" id="42" />
+      <edge source="1592925743478345728" target="1592955541353299968" id="43" />
+      <edge source="1592925743478345728" target="1592981265283973120" id="44" />
+      <edge source="1592925743478345728" target="1592935668430540800" id="45" />
+      <edge source="1592925743478345728" target="1592933985667420160" id="46" />
+      <edge source="1592925743478345728" target="1592961708360077312" id="47" />
+      <edge source="1592925743478345728" target="1592985751901569024" id="48" />
+      <edge source="1592925743478345728" target="1592965578758950912" id="49" />
+      <edge source="1592925743478345728" target="1592995979711873024" id="50" />
+      <edge source="1592925743478345728" target="1592941954060648448" id="51" />
+      <edge source="1592925743478345728" target="1592991977145917440" id="52" />
+      <edge source="1592925743478345728" target="1592950701571047424" id="53" />
+      <edge source="1592925743478345728" target="1592949348102328320" id="54" />
+      <edge source="1592925743478345728" target="1592983968663539712" id="55" />
+      <edge source="1592925743478345728" target="1592994168041017344" id="56" />
+      <edge source="1592925743478345728" target="1592992401953787904" id="57" />
+      <edge source="1592925743478345728" target="1592997300141719552" id="58" />
+      <edge source="1592925743478345728" target="1592952046491430912" id="59" />
+      <edge source="1592925743478345728" target="1592980829000839168" id="60" />
+      <edge source="1592925743478345728" target="1592954649631690752" id="61" />
+      <edge source="1592925743478345728" target="1592967758207066112" id="62" />
+      <edge source="1592925743478345728" target="1592933060978540544" id="63" />
+      <edge source="1592925743478345728" target="1592966464822161408" id="64" />
+      <edge source="1592925743478345728" target="1592957299542593536" id="65" />
+      <edge source="1592925743478345728" target="1592937422354288640" id="66" />
+      <edge source="1592925743478345728" target="1592962614094884864" id="67" />
+      <edge source="1592925743478345728" target="1592969566384422912" id="68" />
+      <edge source="1592925743478345728" target="1592964317305262080" id="69" />
+      <edge source="1592925743478345728" target="1592988003643056128" id="70" />
+      <edge source="1592925743478345728" target="1592972213350961152" id="71" />
+      <edge source="1592925743478345728" target="1592965170414104576" id="72" />
+      <edge source="1592925743478345728" target="1592952451380170752" id="73" />
+      <edge source="1592925743478345728" target="1592969125542125568" id="74" />
+      <edge source="1592925743478345728" target="1592996839942651904" id="75" />
+      <edge source="1592925743478345728" target="1592958631825506304" id="76" />
+      <edge source="1592925743478345728" target="1592993714007592960" id="77" />
+      <edge source="1592925743478345728" target="1592996429479673856" id="78" />
+      <edge source="1592925743478345728" target="1592995549065932800" id="79" />
+      <edge source="1592925743478345728" target="1592940181115445248" id="80" />
+      <edge source="1592925743478345728" target="1592985334819586048" id="81" />
+      <edge source="1592925743478345728" target="1592947966825807872" id="82" />
+      <edge source="1592925743478345728" target="1592982128870162432" id="83" />
+      <edge source="1592925743478345728" target="1592971330303188992" id="84" />
+      <edge source="1592925743478345728" target="1592963958876823552" id="85" />
+      <edge source="1592925743478345728" target="1592972684224532480" id="86" />
+      <edge source="1592925743478345728" target="1592940621991665664" id="87" />
+      <edge source="1592925743478345728" target="1592941524387778560" id="88" />
+      <edge source="1592925743478345728" target="1592938805212106752" id="89" />
+      <edge source="1592925743478345728" target="1592980410929393664" id="90" />
+      <edge source="1592925743478345728" target="1592951611571474432" id="91" />
+      <edge source="1592925743478345728" target="1592963532475301888" id="92" />
+      <edge source="1592925743478345728" target="1592967328836485120" id="93" />
+      <edge source="1592925743478345728" target="1592939250668163072" id="94" />
+      <edge source="1592925743478345728" target="1592959928670773248" id="95" />
+      <edge source="1592925743478345728" target="1592966015763111936" id="96" />
+      <edge source="1592925743478345728" target="1592947088132046848" id="97" />
+      <edge source="1592925743478345728" target="1592937892577693696" id="98" />
+      <edge source="1592925743478345728" target="1592930805189578752" id="99" />
+      <edge source="1592925743478345728" target="1592936124007079936" id="100" />
+      <edge source="1592925743478345728" target="1592934419924647936" id="101" />
+      <edge source="1592925743478345728" target="1592993260535808000" id="102" />
+      <edge source="1592925743478345728" target="1592934817070735360" id="103" />
+      <edge source="1592925743478345728" target="1592944152114700288" id="104" />
+      <edge source="1592925743478345728" target="1592991546055725056" id="105" />
+      <edge source="1592925743478345728" target="1592994611987087360" id="106" />
+      <edge source="1592925743478345728" target="1592956003213275136" id="107" />
+      <edge source="1592925743478345728" target="1592963072955936768" id="108" />
+      <edge source="1592925743478345728" target="1592982608836640768" id="109" />
+      <edge source="1592925743478345728" target="1592964756172046336" id="110" />
+      <edge source="1592925743478345728" target="1592933524423995392" id="111" />
+      <edge source="1592925743478345728" target="1592962143368142848" id="112" />
+      <edge source="1592925743478345728" target="1592983074706690048" id="113" />
+      <edge source="1592925743478345728" target="1592966909968150528" id="114" />
+      <edge source="1592925743478345728" target="1592948444200857600" id="115" />
+      <edge source="1592925743478345728" target="1592931202448904192" id="116" />
+      <edge source="1592925743478345728" target="1592942426515066880" id="117" />
+      <edge source="1592925743478345728" target="1592958218309087232" id="118" />
+      <edge source="1592925743478345728" target="1592957774035419136" id="119" />
+      <edge source="1592925743478345728" target="1592960376614039552" id="120" />
+      <edge source="1592925743478345728" target="1592995067354304512" id="121" />
+      <edge source="1592925743478345728" target="1592968200031203328" id="122" />
+      <edge source="1592925743478345728" target="1592952869267083264" id="123" />
+      <edge source="1592925743478345728" target="1592953340136026112" id="124" />
+      <edge source="1592925743478345728" target="1592991141087285248" id="125" />
+      <edge source="1592925743478345728" target="1592960795163340800" id="126" />
+      <edge source="1592925743478345728" target="1592970016336785408" id="127" />
+      <edge source="1592925743478345728" target="1592989800440950784" id="128" />
+      <edge source="1592925743478345728" target="1592941091762102272" id="129" />
+      <edge source="1592925743478345728" target="1592981717970976768" id="130" />
+      <edge source="1592925743478345728" target="1592990237781037056" id="131" />
+      <edge source="1592925743478345728" target="1592984416632332288" id="132" />
+      <edge source="1592925743478345728" target="1592970462786879488" id="133" />
+    </edges>
+  </graph>
+</gexf>

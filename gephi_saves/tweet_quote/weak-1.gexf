@@ -1,0 +1,1570 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-12-01">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="Text" type="string" />
+      <attribute id="1" title="Sentiment Composite" type="double" />
+      <attribute id="2" title="Retweet Count" type="double" />
+      <attribute id="3" title="Favorite Count" type="double" />
+      <attribute id="4" title="Quote Count" type="double" />
+      <attribute id="5" title="Reply Count" type="double" />
+    </attributes>
+    <nodes>
+      <node id="1592963635948945408" label="1592963635948945408">
+        <attvalues>
+          <attvalue for="0" value="Vulnerability is the highest form of love. You do not truly love a person if you’re not vulnerable." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="4791.0" />
+          <attvalue for="3" value="13989.0" />
+          <attvalue for="4" value="541.0" />
+          <attvalue for="5" value="213.0" />
+        </attvalues>
+      </node>
+      <node id="1593236338941124608" label="1593236338941124608">
+        <attvalues>
+          <attvalue for="0" value="I think being vulnerability and wisdom are key because 😭" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593267357891366912" label="1593267357891366912">
+        <attvalues>
+          <attvalue for="0" value="I agrée because people mistake openness with vulnerability and there is such a huge difference." />
+          <attvalue for="1" value="-0.5518673658370972" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593165048838782976" label="1593165048838782976">
+        <attvalues>
+          <attvalue for="0" value="I agree, and that's how i know i will deep with someone." />
+          <attvalue for="1" value="0.7552595138549805" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593224937925664768" label="1593224937925664768">
+        <attvalues>
+          <attvalue for="0" value="No Sir.&#10;&#10;Giving is the highest expression of love. Vulnerability is only a product of emotional attachment. That is why attachment makes you vulnerable." />
+          <attvalue for="1" value="-0.6157146692276001" />
+          <attvalue for="2" value="18.0" />
+          <attvalue for="3" value="65.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="3.0" />
+        </attvalues>
+      </node>
+      <node id="1593228650245070848" label="1593228650245070848">
+        <attvalues>
+          <attvalue for="0" value="I don’t even think this is up for discussion, it’s almost impossible to live without being vulnerable." />
+          <attvalue for="1" value="-0.877825915813446" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593242827018108928" label="1593242827018108928">
+        <attvalues>
+          <attvalue for="0" value="All the best to you sha" />
+          <attvalue for="1" value="0.9700606465339661" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593218825767747584" label="1593218825767747584">
+        <attvalues>
+          <attvalue for="0" value="For Intimacy, yes. As a prerequisite for or proof of love, I don't think so." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593659574883680256" label="1593659574883680256">
+        <attvalues>
+          <attvalue for="0" value="Yeah, love is giving someone the power to destroy but trusting them not to." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593230332350042112" label="1593230332350042112">
+        <attvalues>
+          <attvalue for="0" value="And a lot of people think vulnerability = telling all your trauma and triggers to someone. It’s much more than that, glad i finally learned that." />
+          <attvalue for="1" value="-0.6026562452316284" />
+          <attvalue for="2" value="7.0" />
+          <attvalue for="3" value="20.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="1593419854618542080" label="1593419854618542080">
+        <attvalues>
+          <attvalue for="0" value="Right On 💯" />
+          <attvalue for="1" value="0.7388718128204346" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593245460306997248" label="1593245460306997248">
+        <attvalues>
+          <attvalue for="0" value="And you shouldn’t be" />
+          <attvalue for="1" value="-0.6182829141616821" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593232913583468544" label="1593232913583468544">
+        <attvalues>
+          <attvalue for="0" value="PERIODT!!!&#10;&#10;If you're not ready to be vulnerable, don't waste anyone time" />
+          <attvalue for="1" value="-0.6634411215782166" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593544543143501824" label="1593544543143501824">
+        <attvalues>
+          <attvalue for="0" value="if I say I like you and I’ve never been vulnerable with youuuuu, I got some news for yo asss🙂" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1594383004188581888" label="1594383004188581888">
+        <attvalues>
+          <attvalue for="0" value="Be vulnerable at your own risk" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593625058324291584" label="1593625058324291584">
+        <attvalues>
+          <attvalue for="0" value="I'm afraid I have to agree. Go figure, yes YOU." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593331849778135040" label="1593331849778135040">
+        <attvalues>
+          <attvalue for="0" value="Other way around. Vulnerability comes naturally when you feel truly loved." />
+          <attvalue for="1" value="0.8599245548248291" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593237292864442368" label="1593237292864442368">
+        <attvalues>
+          <attvalue for="0" value="And this goes way past romantic relationships" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="28.0" />
+          <attvalue for="3" value="36.0" />
+          <attvalue for="4" value="1.0" />
+          <attvalue for="5" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="1593339426385629184" label="1593339426385629184">
+        <attvalues>
+          <attvalue for="0" value="If I can't be vulnerable with the one I claim to love,then who will I be vulnerable with then?" />
+          <attvalue for="1" value="-0.6214988231658936" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593352116004917248" label="1593352116004917248">
+        <attvalues>
+          <attvalue for="0" value="Till they weaponize your vulnerability 💀" />
+          <attvalue for="1" value="-0.7553356885910034" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593440603320291328" label="1593440603320291328">
+        <attvalues>
+          <attvalue for="0" value="&quot;Vulnerability is clumsy but it's the only thing worth anything &quot;" />
+          <attvalue for="1" value="0.5689941048622131" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="5.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593249941660442624" label="1593249941660442624">
+        <attvalues>
+          <attvalue for="0" value="&quot;Messing with my pride, thinking anytime&#10;You could just get up and go&#10;𝙏𝙝𝙚𝙣 𝙄 𝙧𝙚𝙖𝙡𝙞𝙯𝙚, 𝙬𝙝𝙖𝙩 𝙩𝙝𝙚 𝙝𝙚𝙡𝙡 𝙞𝙨 𝙡𝙤𝙫𝙚 &#10;𝙄𝙛 𝙮𝙤𝙪'𝙧𝙚 𝙞𝙣 𝙘𝙤𝙢𝙥𝙡𝙚𝙩𝙚 𝙘𝙤𝙣𝙩𝙧𝙤𝙡?&quot;&#10;&#10;Jon Bellion — Blu." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593239952933855232" label="1593239952933855232">
+        <attvalues>
+          <attvalue for="0" value="I don’t know if it’s the highest form. But you cannot love deeply and not become vulnerable with them" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593257652754128896" label="1593257652754128896">
+        <attvalues>
+          <attvalue for="0" value="Yes, but it’s one thing to want it, can you handle it?" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593262798028607488" label="1593262798028607488">
+        <attvalues>
+          <attvalue for="0" value="It's true, and it's hard. &#10;Vulnerability is hard as is, but not many people have the maturity to receive vulnerability and *not* translate it into weakness, especially towards men. A lot of guys are scared that their vulnerability will be used against them, eventually" />
+          <attvalue for="1" value="-0.700836718082428" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593305818602012672" label="1593305818602012672">
+        <attvalues>
+          <attvalue for="0" value="i learnt this year that people can be incapable of vulnerability, whether that makes them incapable of love i dunno" />
+          <attvalue for="1" value="-0.7539618611335754" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593917533081538560" label="1593917533081538560">
+        <attvalues>
+          <attvalue for="0" value="I disagree. Sacrifice is the highest form of love. How much you're willing to sacrifice shows the depth and truth of your love." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593551954835378176" label="1593551954835378176">
+        <attvalues>
+          <attvalue for="0" value="To love is to allow yourself be vulnerable with someone other than yourself. No two ways about it." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593434067499978752" label="1593434067499978752">
+        <attvalues>
+          <attvalue for="0" value="A hill I will die on !!!!" />
+          <attvalue for="1" value="-0.6652581095695496" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593309237219921920" label="1593309237219921920">
+        <attvalues>
+          <attvalue for="0" value="I always believed one who loves me will be vulnerable with me as I am to him too...so your theory makes all the sense👌" />
+          <attvalue for="1" value="0.8376766443252563" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593354730155249664" label="1593354730155249664">
+        <attvalues>
+          <attvalue for="0" value="I’ve grown to disagree with this. I honestly think see-finishism is a dangerous thing" />
+          <attvalue for="1" value="-0.8550413250923157" />
+          <attvalue for="2" value="6.0" />
+          <attvalue for="3" value="8.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="3.0" />
+        </attvalues>
+      </node>
+      <node id="1593358245674061824" label="1593358245674061824">
+        <attvalues>
+          <attvalue for="0" value="For God so love the world that He &quot;gave&quot; His only begotten son.&#10;&#10;Giving is top of the chart for me." />
+          <attvalue for="1" value="0.9496733546257019" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593547325493972992" label="1593547325493972992">
+        <attvalues>
+          <attvalue for="0" value="You all misuse this word &quot; vulnerability&quot;. A word which specifically means susceptibility to harm, and a state of being weak.&#10;I would rather use comfortable instead of vulnerability." />
+          <attvalue for="1" value="-0.8928239941596985" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593370138878906368" label="1593370138878906368">
+        <attvalues>
+          <attvalue for="0" value="I don't want to be vulnerable again. I've seen enough shege 🤲" />
+          <attvalue for="1" value="-0.8810770511627197" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="2.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="1593570460050100224" label="1593570460050100224">
+        <attvalues>
+          <attvalue for="0" value="All of a sudden, everyone is agreeing with this. When in real life, y'all don't want to be the vulnerable one or you don't want to show it.&#10;&#10;Ema wa alright." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="1.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593394698097496064" label="1593394698097496064">
+        <attvalues>
+          <attvalue for="0" value="I think it’s acc sacrifice, once you let something go to benefit others that’s love" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593358318428475392" label="1593358318428475392">
+        <attvalues>
+          <attvalue for="0" value="&quot;it's suits me, so it must apply to everyone&quot;" />
+          <attvalue for="1" value="0.6339544057846069" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593233314600849408" label="1593233314600849408">
+        <attvalues>
+          <attvalue for="0" value="Vulnerability is one of the main factors I use in determining a relationship with a guy. &#10;&#10;If I can’t be vulnerable with you for wherever reason, I’ll leave." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="3.0" />
+          <attvalue for="3" value="7.0" />
+          <attvalue for="4" value="1.0" />
+          <attvalue for="5" value="3.0" />
+        </attvalues>
+      </node>
+      <node id="1593145172539609088" label="1593145172539609088">
+        <attvalues>
+          <attvalue for="0" value="Be vulnerable to your woman at your own peril" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="1.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="1593547519933534208" label="1593547519933534208">
+        <attvalues>
+          <attvalue for="0" value="I will use comfortable instead of vulnerable anytime.&#10;Vulnerability una" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593350359275261952" label="1593350359275261952">
+        <attvalues>
+          <attvalue for="0" value="Until your vulnerability is weaponized." />
+          <attvalue for="1" value="-0.6377902030944824" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593255352333520896" label="1593255352333520896">
+        <attvalues>
+          <attvalue for="0" value="Scratch that. As a man you do not love your woman if you’re not strong enough to respect her, take care of her and handle her vulnerability and sometimes her “naive and childish” behavior." />
+          <attvalue for="1" value="-0.7994264364242554" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593213043626119168" label="1593213043626119168">
+        <attvalues>
+          <attvalue for="0" value="This is plain facts and why I really think it's gonna be hard for me to get into a relationship against, not being vulnerable is like surrounding your partners with walls and suffocating them, it's really terrible and there is nothing you can do" />
+          <attvalue for="1" value="-0.9258249402046204" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593331515974455296" label="1593331515974455296">
+        <attvalues>
+          <attvalue for="0" value="If you can't be open to me, then you don't love me.&#10;And if I let myself be vulnerable to you, and u make me regret it, then that ain't love either." />
+          <attvalue for="1" value="-0.7716090679168701" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593362281282375680" label="1593362281282375680">
+        <attvalues>
+          <attvalue for="0" value="Listen!! I try to preach this to people all the time! This is what love is and why I chose not to associate!!" />
+          <attvalue for="1" value="0.5966978669166565" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593312181843595264" label="1593312181843595264">
+        <attvalues>
+          <attvalue for="0" value="And we are weakest when vulnerable." />
+          <attvalue for="1" value="-0.7488903999328613" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593516154089312256" label="1593516154089312256">
+        <attvalues>
+          <attvalue for="0" value="You try to be like this with someone &amp;amp; they give you reasons not to be." />
+          <attvalue for="1" value="-0.6122884750366211" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593287987504226304" label="1593287987504226304">
+        <attvalues>
+          <attvalue for="0" value="Then don’t let your guards down. Always remember someone can actually fall out of love with u anytime." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593615821900750848" label="1593615821900750848">
+        <attvalues>
+          <attvalue for="0" value="The concept of love is..." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1594006376891686912" label="1594006376891686912">
+        <attvalues>
+          <attvalue for="0" value="This is very true. &#10;&#10;You also will be unable to reach a certain level in a relationship if you believe in having a “back up plan”." />
+          <attvalue for="1" value="-0.48445093631744385" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593385406430601216" label="1593385406430601216">
+        <attvalues>
+          <attvalue for="0" value="Vulnerability is not supposed to be weakness, but i'd advise NEVER to be vulnerable with anyone no matter how much you feel you love them. They will rub it in your face" />
+          <attvalue for="1" value="-0.7065525650978088" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="3.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593332781941153792" label="1593332781941153792">
+        <attvalues>
+          <attvalue for="0" value="Vulnerability comes when you experience love." />
+          <attvalue for="1" value="0.8831080198287964" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593344737670488064" label="1593344737670488064">
+        <attvalues>
+          <attvalue for="0" value="It can also be used to manipulate you terribly😹&#10;Stay safe." />
+          <attvalue for="1" value="-0.7375808358192444" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593234097127583744" label="1593234097127583744">
+        <attvalues>
+          <attvalue for="0" value="Ready to die on this hill🙂" />
+          <attvalue for="1" value="-0.5855379104614258" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593229365172928512" label="1593229365172928512">
+        <attvalues>
+          <attvalue for="0" value="Spot on" />
+          <attvalue for="1" value="0.7193716764450073" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593223789730758656" label="1593223789730758656">
+        <attvalues>
+          <attvalue for="0" value="been vulnerable is just you trying to get yourself hurt" />
+          <attvalue for="1" value="-0.7594712376594543" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593173459848560640" label="1593173459848560640">
+        <attvalues>
+          <attvalue for="0" value="Yes. And this is why you must not love. 💜" />
+          <attvalue for="1" value="-0.42137500643730164" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593355605900656640" label="1593355605900656640">
+        <attvalues>
+          <attvalue for="0" value="And vulnerability is a weakness. Historically one of the most dangerous weapons used against strong men. Samson is a popular example.&#10;&#10;Love makes you vulnerable and vulnerability makes you weak.&#10;&#10;Love makes you weak." />
+          <attvalue for="1" value="-0.8019563555717468" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593513322955014144" label="1593513322955014144">
+        <attvalues>
+          <attvalue for="0" value="Vulnerability is overrated abeg." />
+          <attvalue for="1" value="-0.74411541223526" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593421668235583488" label="1593421668235583488">
+        <attvalues>
+          <attvalue for="0" value="Yes! That’s why God said to love Him with all your heart, body and soul. &#10;&#10;So it’s not meant for humans .." />
+          <attvalue for="1" value="0.8057424426078796" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593264015643484160" label="1593264015643484160">
+        <attvalues>
+          <attvalue for="0" value="Vulnerability dey also cause see finish" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593313345301618688" label="1593313345301618688">
+        <attvalues>
+          <attvalue for="0" value="Highest form of love? No&#10;But it's true that you do not truly love a person if you're not vulnerable." />
+          <attvalue for="1" value="-0.4864199757575989" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593533371505815552" label="1593533371505815552">
+        <attvalues>
+          <attvalue for="0" value="A lot of things I want to say but…" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593261966927208448" label="1593261966927208448">
+        <attvalues>
+          <attvalue for="0" value="I don’t think Vulnerability is what you give; I feel it’s there when there’s Love. You can only Mask it, but can’t deny the existence as it comes with the Love." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593540840709824512" label="1593540840709824512">
+        <attvalues>
+          <attvalue for="0" value="Where I am from, we don’t have “love” in our indigenous languages.&#10;&#10;Hence the reason I don’t believe in it.&#10;&#10;Also the reason I shouldn’t be vulnerable to any woman." />
+          <attvalue for="1" value="-0.878561794757843" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593307588615086080" label="1593307588615086080">
+        <attvalues>
+          <attvalue for="0" value="So many 'Stay Toxic' and 'Stay Woke' activists these days.....Are you in love or deeply involved in mind games" />
+          <attvalue for="1" value="-0.7228080630302429" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593317127871668224" label="1593317127871668224">
+        <attvalues>
+          <attvalue for="0" value="The problem is a lot of the times, when you get to this stage, you get taken for granted. Taken fi idiat." />
+          <attvalue for="1" value="-0.83008873462677" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593335166289715200" label="1593335166289715200">
+        <attvalues>
+          <attvalue for="0" value="Opening up to people be hard af 😭" />
+          <attvalue for="1" value="-0.6938624382019043" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593586838786154496" label="1593586838786154496">
+        <attvalues>
+          <attvalue for="0" value="nah. men use vulnerability to get in your panties pls." />
+          <attvalue for="1" value="-0.7499056458473206" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593513661296959488" label="1593513661296959488">
+        <attvalues>
+          <attvalue for="0" value="So In one word love with your head not your heart" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593667400993497088" label="1593667400993497088">
+        <attvalues>
+          <attvalue for="0" value="Well Eph 5:20 “husbands love your wives even as Christ loves the church and gave himself up for her” that means its an instruction to be vulnerable !! that scripture was even after Jesus death and past experiences, Paul knew he was still gonna go through shit too!&#10;@AjeboDanny" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593264246820855808" label="1593264246820855808">
+        <attvalues>
+          <attvalue for="0" value="And where did that get me??? Shift🤣💀" />
+          <attvalue for="1" value="-0.8318968415260315" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593370624788946944" label="1593370624788946944">
+        <attvalues>
+          <attvalue for="0" value="Who asked for the broadcast of this information" />
+          <attvalue for="1" value="-0.5433076024055481" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593236784153886720" label="1593236784153886720">
+        <attvalues>
+          <attvalue for="0" value="They might use your vulnerability against you cuz people are wicked but yeah, he’s right.&#10;If that person has never been vulnerable w you, it’s because they don’t love you and they don’t see you as a safe space for themselves." />
+          <attvalue for="1" value="-0.7872816324234009" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593261245586870272" label="1593261245586870272">
+        <attvalues>
+          <attvalue for="0" value="Agreed.&#10;Problem Is, Not Everyone Can Handle Another's Vulnerability." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593165152110907392" label="1593165152110907392">
+        <attvalues>
+          <attvalue for="0" value="I agree, and that's how i know i am deep with someone." />
+          <attvalue for="1" value="0.7091929912567139" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593219504066400256" label="1593219504066400256">
+        <attvalues>
+          <attvalue for="0" value="Be vulnerable and see shege 😂" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="1.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593187740803534848" label="1593187740803534848">
+        <attvalues>
+          <attvalue for="0" value="It’s not hard to be vulnerable lol" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593244093697904640" label="1593244093697904640">
+        <attvalues>
+          <attvalue for="0" value="And some people pinpoint that vulnerable part of you and take it for granted!...&#10;I promise never to be vulnerable for a guy in the name of dating again!" />
+          <attvalue for="1" value="-0.7959745526313782" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593522566052073472" label="1593522566052073472">
+        <attvalues>
+          <attvalue for="0" value="I learned that vulnerability ≠ weakness and that changed my relationships." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593249191803129856" label="1593249191803129856">
+        <attvalues>
+          <attvalue for="0" value="And that's exactly the problem🙂" />
+          <attvalue for="1" value="-0.7881602644920349" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593250979062824960" label="1593250979062824960">
+        <attvalues>
+          <attvalue for="0" value="i disagree, i can love and still be guided" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593240070772834304" label="1593240070772834304">
+        <attvalues>
+          <attvalue for="0" value="Be vulnerable but don't ask for money.&#10;Thank you" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593224250273382400" label="1593224250273382400">
+        <attvalues>
+          <attvalue for="0" value="I don't even know what this means. So to love my child or brother, I have to be vulnerable with them or what?" />
+          <attvalue for="1" value="-0.7197375893592834" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593244131656024064" label="1593244131656024064">
+        <attvalues>
+          <attvalue for="0" value="But it doesn't mean you should lose your sense completely because that's what some people call vulnerability." />
+          <attvalue for="1" value="-0.5417202711105347" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593243074213265408" label="1593243074213265408">
+        <attvalues>
+          <attvalue for="0" value="Just prepare to cry sha" />
+          <attvalue for="1" value="-0.5929359197616577" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593173991241691136" label="1593173991241691136">
+        <attvalues>
+          <attvalue for="0" value="Yes but why did you wait over a week to tweet this" />
+          <attvalue for="1" value="-0.5120401978492737" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593221834543345664" label="1593221834543345664">
+        <attvalues>
+          <attvalue for="0" value="Things are not exactly black and white lol. Unpopular opinion, but i think vulnerability is earned. People do not let down their guard until they feel it’s safe to. It’s not even something you can control. If you want vulnerability, create a safe space." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="3.0" />
+          <attvalue for="3" value="1.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="1593227769151860736" label="1593227769151860736">
+        <attvalues>
+          <attvalue for="0" value="This is the only type of love I want. I would be there all round for you" />
+          <attvalue for="1" value="0.9625949859619141" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593236711009529856" label="1593236711009529856">
+        <attvalues>
+          <attvalue for="0" value="I believe Knowledge/Understanding of who you are loving is the highest form of love. Giving, vulnerability comes after. For without knowledge first, giving or vulnerability will be built in a weak/wrong foundation. Hence, you could even love amiss." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593225914217017344" label="1593225914217017344">
+        <attvalues>
+          <attvalue for="0" value="I would have to disagree with this and for good reason too.&#10;&#10;Vulnerability has more to do with trust than love. You can love somebody but not trust them fully.&#10;&#10;The highest form of love is sacrifice. Even the Bible confirms this." />
+          <attvalue for="1" value="-0.5110504627227783" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="1593259618330869760" label="1593259618330869760">
+        <attvalues>
+          <attvalue for="0" value="I agree and disagree" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593285746747637760" label="1593285746747637760">
+        <attvalues>
+          <attvalue for="0" value="Right!!!!reality is we are all scared to be vulnerable to people that later turn to use it against us." />
+          <attvalue for="1" value="-0.7033674716949463" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593465038920089600" label="1593465038920089600">
+        <attvalues>
+          <attvalue for="0" value="I don't think this is true. What happens to your childhood traumas that keep you from being vulnerable? They melt because you are in love? LOL." />
+          <attvalue for="1" value="-0.6759824752807617" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593178937823473664" label="1593178937823473664">
+        <attvalues>
+          <attvalue for="0" value="Beautiful, but I no do. I mean, I'd be transparent and all but 100% vulnerable? Count me out." />
+          <attvalue for="1" value="-0.7364839315414429" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593210755511627776" label="1593210755511627776">
+        <attvalues>
+          <attvalue for="0" value="Lol, it is ooo but getting ready for tears &#10;&#10;Humans are so weird that vulnerability from others gives them power" />
+          <attvalue for="1" value="-0.6867372989654541" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593357161710616576" label="1593357161710616576">
+        <attvalues>
+          <attvalue for="0" value="From personal experience, it's also the most emotionally risky thing you can put yourself through.&#10;&#10;The person will either recognize, appreciate, respect &amp;amp; value your vulnerability or 'see finish' will enter the matter." />
+          <attvalue for="1" value="-0.5839857459068298" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593606662874595328" label="1593606662874595328">
+        <attvalues>
+          <attvalue for="0" value="I always say this, if someone cannot be vulnerable with you then they don't trust you enough to love them" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593280415267160064" label="1593280415267160064">
+        <attvalues>
+          <attvalue for="0" value="I agree but this is the most dangerous thing to do. That’s why people think love is scary." />
+          <attvalue for="1" value="-0.8981457948684692" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593275485986881536" label="1593275485986881536">
+        <attvalues>
+          <attvalue for="0" value="More reason true love is rare in this our modern world. Everyone wants to be tough, no one wants to let their guards down and be vulnerable. No one wants to be the “fool”. It takes wise people to know this is the reality of love tho 🤷‍♀️" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593294772386529280" label="1593294772386529280">
+        <attvalues>
+          <attvalue for="0" value="Not the highest form, its is a feature. Can't be love without vulnerability." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593537233281236992" label="1593537233281236992">
+        <attvalues>
+          <attvalue for="0" value="If that’s the case, then I don’t want to love. &#10;&#10;Anything or situation that will make me weak &amp;amp; defenseless or turn a blind eye to red flags in the name of LOVE, I don’t want that shit 🚫" />
+          <attvalue for="1" value="-0.8934705257415771" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593362832753573888" label="1593362832753573888">
+        <attvalues>
+          <attvalue for="0" value="There’s no love without vulnerability!" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593309299622690816" label="1593309299622690816">
+        <attvalues>
+          <attvalue for="0" value="The highest form of love is ‘agape’&#10; /selfless love/ It's given without any expectations of receiving anything in return. There goes the theory of ‘love is transactional’ because at the highest level of love, there’s no such thing" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593309184841367552" label="1593309184841367552">
+        <attvalues>
+          <attvalue for="0" value="Me? Vulnerable? To a woman?? I'll rather dive into a volcano 🤝" />
+          <attvalue for="1" value="-0.763188362121582" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593373394715561984" label="1593373394715561984">
+        <attvalues>
+          <attvalue for="0" value="Some People take advantage of this alots." />
+          <attvalue for="1" value="-0.67481529712677" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593524122331529216" label="1593524122331529216">
+        <attvalues>
+          <attvalue for="0" value="Not theory but fact. Also, it is in the vulnerability that there is strength." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593277322446127104" label="1593277322446127104">
+        <attvalues>
+          <attvalue for="0" value="All of you should rest abeg." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593519833492111360" label="1593519833492111360">
+        <attvalues>
+          <attvalue for="0" value="To love is to be vulnerable" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593256495244009472" label="1593256495244009472">
+        <attvalues>
+          <attvalue for="0" value="People sometimes prick at your vulnerability unknowingly don't ever blame yourself for being vulnerable. Sometimes it's not intentional" />
+          <attvalue for="1" value="-0.5995428562164307" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593275203727015936" label="1593275203727015936">
+        <attvalues>
+          <attvalue for="0" value="And may I add, not feeling regret after that vulnerability bc you know the environment in which it was said is a safe one" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593184592403783680" label="1593184592403783680">
+        <attvalues>
+          <attvalue for="0" value="Sadly, it mostly leads to see finish 🥲" />
+          <attvalue for="1" value="-0.9019440412521362" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593250015673077760" label="1593250015673077760">
+        <attvalues>
+          <attvalue for="0" value="Whew. Pushing through the tight chest. Murmuring “if I die, I die” “Shey this one will not see me finish like this” &#10;I no do again sha" />
+          <attvalue for="1" value="-0.8043606281280518" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593646820122574848" label="1593646820122574848">
+        <attvalues>
+          <attvalue for="0" value="Vulnerability is the result of safety. You can love a person and yet not feel safe with them and can’t attain vulnerability for a plethora of reasons." />
+          <attvalue for="1" value="-0.518402636051178" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593254948795736064" label="1593254948795736064">
+        <attvalues>
+          <attvalue for="0" value="💯💯&#10;If you can't be vulnerable with the person you are with, don't waste your time. You'll grow in frustration all your life.&#10;Your partner should be the easiest person to speak to and understand you." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593226066675785728" label="1593226066675785728">
+        <attvalues>
+          <attvalue for="0" value="rory gilmore would beg to differ" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593250698250313728" label="1593250698250313728">
+        <attvalues>
+          <attvalue for="0" value="Good luck to everyone involved 👍" />
+          <attvalue for="1" value="0.9772061109542847" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593362340602413056" label="1593362340602413056">
+        <attvalues>
+          <attvalue for="0" value="I agree but maybe humans are not supposed to Love or be Loved in the highest form. &#10;&#10;Jesus loved humans in the highest form but what did he get in return after all the good he did? Betrayal, denial, torture and death.&#10;&#10;Vulnerability is weakness and humans will use it against you." />
+          <attvalue for="1" value="-0.6690032482147217" />
+          <attvalue for="2" value="171.0" />
+          <attvalue for="3" value="568.0" />
+          <attvalue for="4" value="10.0" />
+          <attvalue for="5" value="36.0" />
+        </attvalues>
+      </node>
+      <node id="1593376096929677312" label="1593376096929677312">
+        <attvalues>
+          <attvalue for="0" value="You know the truth and it’s bad but still end up doing it anyway." />
+          <attvalue for="1" value="-0.7876192331314087" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593502997623050240" label="1593502997623050240">
+        <attvalues>
+          <attvalue for="0" value="In short, love without the falling…use your head 90% of the time, use your heart for the remaining 10%." />
+          <attvalue for="1" value="0.6739940643310547" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593355825153703936" label="1593355825153703936">
+        <attvalues>
+          <attvalue for="0" value="not me and you." />
+          <attvalue for="1" value="-0.6392552852630615" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593324852433256448" label="1593324852433256448">
+        <attvalues>
+          <attvalue for="0" value="no such thing as true love my man, everyone with their own versions&#10;no right way to love someone" />
+          <attvalue for="1" value="-0.7241588830947876" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593266192206090240" label="1593266192206090240">
+        <attvalues>
+          <attvalue for="0" value="Hmmm, they have use people eye to see shege on top vulnerability abeg" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593360712205684736" label="1593360712205684736">
+        <attvalues>
+          <attvalue for="0" value="Almost all the women be supporting this , don't do it brothers , don't you ever dare&#10;&#10;You should only be vulnerable to your mom" />
+          <attvalue for="1" value="-0.8026689291000366" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593475089403707392" label="1593475089403707392">
+        <attvalues>
+          <attvalue for="0" value="Yes however vulnerability requires a safe space. You can love a person &amp;amp; yet find it hard to be vulnerable because they simply don’t feel safe enough. Know where to be vulnerable &amp;amp; know where to keep your boundaries clear within your self." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593332692191510528" label="1593332692191510528">
+        <attvalues>
+          <attvalue for="0" value="...and when they've seen the vulnerability, they leave.😜" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593281358037745664" label="1593281358037745664">
+        <attvalues>
+          <attvalue for="0" value="I pray my love for someone doesn't get to this level ,at least for now. Vulnerability gives way to manipulation" />
+          <attvalue for="1" value="-0.8008161187171936" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593333903443591168" label="1593333903443591168">
+        <attvalues>
+          <attvalue for="0" value="Love is when you are not afraid to show your true self" />
+          <attvalue for="1" value="0.7621480226516724" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593267217306714112" label="1593267217306714112">
+        <attvalues>
+          <attvalue for="0" value="False. Vulnerability is not a form of love. It is a form of infatuation which can attract manipulation." />
+          <attvalue for="1" value="-0.7688508033752441" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593476405588885504" label="1593476405588885504">
+        <attvalues>
+          <attvalue for="0" value="Not everyone is capable of handling vulnerability. You could be vulnerable and get resentment and disgust instead of having it requited." />
+          <attvalue for="1" value="-0.803086519241333" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593373919641305088" label="1593373919641305088">
+        <attvalues>
+          <attvalue for="0" value="Love makes a person vulnerable, we don’t have to be vulnerable to give love to a person." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2.0" />
+          <attvalue for="3" value="4.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593471996318416896" label="1593471996318416896">
+        <attvalues>
+          <attvalue for="0" value="Furthermore a person does not truly love you if they don't allow you to be fully vulnerable" />
+          <attvalue for="1" value="-0.7455762028694153" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593504691144589312" label="1593504691144589312">
+        <attvalues>
+          <attvalue for="0" value="People become vulnerable in love because it is the momentary comfortable thing to be. The implication of this is a long term degrade in value-respect. This is a simple cause and effect dynamic.&#10;&#10;Vulnerability is weakness and humans will use it against you. Control your immersion." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="5.0" />
+          <attvalue for="3" value="16.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593323534461403136" label="1593323534461403136">
+        <attvalues>
+          <attvalue for="0" value="💯!!!!&#10;&#10;What is love without vulnerability? Keep that fake shit far away from me." />
+          <attvalue for="1" value="-0.5742749571800232" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593889230559887360" label="1593889230559887360">
+        <attvalues>
+          <attvalue for="0" value="I have a fear of my vulnerability being thrown back on my face, so I’d rather be a thug. However, I love the idea of people being vulnerable to me and I think they love it too." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593372522732568576" label="1593372522732568576">
+        <attvalues>
+          <attvalue for="0" value="Crying in front of your person for the first time is the most embarrassing thing ever. So yes." />
+          <attvalue for="1" value="-0.8794296979904175" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593325463048536064" label="1593325463048536064">
+        <attvalues>
+          <attvalue for="0" value="I thought I wrote something similar on here but I couldn't find it anymore.&#10;&#10;Real love is exposing every vulnerability with your partner but you both don't take advantage of it. You don't hurt or scam the other, instead it's a privilege you both cherish." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593452248050417664" label="1593452248050417664">
+        <attvalues>
+          <attvalue for="0" value="To love at all is to be vulnerable" />
+          <attvalue for="1" value="-0.6200251579284668" />
+          <attvalue for="2" value="2.0" />
+          <attvalue for="3" value="3.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593563478941483008" label="1593563478941483008">
+        <attvalues>
+          <attvalue for="0" value="Vulnerability works when both parties are EQUALLY VULNERABLE &#10;&#10;No go loose guard &#10;At one point, ur partner will definitely use it against you !!!" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593297871310405632" label="1593297871310405632">
+        <attvalues>
+          <attvalue for="0" value="And it's that vulnerability that finishes you." />
+          <attvalue for="1" value="-0.7871653437614441" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1593280963227926528" label="1593280963227926528">
+        <attvalues>
+          <attvalue for="0" value="This one hard to swallow." />
+          <attvalue for="1" value="-0.6468859314918518" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="1592963635948945408" target="1593236338941124608" id="0" />
+      <edge source="1592963635948945408" target="1593165048838782976" id="1" />
+      <edge source="1592963635948945408" target="1593267357891366912" id="2" />
+      <edge source="1592963635948945408" target="1593228650245070848" id="3" />
+      <edge source="1592963635948945408" target="1593224937925664768" id="4" />
+      <edge source="1592963635948945408" target="1593242827018108928" id="5" />
+      <edge source="1592963635948945408" target="1593218825767747584" id="6" />
+      <edge source="1592963635948945408" target="1593659574883680256" id="7" />
+      <edge source="1592963635948945408" target="1593230332350042112" id="8" />
+      <edge source="1592963635948945408" target="1593419854618542080" id="9" />
+      <edge source="1592963635948945408" target="1593331515974455296" id="10" />
+      <edge source="1592963635948945408" target="1593357161710616576" id="11" />
+      <edge source="1592963635948945408" target="1593275485986881536" id="12" />
+      <edge source="1592963635948945408" target="1593917533081538560" id="13" />
+      <edge source="1592963635948945408" target="1594006376891686912" id="14" />
+      <edge source="1592963635948945408" target="1593233314600849408" id="15" />
+      <edge source="1592963635948945408" target="1593540840709824512" id="16" />
+      <edge source="1592963635948945408" target="1593889230559887360" id="17" />
+      <edge source="1592963635948945408" target="1593312181843595264" id="18" />
+      <edge source="1592963635948945408" target="1593249941660442624" id="19" />
+      <edge source="1592963635948945408" target="1593516154089312256" id="20" />
+      <edge source="1592963635948945408" target="1593307588615086080" id="21" />
+      <edge source="1592963635948945408" target="1593237292864442368" id="22" />
+      <edge source="1592963635948945408" target="1593332781941153792" id="23" />
+      <edge source="1592963635948945408" target="1593513322955014144" id="24" />
+      <edge source="1592963635948945408" target="1593305818602012672" id="25" />
+      <edge source="1592963635948945408" target="1593309299622690816" id="26" />
+      <edge source="1592963635948945408" target="1593504691144589312" id="27" />
+      <edge source="1592963635948945408" target="1593213043626119168" id="28" />
+      <edge source="1592963635948945408" target="1593323534461403136" id="29" />
+      <edge source="1592963635948945408" target="1593339426385629184" id="30" />
+      <edge source="1592963635948945408" target="1593331849778135040" id="31" />
+      <edge source="1592963635948945408" target="1593544543143501824" id="32" />
+      <edge source="1592963635948945408" target="1593465038920089600" id="33" />
+      <edge source="1592963635948945408" target="1593344737670488064" id="34" />
+      <edge source="1592963635948945408" target="1593259618330869760" id="35" />
+      <edge source="1592963635948945408" target="1593551954835378176" id="36" />
+      <edge source="1592963635948945408" target="1594383004188581888" id="37" />
+      <edge source="1592963635948945408" target="1593256495244009472" id="38" />
+      <edge source="1592963635948945408" target="1593227769151860736" id="39" />
+      <edge source="1592963635948945408" target="1593372522732568576" id="40" />
+      <edge source="1592963635948945408" target="1593145172539609088" id="41" />
+      <edge source="1592963635948945408" target="1593184592403783680" id="42" />
+      <edge source="1592963635948945408" target="1593266192206090240" id="43" />
+      <edge source="1592963635948945408" target="1593317127871668224" id="44" />
+      <edge source="1592963635948945408" target="1593309184841367552" id="45" />
+      <edge source="1592963635948945408" target="1593434067499978752" id="46" />
+      <edge source="1592963635948945408" target="1593285746747637760" id="47" />
+      <edge source="1592963635948945408" target="1593524122331529216" id="48" />
+      <edge source="1592963635948945408" target="1593362340602413056" id="49" />
+      <edge source="1592963635948945408" target="1593309237219921920" id="50" />
+      <edge source="1592963635948945408" target="1593376096929677312" id="51" />
+      <edge source="1592963635948945408" target="1593335166289715200" id="52" />
+      <edge source="1592963635948945408" target="1593245460306997248" id="53" />
+      <edge source="1592963635948945408" target="1593325463048536064" id="54" />
+      <edge source="1592963635948945408" target="1593625058324291584" id="55" />
+      <edge source="1592963635948945408" target="1593261966927208448" id="56" />
+      <edge source="1592963635948945408" target="1593332692191510528" id="57" />
+      <edge source="1592963635948945408" target="1593277322446127104" id="58" />
+      <edge source="1592963635948945408" target="1593264246820855808" id="59" />
+      <edge source="1592963635948945408" target="1593370624788946944" id="60" />
+      <edge source="1592963635948945408" target="1593173991241691136" id="61" />
+      <edge source="1592963635948945408" target="1593255352333520896" id="62" />
+      <edge source="1592963635948945408" target="1593221834543345664" id="63" />
+      <edge source="1592963635948945408" target="1593519833492111360" id="64" />
+      <edge source="1592963635948945408" target="1593373919641305088" id="65" />
+      <edge source="1592963635948945408" target="1593358318428475392" id="66" />
+      <edge source="1592963635948945408" target="1593586838786154496" id="67" />
+      <edge source="1592963635948945408" target="1593354730155249664" id="68" />
+      <edge source="1592963635948945408" target="1593294772386529280" id="69" />
+      <edge source="1592963635948945408" target="1593229365172928512" id="70" />
+      <edge source="1592963635948945408" target="1593287987504226304" id="71" />
+      <edge source="1592963635948945408" target="1593471996318416896" id="72" />
+      <edge source="1592963635948945408" target="1593254948795736064" id="73" />
+      <edge source="1592963635948945408" target="1593262798028607488" id="74" />
+      <edge source="1592963635948945408" target="1593355605900656640" id="75" />
+      <edge source="1592963635948945408" target="1593615821900750848" id="76" />
+      <edge source="1592963635948945408" target="1593250979062824960" id="77" />
+      <edge source="1592963635948945408" target="1593358245674061824" id="78" />
+      <edge source="1592963635948945408" target="1593226066675785728" id="79" />
+      <edge source="1592963635948945408" target="1593240070772834304" id="80" />
+      <edge source="1592963635948945408" target="1593421668235583488" id="81" />
+      <edge source="1592963635948945408" target="1593239952933855232" id="82" />
+      <edge source="1592963635948945408" target="1593261245586870272" id="83" />
+      <edge source="1592963635948945408" target="1593264015643484160" id="84" />
+      <edge source="1592963635948945408" target="1593355825153703936" id="85" />
+      <edge source="1592963635948945408" target="1593352116004917248" id="86" />
+      <edge source="1592963635948945408" target="1593250698250313728" id="87" />
+      <edge source="1592963635948945408" target="1593547325493972992" id="88" />
+      <edge source="1592963635948945408" target="1593249191803129856" id="89" />
+      <edge source="1592963635948945408" target="1593236711009529856" id="90" />
+      <edge source="1592963635948945408" target="1593440603320291328" id="91" />
+      <edge source="1592963635948945408" target="1593475089403707392" id="92" />
+      <edge source="1592963635948945408" target="1593225914217017344" id="93" />
+      <edge source="1592963635948945408" target="1593313345301618688" id="94" />
+      <edge source="1592963635948945408" target="1593178937823473664" id="95" />
+      <edge source="1592963635948945408" target="1593210755511627776" id="96" />
+      <edge source="1592963635948945408" target="1593350359275261952" id="97" />
+      <edge source="1592963635948945408" target="1593452248050417664" id="98" />
+      <edge source="1592963635948945408" target="1593232913583468544" id="99" />
+      <edge source="1592963635948945408" target="1593234097127583744" id="100" />
+      <edge source="1592963635948945408" target="1593563478941483008" id="101" />
+      <edge source="1592963635948945408" target="1593165152110907392" id="102" />
+      <edge source="1592963635948945408" target="1593244093697904640" id="103" />
+      <edge source="1592963635948945408" target="1593275203727015936" id="104" />
+      <edge source="1592963635948945408" target="1593224250273382400" id="105" />
+      <edge source="1592963635948945408" target="1593250015673077760" id="106" />
+      <edge source="1592963635948945408" target="1593257652754128896" id="107" />
+      <edge source="1592963635948945408" target="1593324852433256448" id="108" />
+      <edge source="1592963635948945408" target="1593370138878906368" id="109" />
+      <edge source="1592963635948945408" target="1593606662874595328" id="110" />
+      <edge source="1592963635948945408" target="1593646820122574848" id="111" />
+      <edge source="1592963635948945408" target="1593570460050100224" id="112" />
+      <edge source="1592963635948945408" target="1593362832753573888" id="113" />
+      <edge source="1592963635948945408" target="1593223789730758656" id="114" />
+      <edge source="1592963635948945408" target="1593297871310405632" id="115" />
+      <edge source="1592963635948945408" target="1593244131656024064" id="116" />
+      <edge source="1592963635948945408" target="1593394698097496064" id="117" />
+      <edge source="1592963635948945408" target="1593385406430601216" id="118" />
+      <edge source="1592963635948945408" target="1593360712205684736" id="119" />
+      <edge source="1592963635948945408" target="1593219504066400256" id="120" />
+      <edge source="1592963635948945408" target="1593236784153886720" id="121" />
+      <edge source="1592963635948945408" target="1593187740803534848" id="122" />
+      <edge source="1592963635948945408" target="1593522566052073472" id="123" />
+      <edge source="1592963635948945408" target="1593243074213265408" id="124" />
+      <edge source="1592963635948945408" target="1593281358037745664" id="125" />
+      <edge source="1592963635948945408" target="1593280415267160064" id="126" />
+      <edge source="1592963635948945408" target="1593537233281236992" id="127" />
+      <edge source="1592963635948945408" target="1593362281282375680" id="128" />
+      <edge source="1592963635948945408" target="1593333903443591168" id="129" />
+      <edge source="1592963635948945408" target="1593476405588885504" id="130" />
+      <edge source="1592963635948945408" target="1593373394715561984" id="131" />
+      <edge source="1592963635948945408" target="1593280963227926528" id="132" />
+      <edge source="1592963635948945408" target="1593533371505815552" id="133" />
+      <edge source="1592963635948945408" target="1593173459848560640" id="134" />
+      <edge source="1592963635948945408" target="1593267217306714112" id="135" />
+      <edge source="1593362340602413056" target="1593502997623050240" id="136" />
+      <edge source="1593362340602413056" target="1593547519933534208" id="137" />
+      <edge source="1593362340602413056" target="1593667400993497088" id="138" />
+      <edge source="1593362340602413056" target="1593513661296959488" id="139" />
+    </edges>
+  </graph>
+</gexf>

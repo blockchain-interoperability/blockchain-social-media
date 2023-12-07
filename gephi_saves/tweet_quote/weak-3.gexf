@@ -1,0 +1,1317 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-12-01">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="Text" type="string" />
+      <attribute id="1" title="Sentiment Composite" type="double" />
+      <attribute id="2" title="Retweet Count" type="double" />
+      <attribute id="3" title="Favorite Count" type="double" />
+      <attribute id="4" title="Quote Count" type="double" />
+      <attribute id="5" title="Reply Count" type="double" />
+    </attributes>
+    <nodes>
+      <node id="1590608083067498496" label="1590608083067498496">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590610205078790144" label="1590610205078790144">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590550809582112768" label="1590550809582112768">
+        <attvalues>
+          <attvalue for="0" value="We are still here 🐂🔥⚡️&#10;&#10;#RichQUACK $QUACK #Crypto #cryptocrash" />
+          <attvalue for="1" value="0.8224666714668274" />
+          <attvalue for="2" value="1530.0" />
+          <attvalue for="3" value="1967.0" />
+          <attvalue for="4" value="78.0" />
+          <attvalue for="5" value="745.0" />
+        </attvalues>
+      </node>
+      <node id="1590659823615741952" label="1590659823615741952">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590552222144024576" label="1590552222144024576">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590660220346564608" label="1590660220346564608">
+        <attvalues>
+          <attvalue for="0" value="Look! $QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.8421820402145386" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590569516677070848" label="1590569516677070848">
+        <attvalues>
+          <attvalue for="0" value="⚡⚡ $QUACK #Crypto #NFT #NFTs https://t.co/ypOrOIRACT" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="1.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590567727357644800" label="1590567727357644800">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs woah here" />
+          <attvalue for="1" value="0.6431534290313721" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590664348141498368" label="1590664348141498368">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590657406249611264" label="1590657406249611264">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590569429376827392" label="1590569429376827392">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590659818381283328" label="1590659818381283328">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590552779495714816" label="1590552779495714816">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590667040876277760" label="1590667040876277760">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590686657824829440" label="1590686657824829440">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590669447504998400" label="1590669447504998400">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590605281662480384" label="1590605281662480384">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590658162709114880" label="1590658162709114880">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs 🌠" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590568477320163328" label="1590568477320163328">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590663900751884288" label="1590663900751884288">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590568220213538816" label="1590568220213538816">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590629954953572352" label="1590629954953572352">
+        <attvalues>
+          <attvalue for="0" value="Check this out!&#10;$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.7943893074989319" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590648047050321920" label="1590648047050321920">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs&#10;https://t.co/P3A4hoa3W7" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590602900317040640" label="1590602900317040640">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590677022170574848" label="1590677022170574848">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs https://t.co/Ykt8h6ldxS" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="1.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590659429632208896" label="1590659429632208896">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs at #3 🔥" />
+          <attvalue for="1" value="0.8119451999664307" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590603861945118720" label="1590603861945118720">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590558928882266112" label="1590558928882266112">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTssaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590648616095739904" label="1590648616095739904">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590649004064673792" label="1590649004064673792">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590648258623598592" label="1590648258623598592">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590575869395111936" label="1590575869395111936">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590566396303642624" label="1590566396303642624">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590603739593052160" label="1590603739593052160">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590558434940030976" label="1590558434940030976">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590571358500818944" label="1590571358500818944">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590663822591004672" label="1590663822591004672">
+        <attvalues>
+          <attvalue for="0" value="&quot; $QUACK #Crypto #NFT #NFTs”" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590561345413709824" label="1590561345413709824">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590659055118585856" label="1590659055118585856">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590647834235523072" label="1590647834235523072">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590557192469762048" label="1590557192469762048">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590657662894903296" label="1590657662894903296">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590658190467006464" label="1590658190467006464">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590582284297830400" label="1590582284297830400">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590658176277676032" label="1590658176277676032">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590630667855200256" label="1590630667855200256">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs”" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590658126927495168" label="1590658126927495168">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590658219332243456" label="1590658219332243456">
+        <attvalues>
+          <attvalue for="0" value="Amazing project $QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.9807927012443542" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590605656511246336" label="1590605656511246336">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590645521114628096" label="1590645521114628096">
+        <attvalues>
+          <attvalue for="0" value="Great  $QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.977046549320221" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590584340307935232" label="1590584340307935232">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="2.0" />
+          <attvalue for="4" value="2.0" />
+          <attvalue for="5" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="1590583532564676608" label="1590583532564676608">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590668753649696768" label="1590668753649696768">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590610774720151552" label="1590610774720151552">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590569623719936000" label="1590569623719936000">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590557312200376320" label="1590557312200376320">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTssaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590626807996645376" label="1590626807996645376">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTssaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590714397806460928" label="1590714397806460928">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @nftssaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590714381159268352" label="1590714381159268352">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590648382611390464" label="1590648382611390464">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590625788365533184" label="1590625788365533184">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTssaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590715188344680448" label="1590715188344680448">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTssaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590658594735026176" label="1590658594735026176">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590715413741985792" label="1590715413741985792">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590593251324878848" label="1590593251324878848">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590555435731673088" label="1590555435731673088">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590562035154444288" label="1590562035154444288">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590662552169897984" label="1590662552169897984">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590636946787033088" label="1590636946787033088">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590568144711868416" label="1590568144711868416">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590625515534442496" label="1590625515534442496">
+        <attvalues>
+          <attvalue for="0" value="to the moon!!&#10; $QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.884892463684082" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590587240748834816" label="1590587240748834816">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590604794070458368" label="1590604794070458368">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590567003961823232" label="1590567003961823232">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTssaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590658234180046848" label="1590658234180046848">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590664170168782848" label="1590664170168782848">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @nftssaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590649343518052352" label="1590649343518052352">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590584097025691648" label="1590584097025691648">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590666199456944128" label="1590666199456944128">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590603237673275392" label="1590603237673275392">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590605773411061760" label="1590605773411061760">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590655141631643648" label="1590655141631643648">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #RichQUACK  is on bullish tooo" />
+          <attvalue for="1" value="0.9192417860031128" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590715305021820928" label="1590715305021820928">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @nftssaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590659837758951424" label="1590659837758951424">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590583569340321792" label="1590583569340321792">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590711055751467008" label="1590711055751467008">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590659648839127040" label="1590659648839127040">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590714989702451200" label="1590714989702451200">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590667389905309696" label="1590667389905309696">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @nftssaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590710945369985024" label="1590710945369985024">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590647221741326336" label="1590647221741326336">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590660282493603840" label="1590660282493603840">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590565412777136128" label="1590565412777136128">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590583411840028672" label="1590583411840028672">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590714023846514688" label="1590714023846514688">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590658313687306240" label="1590658313687306240">
+        <attvalues>
+          <attvalue for="0" value="Don't missed it $QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.9538159370422363" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590675024918515712" label="1590675024918515712">
+        <attvalues>
+          <attvalue for="0" value="i'm here too $QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.6624196767807007" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590665347740635136" label="1590665347740635136">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590658549843361792" label="1590658549843361792">
+        <attvalues>
+          <attvalue for="0" value="Beautiful work! I wish to find this beauty its owner!👍 https://t.co/qgaLDZTBO0" />
+          <attvalue for="1" value="0.9840368628501892" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590584678603685888" label="1590584678603685888">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590657834630672384" label="1590657834630672384">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #NFT #Nfts #Crypto" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590626600907075584" label="1590626600907075584">
+        <attvalues>
+          <attvalue for="0" value="$QUACK #Crypto #NFT #NFTs go" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590605661674811392" label="1590605661674811392">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590569662349455360" label="1590569662349455360">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590667482276442112" label="1590667482276442112">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTssaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590648051030700032" label="1590648051030700032">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590714438528937984" label="1590714438528937984">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTssaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590714285633974272" label="1590714285633974272">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @nftssaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590675285498015744" label="1590675285498015744">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTssaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590660024564854784" label="1590660024564854784">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590568296881205248" label="1590568296881205248">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590715154333052928" label="1590715154333052928">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @nftssaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590664529683570688" label="1590664529683570688">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590660304429801472" label="1590660304429801472">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590686988084314112" label="1590686988084314112">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @nftssaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590648088368074752" label="1590648088368074752">
+        <attvalues>
+          <attvalue for="0" value="Nice project $QUACK #Crypto #NFT #NFTs&#10;https://t.co/GXugZUXFvs" />
+          <attvalue for="1" value="0.954440176486969" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590584424785408000" label="1590584424785408000">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @NFTsSaga" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590715053896269824" label="1590715053896269824">
+        <attvalues>
+          <attvalue for="0" value="Promote it on @nftmarkettplace" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="1590608083067498496" target="1590610205078790144" id="0" />
+      <edge source="1590550809582112768" target="1590659823615741952" id="1" />
+      <edge source="1590550809582112768" target="1590569516677070848" id="2" />
+      <edge source="1590550809582112768" target="1590660220346564608" id="3" />
+      <edge source="1590550809582112768" target="1590552222144024576" id="4" />
+      <edge source="1590550809582112768" target="1590567727357644800" id="5" />
+      <edge source="1590550809582112768" target="1590664348141498368" id="6" />
+      <edge source="1590550809582112768" target="1590657406249611264" id="7" />
+      <edge source="1590550809582112768" target="1590647221741326336" id="8" />
+      <edge source="1590550809582112768" target="1590566396303642624" id="9" />
+      <edge source="1590550809582112768" target="1590583411840028672" id="10" />
+      <edge source="1590550809582112768" target="1590714023846514688" id="11" />
+      <edge source="1590550809582112768" target="1590658594735026176" id="12" />
+      <edge source="1590550809582112768" target="1590657834630672384" id="13" />
+      <edge source="1590550809582112768" target="1590603739593052160" id="14" />
+      <edge source="1590550809582112768" target="1590648088368074752" id="15" />
+      <edge source="1590550809582112768" target="1590645521114628096" id="16" />
+      <edge source="1590550809582112768" target="1590593251324878848" id="17" />
+      <edge source="1590550809582112768" target="1590569429376827392" id="18" />
+      <edge source="1590550809582112768" target="1590552779495714816" id="19" />
+      <edge source="1590550809582112768" target="1590658313687306240" id="20" />
+      <edge source="1590550809582112768" target="1590626600907075584" id="21" />
+      <edge source="1590550809582112768" target="1590555435731673088" id="22" />
+      <edge source="1590550809582112768" target="1590658190467006464" id="23" />
+      <edge source="1590550809582112768" target="1590663900751884288" id="24" />
+      <edge source="1590550809582112768" target="1590647834235523072" id="25" />
+      <edge source="1590550809582112768" target="1590608083067498496" id="26" />
+      <edge source="1590550809582112768" target="1590562035154444288" id="27" />
+      <edge source="1590550809582112768" target="1590675024918515712" id="28" />
+      <edge source="1590550809582112768" target="1590558434940030976" id="29" />
+      <edge source="1590550809582112768" target="1590568220213538816" id="30" />
+      <edge source="1590550809582112768" target="1590662552169897984" id="31" />
+      <edge source="1590550809582112768" target="1590571358500818944" id="32" />
+      <edge source="1590550809582112768" target="1590636946787033088" id="33" />
+      <edge source="1590550809582112768" target="1590557192469762048" id="34" />
+      <edge source="1590550809582112768" target="1590667040876277760" id="35" />
+      <edge source="1590550809582112768" target="1590568144711868416" id="36" />
+      <edge source="1590550809582112768" target="1590629954953572352" id="37" />
+      <edge source="1590550809582112768" target="1590582284297830400" id="38" />
+      <edge source="1590550809582112768" target="1590663822591004672" id="39" />
+      <edge source="1590550809582112768" target="1590659648839127040" id="40" />
+      <edge source="1590550809582112768" target="1590648047050321920" id="41" />
+      <edge source="1590550809582112768" target="1590584340307935232" id="42" />
+      <edge source="1590550809582112768" target="1590686657824829440" id="43" />
+      <edge source="1590550809582112768" target="1590583532564676608" id="44" />
+      <edge source="1590550809582112768" target="1590625515534442496" id="45" />
+      <edge source="1590550809582112768" target="1590659055118585856" id="46" />
+      <edge source="1590550809582112768" target="1590658219332243456" id="47" />
+      <edge source="1590550809582112768" target="1590587240748834816" id="48" />
+      <edge source="1590550809582112768" target="1590659818381283328" id="49" />
+      <edge source="1590550809582112768" target="1590658176277676032" id="50" />
+      <edge source="1590550809582112768" target="1590575869395111936" id="51" />
+      <edge source="1590550809582112768" target="1590602900317040640" id="52" />
+      <edge source="1590550809582112768" target="1590669447504998400" id="53" />
+      <edge source="1590550809582112768" target="1590605281662480384" id="54" />
+      <edge source="1590550809582112768" target="1590677022170574848" id="55" />
+      <edge source="1590550809582112768" target="1590649004064673792" id="56" />
+      <edge source="1590550809582112768" target="1590630667855200256" id="57" />
+      <edge source="1590550809582112768" target="1590658162709114880" id="58" />
+      <edge source="1590550809582112768" target="1590668753649696768" id="59" />
+      <edge source="1590550809582112768" target="1590657662894903296" id="60" />
+      <edge source="1590550809582112768" target="1590665347740635136" id="61" />
+      <edge source="1590550809582112768" target="1590610774720151552" id="62" />
+      <edge source="1590550809582112768" target="1590655141631643648" id="63" />
+      <edge source="1590550809582112768" target="1590658126927495168" id="64" />
+      <edge source="1590550809582112768" target="1590568477320163328" id="65" />
+      <edge source="1590550809582112768" target="1590561345413709824" id="66" />
+      <edge source="1590550809582112768" target="1590659429632208896" id="67" />
+      <edge source="1590550809582112768" target="1590714989702451200" id="68" />
+      <edge source="1590660220346564608" target="1590660282493603840" id="69" />
+      <edge source="1590569516677070848" target="1590569623719936000" id="70" />
+      <edge source="1590569429376827392" target="1590569662349455360" id="71" />
+      <edge source="1590667040876277760" target="1590667389905309696" id="72" />
+      <edge source="1590667040876277760" target="1590667482276442112" id="73" />
+      <edge source="1590686657824829440" target="1590686988084314112" id="74" />
+      <edge source="1590605281662480384" target="1590605656511246336" id="75" />
+      <edge source="1590658162709114880" target="1590658549843361792" id="76" />
+      <edge source="1590658162709114880" target="1590658234180046848" id="77" />
+      <edge source="1590663900751884288" target="1590664170168782848" id="78" />
+      <edge source="1590629954953572352" target="1590710945369985024" id="79" />
+      <edge source="1590602900317040640" target="1590603237673275392" id="80" />
+      <edge source="1590602900317040640" target="1590605773411061760" id="81" />
+      <edge source="1590659429632208896" target="1590660304429801472" id="82" />
+      <edge source="1590566396303642624" target="1590567003961823232" id="83" />
+      <edge source="1590603739593052160" target="1590603861945118720" id="84" />
+      <edge source="1590603739593052160" target="1590604794070458368" id="85" />
+      <edge source="1590603739593052160" target="1590605661674811392" id="86" />
+      <edge source="1590558434940030976" target="1590558928882266112" id="87" />
+      <edge source="1590647834235523072" target="1590648051030700032" id="88" />
+      <edge source="1590647834235523072" target="1590648616095739904" id="89" />
+      <edge source="1590557192469762048" target="1590557312200376320" id="90" />
+      <edge source="1590630667855200256" target="1590711055751467008" id="91" />
+      <edge source="1590645521114628096" target="1590649343518052352" id="92" />
+      <edge source="1590584340307935232" target="1590584678603685888" id="93" />
+      <edge source="1590584340307935232" target="1590584424785408000" id="94" />
+      <edge source="1590583532564676608" target="1590583569340321792" id="95" />
+      <edge source="1590583532564676608" target="1590584097025691648" id="96" />
+      <edge source="1590562035154444288" target="1590565412777136128" id="97" />
+      <edge source="1590662552169897984" target="1590664529683570688" id="98" />
+      <edge source="1590568144711868416" target="1590568296881205248" id="99" />
+      <edge source="1590625515534442496" target="1590625788365533184" id="100" />
+      <edge source="1590659648839127040" target="1590659837758951424" id="101" />
+      <edge source="1590659648839127040" target="1590660024564854784" id="102" />
+      <edge source="1590714989702451200" target="1590715053896269824" id="103" />
+      <edge source="1590714989702451200" target="1590715188344680448" id="104" />
+      <edge source="1590714989702451200" target="1590715413741985792" id="105" />
+      <edge source="1590714989702451200" target="1590715154333052928" id="106" />
+      <edge source="1590714023846514688" target="1590714438528937984" id="107" />
+      <edge source="1590714023846514688" target="1590714397806460928" id="108" />
+      <edge source="1590714023846514688" target="1590714381159268352" id="109" />
+      <edge source="1590714023846514688" target="1590715305021820928" id="110" />
+      <edge source="1590714023846514688" target="1590714285633974272" id="111" />
+      <edge source="1590675024918515712" target="1590675285498015744" id="112" />
+      <edge source="1590665347740635136" target="1590666199456944128" id="113" />
+      <edge source="1590626600907075584" target="1590626807996645376" id="114" />
+      <edge source="1590648088368074752" target="1590648258623598592" id="115" />
+      <edge source="1590648088368074752" target="1590648382611390464" id="116" />
+    </edges>
+  </graph>
+</gexf>

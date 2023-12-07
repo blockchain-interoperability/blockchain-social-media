@@ -19,4 +19,5 @@ else:
 FIGS_DIR = BASE_DIR / 'figures'
 FIGS_DIR.mkdir(exist_ok=True, parents=True)
 
-
+REPORT_DIR = BASE_DIR / 'reports'
+REPORT_DIR.mkdir(exist_ok=True, parents=True)

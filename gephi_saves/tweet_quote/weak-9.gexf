@@ -1,0 +1,767 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-12-01">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="Text" type="string" />
+      <attribute id="1" title="Sentiment Composite" type="double" />
+      <attribute id="2" title="Retweet Count" type="double" />
+      <attribute id="3" title="Favorite Count" type="double" />
+      <attribute id="4" title="Quote Count" type="double" />
+      <attribute id="5" title="Reply Count" type="double" />
+    </attributes>
+    <nodes>
+      <node id="1590561360823619584" label="1590561360823619584">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="3.0" />
+          <attvalue for="3" value="22.0" />
+          <attvalue for="4" value="2.0" />
+          <attvalue for="5" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="1590562716464271360" label="1590562716464271360">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590560114184179712" label="1590560114184179712">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="2.0" />
+          <attvalue for="3" value="31.0" />
+          <attvalue for="4" value="4.0" />
+          <attvalue for="5" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="1590589103359549440" label="1590589103359549440">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590559271040622592" label="1590559271040622592">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="21.0" />
+          <attvalue for="3" value="189.0" />
+          <attvalue for="4" value="11.0" />
+          <attvalue for="5" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="1590592963713040384" label="1590592963713040384">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="4.0" />
+          <attvalue for="3" value="21.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="1590786457429762048" label="1590786457429762048">
+        <attvalues>
+          <attvalue for="0" value="Basel is a very smart crypto punk and Link marine." />
+          <attvalue for="1" value="0.862912118434906" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590673620531314688" label="1590673620531314688">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="7.0" />
+          <attvalue for="3" value="29.0" />
+          <attvalue for="4" value="2.0" />
+          <attvalue for="5" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="1590673206163083264" label="1590673206163083264">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink $link" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590584330543566848" label="1590584330543566848">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590806500939018240" label="1590806500939018240">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="4.0" />
+          <attvalue for="3" value="21.0" />
+          <attvalue for="4" value="2.0" />
+          <attvalue for="5" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="1590560697129500672" label="1590560697129500672">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590561204124389376" label="1590561204124389376">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for &#10;@chainlink" />
+          <attvalue for="1" value="-0.6497980952262878" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590778363068940288" label="1590778363068940288">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="6.0" />
+          <attvalue for="3" value="29.0" />
+          <attvalue for="4" value="2.0" />
+          <attvalue for="5" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="1590642474879684608" label="1590642474879684608">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590778690488893440" label="1590778690488893440">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590726878155124736" label="1590726878155124736">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="1.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590675248604917760" label="1590675248604917760">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590799616181940224" label="1590799616181940224">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for Chainlink" />
+          <attvalue for="1" value="-0.504175066947937" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590823859753988096" label="1590823859753988096">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for Chainlink" />
+          <attvalue for="1" value="-0.504175066947937" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591083834174746624" label="1591083834174746624">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for Chainlink" />
+          <attvalue for="1" value="-0.504175066947937" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590970347540852736" label="1590970347540852736">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590782960110022656" label="1590782960110022656">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink $LINK" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590577872200413184" label="1590577872200413184">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for Chainlink" />
+          <attvalue for="1" value="-0.504175066947937" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590527782337269760" label="1590527782337269760">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="13.0" />
+          <attvalue for="3" value="131.0" />
+          <attvalue for="4" value="7.0" />
+          <attvalue for="5" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="1590531377287417856" label="1590531377287417856">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for Chainlink #chainlink $link @sircryptotips" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590838318128058368" label="1590838318128058368">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590777916610465792" label="1590777916610465792">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590702385424654336" label="1590702385424654336">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="2.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="1590614690484609024" label="1590614690484609024">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="5.0" />
+          <attvalue for="3" value="43.0" />
+          <attvalue for="4" value="2.0" />
+          <attvalue for="5" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="1590537138449571840" label="1590537138449571840">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="3.0" />
+          <attvalue for="4" value="1.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590617674811596800" label="1590617674811596800">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590819992702185472" label="1590819992702185472">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink https://t.co/HoFgdTo9Rs" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2.0" />
+          <attvalue for="3" value="12.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590837729491054592" label="1590837729491054592">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590775471608061952" label="1590775471608061952">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for Chainlink" />
+          <attvalue for="1" value="-0.504175066947937" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590775008145858560" label="1590775008145858560">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for Chainlink" />
+          <attvalue for="1" value="-0.504175066947937" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590594362945470464" label="1590594362945470464">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is a gey advertisement for @chainlink" />
+          <attvalue for="1" value="-0.7946834564208984" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590897513514827776" label="1590897513514827776">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590525005351518208" label="1590525005351518208">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for Chainlink" />
+          <attvalue for="1" value="-0.504175066947937" />
+          <attvalue for="2" value="7.0" />
+          <attvalue for="3" value="75.0" />
+          <attvalue for="4" value="3.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590611636167278592" label="1590611636167278592">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="9.0" />
+          <attvalue for="4" value="3.0" />
+          <attvalue for="5" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="1590969494503329792" label="1590969494503329792">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590772184506863616" label="1590772184506863616">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for Chainlink" />
+          <attvalue for="1" value="-0.504175066947937" />
+          <attvalue for="2" value="47.0" />
+          <attvalue for="3" value="295.0" />
+          <attvalue for="4" value="22.0" />
+          <attvalue for="5" value="11.0" />
+        </attvalues>
+      </node>
+      <node id="1590540725510635520" label="1590540725510635520">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590590949012705280" label="1590590949012705280">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for chainlink" />
+          <attvalue for="1" value="-0.6827292442321777" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590832109446664192" label="1590832109446664192">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for Chainlink" />
+          <attvalue for="1" value="-0.504175066947937" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590772299858612224" label="1590772299858612224">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for Chainlink" />
+          <attvalue for="1" value="-0.504175066947937" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="3.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590911099565936640" label="1590911099565936640">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590778244017852416" label="1590778244017852416">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for Chainlink" />
+          <attvalue for="1" value="-0.504175066947937" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590648528858419200" label="1590648528858419200">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="2.0" />
+          <attvalue for="3" value="34.0" />
+          <attvalue for="4" value="1.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590789653313245184" label="1590789653313245184">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink&#10;&#10;$LINK" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590561882121064448" label="1590561882121064448">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590716481830277120" label="1590716481830277120">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590762906932547584" label="1590762906932547584">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for &#10;@chainlink" />
+          <attvalue for="1" value="-0.6497980952262878" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590776513582227456" label="1590776513582227456">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for Chainlink." />
+          <attvalue for="1" value="-0.5840821862220764" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590530628382253056" label="1590530628382253056">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #ChainLink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="1.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590650809095622656" label="1590650809095622656">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="5.0" />
+          <attvalue for="4" value="1.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591054586034331648" label="1591054586034331648">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590651272692367360" label="1590651272692367360">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590720530415435776" label="1590720530415435776">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590819374612430848" label="1590819374612430848">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink $LINK" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590539781989027840" label="1590539781989027840">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2.0" />
+          <attvalue for="3" value="3.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590529045002801152" label="1590529045002801152">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #ChainLink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="5.0" />
+          <attvalue for="4" value="1.0" />
+          <attvalue for="5" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="1590842571181682688" label="1590842571181682688">
+        <attvalues>
+          <attvalue for="0" value="Chainlink fixes this" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590773151180681216" label="1590773151180681216">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for Chainlink" />
+          <attvalue for="1" value="-0.504175066947937" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590529705060757504" label="1590529705060757504">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #ChainLink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="3.0" />
+          <attvalue for="4" value="2.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590811737820995584" label="1590811737820995584">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590646093213499392" label="1590646093213499392">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for @chainlink" />
+          <attvalue for="1" value="-0.5717495083808899" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1590530660913283072" label="1590530660913283072">
+        <attvalues>
+          <attvalue for="0" value="Everything happening is an advertisement for #Chainlink" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="2.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="1590561360823619584" target="1590562716464271360" id="0" />
+      <edge source="1590561360823619584" target="1590589103359549440" id="1" />
+      <edge source="1590560114184179712" target="1590560697129500672" id="2" />
+      <edge source="1590560114184179712" target="1590720530415435776" id="3" />
+      <edge source="1590560114184179712" target="1590726878155124736" id="4" />
+      <edge source="1590560114184179712" target="1590594362945470464" id="5" />
+      <edge source="1590559271040622592" target="1590560114184179712" id="6" />
+      <edge source="1590559271040622592" target="1590673620531314688" id="7" />
+      <edge source="1590559271040622592" target="1590561360823619584" id="8" />
+      <edge source="1590559271040622592" target="1590592963713040384" id="9" />
+      <edge source="1590559271040622592" target="1590786457429762048" id="10" />
+      <edge source="1590559271040622592" target="1590673206163083264" id="11" />
+      <edge source="1590559271040622592" target="1590584330543566848" id="12" />
+      <edge source="1590559271040622592" target="1590806500939018240" id="13" />
+      <edge source="1590559271040622592" target="1590614690484609024" id="14" />
+      <edge source="1590559271040622592" target="1590702385424654336" id="15" />
+      <edge source="1590673620531314688" target="1590762906932547584" id="16" />
+      <edge source="1590673620531314688" target="1590675248604917760" id="17" />
+      <edge source="1590806500939018240" target="1590819992702185472" id="18" />
+      <edge source="1590806500939018240" target="1590811737820995584" id="19" />
+      <edge source="1590806500939018240" target="1590969494503329792" id="20" />
+      <edge source="1590560697129500672" target="1590561204124389376" id="21" />
+      <edge source="1590560697129500672" target="1590611636167278592" id="22" />
+      <edge source="1590561204124389376" target="1590561882121064448" id="23" />
+      <edge source="1590778363068940288" target="1590778690488893440" id="24" />
+      <edge source="1590778363068940288" target="1590782960110022656" id="25" />
+      <edge source="1590527782337269760" target="1590838318128058368" id="26" />
+      <edge source="1590527782337269760" target="1590539781989027840" id="27" />
+      <edge source="1590527782337269760" target="1590529045002801152" id="28" />
+      <edge source="1590527782337269760" target="1590531377287417856" id="29" />
+      <edge source="1590527782337269760" target="1590537138449571840" id="30" />
+      <edge source="1590527782337269760" target="1590772184506863616" id="31" />
+      <edge source="1590527782337269760" target="1590559271040622592" id="32" />
+      <edge source="1590614690484609024" target="1590897513514827776" id="33" />
+      <edge source="1590614690484609024" target="1590617674811596800" id="34" />
+      <edge source="1590537138449571840" target="1590540725510635520" id="35" />
+      <edge source="1590819992702185472" target="1590837729491054592" id="36" />
+      <edge source="1590819992702185472" target="1591054586034331648" id="37" />
+      <edge source="1590525005351518208" target="1590590949012705280" id="38" />
+      <edge source="1590525005351518208" target="1590799616181940224" id="39" />
+      <edge source="1590525005351518208" target="1590527782337269760" id="40" />
+      <edge source="1590611636167278592" target="1590716481830277120" id="41" />
+      <edge source="1590611636167278592" target="1590642474879684608" id="42" />
+      <edge source="1590611636167278592" target="1590646093213499392" id="43" />
+      <edge source="1590772184506863616" target="1590819374612430848" id="44" />
+      <edge source="1590772184506863616" target="1590823859753988096" id="45" />
+      <edge source="1590772184506863616" target="1590789653313245184" id="46" />
+      <edge source="1590772184506863616" target="1590775471608061952" id="47" />
+      <edge source="1590772184506863616" target="1590842571181682688" id="48" />
+      <edge source="1590772184506863616" target="1590777916610465792" id="49" />
+      <edge source="1590772184506863616" target="1591083834174746624" id="50" />
+      <edge source="1590772184506863616" target="1590970347540852736" id="51" />
+      <edge source="1590772184506863616" target="1590832109446664192" id="52" />
+      <edge source="1590772184506863616" target="1590772299858612224" id="53" />
+      <edge source="1590772184506863616" target="1590778363068940288" id="54" />
+      <edge source="1590772184506863616" target="1590911099565936640" id="55" />
+      <edge source="1590772184506863616" target="1590775008145858560" id="56" />
+      <edge source="1590772184506863616" target="1590776513582227456" id="57" />
+      <edge source="1590772184506863616" target="1590773151180681216" id="58" />
+      <edge source="1590772299858612224" target="1590778244017852416" id="59" />
+      <edge source="1590648528858419200" target="1590650809095622656" id="60" />
+      <edge source="1590530628382253056" target="1590577872200413184" id="61" />
+      <edge source="1590650809095622656" target="1590651272692367360" id="62" />
+      <edge source="1590529045002801152" target="1590529705060757504" id="63" />
+      <edge source="1590529705060757504" target="1590530628382253056" id="64" />
+      <edge source="1590529705060757504" target="1590530660913283072" id="65" />
+      <edge source="1590646093213499392" target="1590648528858419200" id="66" />
+    </edges>
+  </graph>
+</gexf>

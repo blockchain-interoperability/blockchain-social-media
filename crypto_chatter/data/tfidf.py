@@ -30,6 +30,7 @@ def fit_tfidf(
     save_file.parent.mkdir(parents=True, exist_ok=True)
 
     if not save_file.is_file():
+        print('fitting tfidf..')
         start = time.time()
         rng = np.random.RandomState(config.random_seed)
         # first filter out spam
@@ -51,6 +52,7 @@ def fit_tfidf(
         pickle.dump(tfidf, open(save_file,"wb"))
         print(f"computed tfidf and saved in {time.time() - start:.2f} seconds")
     else:
+        print('loading tfidf..')
         tfidf = pickle.load(open(save_file, "rb"))
     return tfidf
 
@@ -64,4 +66,4 @@ def get_tfidf(
     sorted_idxs = tfidf_scores.argsort()[::-1]
     keywords = list(terms[sorted_idxs])
     keyword_scores = tfidf_scores[sorted_idxs]
-    return dict(zip(keywords, keyword_scores))
+    return list(zip(keywords, keyword_scores))

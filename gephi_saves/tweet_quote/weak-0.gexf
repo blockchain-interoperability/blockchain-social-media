@@ -1,0 +1,2087 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-12-01">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="Text" type="string" />
+      <attribute id="1" title="Sentiment Composite" type="float" />
+      <attribute id="2" title="Retweet Count" type="double" />
+      <attribute id="3" title="Favorite Count" type="double" />
+      <attribute id="4" title="Quote Count" type="double" />
+      <attribute id="5" title="Reply Count" type="double" />
+    </attributes>
+    <nodes>
+      <node id="1591609103197286400" label="1591609103197286400">
+        <attvalues>
+          <attvalue for="0" value="Crypto dot com accidentally sent 80% of their cold storage ETH to Gate and then … asked for it back???" />
+          <attvalue for="1" value="-0.696931004524231" />
+          <attvalue for="2" value="1518.0" />
+          <attvalue for="3" value="10663.0" />
+          <attvalue for="4" value="436.0" />
+          <attvalue for="5" value="1030.0" />
+        </attvalues>
+      </node>
+      <node id="1591610704565604352" label="1591610704565604352">
+        <attvalues>
+          <attvalue for="0" value="trust no one with your crypto 😵‍💫" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="3.0" />
+          <attvalue for="3" value="20.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="4.0" />
+        </attvalues>
+      </node>
+      <node id="1591627743535714304" label="1591627743535714304">
+        <attvalues>
+          <attvalue for="0" value="FTX finished. CRO next .... &#10;&#10;we must keep the shit show on 😮‍💨😮‍💨😮‍💨" />
+          <attvalue for="1" value="-0.8605108857154846" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591611009743163392" label="1591611009743163392">
+        <attvalues>
+          <attvalue for="0" value="Jfc, define wild week in CT." />
+          <attvalue for="1" value="-0.7003348469734192" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591638860752392192" label="1591638860752392192">
+        <attvalues>
+          <attvalue for="0" value="Wtf is going on? Just when you think it can’t get any worse 🤦‍♂️" />
+          <attvalue for="1" value="-0.9458072781562805" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="1.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591614254536613888" label="1591614254536613888">
+        <attvalues>
+          <attvalue for="0" value="Crypto  . Com next 👀" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="13.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="3.0" />
+        </attvalues>
+      </node>
+      <node id="1591635548153974784" label="1591635548153974784">
+        <attvalues>
+          <attvalue for="0" value="@MrOmodulus already told you to take all your funds out on cex.&#10;$CULT &#10;https://t.co/UKT0kgpdJN" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591614032146055168" label="1591614032146055168">
+        <attvalues>
+          <attvalue for="0" value="Absolute amateur hour. When do the people who actually understand this ecosystem take control?" />
+          <attvalue for="1" value="-0.8385295867919922" />
+          <attvalue for="2" value="2.0" />
+          <attvalue for="3" value="9.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="1591623787405266944" label="1591623787405266944">
+        <attvalues>
+          <attvalue for="0" value="Lol crypto is a shitshow." />
+          <attvalue for="1" value="-0.8994064331054688" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="2.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="1591618121458421760" label="1591618121458421760">
+        <attvalues>
+          <attvalue for="0" value="These people all work while high. There’s no other freakin way this crap happens so consistently!" />
+          <attvalue for="1" value="-0.9237383008003235" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591620996884316160" label="1591620996884316160">
+        <attvalues>
+          <attvalue for="0" value="future of finance" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591619177726775296" label="1591619177726775296">
+        <attvalues>
+          <attvalue for="0" value="WTF is going on this week?" />
+          <attvalue for="1" value="-0.7678107619285583" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591612506954674176" label="1591612506954674176">
+        <attvalues>
+          <attvalue for="0" value="What is going on?? And do we really have to use exchanges? 🤦🏼‍♀️" />
+          <attvalue for="1" value="-0.889348030090332" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591618401549824000" label="1591618401549824000">
+        <attvalues>
+          <attvalue for="0" value="That's kinda reckless for an exchange to do." />
+          <attvalue for="1" value="-0.8387139439582825" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591625601945055232" label="1591625601945055232">
+        <attvalues>
+          <attvalue for="0" value="@Ramon_Pablo23 Something to watch with that, gonna spook people" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591635108892913664" label="1591635108892913664">
+        <attvalues>
+          <attvalue for="0" value="Crypto is a joke chuds, better sell while you have the chance." />
+          <attvalue for="1" value="-0.9229260683059692" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591662145363914752" label="1591662145363914752">
+        <attvalues>
+          <attvalue for="0" value="What is going on" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2.0" />
+          <attvalue for="3" value="11.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="1591627551847624704" label="1591627551847624704">
+        <attvalues>
+          <attvalue for="0" value="How many more crypto fuckups need to happen before you guys realize crypto is uninvestable?&#10;&#10;Y’all sound like a bunch of Stockholm syndromes victims" />
+          <attvalue for="1" value="-0.9222120046615601" />
+          <attvalue for="2" value="5.0" />
+          <attvalue for="3" value="38.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="1591610855443279872" label="1591610855443279872">
+        <attvalues>
+          <attvalue for="0" value="i would exit just to be safe… this is very strange" />
+          <attvalue for="1" value="-0.6567354798316956" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591610090108628992" label="1591610090108628992">
+        <attvalues>
+          <attvalue for="0" value="It is becoming impossible to deny the leaders of our industry are an absolute joke.&#10;&#10;This applies to so many different sectors of #web3 and #crypto" />
+          <attvalue for="1" value="-0.8575895428657532" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591705650580828160" label="1591705650580828160">
+        <attvalues>
+          <attvalue for="0" value="POR still underway but questions raised over solvency after “mistakenly” sending most of their Eth to another exchange 🫡" />
+          <attvalue for="1" value="-0.5134690403938293" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591619539024113664" label="1591619539024113664">
+        <attvalues>
+          <attvalue for="0" value="Ok we should all officially be scared out of our minds.&#10;&#10;👀 ☠️ #NFT #Web3" />
+          <attvalue for="1" value="-0.6567176580429077" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591609820846911488" label="1591609820846911488">
+        <attvalues>
+          <attvalue for="0" value="The drama doesn't end. Will it?&#10;&#10;My eyes and head ache" />
+          <attvalue for="1" value="-0.8298290967941284" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591611064315441152" label="1591611064315441152">
+        <attvalues>
+          <attvalue for="0" value="The fiduciary duty standard is absolutely obliterated by crypto 2022." />
+          <attvalue for="1" value="-0.829469621181488" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591611115993460736" label="1591611115993460736">
+        <attvalues>
+          <attvalue for="0" value="We really are going to zero" />
+          <attvalue for="1" value="-0.8018867373466492" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591612921507115008" label="1591612921507115008">
+        <attvalues>
+          <attvalue for="0" value="well @nansen_intern would never have made that mistake" />
+          <attvalue for="1" value="-0.6203421354293823" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591620764230643712" label="1591620764230643712">
+        <attvalues>
+          <attvalue for="0" value="@daylep91 ok this week just keeps getting wilder. This is the wild west! https://t.co/CosJo85MLr accidently sent 285K ETH to a mislabelled account and asked for it back 😆" />
+          <attvalue for="1" value="0.5653888583183289" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591616465597526016" label="1591616465597526016">
+        <attvalues>
+          <attvalue for="0" value="The buffoonery that just keeps on giving🤡" />
+          <attvalue for="1" value="-0.8849837779998779" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591614393770733568" label="1591614393770733568">
+        <attvalues>
+          <attvalue for="0" value="This week in crypto is 🤯" />
+          <attvalue for="1" value="0.5236724615097046" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592342885424590848" label="1592342885424590848">
+        <attvalues>
+          <attvalue for="0" value="We’re getting close to cleaning out ALL the trash in this space! 🚮" />
+          <attvalue for="1" value="-0.4447120726108551" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591636078209167360" label="1591636078209167360">
+        <attvalues>
+          <attvalue for="0" value="I don’t even know what to say anymore" />
+          <attvalue for="1" value="-0.7074755430221558" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591615485916942336" label="1591615485916942336">
+        <attvalues>
+          <attvalue for="0" value="Whaaaaat lmao. Counter party risk on steroids when trusting exchanges." />
+          <attvalue for="1" value="-0.8393266201019287" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591620953435475968" label="1591620953435475968">
+        <attvalues>
+          <attvalue for="0" value="Fck it. I'm putting everything into Walmart and telecommunications" />
+          <attvalue for="1" value="-0.8324983716011047" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591612743664209920" label="1591612743664209920">
+        <attvalues>
+          <attvalue for="0" value="world cup 2022 &amp;amp; staples center sponsor crypto dot com! what could go wrong" />
+          <attvalue for="1" value="0.6948250532150269" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591622396095696896" label="1591622396095696896">
+        <attvalues>
+          <attvalue for="0" value="No i swear day after day we have something new and worst, this is the best season on the CT." />
+          <attvalue for="1" value="0.4612347185611725" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="1.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591621470094036992" label="1591621470094036992">
+        <attvalues>
+          <attvalue for="0" value="Whats going on ¿?" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591618448374759424" label="1591618448374759424">
+        <attvalues>
+          <attvalue for="0" value="So #Gateio did the honorable thing. I hope they told #CryptoCom they pay for the gas though. You remember the old saying...no one rides for free." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591626165885992960" label="1591626165885992960">
+        <attvalues>
+          <attvalue for="0" value="Only solution is use #Dex . We here for #decentralisation. These central exchanges are bringing #Crypto down ." />
+          <attvalue for="1" value="-0.5745263695716858" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591610549439270912" label="1591610549439270912">
+        <attvalues>
+          <attvalue for="0" value="there are chick fil a’s ran better than the majority of these crypto exchanges" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591629129203552256" label="1591629129203552256">
+        <attvalues>
+          <attvalue for="0" value="The fun never stops in crypto" />
+          <attvalue for="1" value="0.9293323159217834" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591660066666696704" label="1591660066666696704">
+        <attvalues>
+          <attvalue for="0" value="I probably won't have invested in crypto if I had known that clowns are in charge https://t.co/RRIJ8OFksO" />
+          <attvalue for="1" value="-0.9076685309410095" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591740273427730432" label="1591740273427730432">
+        <attvalues>
+          <attvalue for="0" value="Normies are never entering crypto if exchanges can’t even get addresses right." />
+          <attvalue for="1" value="-0.7322221398353577" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591698964231098368" label="1591698964231098368">
+        <attvalues>
+          <attvalue for="0" value="This is also from an exchange which accidentally sent $10 million to a user instead of $100 withdrawal and didn't realise for 7 months... and people think there funds are safe stored on there.&#10;&#10;https://t.co/Wy9ngxi1Qc" />
+          <attvalue for="1" value="-0.7781873345375061" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591670410021834752" label="1591670410021834752">
+        <attvalues>
+          <attvalue for="0" value="Seriously pack it all up the tech doesn’t work has no PMF and significant players are scammers" />
+          <attvalue for="1" value="-0.9413267374038696" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591636033405587456" label="1591636033405587456">
+        <attvalues>
+          <attvalue for="0" value="@AutismCapital thoughts on new crypto . com's new discovery here?? https://t.co/nC7eJ3wfCS are they next?" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591612832420073472" label="1591612832420073472">
+        <attvalues>
+          <attvalue for="0" value="Fuckin hell, every major player in this space is simply incompetent or a con artist 😂" />
+          <attvalue for="1" value="-0.9491954445838928" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591621299075534848" label="1591621299075534848">
+        <attvalues>
+          <attvalue for="0" value="All I'm asking for is for one day in CT without drama . https://t.co/vz9gr5w1Gl" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591632002394226688" label="1591632002394226688">
+        <attvalues>
+          <attvalue for="0" value="@AltcoinPepe Check this out" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591669088681709568" label="1591669088681709568">
+        <attvalues>
+          <attvalue for="0" value="this is why you should self custody your funds... if you hold your funds with someone else you are blindly trusting other people" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591667629739200512" label="1591667629739200512">
+        <attvalues>
+          <attvalue for="0" value="Only solution I see is to take a snapshot of top 10 major cex’s simultaneously to prove reserves" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591628905227898880" label="1591628905227898880">
+        <attvalues>
+          <attvalue for="0" value="What a shitshow. If you haven’t learned by now I don’t know what to tell you 🤷 &#10;#NotYourKeysNotYourCoins &#10;#TrustNoOne #TrustCode #LongLiveDeFi #X7Finance" />
+          <attvalue for="1" value="-0.8942046165466309" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="3.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591628310463008768" label="1591628310463008768">
+        <attvalues>
+          <attvalue for="0" value="A lot of fantasy going on &#10;&#10;🌈🌈" />
+          <attvalue for="1" value="0.6707842946052551" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591619259226259456" label="1591619259226259456">
+        <attvalues>
+          <attvalue for="0" value="Get your stuff OFF of @cryptocom NOW just in case...." />
+          <attvalue for="1" value="-0.7193641662597656" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591640951109582848" label="1591640951109582848">
+        <attvalues>
+          <attvalue for="0" value="Wild" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591717719942234112" label="1591717719942234112">
+        <attvalues>
+          <attvalue for="0" value="It's probably a scam, this is how they fake proof of reserves" />
+          <attvalue for="1" value="-0.8339931964874268" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591613079129030656" label="1591613079129030656">
+        <attvalues>
+          <attvalue for="0" value="Not your keys not your crypto.&#10;Not your keys not your crypto.&#10;Not your keys not your crypto.&#10;Not your keys not your crypto.&#10;Not your keys not your crypto.&#10;Not your keys not your crypto.&#10;Not your keys not your crypto.&#10;Not your keys not your crypto.&#10;Not your keys not your crypto." />
+          <attvalue for="1" value="-0.7364715337753296" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591614407045677056" label="1591614407045677056">
+        <attvalues>
+          <attvalue for="0" value="Copy-and-pasting is hard if you pulled up the wrong list." />
+          <attvalue for="1" value="-0.4880470931529999" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591695512373174272" label="1591695512373174272">
+        <attvalues>
+          <attvalue for="0" value="Proof of reserves but with friends 😅" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591833710671831040" label="1591833710671831040">
+        <attvalues>
+          <attvalue for="0" value="Hmm.... CZ was right... To away, this time from https://t.co/Ud7nu0SrSh, next tíme from Huobi?" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591614377626574848" label="1591614377626574848">
+        <attvalues>
+          <attvalue for="0" value="Absolutely insane.. this can’t be true… Peak 2022.&#10;Trust. No. One." />
+          <attvalue for="1" value="-0.8364464640617371" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591615141241577472" label="1591615141241577472">
+        <attvalues>
+          <attvalue for="0" value="the blockchain is truly incredible" />
+          <attvalue for="1" value="0.9700831770896912" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591614969413525504" label="1591614969413525504">
+        <attvalues>
+          <attvalue for="0" value="Dawg… 🤦🏼‍♂️  I’m going to sleep" />
+          <attvalue for="1" value="-0.8488761782646179" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591636456019095552" label="1591636456019095552">
+        <attvalues>
+          <attvalue for="0" value="@QTRResearch Crypto doesn’t have issues like that Mr Crow https://t.co/EYccCrsmuW" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591686127807004672" label="1591686127807004672">
+        <attvalues>
+          <attvalue for="0" value="Ya gotta question yourself why you invest your time and effort in this space…..&#10;&#10;Bullish 🐮" />
+          <attvalue for="1" value="-0.4939325153827667" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591629067362926592" label="1591629067362926592">
+        <attvalues>
+          <attvalue for="0" value="Corporate governance can definitely be improved here" />
+          <attvalue for="1" value="0.7563463449478149" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591772424085078016" label="1591772424085078016">
+        <attvalues>
+          <attvalue for="0" value="This is a precaution that we advise because of of recent news being shared via socials. https://t.co/R2dX4bOA8h" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="3.0" />
+          <attvalue for="3" value="11.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591638010202062848" label="1591638010202062848">
+        <attvalues>
+          <attvalue for="0" value="To be fair Gate never said the magic phrase: “no take backs”, so they sorta had to return it." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591611933261987840" label="1591611933261987840">
+        <attvalues>
+          <attvalue for="0" value="You only had one job lol" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591626876946382848" label="1591626876946382848">
+        <attvalues>
+          <attvalue for="0" value="Crypto is great - when it isnt a sex cult losing your money, its a major website just simply sending it to the wrong place." />
+          <attvalue for="1" value="0.5613765716552734" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591680831999082496" label="1591680831999082496">
+        <attvalues>
+          <attvalue for="0" value="Really hope whoever did this was fired. I always send a test transaction for .1 ETH let alone 320k ETH" />
+          <attvalue for="1" value="-0.9099905490875244" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591616350455496704" label="1591616350455496704">
+        <attvalues>
+          <attvalue for="0" value="Not your keys not your crypto." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="3.0" />
+          <attvalue for="3" value="23.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="4.0" />
+        </attvalues>
+      </node>
+      <node id="1591625677216055296" label="1591625677216055296">
+        <attvalues>
+          <attvalue for="0" value="Half time show brought to you by clown central" />
+          <attvalue for="1" value="-0.6571505069732666" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591610281528295424" label="1591610281528295424">
+        <attvalues>
+          <attvalue for="0" value="@4GIVEMYSOUL @cryptocom @RealMattDamon https://t.co/NIm4c1whS0&#10;&#10;they loss 90% of user eth lol" />
+          <attvalue for="1" value="-0.6256474256515503" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="2.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591609904900771840" label="1591609904900771840">
+        <attvalues>
+          <attvalue for="0" value="The good thing to come out of this FTX thing is everyone is now watching every company with a hawks eye. All the bs is starting to unwind and people are becoming smart when it comes to where they put their money!" />
+          <attvalue for="1" value="0.591612696647644" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591615956937474048" label="1591615956937474048">
+        <attvalues>
+          <attvalue for="0" value="Seriously, who’s writing this dramatic comedy and when’s the last chapter?!" />
+          <attvalue for="1" value="-0.8986071944236755" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591612141328793600" label="1591612141328793600">
+        <attvalues>
+          <attvalue for="0" value="Next one that goes down is #CRO https://t.co/nx2mTQe3Gh&#10;&#10;Be careful" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591610715655348224" label="1591610715655348224">
+        <attvalues>
+          <attvalue for="0" value="today of all days" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591703483442503680" label="1591703483442503680">
+        <attvalues>
+          <attvalue for="0" value="Lol yeh george has always thought these guys dodgy af every since they started in HK&#10;&#10;business built off a domain pretty much. Them and blockfi next to go likely https://t.co/cIirM90fxw" />
+          <attvalue for="1" value="-0.8357369899749756" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591768455082123264" label="1591768455082123264">
+        <attvalues>
+          <attvalue for="0" value="If you have tokens on any of these exchanges… get them then hell into a metamask wallet or even better, cold storage. &#10;&#10;Crypto,com has their balance audit, sends balance to Gate for their audit, then sends it back? &#10;&#10;SUS!!!" />
+          <attvalue for="1" value="-0.511254072189331" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591705317859106816" label="1591705317859106816">
+        <attvalues>
+          <attvalue for="0" value="Questions raised over security of reserves 🫡" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591680535176388608" label="1591680535176388608">
+        <attvalues>
+          <attvalue for="0" value="Can https://t.co/U9Nzrwdk3c just die already we need to purge all these bad actors and send them to jail already" />
+          <attvalue for="1" value="-0.9162238240242004" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591611573550088192" label="1591611573550088192">
+        <attvalues>
+          <attvalue for="0" value="WTF is going on in crypto world https://t.co/9aNFWsmzvg" />
+          <attvalue for="1" value="-0.6712282299995422" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591715873139597312" label="1591715873139597312">
+        <attvalues>
+          <attvalue for="0" value="Take your crypto out of Crypto .Com &#10;&#10;ASAP!&#10;&#10;They’re next" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591629719325270016" label="1591629719325270016">
+        <attvalues>
+          <attvalue for="0" value="Wtf is going on in the cryto space? https://t.co/Lu5FbJyt2V" />
+          <attvalue for="1" value="-0.7013906240463257" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591626608749731840" label="1591626608749731840">
+        <attvalues>
+          <attvalue for="0" value="This space hasn't changed people.&#10;&#10;Everything is a ponzi. &#10;Everyone is a scammer. &#10;Not your keys not your coins. &#10;&#10;This is the ONLY way you will survive here. &#10;&#10;Crypto was invented SO you don't have to trust anyone, trust code instead." />
+          <attvalue for="1" value="-0.7947432398796082" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591616916937924608" label="1591616916937924608">
+        <attvalues>
+          <attvalue for="0" value="What a shit show! They don’t even get basics right.&#10;&#10;I pay more attention when Venmo or CashApp. Stupid.&#10;&#10;@cryptocom #eth" />
+          <attvalue for="1" value="-0.8963037133216858" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591627077219819520" label="1591627077219819520">
+        <attvalues>
+          <attvalue for="0" value="Imagine they had send it to a @bitbns wallet. Would have declared bankruptcy by now." />
+          <attvalue for="1" value="-0.7794461250305176" />
+          <attvalue for="2" value="2.0" />
+          <attvalue for="3" value="14.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="3.0" />
+        </attvalues>
+      </node>
+      <node id="1591645667113541632" label="1591645667113541632">
+        <attvalues>
+          <attvalue for="0" value="crypto dot com is a meme" />
+          <attvalue for="1" value="-0.5266050100326538" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591663708664733696" label="1591663708664733696">
+        <attvalues>
+          <attvalue for="0" value="I've said it before, and I'll say it again. I've always been skeptical about this exchange since their $MCO and $CRO token... Their business model for those rewards cards always seem unsuitable to me." />
+          <attvalue for="1" value="-0.8976520895957947" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591714221150150656" label="1591714221150150656">
+        <attvalues>
+          <attvalue for="0" value="Seeing most crypto exchanges doing audits in the public because of FTX.&#10;FTX had no board!..SFB just marked all the right MIT &amp;amp; Harvard checkmarks." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591626755206520832" label="1591626755206520832">
+        <attvalues>
+          <attvalue for="0" value="welcome to the Wild West of Crypto" />
+          <attvalue for="1" value="0.5922608971595764" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591625953045880832" label="1591625953045880832">
+        <attvalues>
+          <attvalue for="0" value="😆🤣😂😹 get you crypto off exchanges NOW" />
+          <attvalue for="1" value="-0.603752613067627" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591663121051291648" label="1591663121051291648">
+        <attvalues>
+          <attvalue for="0" value="What kind of shit is this." />
+          <attvalue for="1" value="-0.9434752464294434" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591728251520815104" label="1591728251520815104">
+        <attvalues>
+          <attvalue for="0" value="This is Anglo/Irish Nationwide all over again. Circular capital washing." />
+          <attvalue for="1" value="-0.7846664786338806" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591829748745113600" label="1591829748745113600">
+        <attvalues>
+          <attvalue for="0" value="Total $100 reserve basic, I transfer it to you, you have $100 proof, then you give it back to me, I have $100 too, 100 becomes 200" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591610275790458880" label="1591610275790458880">
+        <attvalues>
+          <attvalue for="0" value="Either Crypto dot com is lying or this space has a lot of growing up to do.&#10;&#10;Imagine sending 80% of your net worth because you mistyped a character." />
+          <attvalue for="1" value="-0.8985035419464111" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591614862408683520" label="1591614862408683520">
+        <attvalues>
+          <attvalue for="0" value="Time to observe $CRO chart.. possible shorts 🥂🤔" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591609921665372160" label="1591609921665372160">
+        <attvalues>
+          <attvalue for="0" value="Crypto industry has never died, but some of the brainlet activity makes you wonder if it’s just been lucky to be alive 😂" />
+          <attvalue for="1" value="0.4694659411907196" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591806461407268864" label="1591806461407268864">
+        <attvalues>
+          <attvalue for="0" value="&quot;New process and features were implemented to prevent this from reoccurring&quot; .... Need to rename it Clowncurrency." />
+          <attvalue for="1" value="-0.6245177984237671" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591609976933715968" label="1591609976933715968">
+        <attvalues>
+          <attvalue for="0" value="ALL CEXs ARE GOING TO FALL.&#10;&#10;ALL OF THEM ACCEPT USDT. USDT = ULTIMATE SCAM.&#10;&#10;Be ready, crypto is worthless, morons." />
+          <attvalue for="1" value="-0.8487311005592346" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591656217667309568" label="1591656217667309568">
+        <attvalues>
+          <attvalue for="0" value="This financial savvy is how they afford to give 8% back on a debit card. &#10;&#10;Just kidding it’s because the debit card costs $400,000." />
+          <attvalue for="1" value="-0.45146146416664124" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591718865113075712" label="1591718865113075712">
+        <attvalues>
+          <attvalue for="0" value="Waking up to even more drama https://t.co/vAQ2p9ij3k" />
+          <attvalue for="1" value="-0.7316426634788513" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591617294224216064" label="1591617294224216064">
+        <attvalues>
+          <attvalue for="0" value="Once again, massive flaws in security controls exposed. Understandably there is a learning curve, which should be focusing on risks exposed by web3, NOT repeat blunders already solved for by existing sec controls." />
+          <attvalue for="1" value="-0.8046801090240479" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591634861114413056" label="1591634861114413056">
+        <attvalues>
+          <attvalue for="0" value="Dudes WTF… please get your #crypto off exchanges" />
+          <attvalue for="1" value="-0.8957074880599976" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591610231284715520" label="1591610231284715520">
+        <attvalues>
+          <attvalue for="0" value="I reiterate, please GTFO from Gate, Cryptodot com etc.&#10;Whatever is going on there smells like scammy behavior" />
+          <attvalue for="1" value="-0.9080398082733154" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591611644094074880" label="1591611644094074880">
+        <attvalues>
+          <attvalue for="0" value="competent people should be embarrassed about our work ethic. look at who has risen to leadership and positions of influence. I, for one, feel as though I have a ceiling to chase." />
+          <attvalue for="1" value="-0.7956233024597168" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591948345689657344" label="1591948345689657344">
+        <attvalues>
+          <attvalue for="0" value="This type of red flags 🚩 are the ones we should be looking for .. don’t wait for the news, buy the rumor by moving your funds to a safe @Ledger or @TrustWallet &#10;&#10;Stay safe" />
+          <attvalue for="1" value="-0.574523389339447" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591616798964994048" label="1591616798964994048">
+        <attvalues>
+          <attvalue for="0" value="Withdraw your funds from https://t.co/Hq75AEUVjT. Something sketchy is going on." />
+          <attvalue for="1" value="-0.8306060433387756" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591840287848288256" label="1591840287848288256">
+        <attvalues>
+          <attvalue for="0" value="Is https://t.co/F9ZUVPOjzH the next domino to fall?! Sending bn wallets/addresses is the most fundamental part of crypto...who tf is running this show?! #AmateurHour 80% of ETH assets could have been lost😲😲😲 ...does not bode well😬 #ConfidenceShaken https://t.co/T02jtzLkf5" />
+          <attvalue for="1" value="-0.9160147905349731" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591873623778021376" label="1591873623778021376">
+        <attvalues>
+          <attvalue for="0" value="Accidents happens all the time. FTX was an accident also. A few coordinated accidents to be more precise" />
+          <attvalue for="1" value="-0.7218074798583984" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591621603775107072" label="1591621603775107072">
+        <attvalues>
+          <attvalue for="0" value="ya bro welcome to crypto 🫡" />
+          <attvalue for="1" value="0.771294891834259" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591610241921486848" label="1591610241921486848">
+        <attvalues>
+          <attvalue for="0" value="Reminder -- get your crypto off *all* exchanges. Especially ones with arenas named after them." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="4.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591616405145030656" label="1591616405145030656">
+        <attvalues>
+          <attvalue for="0" value="Incompetence on another level" />
+          <attvalue for="1" value="-0.8758513927459717" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591626116707815424" label="1591626116707815424">
+        <attvalues>
+          <attvalue for="0" value="Lmaooo wither terribly incompetent or sketchy. Either way…. Get yo funds off" />
+          <attvalue for="1" value="-0.9181205034255981" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="1.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591644096271388672" label="1591644096271388672">
+        <attvalues>
+          <attvalue for="0" value="And luckily got almost 90% of it back, lol" />
+          <attvalue for="1" value="0.9481525421142578" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591636184002105344" label="1591636184002105344">
+        <attvalues>
+          <attvalue for="0" value="ehh next is crypto dot com…" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591624878423445504" label="1591624878423445504">
+        <attvalues>
+          <attvalue for="0" value="Get ready for next chapter of &quot;mistakes&quot; , hacks, stolen funds." />
+          <attvalue for="1" value="-0.6872745752334595" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591612904998342656" label="1591612904998342656">
+        <attvalues>
+          <attvalue for="0" value="#web5 fixes this #web3 problem using #Bitcoin’s secure and public blockchain. No more centralized exchanges. Sovereign computing with Bitcoin Lightning Network is the start of the next web. Check out @start9labs, @ImperviousAi to see a glimpse of web5. https://t.co/rxGsssbEPH" />
+          <attvalue for="1" value="0.749447226524353" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591611441374990336" label="1591611441374990336">
+        <attvalues>
+          <attvalue for="0" value="Please, what tf is going on??" />
+          <attvalue for="1" value="-0.8271922469139099" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591828228825845760" label="1591828228825845760">
+        <attvalues>
+          <attvalue for="0" value="Blockchained, on-chain accountability and transparency right before your eyes. This is how we keep centralized institutions accountable." />
+          <attvalue for="1" value="0.5458100438117981" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591610586055741440" label="1591610586055741440">
+        <attvalues>
+          <attvalue for="0" value="I understand not everyone is comfortable with defi and managing their private keys&#10;&#10;How on earth do you trust anyone besides Coinbase" />
+          <attvalue for="1" value="-0.4924004077911377" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="1.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591752012957450240" label="1591752012957450240">
+        <attvalues>
+          <attvalue for="0" value="Lol. This is getting out of hands." />
+          <attvalue for="1" value="-0.7462108135223389" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591633729826738176" label="1591633729826738176">
+        <attvalues>
+          <attvalue for="0" value="What actual fuck?! haha we definitly live in a simulation, the timing of this from @cryptocom $ETH" />
+          <attvalue for="1" value="-0.9189571142196655" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591647150039257088" label="1591647150039257088">
+        <attvalues>
+          <attvalue for="0" value="Wouldn’t they have to bypass  additional security functionality to make this error? &#10;&#10;Are all the exchanges shady?" />
+          <attvalue for="1" value="-0.7825900912284851" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591611252497092608" label="1591611252497092608">
+        <attvalues>
+          <attvalue for="0" value="Bro are any of these fuckers competent?" />
+          <attvalue for="1" value="-0.9259933233261108" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591642880850169856" label="1591642880850169856">
+        <attvalues>
+          <attvalue for="0" value="I love crypto, I truly believe it’s the future; but can we get ANYONE THATS NOT A FUCKING MORON RUNNING LARGE EXCHANGES??" />
+          <attvalue for="1" value="0.7564525604248047" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591650624239960064" label="1591650624239960064">
+        <attvalues>
+          <attvalue for="0" value="Trust no CEX not even @binance &#10;&#10;I had enough of these circus events. &#10;&#10;DeFi is the future." />
+          <attvalue for="1" value="-0.7252413630485535" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591911772730294272" label="1591911772730294272">
+        <attvalues>
+          <attvalue for="0" value="I have no idea what https://t.co/hJm9dnOJcL and https://t.co/n1GoqgFl5e are doing here, but in 2020, I put together a report showing that https://t.co/n1GoqgFl5e was hacked in 2018 and covered it up. Wouldn't trust them." />
+          <attvalue for="1" value="-0.8700211048126221" />
+          <attvalue for="2" value="20.0" />
+          <attvalue for="3" value="78.0" />
+          <attvalue for="4" value="6.0" />
+          <attvalue for="5" value="5.0" />
+        </attvalues>
+      </node>
+      <node id="1591622807229956096" label="1591622807229956096">
+        <attvalues>
+          <attvalue for="0" value="This is what happens when you trust middlemen to custody your #crypto. 🤡🌎" />
+          <attvalue for="1" value="-0.9017639756202698" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591616916913000448" label="1591616916913000448">
+        <attvalues>
+          <attvalue for="0" value="sounds like we should have been using https://t.co/K0hxxrm1LB and not FTX  they didn't run off with  320k $eth 🤣" />
+          <attvalue for="1" value="-0.6044908761978149" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591614014504964096" label="1591614014504964096">
+        <attvalues>
+          <attvalue for="0" value="A friend in finance told me that this stuff happens in big banks not never and there is a code of honour to send it back. 80%" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591757545534001152" label="1591757545534001152">
+        <attvalues>
+          <attvalue for="0" value="That’s what you called trust and working together. Which crypto is supposed to be, instead of fud-ing peers in the same industry.&#10;&#10;#crypto #CryptoCom #CRO" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591631044117430272" label="1591631044117430272">
+        <attvalues>
+          <attvalue for="0" value="josephweinberg: It’s becoming abundantly clear the only people who know how to build stuff for crypto safely and securely are the early people in crypto. Everyone who joined in the last 2-5 years are incapable of running millions of users and their money… https://t.co/opQAQGaZJB" />
+          <attvalue for="1" value="-0.4761433005332947" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591704909409562624" label="1591704909409562624">
+        <attvalues>
+          <attvalue for="0" value="Crypto bros down bad" />
+          <attvalue for="1" value="-0.8871895670890808" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591612975043194880" label="1591612975043194880">
+        <attvalues>
+          <attvalue for="0" value="This is all part of the Crypto Matrix, we are just living in it. Neo will save us here soon." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591613854546800640" label="1591613854546800640">
+        <attvalues>
+          <attvalue for="0" value="Add another reason to 'store your own crypto' list...." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591613660589600768" label="1591613660589600768">
+        <attvalues>
+          <attvalue for="0" value="me: paranoid, sending microtransactions to verify an address any time i send more than .05eth&#10;https://t.co/svLcP8JBzC: yeah, that address looks good full send" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591617914788261888" label="1591617914788261888">
+        <attvalues>
+          <attvalue for="0" value="crypto in fucking shambles rn, get it together guys 😂" />
+          <attvalue for="1" value="-0.9478854537010193" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591625229771878400" label="1591625229771878400">
+        <attvalues>
+          <attvalue for="0" value="Like... it's seriously not easy to stay positive in this space.... 🥲" />
+          <attvalue for="1" value="-0.8826070427894592" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591928237869117440" label="1591928237869117440">
+        <attvalues>
+          <attvalue for="0" value="Looks correct and suggests https://t.co/QTG2jdExuD may have been hacked for a lot. (But I haven't vetted the BTC analysis. )&#10;&#10;Here's some quicker ETH analysis. At the bottom of the DOJ complaint, there's a DPRK Bittrex deposit address (0xc4f) that received ~6417 ETH. https://t.co/32NvUPJ48x" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="3.0" />
+          <attvalue for="3" value="6.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="1591656761806974976" label="1591656761806974976">
+        <attvalues>
+          <attvalue for="0" value="* bro can i borrow ur user deposit real quick, need to get this Merkle shit done" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591611994914058240" label="1591611994914058240">
+        <attvalues>
+          <attvalue for="0" value="Why are all the people in charge complete and utter retards" />
+          <attvalue for="1" value="-0.9227142930030823" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591812488529866752" label="1591812488529866752">
+        <attvalues>
+          <attvalue for="0" value="I am starting to think, and hear me out, that the wild-west of finance isn’t exactly a reliable place to park your money. https://t.co/57cqXFkfa0" />
+          <attvalue for="1" value="-0.7913870811462402" />
+          <attvalue for="2" value="3.0" />
+          <attvalue for="3" value="20.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="1591701067577819136" label="1591701067577819136">
+        <attvalues>
+          <attvalue for="0" value="Who backed the bigger #ponzi ?&#10;&#10;Jason Bourne or the #GOAT ?" />
+          <attvalue for="1" value="-0.5014961957931519" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591627741232758784" label="1591627741232758784">
+        <attvalues>
+          <attvalue for="0" value="#TeraExchange will definitely be better!!  &#10;&#10;It's amateur hour at crypto com! Incredible" />
+          <attvalue for="1" value="0.9858850240707397" />
+          <attvalue for="2" value="3.0" />
+          <attvalue for="3" value="7.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="3.0" />
+        </attvalues>
+      </node>
+      <node id="1591701435317616640" label="1591701435317616640">
+        <attvalues>
+          <attvalue for="0" value="This is also from an exchange which accidentally sent $10 million to a user instead of a $100 withdrawal and didn't realise for 7 months... and people think their funds are safe stored on there?&#10;https://t.co/Wy9ngxhu0E https://t.co/G1nw1IbuMh" />
+          <attvalue for="1" value="-0.8283466696739197" />
+          <attvalue for="2" value="4.0" />
+          <attvalue for="3" value="39.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="1591615730256351232" label="1591615730256351232">
+        <attvalues>
+          <attvalue for="0" value="The mishandling of users funds is starting to be a very problematic pattern among #CEXs ." />
+          <attvalue for="1" value="-0.8786041140556335" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591626660964896768" label="1591626660964896768">
+        <attvalues>
+          <attvalue for="0" value="Keep putting your money in the hands of idiots" />
+          <attvalue for="1" value="-0.8917452096939087" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591653255033294848" label="1591653255033294848">
+        <attvalues>
+          <attvalue for="0" value="Move your asset out of exchange" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591741319160172544" label="1591741319160172544">
+        <attvalues>
+          <attvalue for="0" value="Get your coins off exchanges!! Do it! Now, not tomorrow! Crypto dot com isn’t looking good at all!" />
+          <attvalue for="1" value="-0.8558316230773926" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591611151179485184" label="1591611151179485184">
+        <attvalues>
+          <attvalue for="0" value="Come on people, focus!" />
+          <attvalue for="1" value="0.5210439562797546" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591612903135789056" label="1591612903135789056">
+        <attvalues>
+          <attvalue for="0" value="they really trying to send it to literal fuckin zero 😂" />
+          <attvalue for="1" value="-0.897830605506897" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591611047882153984" label="1591611047882153984">
+        <attvalues>
+          <attvalue for="0" value="Another reason to stick with #Binance" />
+          <attvalue for="1" value="0.8962446451187134" />
+          <attvalue for="2" value="12.0" />
+          <attvalue for="3" value="27.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="1591617254604824576" label="1591617254604824576">
+        <attvalues>
+          <attvalue for="0" value="Crypto is a crazy world right now. Feel like we’re in a simulation." />
+          <attvalue for="1" value="-0.7187044024467468" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591738392672624640" label="1591738392672624640">
+        <attvalues>
+          <attvalue for="0" value="I mean... should we REALLY trust these guys with our money ?&#10;&#10;@cryptocom" />
+          <attvalue for="1" value="-0.7004880905151367" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591629019052924928" label="1591629019052924928">
+        <attvalues>
+          <attvalue for="0" value="@fightoracle @cryptocom They couldn't pay for it they just sent all their ETH to the wrong address. https://t.co/rCxmPS0sUZ" />
+          <attvalue for="1" value="-0.8537381291389465" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591640548292845568" label="1591640548292845568">
+        <attvalues>
+          <attvalue for="0" value="josephweinberg: It’s becoming abundantly clear the only people who know how to build stuff for crypto safely and securely are the early people in crypto. Everyone who joined in the last 2-5 years are incapable of running millions of users and their money… https://t.co/sj2B3ugGKR" />
+          <attvalue for="1" value="-0.4761433005332947" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591927075958841344" label="1591927075958841344">
+        <attvalues>
+          <attvalue for="0" value="Auto-Exit strategy testing?" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591645890565267456" label="1591645890565267456">
+        <attvalues>
+          <attvalue for="0" value="Bro i swear to fucking god im not touching another coin until someone other than IDIOTS start running these exchanges. Let alone the FTX goblin lord." />
+          <attvalue for="1" value="-0.951603353023529" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591910003249930240" label="1591910003249930240">
+        <attvalues>
+          <attvalue for="0" value="I have no idea what https://t.co/yL1e25E9rk and https://t.co/wyaLuAeXCA are doing here, but in 2020, I put together a report showing that https://t.co/wyaLuAeXCA was hacked in 2018 and covered it up. Wouldn't trust them.&#10;&#10;https://t.co/Gj7xeBhxIn" />
+          <attvalue for="1" value="-0.8452306389808655" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591737645071491072" label="1591737645071491072">
+        <attvalues>
+          <attvalue for="0" value="What the hell is going on. Is everything just capitulating right now?" />
+          <attvalue for="1" value="-0.9202250838279724" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591630152605523968" label="1591630152605523968">
+        <attvalues>
+          <attvalue for="0" value="It’s becoming abundantly clear the only people who know how to build stuff for crypto safely and securely are the early people in crypto. Everyone who joined in the last 2-5 years are incapable of running millions of users and their money. This is getting ridiculous." />
+          <attvalue for="1" value="-0.7860730290412903" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591623166157541376" label="1591623166157541376">
+        <attvalues>
+          <attvalue for="0" value="This has to be the wildest week ever. Elon should charge $100 a month for Twitter." />
+          <attvalue for="1" value="-0.349941611289978" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591623296935657472" label="1591623296935657472">
+        <attvalues>
+          <attvalue for="0" value="The fiasco continues, after the bankruptcy of #FTX it could STRONGLY be that https://t.co/8wxyXuLyqX does the same thing. Sell your $CRO tokens before you lose everything !" />
+          <attvalue for="1" value="-0.9094760417938232" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591697759656083456" label="1591697759656083456">
+        <attvalues>
+          <attvalue for="0" value="Lmao&#10;Also didn't they send crypto to users by mistake in the past?&#10;Then asked for it back and threaten to sue" />
+          <attvalue for="1" value="-0.8087393641471863" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591616694996590592" label="1591616694996590592">
+        <attvalues>
+          <attvalue for="0" value="And the shit show continues😂😅" />
+          <attvalue for="1" value="-0.925995409488678" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591626928641146880" label="1591626928641146880">
+        <attvalues>
+          <attvalue for="0" value="@Helloimmorgan thoughts on this???" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591631270282657792" label="1591631270282657792">
+        <attvalues>
+          <attvalue for="0" value="Man, it has been a while since I laughed that hard. The industry is run by a group of primary school kids 😂😂😂 https://t.co/Cd0pYfpxwQ" />
+          <attvalue for="1" value="-0.49116402864456177" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591636245985492992" label="1591636245985492992">
+        <attvalues>
+          <attvalue for="0" value="??????????????????????????????????????????????&#10;&#10;What the actual ……&#10;&#10;Now Crypto .com says it ‘accidentally’ fat fingered and sent 80% of all customers ETH to another exchange from Cold Storage???? What?&#10;&#10;What?&#10;&#10;https://t.co/Uu8VQlsI2Z https://t.co/1Ux9oJEeA4" />
+          <attvalue for="1" value="-0.7836194038391113" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591645424850698240" label="1591645424850698240">
+        <attvalues>
+          <attvalue for="0" value="Ah yes, SBF is the ONLY reason crypto gonna get regulated... Are all these conspiracy theorists serious? This entire industry is a joke" />
+          <attvalue for="1" value="-0.7487537264823914" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591610123759517696" label="1591610123759517696">
+        <attvalues>
+          <attvalue for="0" value="Man the cefi side of this industry is really inhabited by the lowest IQ mfs ever... How do you fuck that up so badly? I wouldn't trust this exchange with more than $5." />
+          <attvalue for="1" value="-0.9587288498878479" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591742730975444992" label="1591742730975444992">
+        <attvalues>
+          <attvalue for="0" value="Day 0 since no crypto drama&#10;&#10;https://t.co/Kx46iBZx5I https://t.co/BPZQy5JXEa" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1592050250205712384" label="1592050250205712384">
+        <attvalues>
+          <attvalue for="0" value="7/n&#10;&#10;13 November - Oopsied ETH&#10;&#10;As CT tries to uncover every shady-looking detail about https://t.co/FaVvsyceLm, another secret was uncovered. Back in October, there was a transfer of 320K ETH to https://t.co/eTUyLVhsLC they apparently got a refund of only 285K ETH." />
+          <attvalue for="1" value="-0.6406459808349609" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591627132618375168" label="1591627132618375168">
+        <attvalues>
+          <attvalue for="0" value="Crypto . Com to 0" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="7.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591636212393316352" label="1591636212393316352">
+        <attvalues>
+          <attvalue for="0" value="Get out of all centralized exchanges folks. Now! $BTC $ETH" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591629155560722432" label="1591629155560722432">
+        <attvalues>
+          <attvalue for="0" value="This had to be multisig, right? So, everyone collectively agreed to fat finger a very large amount of user funds? Uhm… fortune favors the brave I guess" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591631066447708160" label="1591631066447708160">
+        <attvalues>
+          <attvalue for="0" value="I hope matt damon keeping track of this circus moves." />
+          <attvalue for="1" value="-0.6259580850601196" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591623051849990144" label="1591623051849990144">
+        <attvalues>
+          <attvalue for="0" value="Withdraw from https://t.co/zpbB7TWLFi ASAP. Can't believe the level of incompetence here." />
+          <attvalue for="1" value="-0.9512024521827698" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591792301289996288" label="1591792301289996288">
+        <attvalues>
+          <attvalue for="0" value="😬&#10;&#10;FFS...&#10;&#10;Get your funds off crypto . Com, and off any exchange for that matter" />
+          <attvalue for="1" value="-0.6294649243354797" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591759813276565504" label="1591759813276565504">
+        <attvalues>
+          <attvalue for="0" value="The level of stupidity makes me worried.. glad I’ve moved all funds from https://t.co/tTRZF7xbYD 😅" />
+          <attvalue for="1" value="-0.8883230686187744" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591642777489735680" label="1591642777489735680">
+        <attvalues>
+          <attvalue for="0" value="Went to cold storage tonite with everything except trading bags." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591616024369303552" label="1591616024369303552">
+        <attvalues>
+          <attvalue for="0" value="Do you want these people in charge of securing your bitcoin?" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2.0" />
+          <attvalue for="3" value="5.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591897061796052992" label="1591897061796052992">
+        <attvalues>
+          <attvalue for="0" value="Definitely a mistake that wont be made again, but what else can gate do? Theft is still illegal lol. Of course, they'd get their money back." />
+          <attvalue for="1" value="-0.7496508359909058" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591734809877155840" label="1591734809877155840">
+        <attvalues>
+          <attvalue for="0" value="#Crypto is wild right now! #FTX &#10;&quot;Let me transfer $500 to my savings account, oops! I sent it to Singapore by mistake!&quot; This is what #CryptoCom wants us to believe. @kris really? https://t.co/vTYFUzioU1" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591710078985551872" label="1591710078985551872">
+        <attvalues>
+          <attvalue for="0" value="And I said last week that I was pulling my funds from https://t.co/DKIheikniK..." />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591676610721333248" label="1591676610721333248">
+        <attvalues>
+          <attvalue for="0" value="Genuinely getting sad and disappointed" />
+          <attvalue for="1" value="-0.8825294971466064" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591671519142461440" label="1591671519142461440">
+        <attvalues>
+          <attvalue for="0" value="@MrOmodulus&#10; already told you to take all your funds out on cex.&#10;$CULT" />
+          <attvalue for="1" value="-0.6732193231582642" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1591614073598361600" label="1591614073598361600">
+        <attvalues>
+          <attvalue for="0" value="Centralized exchanges are not banks.&#10;&#10;It’s one thing to rely on centralized actors for fiat on-ramps. It’s another thing entirely for the crypto space itself to be centered around centralized actors, and it’s dangerous long-term." />
+          <attvalue for="1" value="-0.696937084197998" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+          <attvalue for="4" value="0.0" />
+          <attvalue for="5" value="0.0" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="1591609103197286400" target="1591610704565604352" id="0" />
+      <edge source="1591609103197286400" target="1591627743535714304" id="1" />
+      <edge source="1591609103197286400" target="1591638860752392192" id="2" />
+      <edge source="1591609103197286400" target="1591611009743163392" id="3" />
+      <edge source="1591609103197286400" target="1591614254536613888" id="4" />
+      <edge source="1591609103197286400" target="1591635548153974784" id="5" />
+      <edge source="1591609103197286400" target="1591614032146055168" id="6" />
+      <edge source="1591609103197286400" target="1591623787405266944" id="7" />
+      <edge source="1591609103197286400" target="1591618121458421760" id="8" />
+      <edge source="1591609103197286400" target="1591620996884316160" id="9" />
+      <edge source="1591609103197286400" target="1591704909409562624" id="10" />
+      <edge source="1591609103197286400" target="1591632002394226688" id="11" />
+      <edge source="1591609103197286400" target="1591620764230643712" id="12" />
+      <edge source="1591609103197286400" target="1591628310463008768" id="13" />
+      <edge source="1591609103197286400" target="1591613079129030656" id="14" />
+      <edge source="1591609103197286400" target="1591629719325270016" id="15" />
+      <edge source="1591609103197286400" target="1591611047882153984" id="16" />
+      <edge source="1591609103197286400" target="1591612975043194880" id="17" />
+      <edge source="1591609103197286400" target="1591617254604824576" id="18" />
+      <edge source="1591609103197286400" target="1591670410021834752" id="19" />
+      <edge source="1591609103197286400" target="1591738392672624640" id="20" />
+      <edge source="1591609103197286400" target="1591610586055741440" id="21" />
+      <edge source="1591609103197286400" target="1591614407045677056" id="22" />
+      <edge source="1591609103197286400" target="1591613854546800640" id="23" />
+      <edge source="1591609103197286400" target="1591718865113075712" id="24" />
+      <edge source="1591609103197286400" target="1591636033405587456" id="25" />
+      <edge source="1591609103197286400" target="1591715873139597312" id="26" />
+      <edge source="1591609103197286400" target="1591650624239960064" id="27" />
+      <edge source="1591609103197286400" target="1591615485916942336" id="28" />
+      <edge source="1591609103197286400" target="1591629019052924928" id="29" />
+      <edge source="1591609103197286400" target="1591626608749731840" id="30" />
+      <edge source="1591609103197286400" target="1591660066666696704" id="31" />
+      <edge source="1591609103197286400" target="1591612832420073472" id="32" />
+      <edge source="1591609103197286400" target="1591610275790458880" id="33" />
+      <edge source="1591609103197286400" target="1591613660589600768" id="34" />
+      <edge source="1591609103197286400" target="1591619177726775296" id="35" />
+      <edge source="1591609103197286400" target="1591627132618375168" id="36" />
+      <edge source="1591609103197286400" target="1591621299075534848" id="37" />
+      <edge source="1591609103197286400" target="1591616465597526016" id="38" />
+      <edge source="1591609103197286400" target="1591616916937924608" id="39" />
+      <edge source="1591609103197286400" target="1591609904900771840" id="40" />
+      <edge source="1591609103197286400" target="1591629067362926592" id="41" />
+      <edge source="1591609103197286400" target="1591614862408683520" id="42" />
+      <edge source="1591609103197286400" target="1591617914788261888" id="43" />
+      <edge source="1591609103197286400" target="1591642880850169856" id="44" />
+      <edge source="1591609103197286400" target="1591626165885992960" id="45" />
+      <edge source="1591609103197286400" target="1591625229771878400" id="46" />
+      <edge source="1591609103197286400" target="1591616405145030656" id="47" />
+      <edge source="1591609103197286400" target="1591640548292845568" id="48" />
+      <edge source="1591609103197286400" target="1591634861114413056" id="49" />
+      <edge source="1591609103197286400" target="1591627077219819520" id="50" />
+      <edge source="1591609103197286400" target="1591710078985551872" id="51" />
+      <edge source="1591609103197286400" target="1591614393770733568" id="52" />
+      <edge source="1591609103197286400" target="1591615956937474048" id="53" />
+      <edge source="1591609103197286400" target="1591609921665372160" id="54" />
+      <edge source="1591609103197286400" target="1591618448374759424" id="55" />
+      <edge source="1591609103197286400" target="1591806461407268864" id="56" />
+      <edge source="1591609103197286400" target="1591772424085078016" id="57" />
+      <edge source="1591609103197286400" target="1591623296935657472" id="58" />
+      <edge source="1591609103197286400" target="1591636456019095552" id="59" />
+      <edge source="1591609103197286400" target="1591927075958841344" id="60" />
+      <edge source="1591609103197286400" target="1591626928641146880" id="61" />
+      <edge source="1591609103197286400" target="1591645890565267456" id="62" />
+      <edge source="1591609103197286400" target="1591910003249930240" id="63" />
+      <edge source="1591609103197286400" target="1591676610721333248" id="64" />
+      <edge source="1591609103197286400" target="1591610549439270912" id="65" />
+      <edge source="1591609103197286400" target="1591611644094074880" id="66" />
+      <edge source="1591609103197286400" target="1591615730256351232" id="67" />
+      <edge source="1591609103197286400" target="1591638010202062848" id="68" />
+      <edge source="1591609103197286400" target="1591636078209167360" id="69" />
+      <edge source="1591609103197286400" target="1591631066447708160" id="70" />
+      <edge source="1591609103197286400" target="1591948345689657344" id="71" />
+      <edge source="1591609103197286400" target="1591616798964994048" id="72" />
+      <edge source="1591609103197286400" target="1591620953435475968" id="73" />
+      <edge source="1591609103197286400" target="1591840287848288256" id="74" />
+      <edge source="1591609103197286400" target="1591669088681709568" id="75" />
+      <edge source="1591609103197286400" target="1591609976933715968" id="76" />
+      <edge source="1591609103197286400" target="1591623051849990144" id="77" />
+      <edge source="1591609103197286400" target="1591631270282657792" id="78" />
+      <edge source="1591609103197286400" target="1591703483442503680" id="79" />
+      <edge source="1591609103197286400" target="1591612506954674176" id="80" />
+      <edge source="1591609103197286400" target="1591619259226259456" id="81" />
+      <edge source="1591609103197286400" target="1591656217667309568" id="82" />
+      <edge source="1591609103197286400" target="1591612903135789056" id="83" />
+      <edge source="1591609103197286400" target="1591873623778021376" id="84" />
+      <edge source="1591609103197286400" target="1591610241921486848" id="85" />
+      <edge source="1591609103197286400" target="1591611252497092608" id="86" />
+      <edge source="1591609103197286400" target="1591636212393316352" id="87" />
+      <edge source="1591609103197286400" target="1591656761806974976" id="88" />
+      <edge source="1591609103197286400" target="1591792301289996288" id="89" />
+      <edge source="1591609103197286400" target="1591611933261987840" id="90" />
+      <edge source="1591609103197286400" target="1591611994914058240" id="91" />
+      <edge source="1591609103197286400" target="1591911772730294272" id="92" />
+      <edge source="1591609103197286400" target="1591759813276565504" id="93" />
+      <edge source="1591609103197286400" target="1591626876946382848" id="94" />
+      <edge source="1591609103197286400" target="1591615141241577472" id="95" />
+      <edge source="1591609103197286400" target="1591616916913000448" id="96" />
+      <edge source="1591609103197286400" target="1591629155560722432" id="97" />
+      <edge source="1591609103197286400" target="1591618401549824000" id="98" />
+      <edge source="1591609103197286400" target="1591614014504964096" id="99" />
+      <edge source="1591609103197286400" target="1591642777489735680" id="100" />
+      <edge source="1591609103197286400" target="1591812488529866752" id="101" />
+      <edge source="1591609103197286400" target="1591757545534001152" id="102" />
+      <edge source="1591609103197286400" target="1591768455082123264" id="103" />
+      <edge source="1591609103197286400" target="1591621603775107072" id="104" />
+      <edge source="1591609103197286400" target="1591705317859106816" id="105" />
+      <edge source="1591609103197286400" target="1591626116707815424" id="106" />
+      <edge source="1591609103197286400" target="1591636245985492992" id="107" />
+      <edge source="1591609103197286400" target="1591680535176388608" id="108" />
+      <edge source="1591609103197286400" target="1591695512373174272" id="109" />
+      <edge source="1591609103197286400" target="1591737645071491072" id="110" />
+      <edge source="1591609103197286400" target="1591625601945055232" id="111" />
+      <edge source="1591609103197286400" target="1591627741232758784" id="112" />
+      <edge source="1591609103197286400" target="1591619539024113664" id="113" />
+      <edge source="1591609103197286400" target="1591626660964896768" id="114" />
+      <edge source="1591609103197286400" target="1591697759656083456" id="115" />
+      <edge source="1591609103197286400" target="1591671519142461440" id="116" />
+      <edge source="1591609103197286400" target="1591635108892913664" id="117" />
+      <edge source="1591609103197286400" target="1591633729826738176" id="118" />
+      <edge source="1591609103197286400" target="1591612904998342656" id="119" />
+      <edge source="1591609103197286400" target="1591616024369303552" id="120" />
+      <edge source="1591609103197286400" target="1591653255033294848" id="121" />
+      <edge source="1591609103197286400" target="1591645667113541632" id="122" />
+      <edge source="1591609103197286400" target="1591701067577819136" id="123" />
+      <edge source="1591609103197286400" target="1591611441374990336" id="124" />
+      <edge source="1591609103197286400" target="1591667629739200512" id="125" />
+      <edge source="1591609103197286400" target="1591609820846911488" id="126" />
+      <edge source="1591609103197286400" target="1591663708664733696" id="127" />
+      <edge source="1591609103197286400" target="1591680831999082496" id="128" />
+      <edge source="1591609103197286400" target="1591897061796052992" id="129" />
+      <edge source="1591609103197286400" target="1591616350455496704" id="130" />
+      <edge source="1591609103197286400" target="1591611151179485184" id="131" />
+      <edge source="1591609103197286400" target="1591833710671831040" id="132" />
+      <edge source="1591609103197286400" target="1591714221150150656" id="133" />
+      <edge source="1591609103197286400" target="1591662145363914752" id="134" />
+      <edge source="1591609103197286400" target="1591728251520815104" id="135" />
+      <edge source="1591609103197286400" target="1591625677216055296" id="136" />
+      <edge source="1591609103197286400" target="1591610281528295424" id="137" />
+      <edge source="1591609103197286400" target="1591622807229956096" id="138" />
+      <edge source="1591609103197286400" target="1591686127807004672" id="139" />
+      <edge source="1591609103197286400" target="1591640951109582848" id="140" />
+      <edge source="1591609103197286400" target="1591741319160172544" id="141" />
+      <edge source="1591609103197286400" target="1591752012957450240" id="142" />
+      <edge source="1591609103197286400" target="1591647150039257088" id="143" />
+      <edge source="1591609103197286400" target="1591734809877155840" id="144" />
+      <edge source="1591609103197286400" target="1591629129203552256" id="145" />
+      <edge source="1591609103197286400" target="1591626755206520832" id="146" />
+      <edge source="1591609103197286400" target="1591645424850698240" id="147" />
+      <edge source="1591609103197286400" target="1591612743664209920" id="148" />
+      <edge source="1591609103197286400" target="1591717719942234112" id="149" />
+      <edge source="1591609103197286400" target="1591740273427730432" id="150" />
+      <edge source="1591609103197286400" target="1591617294224216064" id="151" />
+      <edge source="1591609103197286400" target="1591701435317616640" id="152" />
+      <edge source="1591609103197286400" target="1591630152605523968" id="153" />
+      <edge source="1591609103197286400" target="1591611064315441152" id="154" />
+      <edge source="1591609103197286400" target="1591623166157541376" id="155" />
+      <edge source="1591609103197286400" target="1591611115993460736" id="156" />
+      <edge source="1591609103197286400" target="1591644096271388672" id="157" />
+      <edge source="1591609103197286400" target="1591698964231098368" id="158" />
+      <edge source="1591609103197286400" target="1591631044117430272" id="159" />
+      <edge source="1591609103197286400" target="1591622396095696896" id="160" />
+      <edge source="1591609103197286400" target="1591614377626574848" id="161" />
+      <edge source="1591609103197286400" target="1591628905227898880" id="162" />
+      <edge source="1591609103197286400" target="1591612141328793600" id="163" />
+      <edge source="1591609103197286400" target="1591636184002105344" id="164" />
+      <edge source="1591609103197286400" target="1591612921507115008" id="165" />
+      <edge source="1591609103197286400" target="1591610123759517696" id="166" />
+      <edge source="1591609103197286400" target="1591627551847624704" id="167" />
+      <edge source="1591609103197286400" target="1591621470094036992" id="168" />
+      <edge source="1591609103197286400" target="1591616694996590592" id="169" />
+      <edge source="1591609103197286400" target="1591614073598361600" id="170" />
+      <edge source="1591609103197286400" target="1591610231284715520" id="171" />
+      <edge source="1591609103197286400" target="1591614969413525504" id="172" />
+      <edge source="1591609103197286400" target="1591625953045880832" id="173" />
+      <edge source="1591609103197286400" target="1591663121051291648" id="174" />
+      <edge source="1591609103197286400" target="1591610715655348224" id="175" />
+      <edge source="1591609103197286400" target="1591828228825845760" id="176" />
+      <edge source="1591609103197286400" target="1592050250205712384" id="177" />
+      <edge source="1591609103197286400" target="1591611573550088192" id="178" />
+      <edge source="1591609103197286400" target="1591624878423445504" id="179" />
+      <edge source="1591609103197286400" target="1591610855443279872" id="180" />
+      <edge source="1591609103197286400" target="1591610090108628992" id="181" />
+      <edge source="1591609103197286400" target="1591829748745113600" id="182" />
+      <edge source="1591609103197286400" target="1591705650580828160" id="183" />
+      <edge source="1591911772730294272" target="1591928237869117440" id="184" />
+      <edge source="1591911772730294272" target="1592342885424590848" id="185" />
+      <edge source="1591701435317616640" target="1591742730975444992" id="186" />
+    </edges>
+  </graph>
+</gexf>
